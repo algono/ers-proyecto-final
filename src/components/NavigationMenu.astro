@@ -1,0 +1,31 @@
+---
+import Dropdown from './Dropdown.astro';
+import { getAriaCurrentPage } from '@utils/a11y';
+
+const { homeLocale: home, t } = Astro.locals;
+
+interface Props {
+  class?: string;
+  [key: string]: any;
+}
+
+const { class: className, ...attributes } = Astro.props;
+
+const menuItems : { href: string; label: string }[] = [
+  { href: `${home()}#top`, label: t('nav_home') }
+];
+---
+
+<Dropdown {...attributes}
+  class:list={["navigation-menu", className]}
+  position="left"
+  iconName="hamburger"
+  iconOpenName="close"
+  iconSize={32}
+  includeChevron={false}
+  mobileOnly={true}
+  buttonAriaLabel={t('nav_menu_button_label')}>
+  {menuItems.map(item => (
+      <li><a class="dropdown-link" href={item.href} aria-current={getAriaCurrentPage(Astro.url.pathname, item.href)}>{item.label}</a></li>
+    ))}
+</Dropdown>

@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import logo from '@assets/images/logo.svg';
+import type { HTMLAttributes } from 'astro/types';
+import { PROJECT_NAME, PROJECT_NAME_FOR_SCREEN_READERS, PROJECT_SUBTITLE } from '@constants';
+
+interface Props {
+  includeLogo?: boolean;
+  class?: string;
+  loading?: HTMLAttributes<'img'>['loading'];
+  [key: string]: any;
+}
+
+const { t } = Astro.locals;
+
+const { includeLogo = false, includeSubtitle = false, loading, class: className, ...attributes } = Astro.props;
+---
+
+<div 
+  class:list={['container', { 'has-logo': includeLogo }, className]} 
+  {...attributes}
+>
+  {includeLogo && (
+    <Image 
+      src={logo} 
+      alt={t('alt_logo_template', false, PROJECT_NAME)} 
+      height="120"
+      class="logo"
+      style="width: auto;"
+      loading={loading}
+      aria-hidden="true"
+    />
+    <span class="sr-only">{t('alt_logo_template', false, PROJECT_NAME_FOR_SCREEN_READERS)}</span>
+  )}
+  <div class="text">
+    <div class="title">
+      <span aria-hidden="true">{PROJECT_NAME}</span>
+      <span class="sr-only">{PROJECT_NAME_FOR_SCREEN_READERS}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: var(--logo-height, 120px);
+  }
+
+  .text {
+    width: auto;
+  }
+
+  .title {
+    display: inline-block; /* changed from inline to allow margins if needed */
+    font-weight: bold;      /* Logos usually look better bold */
+
+    /* IMPORTANT: The font-size from 'style="..."' used in Header for the container
+     * inherits naturally, but we must ensure the title uses 'em' units
+     * so it scales if the parent font-size changes.
+     */
+    font-size: 1em;
+
+    /* Reduce the line-height to make the title more compact, which is common in logos */
+    line-height: 1.1;
+  }
+
+  .title {
+    color: var(--color-logo-primary);
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+import { Font } from 'astro:assets';
+
+// Import global CSS here
+import '@styles/global.css';
+import '@styles/tooltips.css';
+
+import { PROJECT_NAME } from '@constants';
+import { homeNoLocale } from '@utils/url.ts';
+import { getPlainPathNoLocale, getAbsoluteLocaleUrlFromOrigin} from '@utils/localizedUrl.ts';
+import { locales, defaultLocale } from '@languages';
+
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import SkipLink from '@components/SkipLink.astro';
+import BackToTopButton from '@components/BackToTopButton.astro';
+
+const locale = Astro.currentLocale || defaultLocale;
+
+const origin = Astro.site ? Astro.site.origin : Astro.url.origin;
+
+// Get the locale-agnostic path (e.g., 'contact' instead of '/en/contact' or '/my-repo/en/contact')
+const plainPathNoLocale = getPlainPathNoLocale(Astro.url.pathname, locale);
+
+interface Props {
+	title: string;
+	includeLocaleSelector?: boolean;
+}
+
+const { title, includeLocaleSelector = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={`${PROJECT_NAME} Project Website`} />
+		<meta name="viewport" content="width=device-width" />
+		<Font cssVariable="--font-roboto" preload />
+		<link rel="icon" type="image/svg+xml" href={homeNoLocale('favicon.svg')} /> {/* Default SVG icon for modern browsers */}
+		<link rel="icon" sizes="any" href={homeNoLocale('favicon.ico')} /> {/* Fallback ICO for older browsers */}
+    <link rel="icon" type="image/png" sizes="192x192" href={homeNoLocale('icon-192.png')} /> {/* Icon for Android Chrome */}
+		<link rel="apple-touch-icon" href={homeNoLocale('apple-touch-icon.png')} /> {/* Icon for iOS Safari */}
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		{/* --- SEO: HREFLANG TAGS (for search engines to serve links in the user's language) --- */}
+    {/* x-default (mandatory fallback to default locale, usually points to English) */}
+    <link 
+      rel="alternate" 
+      hreflang="x-default" 
+      href={getAbsoluteLocaleUrlFromOrigin(origin, defaultLocale, plainPathNoLocale)} 
+    />
+    
+    {/* Dynamically map all our supported locales */}
+    {locales.map((loc) => (
+      <link 
+        rel="alternate" 
+        hreflang={loc} 
+        href={getAbsoluteLocaleUrlFromOrigin(origin, loc, plainPathNoLocale)} 
+      />
+    ))}
+	</head>
+	<body id="top">
+		<SkipLink />
+		<Header includeLocaleSelector={includeLocaleSelector} />
+		<main id="main-content">
+			<slot />
+		</main>
+		<Footer />
+		<BackToTopButton />
+	</body>
+</html>

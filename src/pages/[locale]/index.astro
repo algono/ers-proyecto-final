@@ -1,0 +1,33 @@
+---
+import { getStaticPathsFromLocales as getStaticPaths } from '@utils/translation';
+
+export { getStaticPaths };
+
+const { t } = Astro.locals;
+
+import { PROJECT_NAME } from '@constants';
+
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title={PROJECT_NAME}>
+	<div>
+		HOLA, ESTO ES UNA PRUEBA
+	</div>
+</Layout>
+<style>
+	/* Only for subtitles in sections that have one as a direct child */
+	section > p {
+		font-size: 1.2rem;
+		color: var(--color-text);
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	/* Add some spacing between sections on larger screens */
+	@media (min-width: 768px) {
+		section + section {
+			margin-top: 2rem;
+		}
+	}
+</style>

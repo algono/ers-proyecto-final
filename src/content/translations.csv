@@ -1,0 +1,15 @@
+id,en,es,de,pt,it,hr,fr
+locale_name,English,Español,Deutsch,Português,Italiano,Hrvatski,Français
+nav_home,Home,Inicio,Startseite,Início,Home,Početna,Accueil
+alt_logo_template,{0} Logo,Logotipo de {0},{0}-Logo,Logótipo de {0},Logo {0},Logo {0},Logo de {0}
+locale_selector_label,Select language,Seleccionar idioma,Sprache auswählen,Selecionar idioma,Seleziona lingua,Odaberite jezik,Sélectionner la langue
+locale_selector_current_label_template,Current language: {0},Idioma actual: {0},Aktuelle Sprache: {0},Idioma atual: {0},Lingua attuale: {0},Trenutni jezik: {0},Langue actuelle : {0}
+locale_selector_switch_label_template,Switch to {0},Cambiar a {0},Wechseln zu {0},Mudar para {0},Passa a {0},Prebaci na {0},Passer à {0}
+opens_in_new_window,(opens in a new window),(se abre en una nueva ventana),(öffnet in einem neuen Fenster),(abre numa nova janela),(si apre in una nuova finestra),(otvara se u novom prozoru),(s'ouvre dans une nouvelle fenêtre)
+nav_menu_label,Main navigation,Menú principal,Hauptnavigation,Navegação principal,Navigazione principale,Glavna navigacija,Navigation principale
+nav_menu_button_label,Open/close main navigation,Abrir/cerrar menú principal,Menü öffnen/schließen,Abrir/fechar menu principal,Apri/chiudi navigazione principale,Otvoriti/zatvoriti glavnu navigaciju,Ouvrir/fermer la navigation principale
+copyright_text,Students of the MUITSS Master's at UPV | All Rights Reserved.,Estudiantes del máster MUITSS de la UPV | Todos los derechos reservados.,Studierende des MUITSS-Masters an der UPV | Alle Rechte vorbehalten.,Estudantes do mestrado MUITSS da UPV | Todos os direitos reservados.,Studenti del master MUITSS dell'UPV | Tutti i diritti riservati.,Studenti MUITSS master studija na UPV-u | Sva prava pridržana.,Étudiants du master MUITSS de l'UPV | Tous droits réservés.
+404_title,Page Not Found,Página no encontrada,Seite nicht gefunden,Página não encontrada,Pagina non trovata,Stranica nije pronađena,Page non trouvée
+404_description,The page you are looking for doesn't exist or has been moved.,La página que buscas no existe o ha sido movida.,Die gesuchte Seite existiert nicht oder wurde verschoben.,A página que procura não existe ou foi removida.,La pagina che stai cercando non esiste o è stata spostata.,Stranica koju tražite ne postoji ili je premještena.,La page que vous recherchez n'existe pas ou a été déplacée.
+404_back_home,Back to Home,Volver al inicio,Zur Startseite zurück,Voltar para o início,Torna alla home,Na početnu stranicu,Retour à l'accueil
+tooltip_definition_label,Definition,Definición,Definition,Definição,Definizione,Definicija,Définition

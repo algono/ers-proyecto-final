@@ -1,0 +1,146 @@
+---
+import ProjectTitle from '@components/ProjectTitle.astro';
+import LocaleSelector from './LocaleSelector.astro';
+import NavigationMenu from './NavigationMenu.astro';
+
+const { homeLocale: home } = Astro.locals;
+
+interface Props {
+	includeLocaleSelector?: boolean;
+}
+
+const { includeLocaleSelector = true } = Astro.props;
+---
+
+<header>
+    <div class="branding">
+        <a href={`${home()}#top`} class="title-link">
+             <ProjectTitle includeLogo={true} includeSubtitle={true} class="project-title" loading="eager" />
+        </a>
+    </div>
+
+    <NavigationMenu class="nav-wrapper" />
+
+    { includeLocaleSelector && (
+    <div class="locale">
+        <LocaleSelector class="locale-selector" />
+    </div>
+    )}
+</header>
+
+<style>
+    header {
+        display: grid;
+        background-color: var(--color-secondary);
+        padding: 0.5rem 2rem;
+        gap: 0.5rem 2rem; /* Row gap 0.5rem, Column gap 2rem */
+        align-items: center;
+
+        font-size: 1.5rem;
+        
+        /* DESKTOP LAYOUT */
+        /* Branding (Left) | Nav (Middle) | Locale (Right) */
+        grid-template-columns: auto 1fr auto; 
+        
+        /* We define the visual layout here using names */
+        grid-template-areas:
+            "branding nav locale";
+
+        /* Redefine the text color for the header, using the on-secondary color token */
+        --color-text: var(--color-text-on-secondary);
+
+        /* Set color here too so elements that inherit colors get the correct color from the header (such as img) */
+        color: var(--color-text);
+
+        /* Also redefine the subtitle color so it doesn't use the default logo subtitle color, which is too dark for the header */
+        --color-subtitle: var(--color-text);
+    }
+
+    /* Assign the HTML elements to the Grid Areas */
+    
+    .branding {
+        grid-area: branding;
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem; /* Using column-gap instead of gap makes it so it doesn't create a big gap when they wrap on mobile */
+        flex-wrap: nowrap;
+    }
+
+    .locale {
+        grid-area: locale;
+        justify-self: end;
+        align-self: center;
+        margin-top: 0.28rem; /* Adjusted for better vertical alignment with the nav */
+    }
+
+    .nav-wrapper {
+        grid-area: nav;
+        justify-self: end; /* Pushes it to the far right */
+        align-self: center;
+        position: relative;
+    }
+
+    /* --- Component Styles --- */
+    .title-link {
+        text-decoration: none;
+    }
+
+    /* --- TABLET LAYOUT --- */
+    @media (max-width: 1535px) {
+        header {
+            grid-template-columns: auto auto;
+            
+            /* REORDER EVERYTHING HERE */
+            /* This is the magic. We just change the list order. */
+            grid-template-areas:
+                "branding  branding"
+                "nav  locale";
+            
+            padding: 1rem;
+            justify-items: stretch;
+            gap: 1rem;
+        }
+
+        .branding {
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        /* Moving the locale and nav next to each other somehow centers them out */
+        .locale {
+            font-size: 1.5rem;
+            justify-self: start; /* Move it to the left, next to the nav */
+        }
+
+        .nav-wrapper {
+            justify-self: end; /* Move it to the right, next to the locale */
+        }
+    }
+
+    /* --- MOBILE LAYOUT --- */
+    @media (max-width: 850px) {
+        header {
+            /* Two equal columns for the top row controls */
+            grid-template-columns: 1fr 1fr;
+            
+            grid-template-areas:
+                "nav      locale"
+                "branding branding";
+            
+            padding: 0.2rem;
+            justify-items: center;
+            gap: 0;
+        }
+
+        .locale {
+            grid-area: locale;
+            justify-self: end; /* Top Right */
+            align-self: center;
+        }
+
+        .nav-wrapper {
+            justify-self: start; /* Top Left */
+        }
+    }
+</style>
