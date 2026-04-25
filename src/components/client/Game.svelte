@@ -30,8 +30,8 @@
   let showDramaticColor = false; // Controla el cambio de color al final
 
   // Variable reactiva: ¿El usuario ha jugado algo ya?
-  // Si ha pasado del primer tweet o ya ha pulsado un botón, el juego está activo.
-  $: isGameActive = currentIndex > 0 || guess !== null;
+  // Si ha pasado del primer tweet o ya ha pulsado un botón (y no ha terminado), el juego está activo.
+  $: isGameActive = (currentIndex > 0 || guess !== null) && status !== 'gameover';
 
   $: currentItem = data[currentIndex];
   $: isCorrect = guess === (currentItem.stockChange >= 0 ? 'higher' : 'lower');
