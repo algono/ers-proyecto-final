@@ -2,6 +2,7 @@ id,en,es,de,pt,it,hr,fr
 locale_name,English,Español,Deutsch,Português,Italiano,Hrvatski,Français
 nav_classic_game,Classic,Clásico,Classic,Clássico,Classico,Klasična,Classique
 nav_guess_ceo_game,Guess the CEO,Adivina el CEO,Errate den CEO,Adivinhe o CEO,Indovina il CEO,Pogodi CEO,Devinez le CEO
+nav_stocks_only_game,Stocks Only,Solo Acciones,Nur Aktien,Apenas Ações,Solo Azioni,Samo Dionice,Actions Uniquement
 alt_logo_template,{0} Logo,Logotipo de {0},{0}-Logo,Logótipo de {0},Logo {0},Logo {0},Logo de {0}
 locale_selector_label,Select language,Seleccionar idioma,Sprache auswählen,Selecionar idioma,Seleziona lingua,Odaberite jezik,Sélectionner la langue
 locale_selector_current_label_template,Current language: {0},Idioma actual: {0},Aktuelle Sprache: {0},Idioma atual: {0},Lingua attuale: {0},Trenutni jezik: {0},Langue actuelle : {0}
@@ -32,3 +33,4 @@ game.revealed_info_by,The tweet was by,El tweet era de,Der Tweet war von,O tweet
 game.revealed_info_after,After this stocks,Tras esto las acciones,Danach sind die Aktien,Depois disso as ações,Dopodiché le azioni,Nakon toga dionice,Après cela les actions
 game.revealed_info_up,went up,subieron,gestiegen,subiram,sono salite,su porasle,ont augmenté
 game.revealed_info_down,went down,bajaron,gefallen,caíram,sono scese,su pale,ont baissé
+game.stocks_only_question,Based on the company only: what happened?,Basándote solo en la empresa: ¿qué pasó?,Basierend nur auf dem Unternehmen: Was ist passiert?,Baseado apenas na empresa: o que aconteceu?,Basato solo sull'azienda: cosa è successo?,Na temelju samo tvrtke: što se dogodilo ?,Basé uniquement sur l'entreprise : que s'est-il passé ?

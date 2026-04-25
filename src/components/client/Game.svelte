@@ -5,6 +5,7 @@
   // Importamos los modos de juego
   import ModeClassic from './gamemodes/ModeClassic.svelte';
   import ModeGuessCEO from './gamemodes/ModeGuessCEO.svelte';
+  import ModeStocksOnly from './gamemodes/ModeStocksOnly.svelte';
 
   // Props de Astro:
   export let locale;
@@ -15,7 +16,8 @@
   // Diccionario para cargar el componente dinámicamente
   const componentsMap = {
     'classic': ModeClassic,
-    'guess-ceo': ModeGuessCEO
+    'guess-ceo': ModeGuessCEO,
+    'stocks-only': ModeStocksOnly
   };
   $: ActiveModeComponent = componentsMap[gameMode];
 
