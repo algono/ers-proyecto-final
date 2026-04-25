@@ -1,7 +1,7 @@
 <script>
-  import { draw, fade, fly } from 'svelte/transition';
-  import { quintOut } from 'svelte/easing';
+  import { fade, fly } from 'svelte/transition';
   import { onMount } from 'svelte';
+  import StockChart from './StockChart.svelte';
 
   // Props de Astro:
   // Recibimos los textos traducidos al idioma actual desde Astro
@@ -21,19 +21,6 @@
 
   $: currentItem = data[currentIndex];
   $: isCorrect = guess === (currentItem.stockChange >= 0 ? 'higher' : 'lower');
-
-  // Lógica matemática para convertir el historial en puntos SVG
-  $: points = currentItem.history.map((val, i, arr) => {
-    const x = (i / (arr.length - 1)) * 100;
-    const min = Math.min(...arr);
-    const max = Math.max(...arr);
-    const range = max - min || 1;
-    const y = 50 - (((val - min) / range) * 50); // Invertimos Y para SVG
-    return `${x},${y}`;
-  }).join(' L ');
-  
-  $: pathD = `M ${points}`;
-  $: finalColor = currentItem.stockChange >= 0 ? '#10b981' : '#ef4444'; // Verde o Rojo
 
   function makeGuess(userGuess) {
     guess = userGuess;
@@ -145,20 +132,11 @@
           </h3>
           <p>{currentItem.company} ({currentItem.stockCompany}) - {texts.change_text} <strong>{currentItem.stockChange}%</strong></p>
 
-          <div class="chart-container">
-            <svg viewBox="-5 -5 110 60" preserveAspectRatio="none">
-              <path 
-                d={pathD} 
-                fill="none" 
-                stroke={showDramaticColor ? finalColor : '#64748b'} 
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                style="transition: stroke 0.3s ease-in;"
-                in:draw={{ duration: 1500, easing: quintOut }} 
-              />
-            </svg>
-          </div>
+          <StockChart 
+            history={currentItem.history} 
+            stockChange={currentItem.stockChange} 
+            showDramaticColor={showDramaticColor} 
+          />
 
           {#if showDramaticColor}
             <button in:fly={{ y: 10, duration: 300 }} on:click={next}>
@@ -213,15 +191,4 @@
   button:active { transform: scale(0.95); }
   .up { background: #10b981; color: white; }
   .down { background: #ef4444; color: white; }
-  
-  .chart-container {
-    width: 100%;
-    height: 150px;
-    margin: 2rem 0;
-  }
-  svg {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-  }
 </style>
