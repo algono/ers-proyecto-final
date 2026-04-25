@@ -1,6 +1,5 @@
 <script>
   import { fade, fly } from 'svelte/transition';
-  import { onMount } from 'svelte';
   
   // Importamos los modos de juego
   import ModeClassic from './gamemodes/ModeClassic.svelte';
