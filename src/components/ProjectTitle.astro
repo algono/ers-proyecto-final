@@ -13,7 +13,7 @@ interface Props {
 
 const { t } = Astro.locals;
 
-const { includeLogo = false, includeSubtitle = false, loading, class: className, ...attributes } = Astro.props;
+const { includeLogo = false, loading, class: className, ...attributes } = Astro.props;
 ---
 
 <div 
@@ -24,9 +24,8 @@ const { includeLogo = false, includeSubtitle = false, loading, class: className,
     <Image 
       src={logo} 
       alt={t('alt_logo_template', PROJECT_NAME)} 
-      height="120"
+      height="100"
       class="logo"
-      style="width: auto;"
       loading={loading}
       aria-hidden="true"
     />
@@ -70,5 +69,6 @@ const { includeLogo = false, includeSubtitle = false, loading, class: className,
 
   .title {
     color: var(--color-logo-primary);
+    margin-left: 0.2em; /* space between logo and text */
   }
 </style>

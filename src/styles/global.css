@@ -74,7 +74,6 @@ main {
 /* but add padding-block so that the vertical space they occupy is similar to texts with the default line height */
 h1, h2, h3 {
   line-height: 1.2;
-  padding-block: 0.2rem;
 }
 h1, h2 {
   text-align: center;
