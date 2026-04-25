@@ -83,25 +83,31 @@
 
   // La función que vigila los clics en enlaces
   function interceptNavigation(e) {
-    // Si no ha empezado a jugar, no molestamos
+    // 1. Si no hay juego activo, no molestamos
     if (!isGameActive) return;
 
-    // Buscamos si el clic fue en un enlace (<a>) o dentro de uno
+    // 2. Buscamos si el clic fue en un enlace
     const link = e.target.closest('a');
     if (!link) return;
 
-    // Comprobamos si es un enlace interno (de tu propia web)
-    // PERO distinta ruta (ignora enlaces con # o la misma página)
+    // 3. Si el enlace se abre en una pestaña nueva, el juego no se pierde. ¡Le dejamos en paz!
+    if (link.target === '_blank') return;
+
     const url = new URL(link.href, window.location.origin);
-    if (url.origin === window.location.origin && url.pathname !== window.location.pathname) {
-      // ¡Es un enlace interno! (Ej: cambio de idioma, ir a la home)
+    
+    // 4. ¿Es un simple salto (ancla) dentro de la misma página en la que ya estamos?
+    // Ej: href="#reglas" o href="/es/juego#reglas"
+    const isSamePageAnchor = url.pathname === window.location.pathname && url.hash !== '';
+
+    // 5. Si NO es un salto interno de la misma página, significa que va a haber recarga o cambio de ruta
+    if (!isSamePageAnchor) {
       const confirmExit = window.confirm(
         "Tienes una partida en curso. ¿Seguro que quieres salir? Perderás tu progreso actual."
       );
       
       // Si el usuario le da a "Cancelar", detenemos la navegación
       if (!confirmExit) {
-        e.preventDefault();
+        e.preventDefault(); // Abortamos el clic
       }
     }
   }
