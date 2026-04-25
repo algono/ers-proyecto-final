@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 export type Tweet = {
   ceo: string;
   tweet: string;
+  company?: string; // Optional: If not provided we just use the stock company name (e.g. "TWTR" for "Twitter")
+  stockCompany: string;
   stockChange: number;
   history: number[];
 };
@@ -14,6 +16,8 @@ const tweetsEntries = await getCollection('tweets');
 export const tweets: Tweet[] = tweetsEntries.map(entry => ({
   ceo: entry.data.ceo,
   tweet: entry.data.tweet,
+  company: entry.data.company,
+  stockCompany: entry.data.stockCompany,
   stockChange: entry.data.stockChange,
   history: entry.data.history
 }));

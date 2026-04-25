@@ -37,6 +37,8 @@ const tweets = defineCollection({
     id: z.number(),
     ceo: z.string(),
     tweet: z.string(),
+    company: z.string().optional(),
+    stockCompany: z.string(),
     stockChange: z.number(),
     history: z.array(z.number()),
   }).strict(),

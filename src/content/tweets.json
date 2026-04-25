@@ -1,16 +1,20 @@
 [
   {
     "id": 1,
-    "ceo": "Elon Musk", 
-    "tweet": "Funding secured at $420.69.", 
+    "ceo": "Elon Musk",
+    "tweet": "Funding secured at $420.69.",
+    "company": "Twitter",
+    "stockCompany": "TWTR",
     "stockChange": 12.5,
-    "history": [100, 102, 105, 103, 108, 112.5] 
+    "history": [100, 102, 105, 103, 108, 112.5]
   },
   {
     "id": 2,
-    "ceo": "Mark Zuckerberg", 
-    "tweet": "Metaverse is the future.", 
-    "stockChange": -8.4, 
-    "history": [300, 290, 285, 295, 280, 275] 
+    "ceo": "Mark Zuckerberg",
+    "tweet": "Metaverse is the future.",
+    "company": "Meta",
+    "stockCompany": "META",
+    "stockChange": -8.4,
+    "history": [300, 290, 285, 295, 280, 275]
   }
 ]

@@ -143,7 +143,7 @@
           <h3>
             {isCorrect ? texts.correct : texts.wrong}
           </h3>
-          <p>{texts.change_text} <strong>{currentItem.stockChange}%</strong></p>
+          <p>{currentItem.company} ({currentItem.stockCompany}) - {texts.change_text} <strong>{currentItem.stockChange}%</strong></p>
 
           <div class="chart-container">
             <svg viewBox="-5 -5 110 60" preserveAspectRatio="none">
