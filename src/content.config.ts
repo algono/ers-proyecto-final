@@ -37,6 +37,7 @@ const tweets = defineCollection({
     id: z.number(),
     ceo: z.string(),
     tweet: z.string(),
+    date: z.coerce.date(), // ISO date string, converted to Date object by Zod
     company: z.string().optional(),
     stockCompany: z.string(),
     stockChange: z.number(),

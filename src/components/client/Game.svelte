@@ -114,6 +114,7 @@
     <div class="card">
       <p class="ceo">{currentItem.ceo} {texts.tweeted}:</p>
       <h3 class="tweet">"{currentItem.tweet}"</h3>
+      <p class="date">{new Date(currentItem.date).toLocaleDateString()}</p>
 
       {#if status === 'playing'}
         <div class="actions" in:fade>
@@ -163,15 +164,23 @@
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    min-height: 400px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .ceo {
+    margin-bottom: 0.5rem;
   }
   .tweet {
     font-size: 1.5rem;
     font-style: italic;
     margin-bottom: 2rem;
+  }
+  .date {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
   }
   .buttons {
     display: flex;
