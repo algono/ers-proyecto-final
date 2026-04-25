@@ -57,16 +57,16 @@ p {
 }
 
 main {
-  padding: 1.5rem;
-  padding-top: 0.5rem;
+  padding-inline: 1.5rem;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
   max-width: 1200px; /* Prevents lines from getting too long/hard to read */
   margin: 0 auto;
 }
 
 @media (max-width: 767px) {
   main {
-    padding: 1rem;
-    padding-top: 0.5rem;
+    padding-inline: 1rem;
   }
 }
 
@@ -74,14 +74,11 @@ main {
 /* but add padding-block so that the vertical space they occupy is similar to texts with the default line height */
 h1, h2, h3 {
   line-height: 1.2;
-  margin-top: 1.8rem;
-  margin-bottom: 0.8rem;
   padding-block: 0.2rem;
 }
 h1, h2 {
   text-align: center;
   font-weight: 700;
-  margin-bottom: 2rem;
   letter-spacing: 0.5px;
 }
 
