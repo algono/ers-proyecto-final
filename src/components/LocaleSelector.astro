@@ -26,7 +26,7 @@ const localeSelectorLabel = tForLocale(currentLocale, "locale_selector_label");
   iconClass="flag-icon"
   includeChevron={true}
   buttonSharesLinkStyle={true}
-  buttonAriaLabel={`${localeSelectorLabel}. ${tForLocale(currentLocale, "locale_selector_current_label_template", false, currentLocaleName)}`}>
+  buttonAriaLabel={`${localeSelectorLabel}. ${tForLocale(currentLocale, "locale_selector_current_label_template", currentLocaleName)}`}>
   {locales.map((locale) => {
     const localeName = tForLocale(locale, "locale_name");
     return (
@@ -36,7 +36,7 @@ const localeSelectorLabel = tForLocale(currentLocale, "locale_selector_label");
           class:list={["dropdown-link", { "is-active": locale === currentLocale }]}
           aria-current={locale === currentLocale ? "page" : undefined}
           title={localeName} 
-          aria-label={tForLocale(locale, "locale_selector_switch_label_template", false, localeName)}
+          aria-label={tForLocale(locale, "locale_selector_switch_label_template", localeName)}
         >
           <Icon name={`circle-flags:${locale}`} class="flag-icon" width="24" height="24" aria-hidden="true" /> 
           <span class="locale-label">{localeName}</span>
