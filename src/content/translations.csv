@@ -27,3 +27,8 @@ game.results_button,View results,Ver resultados,Ergebnisse anzeigen,Ver resultad
 game.play_again,Play again,Volver a jugar,Nochmal spielen,Jogar novamente,Gioca ancora,Igraj ponovno,Rejouer
 game.over_title,Game Over!,¡Juego Terminado!,Spiel vorbei!,Fim de jogo!,Fine partita!,Kraj igre!,Fin de partie !
 game.change_text,Stocks changed by,Las acciones cambiaron un,Aktien änderten sich um,As ações mudaram em,Le azioni sono cambiate del,Dionice su se promijenile za,Les actions ont changé de
+game.who_tweeted,Who wrote this tweet?,¿Quién escribió este tweet?,Wer hat das getwittert?,Quem escreveu este tweet?,Chi ha scritto questo tweet?,Tko je napisao ovaj tvit?,Qui a écrit ce tweet?
+game.revealed_info_by,The tweet was by,El tweet era de,Der Tweet war von,O tweet foi de,Il tweet era di,Tvit je napisao,Le tweet était de
+game.revealed_info_after,After this stocks,Tras esto las acciones,Danach sind die Aktien,Depois disso as ações,Dopodiché le azioni,Nakon toga dionice,Après cela les actions
+game.revealed_info_up,went up,subieron,gestiegen,subiram,sono salite,su porasle,ont augmenté
+game.revealed_info_down,went down,bajaron,gefallen,caíram,sono scese,su pale,ont baissé

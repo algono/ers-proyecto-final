@@ -2,9 +2,9 @@
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
 
-  // Props recibidas desde Game.svelte (El Padre)
+  // Props recibidas desde Game.svelte
   export let item;
-  export let data; // <- ¡Necesitamos toda la base de datos para buscar otros CEOs!
+  export let data; 
   export let texts;
   export let status;
   export let showDramaticColor;
@@ -14,29 +14,23 @@
   let isCorrect = false;
   let selectedCEO = null;
 
-  // MAGIA REACTIVA: Cada vez que 'item' cambia (pasamos al siguiente turno), 
+  // Cada vez que 'item' cambia (pasamos al siguiente turno), 
   // recalculamos las opciones aleatorias.
   $: if (item && data) {
-    // 1. Sacamos una lista de TODOS los CEOs únicos que existen en el JSON
     const allCEOs = [...new Set(data.map(d => d.ceo))];
-    
-    // 2. Quitamos al CEO correcto de esa lista
     const otherCEOs = allCEOs.filter(c => c !== item.ceo);
     
-    // 3. Elegimos 2 al azar (Asumimos que tienes al menos 3 CEOs en tu base de datos)
-    const random1 = otherCEOs[Math.floor(Math.random() * otherCEOs.length)];
-    const remainingCEOs = otherCEOs.filter(c => c !== random1);
-    const random2 = remainingCEOs[Math.floor(Math.random() * remainingCEOs.length)];
+    // Elegimos 2 al azar
+    const randoms = otherCEOs.sort(() => Math.random() - 0.5).slice(0, 2);
 
-    // 4. Juntamos el correcto y los 2 falsos, y los BARAJAMOS aleatoriamente
-    options = [item.ceo, random1, random2].sort(() => Math.random() - 0.5);
+    // Barajamos los 3
+    options = [item.ceo, ...randoms].sort(() => Math.random() - 0.5);
+    selectedCEO = null; // Reseteamos selección al cambiar de turno
   }
 
   function guess(chosenOption) {
     selectedCEO = chosenOption;
     isCorrect = chosenOption === item.ceo;
-    
-    // Le avisamos al Padre
     onAnswer({ isCorrect });
   }
 </script>
@@ -45,7 +39,7 @@
 
 {#if status === 'playing'}
   <div class="actions" in:fade>
-    <p class="question">{texts.who_tweeted || '¿Quién escribió este tweet?'}</p>
+    <p class="question">{texts.who_tweeted}</p>
     
     <div class="buttons">
       {#each options as option}
@@ -64,8 +58,13 @@
     </h3>
     
     <p>
-      El tweet era de <strong>{item.ceo}</strong> ({item.company}). 
-      Tras esto, las acciones {item.stockChange >= 0 ? 'subieron' : 'bajaron'} un <strong>{item.stockChange}%</strong>
+      {texts.revealed_info_by} <strong>{item.ceo}</strong> ({item.company}). 
+      <br>
+      {texts.revealed_info_after} 
+      <strong>
+        {item.stockChange >= 0 ? texts.revealed_info_up : texts.revealed_info_down}
+      </strong> 
+      un <strong>{item.stockChange}%</strong>
     </p>
 
     <StockChart 
@@ -80,17 +79,18 @@
   .tweet {
     font-size: 1.5rem;
     font-style: italic;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.4;
   }
   .question {
     color: #94a3b8;
     margin-bottom: 1rem;
     font-size: 1.1rem;
+    font-weight: 500;
   }
   .buttons {
     display: flex;
-    flex-direction: column; /* Ponemos los nombres en lista vertical, queda más elegante */
+    flex-direction: column;
     gap: 0.75rem;
     margin-top: 1rem;
   }
@@ -103,12 +103,19 @@
     border-radius: 0.5rem;
     cursor: pointer;
     font-weight: bold;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
+    text-align: left;
   }
   button.ceo-btn:hover {
-    background: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #60a5fa;
   }
   button.ceo-btn:active { 
-    transform: scale(0.95); 
+    transform: scale(0.98); 
+  }
+  .result p {
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: #e2e8f0;
   }
 </style>
