@@ -12,4 +12,17 @@ copyright_text,Students of the MUITSS Master's at UPV | All Rights Reserved.,Est
 404_title,Page Not Found,Página no encontrada,Seite nicht gefunden,Página não encontrada,Pagina non trovata,Stranica nije pronađena,Page non trouvée
 404_description,The page you are looking for doesn't exist or has been moved.,La página que buscas no existe o ha sido movida.,Die gesuchte Seite existiert nicht oder wurde verschoben.,A página que procura não existe ou foi removida.,La pagina che stai cercando non esiste o è stata spostata.,Stranica koju tražite ne postoji ili je premještena.,La page que vous recherchez n'existe pas ou a été déplacée.
 404_back_home,Back to Home,Volver al inicio,Zur Startseite zurück,Voltar para o início,Torna alla home,Na početnu stranicu,Retour à l'accueil
-tooltip_definition_label,Definition,Definición,Definition,Definição,Definizione,Definicija,Définition
+game.score,Score,Puntuación,Punkte,Placar,Punteggio,Rezultat,Score
+game.final_score,Final Score,Puntuación final,Endpunktzahl,Placar final,Punteggio finale,Konačni rezultat,Score final
+game.tweeted,tweeted,tuiteó,hat getwittert,tuitou,ha twittato,je tvitao,a tweeté
+game.what_happened,What happened with the stock?,¿Qué pasó con las acciones?,Was ist mit den Aktien passiert?,O que aconteceu com as ações?,Cosa è successo con le azioni?,Što se dogodilo s dionicama?,Que s'est-il passé avec les acciones ?
+game.higher_button,Went up,Subieron,Gestiegen,Subiu,Salgono,Povećalo,Monté
+game.lower_button,Went down,Bajaron,Gefallen,Caiu,Scendono,Smanjilo,Descendu
+game.confirm_exit,You have a game in progress. Are you sure you want to leave? You'll lose your current progress.,Tienes una partida en curso. ¿Seguro que quieres salir? Perderás tu progreso actual.,"Du hast ein laufendes Spiel. Bist du sicher, dass du die Seite verlassen möchtest? Du verlierst deinen aktuellen Fortschritt.",Você tem um jogo em andamento. Tem certeza de que deseja sair? Você perderá seu progresso atual.,Hai una partita in corso. Sei sicuro di voler uscire? Perderai i tuoi progressi attuali.,Imaš igru u tijeku. Jeste li sigurni da želite napustiti? Izgubit ćete svoj trenutni napredak.,Vous avez une partie en cours. Êtes-vous sûr de vouloir quitter ? Vous perdrez votre progression actuelle.
+game.correct,Correct!,¡Acertaste!,Richtig!,Correto!,Giusto!,Točno!,Correct !
+game.wrong,Wrong!,¡Fallaste!,Falsch!,Errado!,Sbagliato!,Netočno!,Faux !
+game.next_button,Next Tweet ➡️,Siguiente Tweet ➡️,Nächster Tweet ➡️,Próximo Tweet ➡️,Prossimo Tweet ➡️,Sljedeći tvit ➡️,Tweet suivant ➡️
+game.results_button,View results,Ver resultados,Ergebnisse anzeigen,Ver resultados,Vedi risultati,Vidi rezultate,Voir les résultats
+game.play_again,Play again,Volver a jugar,Nochmal spielen,Jogar novamente,Gioca ancora,Igraj ponovno,Rejouer
+game.over_title,Game Over!,¡Juego Terminado!,Spiel vorbei!,Fim de jogo!,Fine partita!,Kraj igre!,Fin de partie !
+game.change_text,Stocks changed by,Las acciones cambiaron un,Aktien änderten sich um,As ações mudaram em,Le azioni sono cambiate del,Dionice su se promijenile za,Les actions ont changé de

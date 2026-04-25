@@ -5,6 +5,11 @@ import Game from '@components/client/Game.svelte';
 
 import { PROJECT_NAME } from '@constants';
 
+import { translationsForLocaleWithPrefix } from '@utils/translation';
+const { locale } = Astro.locals;
+
+const gameTranslatedTexts = translationsForLocaleWithPrefix(locale, 'game.');
+
 // Aquí harías tu lógica real: leer el CSV o Collection
 // const gameData = await getCollection('tweets');
 // const formattedData = ...
@@ -12,7 +17,7 @@ import { PROJECT_NAME } from '@constants';
 
 <Layout title={PROJECT_NAME}>
   <main>
-    <Game client:load /> 
+    <Game client:load texts={gameTranslatedTexts} /> 
   </main>
 </Layout>
 

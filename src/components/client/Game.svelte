@@ -3,6 +3,9 @@
   import { quintOut } from 'svelte/easing';
   import { onMount } from 'svelte';
 
+  // Recibimos los textos traducidos al idioma actual desde Astro
+  export let texts; 
+
   // Props: Astro pasará los datos del CSV/Content Collections aquí
   export let data = [
     { 
@@ -101,9 +104,7 @@
 
     // 5. Si NO es un salto interno de la misma página, significa que va a haber recarga o cambio de ruta
     if (!isSamePageAnchor) {
-      const confirmExit = window.confirm(
-        "Tienes una partida en curso. ¿Seguro que quieres salir? Perderás tu progreso actual."
-      );
+      const confirmExit = window.confirm(texts.confirm_exit);
       
       // Si el usuario le da a "Cancelar", detenemos la navegación
       if (!confirmExit) {
@@ -127,26 +128,26 @@
 
 <div class="game-container">
   <header>
-    <h2>Puntuación: <span>{score}</span></h2>
+    <h2>{texts.score}: <span>{score}</span></h2>
   </header>
 
   {#if status === 'gameover'}
     <div in:fade class="game-over">
-      <h2>¡Juego Terminado!</h2>
-      <p>Puntuación final: {score}</p>
-      <button on:click={restart}>Volver a jugar</button>
+      <h2>{texts.over_title}</h2>
+      <p>{texts.final_score}: {score}</p>
+      <button on:click={restart}>{texts.play_again}</button>
     </div>
   {:else}
     <div class="card">
-      <p class="ceo">{currentItem.ceo} twitteó:</p>
+      <p class="ceo">{currentItem.ceo} {texts.tweeted}:</p>
       <h3 class="tweet">"{currentItem.tweet}"</h3>
 
       {#if status === 'playing'}
         <div class="actions" in:fade>
-          <p>¿Qué pasó con las acciones?</p>
+          <p>{texts.what_happened}</p>
           <div class="buttons">
-            <button class="up" on:click={() => makeGuess('higher')}>📈 Subieron</button>
-            <button class="down" on:click={() => makeGuess('lower')}>📉 Bajaron</button>
+            <button class="up" on:click={() => makeGuess('higher')}>📈 {texts.higher_button}</button>
+            <button class="down" on:click={() => makeGuess('lower')}>📉 {texts.lower_button}</button>
           </div>
         </div>
       {/if}
@@ -154,9 +155,9 @@
       {#if status === 'revealed'}
         <div class="result" in:fade>
           <h3>
-            {isCorrect ? '¡Acertaste!' : '¡Fallaste!'}
+            {isCorrect ? texts.correct : texts.wrong}
           </h3>
-          <p>Las acciones cambiaron un <strong>{currentItem.stockChange}%</strong></p>
+          <p>{texts.change_text} <strong>{currentItem.stockChange}%</strong></p>
 
           <div class="chart-container">
             <svg viewBox="-5 -5 110 60" preserveAspectRatio="none">
@@ -175,7 +176,7 @@
 
           {#if showDramaticColor}
             <button in:fly={{ y: 10, duration: 300 }} on:click={next}>
-              {isCorrect ? 'Siguiente Tweet ➡️' : 'Ver resultados'}
+              {isCorrect ? texts.next_button : texts.results_button}
             </button>
           {/if}
         </div>

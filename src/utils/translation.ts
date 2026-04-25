@@ -42,6 +42,19 @@ export function tForLocale(locale: Locale, key: string, ...args: Parameters<type
   return formattedText;
 }
 
+export function translationsForLocaleWithPrefix(locale: Locale, prefix: string): Record<string, string> {
+  const translations = i18nMap[locale];
+  if (!translations) {
+    console.warn(`Missing translations for locale: ${locale}`);
+    return {};
+  }
+
+  const filteredEntries = Object.entries(translations)
+    .filter(([key]) => key.startsWith(prefix))
+    .map(([key, value]) => [key.slice(prefix.length), value] as [string, string]);
+  return Object.fromEntries(filteredEntries);
+}
+
 /**
  * Simulates C# string.Format for positional arguments.
  * Usage: formatString("Hello {0}!", "World") => "Hello World!"
