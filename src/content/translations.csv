@@ -3,6 +3,7 @@ locale_name,English,Español,Deutsch,Português,Italiano,Hrvatski,Français
 nav_classic_game,Classic,Clásico,Classic,Clássico,Classico,Klasična,Classique
 nav_guess_ceo_game,Guess the CEO,Adivina el CEO,Errate den CEO,Adivinhe o CEO,Indovina il CEO,Pogodi CEO,Devinez le CEO
 nav_stocks_only_game,Stocks Only,Solo Acciones,Nur Aktien,Apenas Ações,Solo Azioni,Samo Dionice,Actions Uniquement
+nav_who_said_what_game,Who Said What?,¿Quién dijo qué?,Wer hat was gesagt?,Quem Disse O Quê?,Chi ha detto cosa?,Tko je što rekao ?,Qui a dit quoi ?
 alt_logo_template,{0} Logo,Logotipo de {0},{0}-Logo,Logótipo de {0},Logo {0},Logo {0},Logo de {0}
 locale_selector_label,Select language,Seleccionar idioma,Sprache auswählen,Selecionar idioma,Seleziona lingua,Odaberite jezik,Sélectionner la langue
 locale_selector_current_label_template,Current language: {0},Idioma actual: {0},Aktuelle Sprache: {0},Idioma atual: {0},Lingua attuale: {0},Trenutni jezik: {0},Langue actuelle : {0}
@@ -34,3 +35,5 @@ game.revealed_info_after,After this stocks,Tras esto las acciones,Danach sind di
 game.revealed_info_up,went up,subieron,gestiegen,subiram,sono salite,su porasle,ont augmenté
 game.revealed_info_down,went down,bajaron,gefallen,caíram,sono scese,su pale,ont baissé
 game.stocks_only_question,Based on the company only: what happened?,Basándote solo en la empresa: ¿qué pasó?,Basierend nur auf dem Unternehmen: Was ist passiert?,Baseado apenas na empresa: o que aconteceu?,Basato solo sull'azienda: cosa è successo?,Na temelju samo tvrtke: što se dogodilo ?,Basé uniquement sur l'entreprise : que s'est-il passé ?
+game.match_instruction,Match each CEO with their tweet. Drag or click!,Empareja cada CEO con su tweet. ¡Arrastra o haz clic!,Ordne jeden CEO seinem Tweet zu. Ziehen oder klicken!,Associe cada CEO ao seu tweet. Arraste ou clique!,Associa ogni CEO al suo tweet. Trascina o clicca!,Poveži svakog CEO-a sa njegovim tvitom. Povuci ili klikni!,Associez chaque PDG à son tweet. Glissez ou cliquez !
+game.ceo_placeholder,CEO...,CEO...,CEO...,CEO...,CEO...,CEO...,PDG...

@@ -6,6 +6,7 @@
   import ModeClassic from './gamemodes/ModeClassic.svelte';
   import ModeGuessCEO from './gamemodes/ModeGuessCEO.svelte';
   import ModeStocksOnly from './gamemodes/ModeStocksOnly.svelte';
+  import ModeWhoSaidWhat from './gamemodes/ModeWhoSaidWhat.svelte';
 
   // Props de Astro:
   export let locale;
@@ -17,7 +18,8 @@
   const componentsMap = {
     'classic': ModeClassic,
     'guess-ceo': ModeGuessCEO,
-    'stocks-only': ModeStocksOnly
+    'stocks-only': ModeStocksOnly,
+    'who-said-what': ModeWhoSaidWhat
   };
   $: ActiveModeComponent = componentsMap[gameMode];
 
