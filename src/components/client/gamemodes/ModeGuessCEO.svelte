@@ -54,7 +54,7 @@
 {#if status === 'revealed'}
   <div class="result" in:fade>
     <h3>
-      {isCorrect ? texts.correct : texts.wrong}
+      {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
     </h3>
     
     <p>

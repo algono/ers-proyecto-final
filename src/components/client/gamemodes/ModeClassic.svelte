@@ -40,7 +40,7 @@
 {#if status === 'revealed'}
   <div class="result" in:fade>
     <h3>
-      {isCorrect ? texts.correct : texts.wrong}
+      {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
     </h3>
     <p>{item.company} ({item.stockCompany}) - {texts.change_text} <strong>{item.stockChange}%</strong></p>
 
