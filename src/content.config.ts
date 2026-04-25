@@ -29,25 +29,4 @@ const i18n = defineCollection({
   }).strict(), // Ensure no extra fields are present
 });
 
-// 3. Dynamically create the shape for the glossary
-const glossaryFields = locales.reduce((acc, locale) => {
-  acc[`term_${locale}`] = z.string();
-  acc[`def_${locale}`] = z.string();
-  return acc;
-}, {} as Record<`term_${Locale}` | `def_${Locale}`, z.ZodString>);
-
-const glossary = defineCollection({
-  loader: file("src/content/glossary.csv", {
-    parser: (text) => parseCsv(text, { 
-      columns: true, 
-      skip_empty_lines: true,
-      trim: true,
-    }),
-  }),
-  schema: z.object({
-    id: z.string(),
-    ...glossaryFields, // Spread the dynamic language fields into the schema
-  }),
-});
-
-export const collections = { i18n, glossary };
+export const collections = { i18n };

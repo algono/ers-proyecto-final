@@ -2,8 +2,6 @@ import { getCollection } from 'astro:content';
 
 import { locales, type Locale } from '@languages';
 
-import { injectGlossariesHtml } from '@utils/glossary';
-
 export function getStaticPathsFromLocales() {
 		return locales.map(locale => ({ params: { locale } }));
 }
@@ -22,11 +20,11 @@ const i18nMap = i18nEntries.reduce((acc, entry) => {
 }, {} as Record<Locale, Record<string, string>>);
 
 export function getTranslationHelperFn(locale: Locale) {
-  return (key: string, htmlWithGlossaries: boolean = false, ...args: Parameters<typeof formatString>[1][]) => tForLocale(locale, key, htmlWithGlossaries, ...args);
+  return (key: string, ...args: Parameters<typeof formatString>[1][]) => tForLocale(locale, key, ...args);
 }
 export type TranslationHelper = ReturnType<typeof getTranslationHelperFn>;
 
-export function tForLocale(locale: Locale, key: string, htmlWithGlossaries: boolean = false, ...args: Parameters<typeof formatString>[1][]) : string {
+export function tForLocale(locale: Locale, key: string, ...args: Parameters<typeof formatString>[1][]) : string {
   const translations = i18nMap[locale];
   if (!translations) {
     console.warn(`Missing translations for locale: ${locale}`);
@@ -41,7 +39,7 @@ export function tForLocale(locale: Locale, key: string, htmlWithGlossaries: bool
 
   const formattedText = args.length > 0 ? formatString(text, ...args) : text;
 
-  return htmlWithGlossaries ? injectGlossariesHtml(locale, formattedText) : formattedText;
+  return formattedText;
 }
 
 /**

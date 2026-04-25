@@ -1,6 +1,5 @@
 import { defineMiddleware } from "astro:middleware";
 import { getTranslationHelperFn } from "@utils/translation";
-import { getGlossaryHtmlForTermFn } from "@utils/glossary";
 import { getHomeHelperFn } from "@utils/localizedUrl"; // URL helper for locale-aware links
 import { defaultLocale, type Locale } from "@languages";
 
@@ -18,7 +17,6 @@ export const onRequest = defineMiddleware((context, next) => {
   context.locals.locale = locale;
   context.locals.t = getTranslationHelperFn(locale); // Create the translation helper for the current locale
   context.locals.homeLocale = getHomeHelperFn(locale); // Create the home function that takes into account the current locale
-  context.locals.getGlossaryHtmlForTerm = getGlossaryHtmlForTermFn(locale); // Create the glossary helper for the current locale
 
   return next();
 });
