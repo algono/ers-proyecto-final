@@ -12,7 +12,7 @@
   export let locale;
   export let texts;
   export let data;
-  export let gameMode = 'classic'; // Permitirá a Astro elegir el modo en el futuro
+  export let gameMode = 'classic';
 
   // Diccionario para cargar el componente dinámicamente
   const componentsMap = {
@@ -23,17 +23,58 @@
   };
   $: ActiveModeComponent = componentsMap[gameMode];
 
+  // Variables de estado iniciales
   let currentIndex = 0;
   let score = 0;
   let status = 'playing'; // 'playing', 'revealed', 'gameover'
   let showDramaticColor = false; 
-  let lastAnswerWasCorrect = false; // Guardamos si el hijo dijo que acertamos
+  let lastAnswerWasCorrect = false; 
 
-  // Variable reactiva para interceptar navegación. 
-  $: isGameActive = status === 'revealed' || (currentIndex > 0 && status !== 'gameover');
+  // --- 🔥 LA MAGIA DEL AUTOGUARDADO 🔥 ---
+  // 1. CARGAR PARTIDA AL INICIAR
+  // Comprobamos window para que el Build de Astro no explote
+  if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+    const savedState = sessionStorage.getItem('finance_game_state');
+    if (savedState) {
+      try {
+        const parsed = JSON.parse(savedState);
+        // Si hay menos datos de los que el jugador llevaba, reseteamos para evitar bugs
+        if (parsed.currentIndex < data.length) {
+          currentIndex = parsed.currentIndex;
+          score = parsed.score;
+          status = parsed.status;
+          lastAnswerWasCorrect = parsed.lastAnswerWasCorrect;
+          
+          // Si guardó en mitad de una revelación, saltamos la espera de 1.5s
+          // y le mostramos los colores directamente para que pueda pulsar Siguiente
+          if (status === 'revealed') {
+            showDramaticColor = true;
+          }
+        }
+      } catch (e) {
+        console.error("Error leyendo la partida guardada", e);
+      }
+    }
+  }
+
   $: currentItem = data[currentIndex];
+  
+  // 2. GUARDAR PARTIDA AUTOMÁTICAMENTE
+  // Svelte ejecutará esto automáticamente cada vez que cualquiera de estas variables cambie
+  $: {
+    // Nos aseguramos de que estamos en el navegador y no en el servidor de Astro
+    if (typeof sessionStorage !== 'undefined') {
+      const stateToSave = {
+        currentIndex,
+        score,
+        status,
+        lastAnswerWasCorrect
+      };
+      sessionStorage.setItem('finance_game_state', JSON.stringify(stateToSave));
+    }
+  }
+  // ----------------------------------------
 
-  // El hijo lanza esta función cuando el usuario hace clic en un botón
   function handleAnswer(result) {
     lastAnswerWasCorrect = result.isCorrect;
     status = 'revealed';
@@ -66,43 +107,11 @@
     status = 'playing';
     showDramaticColor = false;
     lastAnswerWasCorrect = false;
-  }
-
-  function interceptNavigation(e) {
-    // Solo intervenimos si el juego está activo (jugando o mostrando resultado)
-    if (!isGameActive) return;
-
-    // Buscamos si el clic fue en un enlace y no se abre en una nueva pestaña
-    const link = e.target.closest('a');
-    if (!link || link.target === '_blank') return;
-
-    const url = new URL(link.href, window.location.origin);
-    
-    // ¿Es un simple salto (ancla) dentro de la misma página en la que ya estamos?
-    // Ej: href="#reglas" o href="/es/juego#reglas"
-    const isSamePageAnchor = url.pathname === window.location.pathname && url.hash !== '';
-
-    // Si NO es un salto interno de la misma página, significa que va a haber recarga o cambio de ruta
-    if (!isSamePageAnchor) {
-      const confirmExit = window.confirm(texts.confirm_exit);
-      
-      // Si el usuario le da a "Cancelar", detenemos la navegación
-      if (!confirmExit) {
-        e.preventDefault(); // Abortamos el clic
-      }
+    // Limpiamos el guardado
+    if (typeof sessionStorage !== 'undefined') {
+      sessionStorage.removeItem('finance_game_state');
     }
   }
-
-  // Activamos el "vigilante" al cargar el componente y lo quitamos al salir
-  onMount(() => {
-    // Esto SOLO ocurre en el navegador del usuario
-    document.addEventListener('click', interceptNavigation);
-
-    // Svelte ejecutará esta función que devolvemos justo cuando el componente se desmonte
-    return () => {
-      document.removeEventListener('click', interceptNavigation);
-    };
-  });
 </script>
 
 <div class="game-container">
