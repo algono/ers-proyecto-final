@@ -1,6 +1,7 @@
 <script>
   import { draw, fade, fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
+  import { onMount } from 'svelte';
 
   // Props: Astro pasará los datos del CSV/Content Collections aquí
   export let data = [
@@ -24,6 +25,10 @@
   let status = 'playing'; // 'playing', 'revealed', 'gameover'
   let guess = null; // 'higher', 'lower'
   let showDramaticColor = false; // Controla el cambio de color al final
+
+  // Variable reactiva: ¿El usuario ha jugado algo ya?
+  // Si ha pasado del primer tweet o ya ha pulsado un botón, el juego está activo.
+  $: isGameActive = currentIndex > 0 || guess !== null;
 
   $: currentItem = data[currentIndex];
   $: isCorrect = guess === (currentItem.stockChange >= 0 ? 'higher' : 'lower');
@@ -75,6 +80,42 @@
     guess = null;
     showDramaticColor = false;
   }
+
+  // La función que vigila los clics en enlaces
+  function interceptNavigation(e) {
+    // Si no ha empezado a jugar, no molestamos
+    if (!isGameActive) return;
+
+    // Buscamos si el clic fue en un enlace (<a>) o dentro de uno
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    // Comprobamos si es un enlace interno (de tu propia web)
+    const url = new URL(link.href, window.location.origin);
+    if (url.origin === window.location.origin) {
+      // ¡Es un enlace interno! (Ej: cambio de idioma, ir a la home)
+      const confirmExit = window.confirm(
+        "Tienes una partida en curso. ¿Seguro que quieres salir? Perderás tu progreso actual."
+      );
+      
+      // Si el usuario le da a "Cancelar", detenemos la navegación
+      if (!confirmExit) {
+        e.preventDefault();
+      }
+    }
+  }
+
+  // Activamos el "vigilante" al cargar el componente y lo quitamos al salir
+  onMount(() => {
+    // Esto SOLO ocurre en el navegador del usuario
+    document.addEventListener('click', interceptNavigation);
+
+    // Svelte ejecutará esta función que devolvemos justo cuando 
+    // el componente se desmonte. ¡Es nuestro onDestroy seguro!
+    return () => {
+      document.removeEventListener('click', interceptNavigation);
+    };
+  });
 </script>
 
 <div class="game-container">
