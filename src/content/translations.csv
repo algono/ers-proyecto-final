@@ -25,6 +25,7 @@ game.confirm_exit,You have a game in progress. Are you sure you want to leave? Y
 game.correct,Correct!,¡Acertaste!,Richtig!,Correto!,Giusto!,Točno!,Correct !
 game.wrong,Wrong!,¡Fallaste!,Falsch!,Errado!,Sbagliato!,Netočno!,Faux !
 game.next_button,Next Tweet ➡️,Siguiente Tweet ➡️,Nächster Tweet ➡️,Próximo Tweet ➡️,Prossimo Tweet ➡️,Sljedeći tvit ➡️,Tweet suivant ➡️
+game.restart_button,Restart,Reiniciar,Neustart,Reiniciar,Riavvia,Ponovno pokreni,Redémarrer
 game.results_button,View results,Ver resultados,Ergebnisse anzeigen,Ver resultados,Vedi risultati,Vidi rezultate,Voir les résultats
 game.play_again,Play again,Volver a jugar,Nochmal spielen,Jogar novamente,Gioca ancora,Igraj ponovno,Rejouer
 game.over_title,Game Over!,¡Juego Terminado!,Spiel vorbei!,Fim de jogo!,Fine partita!,Kraj igre!,Fin de partie !

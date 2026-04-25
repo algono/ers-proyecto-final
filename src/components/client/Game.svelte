@@ -144,6 +144,9 @@
         </button>
       {/if}
 
+      <button class="main-btn restart-btn" on:click={restart}>
+        {texts.restart_button}
+      </button>
     </div>
   {/if}
 </div>
@@ -157,6 +160,7 @@
     text-align: center;
   }
   .card {
+    position: relative;
     background: #1e293b;
     color: white;
     padding: 2rem;
@@ -182,7 +186,24 @@
     margin-top: 1.5rem;
     width: 100%;
   }
+  button.main-btn:hover {
+    background: #2563eb;
+  }
   button.main-btn:active { 
     transform: scale(0.95); 
+  }
+
+  button.restart-btn {
+    /* Subtle dark gray background for the restart button */
+    background: #475569;
+    /* Smaller size so it doesn't compete with the main action button */
+    width: fit-content;
+    margin: 0;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+    /* Show on top left corner of the card */
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
   }
 </style>
