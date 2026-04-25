@@ -1,6 +1,7 @@
 id,en,es,de,pt,it,hr,fr
 locale_name,English,Español,Deutsch,Português,Italiano,Hrvatski,Français
-nav_home,Home,Inicio,Startseite,Início,Home,Početna,Accueil
+nav_classic_game,Classic,Clásico,Classic,Clássico,Classico,Klasična,Classique
+nav_guess_ceo_game,Guess the CEO,Adivina el CEO,Errate den CEO,Adivinhe o CEO,Indovina il CEO,Pogodi CEO,Devinez le CEO
 alt_logo_template,{0} Logo,Logotipo de {0},{0}-Logo,Logótipo de {0},Logo {0},Logo {0},Logo de {0}
 locale_selector_label,Select language,Seleccionar idioma,Sprache auswählen,Selecionar idioma,Seleziona lingua,Odaberite jezik,Sélectionner la langue
 locale_selector_current_label_template,Current language: {0},Idioma actual: {0},Aktuelle Sprache: {0},Idioma atual: {0},Lingua attuale: {0},Trenutni jezik: {0},Langue actuelle : {0}

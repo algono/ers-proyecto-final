@@ -4,6 +4,7 @@
   
   // Importamos los modos de juego
   import ModeClassic from './gamemodes/ModeClassic.svelte';
+  import ModeGuessCEO from './gamemodes/ModeGuessCEO.svelte';
 
   // Props de Astro:
   export let locale;
@@ -14,7 +15,7 @@
   // Diccionario para cargar el componente dinámicamente
   const componentsMap = {
     'classic': ModeClassic,
-    // 'guess-ceo': ModeGuessCEO  <-- Aquí añadirás los nuevos
+    'guess-ceo': ModeGuessCEO
   };
   $: ActiveModeComponent = componentsMap[gameMode];
 
@@ -115,13 +116,14 @@
     <div class="card">
       
       <svelte:component 
-        this={ActiveModeComponent} 
-        item={currentItem} 
+        this={ActiveModeComponent}
+        item={currentItem}
+        data={data}
         texts={texts}
         locale={locale}
         status={status}
         showDramaticColor={showDramaticColor}
-        onAnswer={handleAnswer} 
+        onAnswer={handleAnswer}
       />
 
       {#if showDramaticColor}

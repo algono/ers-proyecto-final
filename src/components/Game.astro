@@ -15,11 +15,17 @@ const gameTranslatedTexts = translationsForLocaleWithPrefix(locale, 'game.');
 // Aquí harías tu lógica real: leer el CSV o Collection
 // const gameData = await getCollection('tweets');
 // const formattedData = ...
+
+interface Props {
+  gameMode?: 'classic' | 'guess-ceo';
+}
+
+const { gameMode = 'classic' } = Astro.props;
 ---
 
 <Layout title={PROJECT_NAME}>
   <main>
-    <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} data={tweets} /> 
+    <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} data={tweets} gameMode={gameMode} />
   </main>
 </Layout>
 
