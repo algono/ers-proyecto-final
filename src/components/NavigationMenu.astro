@@ -12,7 +12,7 @@ interface Props {
 const { class: className, ...attributes } = Astro.props;
 
 const menuItems : { href: string; label: string }[] = [
-  { href: `${home()}#top`, label: t('nav_classic_game') },
+  { href: `${home()}`, label: t('nav_classic_game') },
   { href: `${home()}guess-ceo`, label: t('nav_guess_ceo_game') },
   { href: `${home()}stocks-only`, label: t('nav_stocks_only_game') },
   { href: `${home()}who-said-what`, label: t('nav_who_said_what_game') }
