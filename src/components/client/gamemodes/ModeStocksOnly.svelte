@@ -93,5 +93,7 @@
   }
   button:active { transform: scale(0.95); }
   .up { background: #10b981; color: white; }
+  .up:hover { background: #059669; }
   .down { background: #ef4444; color: white; }
+  .down:hover { background: #dc2626; }
 </style>
