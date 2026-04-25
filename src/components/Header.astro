@@ -3,8 +3,6 @@ import ProjectTitle from '@components/ProjectTitle.astro';
 import LocaleSelector from './LocaleSelector.astro';
 import NavigationMenu from './NavigationMenu.astro';
 
-const { homeLocale: home } = Astro.locals;
-
 interface Props {
 	includeLocaleSelector?: boolean;
 }
@@ -14,9 +12,7 @@ const { includeLocaleSelector = true } = Astro.props;
 
 <header>
     <div class="branding">
-        <a href={`${home()}#top`} class="title-link">
-             <ProjectTitle includeLogo={true} includeSubtitle={true} class="project-title" loading="eager" />
-        </a>
+        <ProjectTitle includeLogo={true} includeSubtitle={true} class="project-title" loading="eager" />
     </div>
 
     <NavigationMenu class="nav-wrapper" />
@@ -39,12 +35,12 @@ const { includeLocaleSelector = true } = Astro.props;
         font-size: 1.5rem;
         
         /* DESKTOP LAYOUT */
-        /* Nav (Left) | Branding (Middle) | Locale (Right) */
-        grid-template-columns: 1fr auto 1fr; 
+        /* Branding (Left) | Nav (Middle) | Locale (Right) */
+        grid-template-columns: auto 1fr auto; 
         
         /* We define the visual layout here using names */
         grid-template-areas:
-            "nav branding locale";
+            "branding nav locale";
 
         /* Redefine the text color for the header, using the on-secondary color token */
         --color-text: var(--color-text-on-secondary);
@@ -62,7 +58,6 @@ const { includeLocaleSelector = true } = Astro.props;
         grid-area: branding;
         display: flex;
         width: 100%;
-        padding-right: 2rem; /* Because the logo circle on the left is way bigger than the text, we need to add some padding to the right to make it look more balanced */
         justify-content: center;
         align-items: center;
         column-gap: 1.5rem; /* Using column-gap instead of gap makes it so it doesn't create a big gap when they wrap on mobile */
