@@ -50,9 +50,6 @@
 {/if}
 
 <style>
-  .stocks-only-header {
-    margin-bottom: 2rem;
-  }
   .company-name {
     font-size: 2rem;
     margin: 0;
