@@ -3,20 +3,15 @@
 import Layout from '@layouts/Layout.astro';
 import Game from '@components/client/Game.svelte';
 
+import { PROJECT_NAME } from '@constants';
+
 // Aquí harías tu lógica real: leer el CSV o Collection
 // const gameData = await getCollection('tweets');
 // const formattedData = ...
-
-interface Props {
-	title?: string;
-}
-
-const { title } = Astro.props;
 ---
 
-<Layout title={title || "Higher or Lower: CEO Edition"}>
+<Layout title={PROJECT_NAME}>
   <main>
-    <h1>Adivina la Bolsa</h1>
     <Game client:load /> 
   </main>
 </Layout>

@@ -39,12 +39,12 @@ const { includeLocaleSelector = true } = Astro.props;
         font-size: 1.5rem;
         
         /* DESKTOP LAYOUT */
-        /* Branding (Left) | Nav (Middle) | Locale (Right) */
-        grid-template-columns: auto 1fr auto; 
+        /* Nav (Left) | Branding (Middle) | Locale (Right) */
+        grid-template-columns: 1fr auto 1fr; 
         
         /* We define the visual layout here using names */
         grid-template-areas:
-            "branding nav locale";
+            "nav branding locale";
 
         /* Redefine the text color for the header, using the on-secondary color token */
         --color-text: var(--color-text-on-secondary);
@@ -61,6 +61,9 @@ const { includeLocaleSelector = true } = Astro.props;
     .branding {
         grid-area: branding;
         display: flex;
+        width: 100%;
+        padding-right: 2rem; /* Because the logo circle on the left is way bigger than the text, we need to add some padding to the right to make it look more balanced */
+        justify-content: center;
         align-items: center;
         column-gap: 1.5rem; /* Using column-gap instead of gap makes it so it doesn't create a big gap when they wrap on mobile */
         flex-wrap: nowrap;
@@ -75,7 +78,7 @@ const { includeLocaleSelector = true } = Astro.props;
 
     .nav-wrapper {
         grid-area: nav;
-        justify-self: end; /* Pushes it to the far right */
+        justify-self: start; /* Pushes it to the far left */
         align-self: center;
         position: relative;
     }
@@ -104,6 +107,7 @@ const { includeLocaleSelector = true } = Astro.props;
         .branding {
             justify-content: center;
             width: 100%;
+            padding-right: 1rem; /* Reduce the padding on smaller screens */
             flex-wrap: wrap;
         }
 
