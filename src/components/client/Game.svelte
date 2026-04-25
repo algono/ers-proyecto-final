@@ -22,14 +22,37 @@
   };
   $: ActiveModeComponent = componentsMap[gameMode];
 
-  // Variables de estado iniciales
+  // --- 🎲 LÓGICA DE LA SEMILLA Y MEZCLA ---
+
+  // Función de barajado Fisher-Yates determinista mediante una semilla
+  function seededShuffle(array, seed) {
+    let m = array.length, t, i;
+    let shuffled = [...array];
+    // Generador de números pseudo-aleatorios basado en la semilla
+    const random = (s) => {
+      const x = Math.sin(s) * 10000;
+      return x - Math.floor(x);
+    };
+
+    while (m) {
+      i = Math.floor(random(seed + m) * m--);
+      t = shuffled[m];
+      shuffled[m] = shuffled[i];
+      shuffled[i] = t;
+    }
+    return shuffled;
+  }
+
+  // --- 💾 GESTIÓN DE ESTADO ---
+
   let currentIndex = 0;
   let score = 0;
   let status = 'playing'; // 'playing', 'revealed', 'gameover'
-  let showDramaticColor = false; 
-  let lastAnswerWasCorrect = false; 
+  let showDramaticColor = false;
+  let lastAnswerWasCorrect = false;
+  let gameSeed = Math.floor(Math.random() * 1000000); // Semilla por defecto
 
-  // --- 🔥 LA MAGIA DEL AUTOGUARDADO 🔥 ---
+  // --- 🔥 AUTOGUARDADO 🔥 ---
   // 1. CARGAR PARTIDA AL INICIAR
   // Comprobamos window para que el Build de Astro no explote
   if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
@@ -43,6 +66,7 @@
           score = parsed.score;
           status = parsed.status;
           lastAnswerWasCorrect = parsed.lastAnswerWasCorrect;
+          gameSeed = parsed.gameSeed || gameSeed;
           
           // Si guardó en mitad de una revelación, saltamos la espera de 1.5s
           // y le mostramos los colores directamente para que pueda pulsar Siguiente
@@ -56,7 +80,9 @@
     }
   }
 
-  $: currentItem = data[currentIndex];
+  // Barajamos los datos usando la semilla (se mantendrá igual en la sesión)
+  $: shuffledData = seededShuffle(data, gameSeed);
+  $: currentItem = shuffledData[currentIndex];
   
   // 2. GUARDAR PARTIDA AUTOMÁTICAMENTE
   // Svelte ejecutará esto automáticamente cada vez que cualquiera de estas variables cambie
@@ -73,6 +99,8 @@
     }
   }
   // ----------------------------------------
+
+  // --- 🎮 FUNCIONES DE JUEGO ---
 
   function handleAnswer(result) {
     lastAnswerWasCorrect = result.isCorrect;
@@ -106,6 +134,8 @@
     status = 'playing';
     showDramaticColor = false;
     lastAnswerWasCorrect = false;
+    // Al reiniciar, generamos una semilla nueva para que la partida sea distinta
+    gameSeed = Math.floor(Math.random() * 1000000);
     // Limpiamos el guardado
     if (typeof sessionStorage !== 'undefined') {
       sessionStorage.removeItem('finance_game_state');
@@ -130,7 +160,7 @@
       <svelte:component 
         this={ActiveModeComponent}
         item={currentItem}
-        data={data}
+        data={shuffledData}
         texts={texts}
         locale={locale}
         status={status}
