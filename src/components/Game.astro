@@ -19,7 +19,7 @@ const gameTranslatedTexts = translationsForLocaleWithPrefix(locale, 'game.');
 
 <Layout title={PROJECT_NAME}>
   <main>
-    <GameSvelte client:load texts={gameTranslatedTexts} data={tweets} /> 
+    <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} data={tweets} /> 
   </main>
 </Layout>
 

@@ -4,6 +4,8 @@
   import StockChart from './StockChart.svelte';
 
   // Props de Astro:
+  // Recibimos el locale actual para formatear la fecha según el idioma del usuario
+  export let locale;
   // Recibimos los textos traducidos al idioma actual desde Astro
   export let texts;
   // Recibimos los datos del JSON/Content Collections desde Astro
@@ -114,7 +116,7 @@
     <div class="card">
       <p class="ceo">{currentItem.ceo} {texts.tweeted}:</p>
       <h3 class="tweet">"{currentItem.tweet}"</h3>
-      <p class="date">{new Date(currentItem.date).toLocaleDateString()}</p>
+      <p class="date">{new Date(currentItem.date).toLocaleDateString(locale === 'en' ? 'en-GB' : locale)}</p>
 
       {#if status === 'playing'}
         <div class="actions" in:fade>
