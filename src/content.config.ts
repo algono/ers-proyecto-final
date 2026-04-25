@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 import { file } from 'astro/loaders';
 import { parse as parseCsv } from 'csv-parse/sync';
 
@@ -29,4 +30,16 @@ const i18n = defineCollection({
   }).strict(), // Ensure no extra fields are present
 });
 
-export const collections = { i18n };
+// 3. Define the tweets collection
+const tweets = defineCollection({
+  loader: file("src/content/tweets.json"),
+  schema: z.object({
+    id: z.number(),
+    ceo: z.string(),
+    tweet: z.string(),
+    stockChange: z.number(),
+    history: z.array(z.number()),
+  }).strict(),
+});
+
+export const collections = { i18n, tweets };

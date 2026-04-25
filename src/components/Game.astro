@@ -1,9 +1,11 @@
 ---
 // Importas tu layout base y el componente Svelte
 import Layout from '@layouts/Layout.astro';
-import Game from '@components/client/Game.svelte';
+import GameSvelte from '@components/client/Game.svelte';
 
 import { PROJECT_NAME } from '@constants';
+
+import { tweets } from '@utils/tweets';
 
 import { translationsForLocaleWithPrefix } from '@utils/translation';
 const { locale } = Astro.locals;
@@ -17,7 +19,7 @@ const gameTranslatedTexts = translationsForLocaleWithPrefix(locale, 'game.');
 
 <Layout title={PROJECT_NAME}>
   <main>
-    <Game client:load texts={gameTranslatedTexts} /> 
+    <GameSvelte client:load texts={gameTranslatedTexts} data={tweets} /> 
   </main>
 </Layout>
 

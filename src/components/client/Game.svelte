@@ -3,25 +3,11 @@
   import { quintOut } from 'svelte/easing';
   import { onMount } from 'svelte';
 
+  // Props de Astro:
   // Recibimos los textos traducidos al idioma actual desde Astro
-  export let texts; 
-
-  // Props: Astro pasará los datos del CSV/Content Collections aquí
-  export let data = [
-    { 
-      ceo: "Elon Musk", 
-      tweet: "Funding secured at $420.", 
-      stockChange: 12.5, 
-      // Histórico simulado para la gráfica (precios)
-      history: [100, 102, 105, 103, 108, 112.5] 
-    },
-    { 
-      ceo: "Mark Zuckerberg", 
-      tweet: "Metaverse is the future.", 
-      stockChange: -8.4, 
-      history: [300, 290, 285, 295, 280, 275] 
-    }
-  ];
+  export let texts;
+  // Recibimos los datos del JSON/Content Collections desde Astro
+  export let data;
 
   let currentIndex = 0;
   let score = 0;
