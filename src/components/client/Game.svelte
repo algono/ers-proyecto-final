@@ -91,8 +91,9 @@
     if (!link) return;
 
     // Comprobamos si es un enlace interno (de tu propia web)
+    // PERO distinta ruta (ignora enlaces con # o la misma página)
     const url = new URL(link.href, window.location.origin);
-    if (url.origin === window.location.origin) {
+    if (url.origin === window.location.origin && url.pathname !== window.location.pathname) {
       // ¡Es un enlace interno! (Ej: cambio de idioma, ir a la home)
       const confirmExit = window.confirm(
         "Tienes una partida en curso. ¿Seguro que quieres salir? Perderás tu progreso actual."
