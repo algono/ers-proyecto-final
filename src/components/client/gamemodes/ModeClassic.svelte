@@ -25,7 +25,7 @@
 </script>
 
 <div class="mode-wrapper" class:is-revealed={status === 'revealed'}>
-  <p class="ceo">{item.ceo} {texts.tweeted}:</p>
+  <p class="ceo">{item.tweetAuthorDisplayName} {texts.tweeted}:</p>
   <h3 class="tweet">"{item.tweetText}"</h3>
   <p class="date">{new Date(item.date).toLocaleDateString(locale === 'en' ? 'en-GB' : locale)}</p>
 
