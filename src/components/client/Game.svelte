@@ -12,7 +12,7 @@
   import type { GameMode } from '@constants';
   import type { Component } from 'svelte';
 
-  import { formatClassic } from '@utils/dataMappers';
+  import { formatClassic, formatGuessCEO, formatStocksOnly, formatWhoSaidWhat } from '@utils/dataMappers';
 
   // Props de Astro:
   export let locale: string;
@@ -25,16 +25,36 @@
 
   onMount(async () => {
     // Vite creará "chunks" (archivos separados) para cada JSON automáticamente
-    if (gameMode === 'classic') {
-      // Cargamos los 3 a la vez en paralelo
-      const [stocksMod, tweetsMod, linksMod] = await Promise.all([
-        import('../../content/data/stocks.json'),
-        import('../../content/data/tweets.json'),
-        import('../../content/data/stock_tweets.json')
-      ]);
-      data = formatClassic(stocksMod.default, tweetsMod.default, linksMod.default);
+    switch (gameMode) {
+      case 'classic':
+        // Cargamos los 3 a la vez en paralelo
+        const [stocksModCl, tweetsModCl, linksModCl] = await Promise.all([
+          import('../../content/data/stocks.json'),
+          import('../../content/data/tweets.json'),
+          import('../../content/data/stock_tweets.json')
+        ]);
+        data = formatClassic(stocksModCl.default, tweetsModCl.default, linksModCl.default);
+        break;
+      case 'guess-ceo':
+        // Cargamos los 3 a la vez en paralelo
+        const [stocksModGc, tweetsModGc, linksModGc] = await Promise.all([
+          import('../../content/data/stocks.json'),
+          import('../../content/data/tweets.json'),
+          import('../../content/data/stock_tweets.json')
+        ]);
+        data = formatGuessCEO(stocksModGc.default, tweetsModGc.default, linksModGc.default);
+        break;
+      case 'stocks-only':
+        // Cargamos los datos de acciones
+        const stocksModSo = await import('../../content/data/stocks.json');
+        data = formatStocksOnly(stocksModSo.default);
+        break;
+      case 'who-said-what':
+        // Cargamos los tweets
+        const tweetsModWs = await import('../../content/data/tweets.json');
+        data = formatWhoSaidWhat(tweetsModWs.default);
+        break;
     }
-    // ... otros modos ...
     
     isLoading = false;
   });

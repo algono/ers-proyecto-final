@@ -1,11 +1,11 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
-  import type { Tweet } from '@projectTypes/tweets';
+  import type { GameItem } from '@projectTypes/gameItem';
 
   // Props recibidas desde Game.svelte
-  export let item: Tweet;
-  export let data: Tweet[];
+  export let item: GameItem;
+  export let data: GameItem[];
   export let texts: Record<string, string>;
   export let status: string;
   export let showDramaticColor: boolean;
@@ -37,7 +37,7 @@
 </script>
 
 <div class="mode-wrapper" class:is-revealed={status === 'revealed'}>
-  <h3 class="tweet">"{item.tweet}"</h3>
+  <h3 class="tweet">"{item.tweetText}"</h3>
 
   {#if status === 'playing'}
     <div class="actions" in:fade>
@@ -60,18 +60,18 @@
       </h3>
       
       <p>
-        {texts.revealed_info_by} <strong>{item.ceo}</strong> ({item.company}). 
+        {texts.revealed_info_by} <strong>{item.tweetAuthorDisplayName}</strong> ({item.company}). 
         <br>
         {texts.revealed_info_after} 
         <strong>
-          {item.stockChange >= 0 ? texts.revealed_info_up : texts.revealed_info_down}
+          {item.stockChangePct! >= 0 ? texts.revealed_info_up : texts.revealed_info_down}
         </strong> 
-        un <strong>{item.stockChange}%</strong>
+        <strong>{item.stockChangePct!.toFixed(2)}%</strong>
       </p>
 
       <StockChart 
         history={item.history} 
-        stockChange={item.stockChange} 
+        stockChange={item.stockChangePct!} 
         showDramaticColor={showDramaticColor} 
       />
     </div>

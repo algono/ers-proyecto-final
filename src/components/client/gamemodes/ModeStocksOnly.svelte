@@ -1,10 +1,10 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
-  import type { Tweet } from '@projectTypes/tweets';
+  import type { GameItem } from '@projectTypes/gameItem';
 
   // Props siguiendo el estándar de Svelte 5 (callback props)
-  export let item: Tweet;
+  export let item: GameItem;
   export let texts: Record<string, string>;
   export let locale: string;
   export let status: string;
@@ -14,7 +14,7 @@
   let isCorrect = false;
 
   function guess(direction: 'higher' | 'lower') {
-    isCorrect = direction === (item.stockChange >= 0 ? 'higher' : 'lower');
+    isCorrect = direction === (item.stockChangePct! > 0 ? 'higher' : 'lower');
     onAnswer({ isCorrect });
   }
 </script>
@@ -22,7 +22,7 @@
 <div class="mode-wrapper" class:is-revealed={status === 'revealed'}>
   <div class="stocks-only-header" in:fade>
     <h2 class="company-name">{item.company}</h2>
-    <div class="ticker">{item.stockCompany}</div>
+    <div class="ticker">{item.ticker}</div>
     <p class="date">{new Date(item.date).toLocaleDateString(locale === 'en' ? 'en-GB' : locale)}</p>
   </div>
 
@@ -41,11 +41,11 @@
       <h3>
         {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
       </h3>
-      <p>{texts.change_text} <strong>{item.stockChange}%</strong></p>
+      <p>{texts.change_text} <strong>{item.stockChangePct!.toFixed(2)}%</strong></p>
 
       <StockChart 
         history={item.history} 
-        stockChange={item.stockChange} 
+        stockChange={item.stockChangePct!} 
         showDramaticColor={showDramaticColor} 
       />
     </div>

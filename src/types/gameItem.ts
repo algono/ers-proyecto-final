@@ -22,4 +22,10 @@ export interface GameItem {
   
   // --- Extra para modos de adivinar ---
   options?: string[]; // Ej: ['Elon Musk', 'Sam Altman', 'Tim Cook'] para el modo Guess CEO
+  // Nuevo campo para el modo Who Said What (Matching de 2 tweets)
+  matchData?: {
+    id: string;
+    text: string;
+    author: string; // Guardaremos aquí el display_name del tweet
+  }[];
 }

@@ -1,16 +1,17 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
-  import type { Tweet } from '@projectTypes/tweets';
+  import type { GameItem } from '@projectTypes/gameItem';
 
-  export let item: Tweet;
-  export let data: Tweet[];
+  // Props recibidas desde Game.svelte
+  export let item: GameItem;
+  export let data: GameItem[];
   export let texts: Record<string, string>;
   export let status: string;
   export let showDramaticColor: boolean;
   export let onAnswer: (result: { isCorrect: boolean }) => void;
 
-  let tweetsToMatch: Tweet[] = [];
+  let tweetsToMatch: GameItem[] = [];
   let ceosPool: string[] = [];
   let slots: (string | null)[] = [null, null]; // Los dos huecos vacíos
   let activeCeo: string | null = null; // Para el clic-to-slot o drag
@@ -94,7 +95,7 @@
     <div class="drop-zones">
       {#each tweetsToMatch as tw, i}
         <div class="tweet-row">
-          <div class="tweet-bubble">"{tw.tweet}"</div>
+          <div class="tweet-bubble">"{tw.tweetText}"</div>
           
           <button 
             type="button"
@@ -140,19 +141,19 @@
         <div class="chart-wrapper">
           <p class="ceo-result-name">
             <strong>👤 {tw.ceo}</strong> <br>
-            <span class="company-subtext">{tw.company} ({tw.stockCompany})</span>
+            <span class="company-subtext">{tw.company} ({tw.ticker})</span>
           </p>
           <p class="stock-result-text">
             {texts.revealed_info_after} 
             <strong>
-              {tw.stockChange >= 0 ? texts.revealed_info_up : texts.revealed_info_down}
+              {tw.stockChangePct! >= 0 ? texts.revealed_info_up : texts.revealed_info_down}
             </strong> 
-            <strong>{tw.stockChange}%</strong>
+            <strong>{tw.stockChangePct!.toFixed(2)}%</strong>
           </p>
 
           <StockChart 
             history={tw.history} 
-            stockChange={tw.stockChange} 
+            stockChange={tw.stockChangePct!} 
             showDramaticColor={showDramaticColor} 
           />
         </div>
