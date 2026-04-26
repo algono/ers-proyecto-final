@@ -106,12 +106,12 @@ export function formatStocksOnly(stocks: PeakData[]): GameItem[] {
 
 // --- 3. MODO GUESS CEO ---
 export function formatGuessCEO(stocks: PeakData[], tweets: Tweet[], links: StockTweetLink[]): GameItem[] {
-  const allAuthorNames = new Set(tweets.map(t => t.display_name));
+  const allAuthorNames = [...new Set(tweets.map(t => t.display_name))];
 
   // Tomamos de base el formato Classic pero con opciones de CEO
   return formatClassic(stocks, tweets, links).map(item => ({
     ...item,
-    options: generateOptions(item.tweetAuthorDisplayName, allAuthorNames)
+    options: generateOptions(item.tweetAuthorDisplayName!, allAuthorNames)
   }));
 }
 

@@ -5,17 +5,14 @@
 
   // Props recibidas desde Game.svelte
   export let item: GameItem;
-  export let data: GameItem[];
   export let texts: Record<string, string>;
   export let status: string;
   export let showDramaticColor: boolean;
   export let onAnswer: (result: { isCorrect: boolean }) => void;
 
   let isCorrect = false;
-  let selectedCEO: string | null = null;
 
   function guess(chosenOption: string) {
-    selectedCEO = chosenOption;
     isCorrect = chosenOption === item.ceo;
     onAnswer({ isCorrect });
   }
@@ -47,7 +44,7 @@
       <p>
         {texts.revealed_info_by} <strong>{item.tweetAuthorDisplayName}</strong> ({item.company}). 
         <br>
-        {texts.revealed_info_after} 
+        {texts.revealed_info_after}
         <strong>
           {item.stockChangePct! >= 0 ? texts.revealed_info_up : texts.revealed_info_down}
         </strong> 
