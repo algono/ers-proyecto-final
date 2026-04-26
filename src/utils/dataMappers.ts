@@ -77,7 +77,7 @@ export function formatStocksOnly(stocks: PeakData[]): GameItem[] {
 
     for (const peak of stock.peaks) {
       // Usamos tu helper de history, pasándole el historial de la acción y la fecha del pico
-      const historySlice = getClosestHistory(stock.history, peak.date, 5);
+      const historySlice = getClosestHistory(stock.peaks, peak.date, 5);
       
       let changePct = peak.changePct; // Fallback
       let direction = peak.direction;
