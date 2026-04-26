@@ -186,7 +186,6 @@
   .game-container {
     max-width: 600px;
     margin: 0 auto;
-    font-family: system-ui, sans-serif;
     text-align: center;
   }
   .card {
