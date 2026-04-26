@@ -2,8 +2,6 @@ node_modules/
 dist/
 .env
 python/cookies.json
-database/*.json
-database/*.tmp.json
 output/
 __pycache__/
 *.pyc
