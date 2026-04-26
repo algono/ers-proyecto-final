@@ -1,18 +1,19 @@
-<script>
+<script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
+  import type { Tweet } from '@projectTypes/tweets';
 
   // Props siguiendo el estándar de Svelte 5 (callback props)
-  export let item;
-  export let texts;
-  export let locale;
-  export let status;
-  export let showDramaticColor;
-  export let onAnswer = () => { console.warn("Falta prop onAnswer") };
+  export let item: Tweet;
+  export let texts: Record<string, string>;
+  export let locale: string;
+  export let status: string;
+  export let showDramaticColor: boolean;
+  export let onAnswer: (result: { isCorrect: boolean }) => void;
 
   let isCorrect = false;
 
-  function guess(direction) {
+  function guess(direction: 'higher' | 'lower') {
     isCorrect = direction === (item.stockChange >= 0 ? 'higher' : 'lower');
     onAnswer({ isCorrect });
   }

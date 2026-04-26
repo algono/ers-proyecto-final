@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { fade, fly } from 'svelte/transition';
   
   // Importamos los modos de juego
@@ -6,31 +6,45 @@
   import ModeGuessCEO from './gamemodes/ModeGuessCEO.svelte';
   import ModeStocksOnly from './gamemodes/ModeStocksOnly.svelte';
   import ModeWhoSaidWhat from './gamemodes/ModeWhoSaidWhat.svelte';
+  
+  import type { Tweet } from '@projectTypes/tweets';
+  import type { GameMode } from '@constants';
+  import type { Component } from 'svelte';
 
   // Props de Astro:
-  export let locale;
-  export let texts;
-  export let data;
-  export let stocksImagePlaceholder;
-  export let gameMode = 'classic';
+  export let locale: string;
+  export let texts: Record<string, string>;
+  export let data : Tweet[];
+  export let stocksImagePlaceholder: string;
+  export let gameMode : GameMode = 'classic';
+
+  interface GameModeProps {
+    item: Tweet;
+    data: Tweet[];
+    texts: Record<string, string>;
+    locale: string;
+    status: string;
+    showDramaticColor: boolean;
+    onAnswer: (result: { isCorrect: boolean }) => void;
+  }
 
   // Diccionario para cargar el componente dinámicamente
-  const componentsMap = {
+  const componentsMap : Record<GameMode, Component<GameModeProps>> = {
     'classic': ModeClassic,
     'guess-ceo': ModeGuessCEO,
     'stocks-only': ModeStocksOnly,
     'who-said-what': ModeWhoSaidWhat
-  };
+  }; // Aseguramos que el tipo es correcto
   $: ActiveModeComponent = componentsMap[gameMode];
 
   // --- 🎲 LÓGICA DE LA SEMILLA Y MEZCLA ---
 
   // Función de barajado Fisher-Yates determinista mediante una semilla
-  function seededShuffle(array, seed) {
-    let m = array.length, t, i;
+  function seededShuffle<T>(array: T[], seed: number): T[] {
+    let m: number = array.length, t: T, i: number;
     let shuffled = [...array];
     // Generador de números pseudo-aleatorios basado en la semilla
-    const random = (s) => {
+    const random = (s: number) => {
       const x = Math.sin(s) * 10000;
       return x - Math.floor(x);
     };
@@ -103,7 +117,7 @@
 
   // --- 🎮 FUNCIONES DE JUEGO ---
 
-  function handleAnswer(result) {
+  function handleAnswer(result: { isCorrect: boolean }) {
     lastAnswerWasCorrect = result.isCorrect;
     status = 'revealed';
     

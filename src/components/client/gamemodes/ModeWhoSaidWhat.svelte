@@ -1,18 +1,19 @@
-<script>
+<script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
+  import type { Tweet } from '@projectTypes/tweets';
 
-  export let item;
-  export let data;
-  export let texts;
-  export let status;
-  export let showDramaticColor;
-  export let onAnswer = () => {};
+  export let item: Tweet;
+  export let data: Tweet[];
+  export let texts: Record<string, string>;
+  export let status: string;
+  export let showDramaticColor: boolean;
+  export let onAnswer: (result: { isCorrect: boolean }) => void;
 
-  let tweetsToMatch = [];
-  let ceosPool = [];
-  let slots = [null, null]; // Los dos huecos vacíos
-  let activeCeo = null; // Para el clic-to-slot o drag
+  let tweetsToMatch: Tweet[] = [];
+  let ceosPool: string[] = [];
+  let slots: (string | null)[] = [null, null]; // Los dos huecos vacíos
+  let activeCeo: string | null = null; // Para el clic-to-slot o drag
   let isCorrect = false;
 
   // 1. Preparación del tablero
@@ -30,17 +31,19 @@
   }
 
   // 2. Lógica HÍBRIDA (Drag & Drop + Clic)
-  function selectCeo(ceo) {
+  function selectCeo(ceo: string) {
     activeCeo = ceo;
   }
 
-  function handleDragStart(e, ceo) {
+  function handleDragStart(e: DragEvent, ceo: string) {
     activeCeo = ceo;
     // Efecto visual al arrastrar
-    e.dataTransfer.effectAllowed = 'move';
+    if (e.dataTransfer) {
+      e.dataTransfer.effectAllowed = 'move';
+    }
   }
 
-  function placeCeo(slotIndex) {
+  function placeCeo(slotIndex: number) {
     if (!activeCeo) return;
 
     // Si ya había alguien en ese hueco, lo devolvemos a la mesa (pool)
@@ -63,7 +66,7 @@
     }
   }
 
-  function returnToPool(slotIndex) {
+  function returnToPool(slotIndex: number) {
     const ceoToReturn = slots[slotIndex];
     if (ceoToReturn) {
       ceosPool = [...ceosPool, ceoToReturn];

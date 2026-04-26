@@ -1,19 +1,20 @@
-<script>
+<script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
+  import type { Tweet } from '@projectTypes/tweets';
 
-  export let item;
-  export let texts;
-  export let locale;
-  export let status;
-  export let showDramaticColor;
-  
+  export let item: Tweet;
+  export let texts: Record<string, string>;
+  export let locale: string;
+  export let status: string;
+  export let showDramaticColor: boolean;
+
   // 1. ¡Nueva Prop! Recibimos la función del padre directamente
-  export let onAnswer; 
+  export let onAnswer: (result: { isCorrect: boolean }) => void;
 
   let isCorrect = false;
 
-  function guess(direction) {
+  function guess(direction: 'higher' | 'lower') {
     isCorrect = direction === (item.stockChange >= 0 ? 'higher' : 'lower');
     
     // 2. Ejecutamos la función pasándole los datos directamente

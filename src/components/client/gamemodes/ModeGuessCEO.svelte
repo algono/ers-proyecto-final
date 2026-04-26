@@ -1,18 +1,19 @@
-<script>
+<script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
+  import type { Tweet } from '@projectTypes/tweets';
 
   // Props recibidas desde Game.svelte
-  export let item;
-  export let data; 
-  export let texts;
-  export let status;
-  export let showDramaticColor;
-  export let onAnswer = () => { console.warn("Falta prop onAnswer") };
+  export let item: Tweet;
+  export let data: Tweet[];
+  export let texts: Record<string, string>;
+  export let status: string;
+  export let showDramaticColor: boolean;
+  export let onAnswer: (result: { isCorrect: boolean }) => void;
 
-  let options = [];
+  let options: string[] = [];
   let isCorrect = false;
-  let selectedCEO = null;
+  let selectedCEO: string | null = null;
 
   // Cada vez que 'item' cambia (pasamos al siguiente turno), 
   // recalculamos las opciones aleatorias.
@@ -28,7 +29,7 @@
     selectedCEO = null; // Reseteamos selección al cambiar de turno
   }
 
-  function guess(chosenOption) {
+  function guess(chosenOption: string) {
     selectedCEO = chosenOption;
     isCorrect = chosenOption === item.ceo;
     onAnswer({ isCorrect });

@@ -3,7 +3,7 @@
 import Layout from '@layouts/Layout.astro';
 import GameSvelte from '@components/client/Game.svelte';
 
-import { PROJECT_NAME } from '@constants';
+import { PROJECT_NAME, type GameMode } from '@constants';
 
 import { tweets } from '@utils/tweets';
 
@@ -26,7 +26,7 @@ const gameTranslatedTexts = translationsForLocaleWithPrefix(locale, 'game.');
 // const formattedData = ...
 
 interface Props {
-  gameMode?: 'classic' | 'guess-ceo' | 'stocks-only' | 'who-said-what';
+  gameMode?: GameMode;
 }
 
 const { gameMode = 'classic' } = Astro.props;

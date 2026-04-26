@@ -10,6 +10,7 @@
       "@pages/*": ["./src/pages/*"],
       "@scripts/*": ["./src/scripts/*"],
       "@styles/*": ["./src/styles/*"],
+      "@projectTypes/*": ["./src/types/*"], // @types es palabra reservada, así que usamos @projectTypes
       "@utils/*": ["./src/utils/*"],
       "@languages": ["./src/languages.ts"],
       "@constants": ["./src/constants.ts"]
