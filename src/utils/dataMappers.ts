@@ -111,7 +111,7 @@ export function formatGuessCEO(stocks: PeakData[], tweets: Tweet[], links: Stock
   // Tomamos de base el formato Classic pero con opciones de CEO
   return formatClassic(stocks, tweets, links).map(item => ({
     ...item,
-    options: generateOptions(item.ceo, allAuthorNames)
+    options: generateOptions(item.tweetAuthorDisplayName, allAuthorNames)
   }));
 }
 
