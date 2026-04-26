@@ -89,13 +89,12 @@
   }
   .buttons {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 0.75rem;
     margin-top: 1rem;
   }
   button.ceo-btn {
-    padding: 0.85rem 1.5rem;
-    font-size: 1.1rem;
     border: 2px solid #3b82f6;
     background: transparent;
     color: white;
@@ -104,6 +103,16 @@
     font-weight: bold;
     transition: all 0.2s ease;
     text-align: left;
+
+    /* MAGIA 1: Padding fluido (Arriba/Abajo | Izquierda/Derecha) */
+    padding: clamp(0.6rem, 2vw, 1rem) clamp(0.8rem, 3vw, 1.5rem);
+    
+    /* MAGIA 2: Letra fluida (Mínimo 13px | Ideal | Máximo ~18px) */
+    font-size: clamp(0.85rem, 3vw, 1.1rem);
+
+    /* MAGIA 3: Sobrescribir el "hacha" para que solo rompa por palabras enteras */
+    word-break: normal;
+    overflow-wrap: break-word;
   }
   button.ceo-btn:hover {
     background: rgba(59, 130, 246, 0.1);

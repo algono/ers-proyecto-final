@@ -303,7 +303,8 @@
   /* 3. Contenedor del juego */
   .game-container {
     flex: 1.2;
-    padding-inline: 2rem;
+    /* Mínimo 1rem (móvil), ideal 5% del ancho de la pantalla (fluido), Máximo 2rem (PC) */
+    padding-inline: clamp(1rem, 5vw, 2rem);
     padding-block: 1rem;
     display: flex;
     flex-direction: column;
@@ -339,14 +340,21 @@
     justify-content: center;
     text-align: center;
     padding: 1rem;
+
+    /* Obliga al texto largo (como una URL o un ticker extraño) a saltar de línea 
+   en lugar de salirse de la caja y romper el móvil */
+    overflow-wrap: anywhere; 
+    word-break: break-word; 
+
+    /* Si usas flexbox dentro de la tarjeta, asegúrate de que tiene esto 
+      para que los elementos puedan encogerse por debajo de su contenido interno */
+    min-width: 0;
   }
 
   /* 5. Botones usando tus variables globales */
   button.main-btn {
     background: var(--color-logo-primary); /* Verde Neón */
     color: var(--color-secondary); /* Texto negro para contraste */
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -354,6 +362,16 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.2s;
+
+    /* MAGIA 1: Padding fluido (Arriba/Abajo | Izquierda/Derecha) */
+    padding: clamp(0.6rem, 2vw, 1rem) clamp(0.8rem, 3vw, 1.5rem);
+    
+    /* MAGIA 2: Letra fluida (Mínimo 13px | Ideal | Máximo ~18px) */
+    font-size: clamp(0.85rem, 3vw, 1.1rem);
+
+    /* MAGIA 3: Sobrescribir el "hacha" para que solo rompa por palabras enteras */
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   button.main-btn:hover {
