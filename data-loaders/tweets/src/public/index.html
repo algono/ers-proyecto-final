@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twitter Scraper</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d1117;
+      --surface:   #161b22;
+      --surface2:  #21262d;
+      --border:    #30363d;
+      --text:      #e6edf3;
+      --muted:     #8b949e;
+      --blue:      #1d9bf0;
+      --green:     #238636;
+      --red:       #da3633;
+      --yellow:    #d29922;
+      --radius:    8px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .page { max-width: 1140px; margin: 0 auto; }
+
+    /* ── Header ─────────────────────────── */
+    .header {
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-left { display: flex; align-items: center; gap: 0.6rem; }
+    .header-left h1 { font-size: 1.25rem; font-weight: 700; color: #fff; }
+
+    .stats-bar {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding: 0.35rem 0.9rem;
+      white-space: nowrap;
+    }
+
+    .stats-bar strong { color: var(--text); }
+
+    /* ── Cards ──────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+    }
+
+    .card-header {
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .card-header h2 { font-size: 0.9rem; font-weight: 600; color: #fff; }
+    .badge {
+      background: var(--surface2);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      padding: 0.15rem 0.5rem;
+    }
+
+    .card-body { padding: 1rem; }
+
+    /* ── Form controls ──────────────────── */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: flex-end;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 0.3rem; }
+    .field.grow { flex: 1; min-width: 140px; }
+
+    label {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 0.88rem;
+      padding: 0.5rem 0.7rem;
+      transition: border-color .15s;
+      width: 100%;
+    }
+
+    input:focus, select:focus { border-color: var(--blue); outline: none; }
+
+    button {
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.52rem 1rem;
+      transition: opacity .15s, transform .1s;
+      white-space: nowrap;
+      align-self: flex-end;
+    }
+
+    button:active  { transform: scale(0.97); }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .btn-blue   { background: var(--blue);  color: #fff; }
+    .btn-green  { background: var(--green); color: #fff; }
+    .btn-ghost  { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+    .btn-blue:hover:not(:disabled),
+    .btn-green:hover:not(:disabled) { opacity: 0.82; }
+    .btn-ghost:hover:not(:disabled) { border-color: var(--muted); }
+
+    /* ── Status messages ────────────────── */
+    .status {
+      border-radius: 6px;
+      display: none;
+      font-size: 0.82rem;
+      margin-top: 0.75rem;
+      padding: 0.55rem 0.85rem;
+    }
+
+    .status.info    { background: #0c2d6b44; border: 1px solid var(--blue);   color: #79c0ff; display: block; }
+    .status.success { background: #0d332044; border: 1px solid var(--green);  color: #56d364; display: block; }
+    .status.error   { background: #3d0c0c44; border: 1px solid var(--red);    color: #ff7b72; display: block; }
+
+    /* ── Results table ──────────────────── */
+    .table-wrap {
+      border-radius: 6px;
+      margin-top: 1rem;
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      min-width: 700px;
+      width: 100%;
+    }
+
+    thead th {
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.55rem 0.75rem;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    tbody tr { border-bottom: 1px solid var(--surface2); }
+    tbody tr:hover { background: #1c2128; }
+    tbody tr:last-child { border-bottom: none; }
+
+    td { padding: 0.65rem 0.75rem; vertical-align: top; color: var(--text); }
+
+    .td-rank   { color: var(--muted); font-size: 0.75rem; text-align: center; width: 36px; }
+    .td-author { white-space: nowrap; }
+    .td-name   { font-weight: 600; }
+    .td-handle { color: var(--blue); font-size: 0.78rem; }
+    .td-text   { max-width: 360px; word-break: break-word; color: #c9d1d9; }
+    .td-num    { color: var(--muted); text-align: right; white-space: nowrap; }
+    .td-date   { color: var(--muted); font-size: 0.75rem; white-space: nowrap; }
+
+    .empty { color: var(--muted); padding: 2rem; text-align: center; }
+
+    /* ── Progress bar ───────────────────── */
+    .progress-container {
+      display: none;
+      margin-top: 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+    }
+
+    .progress-container.visible { display: block; }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.45rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .progress-label {
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .progress-right {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .progress-track {
+      background: var(--surface2);
+      border-radius: 4px;
+      height: 8px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .progress-bar {
+      background: var(--blue);
+      border-radius: 4px;
+      height: 100%;
+      transition: width 0.4s ease, background 0.3s;
+      width: 0%;
+    }
+
+    /* ── Divider ────────────────────────── */
+    .row + .row { margin-top: 0.75rem; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#1d9bf0">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.734-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
+      </svg>
+      <h1>Twitter Scraper</h1>
+    </div>
+    <div class="stats-bar" id="stats-bar">Loading…</div>
+  </div>
+
+  <!-- Section 1: Scrape a user -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Scrape a user</h2>
+      <span class="badge">Python → twikit</span>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="field grow">
+          <label for="scrape-user">Username (without @)</label>
+          <input type="text" id="scrape-user" placeholder="elonmusk" autocomplete="off" />
+        </div>
+        <div class="field" style="min-width:120px;">
+          <label for="scrape-pages">Pages</label>
+          <input type="number" id="scrape-pages" value="10" min="1" max="200" title="Each page ≈20 tweets. Use 50+ to reach back to 2022." />
+        </div>
+        <button class="btn-blue" id="btn-scrape">Start scraping</button>
+      </div>
+      <div style="margin-top:.35rem;">
+        <small style="color:var(--muted);">Tip: each page ≈ 20 tweets. Use 50+ pages to reach back to 2022.</small>
+      </div>
+      <div class="status" id="scrape-status"></div>
+
+      <!-- Progress bar (shown when scraping) -->
+      <div class="progress-container" id="progress-container">
+        <div class="progress-meta">
+          <span class="progress-label" id="progress-label">Scraping…</span>
+          <div class="progress-right">
+            <span id="progress-pages">0 / 0 pages</span>
+            <span id="progress-oldest"></span>
+            <span id="progress-fetched">0 tweets fetched</span>
+          </div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Top viral -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Top viral tweets</h2>
+      <span class="badge" id="viral-count-badge">—</span>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="field">
+          <label for="viral-from">From</label>
+          <input type="date" id="viral-from" />
+        </div>
+        <div class="field">
+          <label for="viral-to">To</label>
+          <input type="date" id="viral-to" />
+        </div>
+        <div class="field grow">
+          <label for="viral-user">Username filter (optional)</label>
+          <input type="text" id="viral-user" placeholder="all users" autocomplete="off" />
+        </div>
+        <div class="field" style="min-width:90px;">
+          <label for="viral-limit">Limit</label>
+          <select id="viral-limit">
+            <option value="10">10</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+        <button class="btn-blue" id="btn-viral">Show top viral</button>
+      </div>
+      <div class="status" id="viral-status"></div>
+      <div class="table-wrap" id="viral-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th><th>Author</th><th>Tweet</th>
+              <th>Views</th><th>Likes</th><th>Retweets</th><th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="viral-body">
+            <tr><td colspan="7" class="empty">Click "Show top viral" to load results.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Browse user -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Browse user</h2>
+      <span class="badge" id="browse-count-badge">—</span>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="field grow">
+          <label for="browse-user">User</label>
+          <select id="browse-user">
+            <option value="">— select a user —</option>
+          </select>
+        </div>
+        <div class="field" style="min-width:140px;">
+          <label for="browse-sort">Sort by</label>
+          <select id="browse-sort">
+            <option value="views">Views</option>
+            <option value="likes">Likes</option>
+            <option value="retweets">Retweets</option>
+            <option value="created_at">Date</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="browse-from">From</label>
+          <input type="date" id="browse-from" />
+        </div>
+        <div class="field">
+          <label for="browse-to">To</label>
+          <input type="date" id="browse-to" />
+        </div>
+        <div class="field" style="min-width:80px;">
+          <label for="browse-limit">Limit</label>
+          <select id="browse-limit">
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <button class="btn-blue" id="btn-browse">Browse</button>
+        <button class="btn-ghost" id="btn-download-json">Download JSON</button>
+      </div>
+      <div class="status" id="browse-status"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th><th>Author</th><th>Tweet</th>
+              <th>Views</th><th>Likes</th><th>Retweets</th><th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="browse-body">
+            <tr><td colspan="7" class="empty">Select a user and click "Browse".</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+  // ── Helpers ──────────────────────────────────────────────────────────────────
+
+  function qs(id) { return document.getElementById(id); }
+
+  function setStatus(el, msg, type) {
+    el.textContent = msg;
+    el.className = "status " + (type || "info");
+  }
+
+  function clearStatus(el) { el.className = "status"; el.textContent = ""; }
+
+  function fmt(n) {
+    if (n == null) return "—";
+    if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + "M";
+    if (n >= 1_000)     return (n / 1_000).toFixed(1)     + "K";
+    return String(n);
+  }
+
+  function trunc(s, n) {
+    if (!s) return "";
+    return s.length > n ? s.slice(0, n) + "…" : s;
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return "—";
+    try { return new Date(iso).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }); }
+    catch { return iso.slice(0, 10); }
+  }
+
+  function buildTweetRows(tweets) {
+    if (!tweets.length) return `<tr><td colspan="7" class="empty">No tweets found.</td></tr>`;
+    return tweets.map((t, i) => `
+      <tr>
+        <td class="td-rank">${i + 1}</td>
+        <td class="td-author">
+          <div class="td-name">${t.display_name || t.username}</div>
+          <div class="td-handle">@${t.username}</div>
+        </td>
+        <td class="td-text">${trunc(t.text, 120)}</td>
+        <td class="td-num">${fmt(t.views)}</td>
+        <td class="td-num">${fmt(t.likes)}</td>
+        <td class="td-num">${fmt(t.retweets)}</td>
+        <td class="td-date">${fmtDate(t.created_at)}</td>
+      </tr>
+    `).join("");
+  }
+
+  // ── Stats bar ─────────────────────────────────────────────────────────────────
+
+  async function refreshStats() {
+    try {
+      const users = await fetch("/api/users").then(r => r.json());
+      const total = users.reduce((s, u) => s + (u.total_tweets || 0), 0);
+      const last  = users.map(u => u.last_scraped).filter(Boolean).sort().reverse()[0];
+      const lastStr = last ? fmtDate(last) : "never";
+      qs("stats-bar").innerHTML =
+        `<strong>${users.length}</strong> users tracked &nbsp;·&nbsp; ` +
+        `<strong>${total.toLocaleString()}</strong> total tweets &nbsp;·&nbsp; ` +
+        `last updated <strong>${lastStr}</strong>`;
+      populateUserDropdown(users);
+    } catch {
+      qs("stats-bar").textContent = "Could not load stats";
+    }
+  }
+
+  // ── User dropdown ─────────────────────────────────────────────────────────────
+
+  function populateUserDropdown(users) {
+    const sel = qs("browse-user");
+    const cur = sel.value;
+    sel.innerHTML = `<option value="">— select a user —</option>` +
+      users.map(u => `<option value="${u.username}">${u.display_name} (@${u.username}) — ${u.total_tweets} tweets</option>`).join("");
+    if (cur) sel.value = cur;
+  }
+
+  // ── Section 1: Scrape ─────────────────────────────────────────────────────────
+
+  let activeSSE = null;
+
+  qs("btn-scrape").addEventListener("click", async () => {
+    const username = qs("scrape-user").value.trim().replace(/^@/, "");
+    const pages    = parseInt(qs("scrape-pages").value) || 10;
+    const statusEl = qs("scrape-status");
+
+    if (!username) { setStatus(statusEl, "Please enter a username.", "error"); return; }
+
+    // Close any existing SSE stream
+    if (activeSSE) { activeSSE.close(); activeSSE = null; }
+
+    setStatus(statusEl, `Starting scrape for @${username} (${pages} pages)…`, "info");
+    qs("btn-scrape").disabled = true;
+
+    // Reset progress bar
+    const container = qs("progress-container");
+    const bar       = qs("progress-bar");
+    container.classList.add("visible");
+    bar.style.width      = "0%";
+    bar.style.background = "var(--blue)";
+    qs("progress-label").textContent   = `Scraping @${username}…`;
+    qs("progress-pages").textContent   = `0 / ${pages} pages`;
+    qs("progress-oldest").textContent  = "";
+    qs("progress-fetched").textContent = "0 tweets fetched";
+
+    try {
+      const res  = await fetch("/api/scrape", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, pages }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        setStatus(statusEl, data.error || "Error starting scrape", "error");
+        qs("btn-scrape").disabled = false;
+        return;
+      }
+
+      setStatus(statusEl, data.message + " — watching progress…", "info");
+    } catch (err) {
+      setStatus(statusEl, "Failed to reach server: " + err.message, "error");
+      qs("btn-scrape").disabled = false;
+      return;
+    }
+
+    // Open SSE stream
+    const sse = new EventSource(`/api/scrape/stream/${encodeURIComponent(username)}`);
+    activeSSE = sse;
+
+    sse.onmessage = (e) => {
+      let p;
+      try { p = JSON.parse(e.data); } catch { return; }
+
+      if (p.status === "not_found") return;
+
+      const pct = p.total_pages > 0
+        ? Math.min(100, Math.round((p.current_page / p.total_pages) * 100))
+        : 0;
+
+      bar.style.width = pct + "%";
+      qs("progress-pages").textContent   = `${p.current_page} / ${p.total_pages} pages`;
+      qs("progress-oldest").textContent  = p.oldest_date ? "Oldest: " + p.oldest_date : "";
+      qs("progress-fetched").textContent = `${p.total_fetched} tweets fetched`;
+
+      if (p.status === "done") {
+        bar.style.width      = "100%";
+        bar.style.background = "#22c55e";
+        qs("progress-label").textContent = `Done!  ${p.total_fetched} tweets saved for @${username}`;
+        setStatus(qs("scrape-status"), `Scrape complete — ${p.total_fetched} tweets fetched.`, "success");
+        sse.close(); activeSSE = null;
+        qs("btn-scrape").disabled = false;
+        refreshStats();
+      } else if (p.status === "error") {
+        bar.style.background = "#ef4444";
+        qs("progress-label").textContent = `Error scraping @${username}`;
+        setStatus(qs("scrape-status"), "Scrape ended with an error. Check server logs.", "error");
+        sse.close(); activeSSE = null;
+        qs("btn-scrape").disabled = false;
+      } else {
+        qs("progress-label").textContent = `Scraping @${username}…`;
+      }
+    };
+
+    sse.onerror = () => {
+      if (sse.readyState === EventSource.CLOSED) return;
+      sse.close(); activeSSE = null;
+      qs("btn-scrape").disabled = false;
+    };
+  });
+
+  // ── Section 2: Viral ──────────────────────────────────────────────────────────
+
+  qs("btn-viral").addEventListener("click", async () => {
+    const statusEl = qs("viral-status");
+    const params   = new URLSearchParams();
+    const from     = qs("viral-from").value;
+    const to       = qs("viral-to").value;
+    const user     = qs("viral-user").value.trim().replace(/^@/, "");
+    const limit    = qs("viral-limit").value;
+
+    if (from)  params.set("date_from", from);
+    if (to)    params.set("date_to",   to);
+    if (user)  params.set("username",  user);
+    if (limit) params.set("limit",     limit);
+
+    setStatus(statusEl, "Loading…", "info");
+
+    try {
+      const tweets = await fetch("/api/tweets/viral/top?" + params).then(r => r.json());
+
+      if (!Array.isArray(tweets)) throw new Error(tweets.error || "Unexpected response");
+
+      qs("viral-body").innerHTML = buildTweetRows(tweets);
+      qs("viral-count-badge").textContent = `${tweets.length} tweets`;
+      clearStatus(statusEl);
+    } catch (err) {
+      setStatus(statusEl, "Error: " + err.message, "error");
+    }
+  });
+
+  // ── Section 3: Browse ─────────────────────────────────────────────────────────
+
+  qs("btn-browse").addEventListener("click", async () => {
+    const username = qs("browse-user").value;
+    const statusEl = qs("browse-status");
+
+    if (!username) { setStatus(statusEl, "Please select a user.", "error"); return; }
+
+    const params = new URLSearchParams();
+    const from   = qs("browse-from").value;
+    const to     = qs("browse-to").value;
+    const sort   = qs("browse-sort").value;
+    const limit  = qs("browse-limit").value;
+
+    if (from)  params.set("date_from", from);
+    if (to)    params.set("date_to",   to);
+    if (sort)  params.set("sort_by",   sort);
+    if (limit) params.set("limit",     limit);
+
+    setStatus(statusEl, "Loading…", "info");
+
+    try {
+      const tweets = await fetch(`/api/tweets/${username}?` + params).then(r => r.json());
+
+      if (!Array.isArray(tweets)) throw new Error(tweets.error || "Unexpected response");
+
+      qs("browse-body").innerHTML = buildTweetRows(tweets);
+      qs("browse-count-badge").textContent = `${tweets.length} tweets`;
+      clearStatus(statusEl);
+    } catch (err) {
+      setStatus(statusEl, "Error: " + err.message, "error");
+    }
+  });
+
+  qs("btn-download-json").addEventListener("click", () => {
+    const username = qs("browse-user").value;
+    if (!username) { alert("Select a user first."); return; }
+    window.location.href = `/api/export/${username}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────────
+
+  // Default date range: 4 years ago → today
+  const today    = new Date().toISOString().slice(0, 10);
+  const fourAgo  = new Date(Date.now() - 4 * 365.25 * 24 * 3600 * 1000).toISOString().slice(0, 10);
+  qs("viral-from").value = fourAgo;
+  qs("viral-to").value   = today;
+
+  refreshStats();
+  setInterval(refreshStats, 60_000);
+</script>
+</body>
+</html>
