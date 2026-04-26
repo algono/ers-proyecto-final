@@ -1,3 +1,10 @@
+# CUSTOM: Dependencias dentro de data-loaders, ya sea de node o de python
+data-loaders/**/node_modules/
+data-loaders/**/__pycache__/
+data-loaders/**/.venv/
+data-loaders/**/venv/
+data-loaders/**/dist/
+
 # build output
 dist/
 # generated types
