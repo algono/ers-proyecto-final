@@ -23,50 +23,83 @@
   }
 </script>
 
-<p class="ceo">{item.ceo} {texts.tweeted}:</p>
-<h3 class="tweet">"{item.tweet}"</h3>
-<p class="date">{new Date(item.date).toLocaleDateString(locale === 'en' ? 'en-GB' : locale)}</p>
+<div class="mode-wrapper" class:is-revealed={status === 'revealed'}>
+  <p class="ceo">{item.ceo} {texts.tweeted}:</p>
+  <h3 class="tweet">"{item.tweet}"</h3>
+  <p class="date">{new Date(item.date).toLocaleDateString(locale === 'en' ? 'en-GB' : locale)}</p>
 
-{#if status === 'playing'}
-  <div class="actions" in:fade>
-    <p>{texts.what_happened}</p>
-    <div class="buttons">
-      <button class="up" on:click={() => guess('higher')}>📈 {texts.higher_button}</button>
-      <button class="down" on:click={() => guess('lower')}>📉 {texts.lower_button}</button>
+  {#if status === 'playing'}
+    <div class="actions" in:fade>
+      <p>{texts.what_happened}</p>
+      <div class="buttons">
+        <button class="up" on:click={() => guess('higher')}>📈 {texts.higher_button}</button>
+        <button class="down" on:click={() => guess('lower')}>📉 {texts.lower_button}</button>
+      </div>
     </div>
-  </div>
-{/if}
+  {/if}
 
-{#if status === 'revealed'}
-  <div class="result" in:fade>
-    <h3>
-      {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
-    </h3>
-    <p>{item.company} ({item.stockCompany}) - {texts.change_text} <strong>{item.stockChange}%</strong></p>
+  {#if status === 'revealed'}
+    <div class="result" in:fade>
+      <h3>
+        {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
+      </h3>
+      <p>{item.company} ({item.stockCompany}) - {texts.change_text} <strong>{item.stockChange}%</strong></p>
 
-    <StockChart 
-      history={item.history} 
-      stockChange={item.stockChange} 
-      showDramaticColor={showDramaticColor} 
-    />
-  </div>
-{/if}
+      <StockChart 
+        history={item.history} 
+        stockChange={item.stockChange} 
+        showDramaticColor={showDramaticColor} 
+      />
+    </div>
+  {/if}
+</div>
 
 <style>
-  /* Solo los estilos que pertenecen a los elementos internos de este modo */
+  /* ESTADO NORMAL (Jugando) */
+  .mode-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
   .ceo {
     margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
   }
+
   .tweet {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Grande por defecto */
     font-style: italic;
     margin-bottom: 2rem;
+    line-height: 1.4;
+    transition: all 0.3s ease; /* ¡Clave para que no dé un salto brusco! */
+  }
+
+  /* ESTADO REVELADO (is-revealed) */
+  /* Svelte aplicará esto automáticamente cuando status sea 'revealed' */
+  .is-revealed .ceo {
+    font-size: 0.85rem; /* Hacemos el nombre más pequeño */
+    margin-bottom: 0.2rem;
+    color: var(--color-semi-transparent-white);
+  }
+
+  .is-revealed .tweet {
+    font-size: 1.1rem; /* Encogemos el tweet */
+    margin-bottom: 1rem; /* Quitamos espacio por debajo */
+    opacity: 0.8; /* Lo apagamos un poco para dar foco a la gráfica */
   }
   .date {
     font-size: 0.9rem;
     color: #94a3b8;
     margin-bottom: 1rem;
   }
+
+  .is-revealed .date {
+    font-size: 0.75rem;
+  }
+
   .buttons {
     display: flex;
     gap: 1rem;

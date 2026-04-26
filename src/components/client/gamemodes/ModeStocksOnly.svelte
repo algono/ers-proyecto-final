@@ -18,38 +18,51 @@
   }
 </script>
 
-<div class="stocks-only-header" in:fade>
-  <h2 class="company-name">{item.company}</h2>
-  <div class="ticker">{item.stockCompany}</div>
-  <p class="date">{new Date(item.date).toLocaleDateString(locale === 'en' ? 'en-GB' : locale)}</p>
+<div class="mode-wrapper" class:is-revealed={status === 'revealed'}>
+  <div class="stocks-only-header" in:fade>
+    <h2 class="company-name">{item.company}</h2>
+    <div class="ticker">{item.stockCompany}</div>
+    <p class="date">{new Date(item.date).toLocaleDateString(locale === 'en' ? 'en-GB' : locale)}</p>
+  </div>
+
+  {#if status === 'playing'}
+    <div class="actions" in:fade>
+      <p class="question">{texts.stocks_only_question}</p>
+      <div class="buttons">
+        <button class="up" on:click={() => guess('higher')}>📈 {texts.higher_button}</button>
+        <button class="down" on:click={() => guess('lower')}>📉 {texts.lower_button}</button>
+      </div>
+    </div>
+  {/if}
+
+  {#if status === 'revealed'}
+    <div class="result" in:fade>
+      <h3>
+        {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
+      </h3>
+      <p>{texts.change_text} <strong>{item.stockChange}%</strong></p>
+
+      <StockChart 
+        history={item.history} 
+        stockChange={item.stockChange} 
+        showDramaticColor={showDramaticColor} 
+      />
+    </div>
+  {/if}
 </div>
 
-{#if status === 'playing'}
-  <div class="actions" in:fade>
-    <p class="question">{texts.stocks_only_question}</p>
-    <div class="buttons">
-      <button class="up" on:click={() => guess('higher')}>📈 {texts.higher_button}</button>
-      <button class="down" on:click={() => guess('lower')}>📉 {texts.lower_button}</button>
-    </div>
-  </div>
-{/if}
-
-{#if status === 'revealed'}
-  <div class="result" in:fade>
-    <h3>
-      {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
-    </h3>
-    <p>{texts.change_text} <strong>{item.stockChange}%</strong></p>
-
-    <StockChart 
-      history={item.history} 
-      stockChange={item.stockChange} 
-      showDramaticColor={showDramaticColor} 
-    />
-  </div>
-{/if}
-
 <style>
+  .mode-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stocks-only-header > * {
+    transition: all 0.3s ease;
+  }
+
   .company-name {
     font-size: 2rem;
     margin: 0;
@@ -69,6 +82,20 @@
     font-size: 1rem;
     color: #94a3b8;
   }
+
+  .is-revealed .company-name {
+    font-size: 1.5rem;
+    color: #e2e8f0;
+  }
+
+  .is-revealed .ticker {
+    font-size: 0.8rem;
+  }
+
+  .is-revealed .date {
+    font-size: 0.75rem;
+  }
+
   .question {
     color: #e2e8f0;
     margin-bottom: 1.5rem;

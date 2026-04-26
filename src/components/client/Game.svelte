@@ -257,6 +257,7 @@
     min-height: 400px;
     display: flex;
     flex-direction: column;
+    transition: min-height 0.3s ease, height 0.3s ease;
   }
 
   .card-content {

@@ -35,53 +35,69 @@
   }
 </script>
 
-<h3 class="tweet">"{item.tweet}"</h3>
+<div class="mode-wrapper" class:is-revealed={status === 'revealed'}>
+  <h3 class="tweet">"{item.tweet}"</h3>
 
-{#if status === 'playing'}
-  <div class="actions" in:fade>
-    <p class="question">{texts.who_tweeted}</p>
-    
-    <div class="buttons">
-      {#each options as option}
-        <button class="ceo-btn" on:click={() => guess(option)}>
-          👤 {option}
-        </button>
-      {/each}
+  {#if status === 'playing'}
+    <div class="actions" in:fade>
+      <p class="question">{texts.who_tweeted}</p>
+      
+      <div class="buttons">
+        {#each options as option}
+          <button class="ceo-btn" on:click={() => guess(option)}>
+            👤 {option}
+          </button>
+        {/each}
+      </div>
     </div>
-  </div>
-{/if}
+  {/if}
 
-{#if status === 'revealed'}
-  <div class="result" in:fade>
-    <h3>
-      {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
-    </h3>
-    
-    <p>
-      {texts.revealed_info_by} <strong>{item.ceo}</strong> ({item.company}). 
-      <br>
-      {texts.revealed_info_after} 
-      <strong>
-        {item.stockChange >= 0 ? texts.revealed_info_up : texts.revealed_info_down}
-      </strong> 
-      un <strong>{item.stockChange}%</strong>
-    </p>
+  {#if status === 'revealed'}
+    <div class="result" in:fade>
+      <h3>
+        {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
+      </h3>
+      
+      <p>
+        {texts.revealed_info_by} <strong>{item.ceo}</strong> ({item.company}). 
+        <br>
+        {texts.revealed_info_after} 
+        <strong>
+          {item.stockChange >= 0 ? texts.revealed_info_up : texts.revealed_info_down}
+        </strong> 
+        un <strong>{item.stockChange}%</strong>
+      </p>
 
-    <StockChart 
-      history={item.history} 
-      stockChange={item.stockChange} 
-      showDramaticColor={showDramaticColor} 
-    />
-  </div>
-{/if}
+      <StockChart 
+        history={item.history} 
+        stockChange={item.stockChange} 
+        showDramaticColor={showDramaticColor} 
+      />
+    </div>
+  {/if}
+</div>
 
 <style>
+  .mode-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .tweet {
     font-size: 1.5rem;
     font-style: italic;
     margin-bottom: 1.5rem;
     line-height: 1.4;
+    transition: all 0.3s ease; /* ¡Clave para que no dé un salto brusco! */
   }
+
+  .is-revealed .tweet {
+    font-size: 1.1rem; /* Encogemos el tweet */
+    margin-bottom: 1rem; /* Quitamos espacio por debajo */
+    opacity: 0.8; /* Lo apagamos un poco para dar foco a la gráfica */
+  }
+
   .question {
     color: #94a3b8;
     margin-bottom: 1rem;
