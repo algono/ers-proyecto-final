@@ -122,11 +122,17 @@
         status = 'playing';
         showDramaticColor = false;
       } else {
-        status = 'gameover'; // ¡Ganó el juego! (Se acabaron los datos)
+        gameover(); // ¡Ganó el juego! (Se acabaron los datos)
       }
     } else {
-      status = 'gameover'; // Falló
+      gameover(); // Falló
     }
+  }
+
+  function gameover() {
+    // Si el jugador falla o se acaban las preguntas, terminamos el juego
+    status = 'gameover';
+    cleanupStorage(); // Limpiamos el guardado al acabar para que la próxima partida sea fresca
   }
 
   function restart() {
@@ -135,9 +141,16 @@
     status = 'playing';
     showDramaticColor = false;
     lastAnswerWasCorrect = false;
-    // Al reiniciar, generamos una semilla nueva para que la partida sea distinta
+
+    // Al acabar el juego, generamos una semilla nueva para que la partida sea distinta
     gameSeed = Math.floor(Math.random() * 1000000);
-    // Limpiamos el guardado
+
+    // Limpiamos el guardado para que no haya conflictos con la nueva partida
+    cleanupStorage();
+  }
+
+  function cleanupStorage() {
+    // Limpiamos el guardado si existe (y si no, sessionStorage no hace nada)
     if (typeof sessionStorage !== 'undefined') {
       sessionStorage.removeItem('finance_game_state');
     }
