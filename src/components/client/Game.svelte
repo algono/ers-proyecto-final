@@ -50,9 +50,13 @@
         data = formatStocksOnly(stocksModSo.default);
         break;
       case 'who-said-what':
-        // Cargamos los tweets
-        const tweetsModWs = await import('../../content/data/tweets.json');
-        data = formatWhoSaidWhat(tweetsModWs.default);
+        // Cargamos los 3 a la vez en paralelo
+        const [stocksModWs, tweetsModWs, linksModWs] = await Promise.all([
+          import('../../content/data/stocks.json'),
+          import('../../content/data/tweets.json'),
+          import('../../content/data/stock_tweets.json')
+        ]);
+        data = formatWhoSaidWhat(stocksModWs.default, tweetsModWs.default, linksModWs.default);
         break;
     }
     

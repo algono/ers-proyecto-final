@@ -5,30 +5,22 @@
 
   // Props recibidas desde Game.svelte
   export let item: GameItem;
-  export let data: GameItem[];
   export let texts: Record<string, string>;
   export let status: string;
   export let showDramaticColor: boolean;
   export let onAnswer: (result: { isCorrect: boolean }) => void;
 
-  let tweetsToMatch: GameItem[] = [];
   let ceosPool: string[] = [];
   let slots: (string | null)[] = [null, null]; // Los dos huecos vacíos
   let activeCeo: string | null = null; // Para el clic-to-slot o drag
   let isCorrect = false;
 
-  // 1. Preparación del tablero
-  $: if (item && data && status === 'playing') {
-    const otherItems = data.filter(d => d.ceo !== item.ceo);
-    const fakeItem = otherItems[Math.floor(Math.random() * otherItems.length)];
-    
-    if (fakeItem) {
-      // Barajamos los tweets para que el "correcto" no sea siempre el primero
-      tweetsToMatch = [item, fakeItem].sort(() => Math.random() - 0.5);
-      // Barajamos las "fichas" de los CEOs abajo
-      ceosPool = [item.ceo, fakeItem.ceo].sort(() => Math.random() - 0.5);
-      slots = [null, null];
-    }
+  // 1. Preparación del tablero usando item.matchData y item.options
+  $: if (item && status === 'playing') {
+    // Las opciones vienen del mapper (barajadas)
+    ceosPool = [...(item.options || [])];
+    slots = [null, null];
+    activeCeo = null;
   }
 
   // 2. Lógica HÍBRIDA (Drag & Drop + Clic)
@@ -77,9 +69,9 @@
   }
 
   function checkWinCondition() {
-    // Es correcto solo si AMBOS huecos coinciden con el CEO de ese tweet
-    const firstMatch = slots[0] === tweetsToMatch[0].ceo;
-    const secondMatch = slots[1] === tweetsToMatch[1].ceo;
+    // Es correcto solo si AMBOS huecos coinciden con el autor (CEO) de ese tweet
+    const firstMatch = slots[0] === item.matchData![0].tweetAuthorDisplayName;
+    const secondMatch = slots[1] === item.matchData![1].tweetAuthorDisplayName;
     
     isCorrect = firstMatch && secondMatch;
     
@@ -93,7 +85,7 @@
     <p class="instruction">{texts.match_instruction}</p>
     
     <div class="drop-zones">
-      {#each tweetsToMatch as tw, i}
+      {#each item.matchData as tw, i}
         <div class="tweet-row">
           <div class="tweet-bubble">"{tw.tweetText}"</div>
           
@@ -137,10 +129,10 @@
     </h3>
     
     <div class="side-by-side-charts">
-      {#each tweetsToMatch as tw}
+      {#each item.matchData as tw}
         <div class="chart-wrapper">
           <p class="ceo-result-name">
-            <strong>👤 {tw.ceo}</strong> <br>
+            <strong>👤 {tw.tweetAuthorDisplayName}</strong> <br>
             <span class="company-subtext">{tw.company} ({tw.ticker})</span>
           </p>
           <p class="stock-result-text">

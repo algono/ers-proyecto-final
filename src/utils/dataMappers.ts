@@ -73,7 +73,7 @@ export function formatStocksOnly(stocks: PeakData[]): GameItem[] {
   const result: GameItem[] = [];
 
   for (const stock of stocks) {
-    if (!stock.peaks || !stock.history) continue; // stock.history debe ser el historial de bolsa completo (puntos diarios)
+    if (!stock.peaks) continue;
 
     for (const peak of stock.peaks) {
       // Usamos tu helper de history, pasándole el historial de la acción y la fecha del pico
@@ -116,11 +116,13 @@ export function formatGuessCEO(stocks: PeakData[], tweets: Tweet[], links: Stock
 }
 
 // --- 4. MODO WHO SAID WHAT (Matching 2 Tweets) ---
-export function formatWhoSaidWhat(tweets: Tweet[]): GameItem[] {
+export function formatWhoSaidWhat(stocks: PeakData[], tweets: Tweet[], links: StockTweetLink[]): GameItem[] {
   const result: GameItem[] = [];
+
+  const classicItems: GameItem[] = formatClassic(stocks, tweets, links); // Partimos de los items del Classic para tener la info de los tweets y sus stocks (sin esto no podemos mostrar la gráfica cuando revelamos la respuesta)
   
   // 1. Clonamos y barajamos todos los tweets
-  const shuffled = [...tweets].sort(() => 0.5 - Math.random());
+  const shuffled = [...classicItems].sort(() => 0.5 - Math.random());
 
   // 2. Vamos emparejando de 2 en 2, asegurando que sean de distinto autor
   for (let i = 0; i < shuffled.length; i++) {
@@ -129,7 +131,7 @@ export function formatWhoSaidWhat(tweets: Tweet[]): GameItem[] {
     // Buscamos hacia adelante un tweet que sea de un autor distinto al primero
     const tweet2Index = shuffled.findIndex((t, idx) => {
       // Solo miramos los que están después del actual para no repetir parejas
-      return idx > i && t.display_name !== tweet1.display_name;
+      return idx > i && t.tweetAuthorDisplayName !== tweet1.tweetAuthorDisplayName;
     });
 
     if (tweet2Index !== -1) {
@@ -146,13 +148,9 @@ export function formatWhoSaidWhat(tweets: Tweet[]): GameItem[] {
         date: new Date().toISOString(),
         
         // Pasamos la info pura para que Svelte pinte las dos cajas
-        matchData: [
-          { id: tweet1.id, text: tweet1.text, author: tweet1.display_name },
-          { id: tweet2.id, text: tweet2.text, author: tweet2.display_name }
-        ],
-        
+        matchData: [tweet1, tweet2],
         // Pasamos los 2 nombres de los autores barajados para que el jugador los asigne
-        options: [tweet1.display_name, tweet2.display_name].sort(() => 0.5 - Math.random())
+        options: [tweet1.tweetAuthorDisplayName!, tweet2.tweetAuthorDisplayName!].sort(() => 0.5 - Math.random())
       });
     }
   }
