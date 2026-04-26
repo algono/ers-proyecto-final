@@ -1,0 +1,2949 @@
+{
+  "generatedAt": "2026-04-26T17:14:12.538Z",
+  "config": {
+    "zScoreThreshold": 2.5,
+    "absChangeThreshold": 4
+  },
+  "results": [
+    {
+      "company": "NVIDIA",
+      "ticker": "NVDA",
+      "ceo": "Jensen Huang",
+      "twitter_handle": "@jensenhuang",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.259509,
+      "stdDevPct": 3.248977,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-05-09",
+          "direction": "DOWN",
+          "changePct": -9.2369,
+          "zScore": -2.9229,
+          "close": 16.95,
+          "prevClose": 18.675
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -9.4726,
+          "zScore": -2.9954,
+          "close": 13.131,
+          "prevClose": 14.505
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 14.3293,
+          "zScore": 4.3305,
+          "close": 15.75,
+          "prevClose": 13.776
+        },
+        {
+          "date": "2023-02-23",
+          "direction": "UP",
+          "changePct": 14.0214,
+          "zScore": 4.2358,
+          "close": 23.664,
+          "prevClose": 20.754
+        },
+        {
+          "date": "2023-05-25",
+          "direction": "UP",
+          "changePct": 24.3696,
+          "zScore": 7.4208,
+          "close": 37.98,
+          "prevClose": 30.538
+        },
+        {
+          "date": "2024-02-22",
+          "direction": "UP",
+          "changePct": 16.4009,
+          "zScore": 4.9681,
+          "close": 78.538,
+          "prevClose": 67.472
+        },
+        {
+          "date": "2024-04-19",
+          "direction": "DOWN",
+          "changePct": -10.0046,
+          "zScore": -3.1592,
+          "close": 76.2,
+          "prevClose": 84.671
+        },
+        {
+          "date": "2024-09-03",
+          "direction": "DOWN",
+          "changePct": -9.525,
+          "zScore": -3.0116,
+          "close": 108,
+          "prevClose": 119.37
+        },
+        {
+          "date": "2025-01-27",
+          "direction": "DOWN",
+          "changePct": -16.9682,
+          "zScore": -5.3025,
+          "close": 118.42,
+          "prevClose": 142.62
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 18.7227,
+          "zScore": 5.6828,
+          "close": 114.33,
+          "prevClose": 96.3
+        }
+      ]
+    },
+    {
+      "company": "Apple",
+      "ticker": "AAPL",
+      "ceo": "Tim Cook",
+      "twitter_handle": "@tim_cook",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.070626,
+      "stdDevPct": 1.731135,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-01-28",
+          "direction": "UP",
+          "changePct": 6.9778,
+          "zScore": 3.99,
+          "close": 170.33,
+          "prevClose": 159.22
+        },
+        {
+          "date": "2022-05-05",
+          "direction": "DOWN",
+          "changePct": -5.5716,
+          "zScore": -3.2593,
+          "close": 156.77,
+          "prevClose": 166.02
+        },
+        {
+          "date": "2022-05-18",
+          "direction": "DOWN",
+          "changePct": -5.6419,
+          "zScore": -3.2999,
+          "close": 140.82,
+          "prevClose": 149.24
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -5.868,
+          "zScore": -3.4305,
+          "close": 153.84,
+          "prevClose": 163.43
+        },
+        {
+          "date": "2022-10-28",
+          "direction": "UP",
+          "changePct": 7.5553,
+          "zScore": 4.3235,
+          "close": 155.74,
+          "prevClose": 144.8
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 8.8975,
+          "zScore": 5.0989,
+          "close": 146.87,
+          "prevClose": 134.87
+        },
+        {
+          "date": "2024-06-11",
+          "direction": "UP",
+          "changePct": 7.2649,
+          "zScore": 4.1558,
+          "close": 207.15,
+          "prevClose": 193.12
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -9.2456,
+          "zScore": -5.3816,
+          "close": 203.19,
+          "prevClose": 223.89
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -7.2887,
+          "zScore": -4.2512,
+          "close": 188.38,
+          "prevClose": 203.19
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 15.3289,
+          "zScore": 8.814,
+          "close": 198.85,
+          "prevClose": 172.42
+        }
+      ]
+    },
+    {
+      "company": "Alphabet (Google)",
+      "ticker": "GOOGL",
+      "ceo": "Sundar Pichai",
+      "twitter_handle": "@sundarpichai",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.106041,
+      "stdDevPct": 1.948532,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-07-27",
+          "direction": "UP",
+          "changePct": 7.6557,
+          "zScore": 3.8745,
+          "close": 113.06,
+          "prevClose": 105.02
+        },
+        {
+          "date": "2022-10-26",
+          "direction": "DOWN",
+          "changePct": -9.1405,
+          "zScore": -4.7454,
+          "close": 94.93,
+          "prevClose": 104.48
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 7.5813,
+          "zScore": 3.8364,
+          "close": 93.94,
+          "prevClose": 87.32
+        },
+        {
+          "date": "2023-02-08",
+          "direction": "DOWN",
+          "changePct": -7.683,
+          "zScore": -3.9974,
+          "close": 99.37,
+          "prevClose": 107.64
+        },
+        {
+          "date": "2023-10-25",
+          "direction": "DOWN",
+          "changePct": -9.5094,
+          "zScore": -4.9347,
+          "close": 125.61,
+          "prevClose": 138.81
+        },
+        {
+          "date": "2024-01-31",
+          "direction": "DOWN",
+          "changePct": -7.5003,
+          "zScore": -3.9036,
+          "close": 140.1,
+          "prevClose": 151.46
+        },
+        {
+          "date": "2024-04-26",
+          "direction": "UP",
+          "changePct": 10.2244,
+          "zScore": 5.1928,
+          "close": 171.95,
+          "prevClose": 156
+        },
+        {
+          "date": "2025-02-05",
+          "direction": "DOWN",
+          "changePct": -7.2924,
+          "zScore": -3.7969,
+          "close": 191.33,
+          "prevClose": 206.38
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 9.6821,
+          "zScore": 4.9145,
+          "close": 158.71,
+          "prevClose": 144.7
+        },
+        {
+          "date": "2025-09-03",
+          "direction": "UP",
+          "changePct": 9.1365,
+          "zScore": 4.6345,
+          "close": 230.66,
+          "prevClose": 211.35
+        }
+      ]
+    },
+    {
+      "company": "Microsoft",
+      "ticker": "MSFT",
+      "ceo": "Satya Nadella",
+      "twitter_handle": "@satyanadella",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.05241,
+      "stdDevPct": 1.661417,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-07-27",
+          "direction": "UP",
+          "changePct": 6.6852,
+          "zScore": 3.9922,
+          "close": 268.74,
+          "prevClose": 251.9
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -5.4978,
+          "zScore": -3.3407,
+          "close": 251.99,
+          "prevClose": 266.65
+        },
+        {
+          "date": "2022-10-26",
+          "direction": "DOWN",
+          "changePct": -7.7156,
+          "zScore": -4.6756,
+          "close": 231.32,
+          "prevClose": 250.66
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 8.2268,
+          "zScore": 4.9201,
+          "close": 242.98,
+          "prevClose": 224.51
+        },
+        {
+          "date": "2023-04-26",
+          "direction": "UP",
+          "changePct": 7.2435,
+          "zScore": 4.3283,
+          "close": 295.37,
+          "prevClose": 275.42
+        },
+        {
+          "date": "2024-10-31",
+          "direction": "DOWN",
+          "changePct": -6.0528,
+          "zScore": -3.6747,
+          "close": 406.35,
+          "prevClose": 432.53
+        },
+        {
+          "date": "2025-01-30",
+          "direction": "DOWN",
+          "changePct": -6.1809,
+          "zScore": -3.7518,
+          "close": 414.99,
+          "prevClose": 442.33
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 10.1337,
+          "zScore": 6.0679,
+          "close": 390.49,
+          "prevClose": 354.56
+        },
+        {
+          "date": "2025-05-01",
+          "direction": "UP",
+          "changePct": 7.6254,
+          "zScore": 4.5581,
+          "close": 425.4,
+          "prevClose": 395.26
+        },
+        {
+          "date": "2026-01-29",
+          "direction": "DOWN",
+          "changePct": -9.9931,
+          "zScore": -6.0464,
+          "close": 433.5,
+          "prevClose": 481.63
+        }
+      ]
+    },
+    {
+      "company": "Amazon",
+      "ticker": "AMZN",
+      "ceo": "Andy Jassy",
+      "twitter_handle": "@ajassy",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.05978,
+      "stdDevPct": 2.233999,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-02-04",
+          "direction": "UP",
+          "changePct": 13.5359,
+          "zScore": 6.0323,
+          "close": 157.6395,
+          "prevClose": 138.8455
+        },
+        {
+          "date": "2022-04-29",
+          "direction": "DOWN",
+          "changePct": -14.0494,
+          "zScore": -6.3157,
+          "close": 124.2815,
+          "prevClose": 144.5965
+        },
+        {
+          "date": "2022-07-29",
+          "direction": "UP",
+          "changePct": 10.3615,
+          "zScore": 4.6113,
+          "close": 134.95,
+          "prevClose": 122.28
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 12.1778,
+          "zScore": 5.4244,
+          "close": 96.63,
+          "prevClose": 86.14
+        },
+        {
+          "date": "2023-02-03",
+          "direction": "DOWN",
+          "changePct": -8.4315,
+          "zScore": -3.8009,
+          "close": 103.39,
+          "prevClose": 112.91
+        },
+        {
+          "date": "2024-08-02",
+          "direction": "DOWN",
+          "changePct": -8.7847,
+          "zScore": -3.959,
+          "close": 167.9,
+          "prevClose": 184.07
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -8.9791,
+          "zScore": -4.0461,
+          "close": 178.41,
+          "prevClose": 196.01
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 11.977,
+          "zScore": 5.3345,
+          "close": 191.1,
+          "prevClose": 170.66
+        },
+        {
+          "date": "2025-08-01",
+          "direction": "DOWN",
+          "changePct": -8.2696,
+          "zScore": -3.7285,
+          "close": 214.75,
+          "prevClose": 234.11
+        },
+        {
+          "date": "2025-10-31",
+          "direction": "UP",
+          "changePct": 9.5845,
+          "zScore": 4.2635,
+          "close": 244.22,
+          "prevClose": 222.86
+        }
+      ]
+    },
+    {
+      "company": "Meta",
+      "ticker": "META",
+      "ceo": "Mark Zuckerberg",
+      "twitter_handle": "@finkd",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.102449,
+      "stdDevPct": 2.765133,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-02-03",
+          "direction": "DOWN",
+          "changePct": -26.3901,
+          "zScore": -9.5809,
+          "close": 237.76,
+          "prevClose": 323
+        },
+        {
+          "date": "2022-04-28",
+          "direction": "UP",
+          "changePct": 17.5936,
+          "zScore": 6.3256,
+          "close": 205.73,
+          "prevClose": 174.95
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -9.3691,
+          "zScore": -3.4253,
+          "close": 153.13,
+          "prevClose": 168.96
+        },
+        {
+          "date": "2022-10-27",
+          "direction": "DOWN",
+          "changePct": -24.5571,
+          "zScore": -8.918,
+          "close": 97.94,
+          "prevClose": 129.82
+        },
+        {
+          "date": "2023-02-02",
+          "direction": "UP",
+          "changePct": 23.2824,
+          "zScore": 8.3829,
+          "close": 188.77,
+          "prevClose": 153.12
+        },
+        {
+          "date": "2023-04-27",
+          "direction": "UP",
+          "changePct": 13.9255,
+          "zScore": 4.9991,
+          "close": 238.56,
+          "prevClose": 209.4
+        },
+        {
+          "date": "2024-02-02",
+          "direction": "UP",
+          "changePct": 20.3176,
+          "zScore": 7.3107,
+          "close": 474.99,
+          "prevClose": 394.78
+        },
+        {
+          "date": "2024-04-25",
+          "direction": "DOWN",
+          "changePct": -10.5613,
+          "zScore": -3.8565,
+          "close": 441.38,
+          "prevClose": 493.5
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 14.7556,
+          "zScore": 5.2993,
+          "close": 585.77,
+          "prevClose": 510.45
+        },
+        {
+          "date": "2025-10-30",
+          "direction": "DOWN",
+          "changePct": -11.3348,
+          "zScore": -4.1362,
+          "close": 666.47,
+          "prevClose": 751.67
+        }
+      ]
+    },
+    {
+      "company": "Tesla",
+      "ticker": "TSLA",
+      "ceo": "Elon Musk",
+      "twitter_handle": "@elonmusk",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.102583,
+      "stdDevPct": 3.718066,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-01-03",
+          "direction": "UP",
+          "changePct": 13.5317,
+          "zScore": 3.6118,
+          "close": 399.9267,
+          "prevClose": 352.26
+        },
+        {
+          "date": "2022-04-26",
+          "direction": "DOWN",
+          "changePct": -12.1841,
+          "zScore": -3.3046,
+          "close": 292.14,
+          "prevClose": 332.6733
+        },
+        {
+          "date": "2023-01-03",
+          "direction": "DOWN",
+          "changePct": -12.2422,
+          "zScore": -3.3202,
+          "close": 108.1,
+          "prevClose": 123.18
+        },
+        {
+          "date": "2024-04-29",
+          "direction": "UP",
+          "changePct": 15.3069,
+          "zScore": 4.0893,
+          "close": 194.05,
+          "prevClose": 168.29
+        },
+        {
+          "date": "2024-07-24",
+          "direction": "DOWN",
+          "changePct": -12.3346,
+          "zScore": -3.3451,
+          "close": 215.99,
+          "prevClose": 246.38
+        },
+        {
+          "date": "2024-10-24",
+          "direction": "UP",
+          "changePct": 21.919,
+          "zScore": 5.8677,
+          "close": 260.48,
+          "prevClose": 213.65
+        },
+        {
+          "date": "2024-11-06",
+          "direction": "UP",
+          "changePct": 14.751,
+          "zScore": 3.9398,
+          "close": 288.53,
+          "prevClose": 251.44
+        },
+        {
+          "date": "2025-03-10",
+          "direction": "DOWN",
+          "changePct": -15.4262,
+          "zScore": -4.1766,
+          "close": 222.15,
+          "prevClose": 262.67
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 22.69,
+          "zScore": 6.075,
+          "close": 272.2,
+          "prevClose": 221.86
+        },
+        {
+          "date": "2025-06-05",
+          "direction": "DOWN",
+          "changePct": -14.2599,
+          "zScore": -3.8629,
+          "close": 284.7,
+          "prevClose": 332.05
+        }
+      ]
+    },
+    {
+      "company": "Disney",
+      "ticker": "DIS",
+      "ceo": "Josh D'Amaro",
+      "twitter_handle": "@joshdamaro",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": -0.029835,
+      "stdDevPct": 1.831397,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-11-09",
+          "direction": "DOWN",
+          "changePct": -13.1632,
+          "zScore": -7.1712,
+          "close": 86.75,
+          "prevClose": 99.9
+        },
+        {
+          "date": "2022-11-21",
+          "direction": "UP",
+          "changePct": 6.2963,
+          "zScore": 3.4543,
+          "close": 97.58,
+          "prevClose": 91.8
+        },
+        {
+          "date": "2023-05-11",
+          "direction": "DOWN",
+          "changePct": -8.7305,
+          "zScore": -4.7508,
+          "close": 92.31,
+          "prevClose": 101.14
+        },
+        {
+          "date": "2023-11-09",
+          "direction": "UP",
+          "changePct": 6.9112,
+          "zScore": 3.79,
+          "close": 90.34,
+          "prevClose": 84.5
+        },
+        {
+          "date": "2024-02-08",
+          "direction": "UP",
+          "changePct": 11.4989,
+          "zScore": 6.295,
+          "close": 110.54,
+          "prevClose": 99.14
+        },
+        {
+          "date": "2024-05-07",
+          "direction": "DOWN",
+          "changePct": -9.5132,
+          "zScore": -5.1782,
+          "close": 105.39,
+          "prevClose": 116.47
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -9.2358,
+          "zScore": -5.0267,
+          "close": 88.84,
+          "prevClose": 97.88
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 11.8943,
+          "zScore": 6.5109,
+          "close": 91.44,
+          "prevClose": 81.72
+        },
+        {
+          "date": "2025-05-07",
+          "direction": "UP",
+          "changePct": 10.7627,
+          "zScore": 5.8931,
+          "close": 102.09,
+          "prevClose": 92.17
+        },
+        {
+          "date": "2025-11-13",
+          "direction": "DOWN",
+          "changePct": -7.7497,
+          "zScore": -4.2153,
+          "close": 107.61,
+          "prevClose": 116.65
+        }
+      ]
+    },
+    {
+      "company": "Netflix",
+      "ticker": "NFLX",
+      "ceo": "Ted Sarandos",
+      "twitter_handle": "@tedsarandos",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.085686,
+      "stdDevPct": 2.712219,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-01-21",
+          "direction": "DOWN",
+          "changePct": -21.7905,
+          "zScore": -8.0658,
+          "close": 39.75,
+          "prevClose": 50.825
+        },
+        {
+          "date": "2022-01-31",
+          "direction": "UP",
+          "changePct": 11.1302,
+          "zScore": 4.0721,
+          "close": 42.714,
+          "prevClose": 38.436
+        },
+        {
+          "date": "2022-04-20",
+          "direction": "DOWN",
+          "changePct": -35.1166,
+          "zScore": -12.9791,
+          "close": 22.619,
+          "prevClose": 34.861
+        },
+        {
+          "date": "2022-10-19",
+          "direction": "UP",
+          "changePct": 13.0864,
+          "zScore": 4.7934,
+          "close": 27.238,
+          "prevClose": 24.086
+        },
+        {
+          "date": "2023-10-19",
+          "direction": "UP",
+          "changePct": 16.0548,
+          "zScore": 5.8878,
+          "close": 40.177,
+          "prevClose": 34.619
+        },
+        {
+          "date": "2024-04-19",
+          "direction": "DOWN",
+          "changePct": -9.0933,
+          "zScore": -3.3843,
+          "close": 55.504,
+          "prevClose": 61.056
+        },
+        {
+          "date": "2024-10-18",
+          "direction": "UP",
+          "changePct": 11.087,
+          "zScore": 4.0562,
+          "close": 76.389,
+          "prevClose": 68.765
+        },
+        {
+          "date": "2025-10-22",
+          "direction": "DOWN",
+          "changePct": -10.0681,
+          "zScore": -3.7437,
+          "close": 111.637,
+          "prevClose": 124.135
+        },
+        {
+          "date": "2026-02-27",
+          "direction": "UP",
+          "changePct": 13.7723,
+          "zScore": 5.0463,
+          "close": 96.24,
+          "prevClose": 84.59
+        },
+        {
+          "date": "2026-04-17",
+          "direction": "DOWN",
+          "changePct": -9.7226,
+          "zScore": -3.6163,
+          "close": 97.31,
+          "prevClose": 107.79
+        }
+      ]
+    },
+    {
+      "company": "Salesforce",
+      "ticker": "CRM",
+      "ceo": "Marc Benioff",
+      "twitter_handle": "@Benioff",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.004284,
+      "stdDevPct": 2.293698,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-12-01",
+          "direction": "DOWN",
+          "changePct": -11.742,
+          "zScore": -5.1211,
+          "close": 251.5,
+          "prevClose": 284.96
+        },
+        {
+          "date": "2022-01-05",
+          "direction": "DOWN",
+          "changePct": -8.2826,
+          "zScore": -3.6129,
+          "close": 227.67,
+          "prevClose": 248.23
+        },
+        {
+          "date": "2022-06-01",
+          "direction": "UP",
+          "changePct": 9.8789,
+          "zScore": 4.3051,
+          "close": 176.07,
+          "prevClose": 160.24
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 10.0239,
+          "zScore": 4.3683,
+          "close": 156.3,
+          "prevClose": 142.06
+        },
+        {
+          "date": "2022-12-01",
+          "direction": "DOWN",
+          "changePct": -8.2683,
+          "zScore": -3.6067,
+          "close": 147,
+          "prevClose": 160.25
+        },
+        {
+          "date": "2023-03-02",
+          "direction": "UP",
+          "changePct": 11.4969,
+          "zScore": 5.0105,
+          "close": 186.59,
+          "prevClose": 167.35
+        },
+        {
+          "date": "2023-11-30",
+          "direction": "UP",
+          "changePct": 9.3553,
+          "zScore": 4.0768,
+          "close": 251.9,
+          "prevClose": 230.35
+        },
+        {
+          "date": "2024-05-30",
+          "direction": "DOWN",
+          "changePct": -19.7371,
+          "zScore": -8.6068,
+          "close": 218.01,
+          "prevClose": 271.62
+        },
+        {
+          "date": "2024-12-04",
+          "direction": "UP",
+          "changePct": 10.9948,
+          "zScore": 4.7916,
+          "close": 367.87,
+          "prevClose": 331.43
+        },
+        {
+          "date": "2026-04-23",
+          "direction": "DOWN",
+          "changePct": -8.6934,
+          "zScore": -3.792,
+          "close": 173.3,
+          "prevClose": 189.8
+        }
+      ]
+    },
+    {
+      "company": "AMD",
+      "ticker": "AMD",
+      "ceo": "Lisa Su",
+      "twitter_handle": "@lisasu",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.168974,
+      "stdDevPct": 3.39531,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-02-11",
+          "direction": "DOWN",
+          "changePct": -10.0103,
+          "zScore": -2.998,
+          "close": 113.18,
+          "prevClose": 125.77
+        },
+        {
+          "date": "2022-10-07",
+          "direction": "DOWN",
+          "changePct": -13.8688,
+          "zScore": -4.1345,
+          "close": 58.44,
+          "prevClose": 67.85
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 14.269,
+          "zScore": 4.1528,
+          "close": 68.47,
+          "prevClose": 59.92
+        },
+        {
+          "date": "2023-02-01",
+          "direction": "UP",
+          "changePct": 12.6281,
+          "zScore": 3.6695,
+          "close": 84.64,
+          "prevClose": 75.15
+        },
+        {
+          "date": "2024-07-17",
+          "direction": "DOWN",
+          "changePct": -10.2056,
+          "zScore": -3.0556,
+          "close": 159.43,
+          "prevClose": 177.55
+        },
+        {
+          "date": "2024-10-30",
+          "direction": "DOWN",
+          "changePct": -10.6165,
+          "zScore": -3.1766,
+          "close": 148.6,
+          "prevClose": 166.25
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 23.8205,
+          "zScore": 6.9659,
+          "close": 96.84,
+          "prevClose": 78.21
+        },
+        {
+          "date": "2025-10-06",
+          "direction": "UP",
+          "changePct": 23.708,
+          "zScore": 6.9328,
+          "close": 203.71,
+          "prevClose": 164.67
+        },
+        {
+          "date": "2026-02-04",
+          "direction": "DOWN",
+          "changePct": -17.3144,
+          "zScore": -5.1493,
+          "close": 200.19,
+          "prevClose": 242.11
+        },
+        {
+          "date": "2026-04-24",
+          "direction": "UP",
+          "changePct": 13.9128,
+          "zScore": 4.0479,
+          "close": 347.81,
+          "prevClose": 305.33
+        }
+      ]
+    },
+    {
+      "company": "Dell",
+      "ticker": "DELL",
+      "ceo": "Michael Dell",
+      "twitter_handle": "@MichaelDell",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.158103,
+      "stdDevPct": 2.951816,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-05-27",
+          "direction": "UP",
+          "changePct": 12.8614,
+          "zScore": 4.3035,
+          "close": 49.58,
+          "prevClose": 43.93
+        },
+        {
+          "date": "2022-08-26",
+          "direction": "DOWN",
+          "changePct": -13.5073,
+          "zScore": -4.6295,
+          "close": 41.43,
+          "prevClose": 47.9
+        },
+        {
+          "date": "2023-09-01",
+          "direction": "UP",
+          "changePct": 21.2482,
+          "zScore": 7.1448,
+          "close": 68.19,
+          "prevClose": 56.24
+        },
+        {
+          "date": "2024-03-01",
+          "direction": "UP",
+          "changePct": 31.6184,
+          "zScore": 10.658,
+          "close": 124.59,
+          "prevClose": 94.66
+        },
+        {
+          "date": "2024-05-31",
+          "direction": "DOWN",
+          "changePct": -17.8672,
+          "zScore": -6.1065,
+          "close": 139.56,
+          "prevClose": 169.92
+        },
+        {
+          "date": "2024-11-27",
+          "direction": "DOWN",
+          "changePct": -12.2478,
+          "zScore": -4.2028,
+          "close": 124.38,
+          "prevClose": 141.74
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -18.9867,
+          "zScore": -6.4858,
+          "close": 77.23,
+          "prevClose": 95.33
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 15.9802,
+          "zScore": 5.3601,
+          "close": 84.19,
+          "prevClose": 72.59
+        },
+        {
+          "date": "2026-02-12",
+          "direction": "DOWN",
+          "changePct": -9.1334,
+          "zScore": -3.1477,
+          "close": 112.82,
+          "prevClose": 124.16
+        },
+        {
+          "date": "2026-02-27",
+          "direction": "UP",
+          "changePct": 21.9267,
+          "zScore": 7.3747,
+          "close": 148.08,
+          "prevClose": 121.45
+        }
+      ]
+    },
+    {
+      "company": "Airbnb",
+      "ticker": "ABNB",
+      "ceo": "Brian Chesky",
+      "twitter_handle": "@bchesky",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.0227,
+      "stdDevPct": 2.78735,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-08-24",
+          "direction": "UP",
+          "changePct": 9.9666,
+          "zScore": 3.5675,
+          "close": 161.42,
+          "prevClose": 146.79
+        },
+        {
+          "date": "2021-11-05",
+          "direction": "UP",
+          "changePct": 12.984,
+          "zScore": 4.6501,
+          "close": 201.62,
+          "prevClose": 178.45
+        },
+        {
+          "date": "2022-02-23",
+          "direction": "DOWN",
+          "changePct": -9.1987,
+          "zScore": -3.3083,
+          "close": 150.04,
+          "prevClose": 165.24
+        },
+        {
+          "date": "2022-05-09",
+          "direction": "DOWN",
+          "changePct": -12.1246,
+          "zScore": -4.358,
+          "close": 119.37,
+          "prevClose": 135.84
+        },
+        {
+          "date": "2022-11-02",
+          "direction": "DOWN",
+          "changePct": -13.425,
+          "zScore": -4.8246,
+          "close": 94.41,
+          "prevClose": 109.05
+        },
+        {
+          "date": "2023-02-15",
+          "direction": "UP",
+          "changePct": 13.3532,
+          "zScore": 4.7825,
+          "close": 137.01,
+          "prevClose": 120.87
+        },
+        {
+          "date": "2023-05-10",
+          "direction": "DOWN",
+          "changePct": -10.9231,
+          "zScore": -3.927,
+          "close": 113.19,
+          "prevClose": 127.07
+        },
+        {
+          "date": "2024-08-07",
+          "direction": "DOWN",
+          "changePct": -13.3824,
+          "zScore": -4.8093,
+          "close": 113.01,
+          "prevClose": 130.47
+        },
+        {
+          "date": "2025-02-14",
+          "direction": "UP",
+          "changePct": 14.4498,
+          "zScore": 5.1759,
+          "close": 161.42,
+          "prevClose": 141.04
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 14.7885,
+          "zScore": 5.2974,
+          "close": 121.32,
+          "prevClose": 105.69
+        }
+      ]
+    },
+    {
+      "company": "Uber",
+      "ticker": "UBER",
+      "ceo": "Dara Khosrowshahi",
+      "twitter_handle": "@dkhos",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.060589,
+      "stdDevPct": 2.839981,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-05-09",
+          "direction": "DOWN",
+          "changePct": -11.5842,
+          "zScore": -4.1003,
+          "close": 23.05,
+          "prevClose": 26.07
+        },
+        {
+          "date": "2022-05-24",
+          "direction": "DOWN",
+          "changePct": -9.3776,
+          "zScore": -3.3233,
+          "close": 21.55,
+          "prevClose": 23.78
+        },
+        {
+          "date": "2022-08-02",
+          "direction": "UP",
+          "changePct": 18.9024,
+          "zScore": 6.6345,
+          "close": 29.25,
+          "prevClose": 24.6
+        },
+        {
+          "date": "2022-10-11",
+          "direction": "DOWN",
+          "changePct": -10.425,
+          "zScore": -3.6921,
+          "close": 24.66,
+          "prevClose": 27.53
+        },
+        {
+          "date": "2022-11-01",
+          "direction": "UP",
+          "changePct": 11.9684,
+          "zScore": 4.1929,
+          "close": 29.75,
+          "prevClose": 26.57
+        },
+        {
+          "date": "2023-05-02",
+          "direction": "UP",
+          "changePct": 11.5455,
+          "zScore": 4.044,
+          "close": 36.52,
+          "prevClose": 32.74
+        },
+        {
+          "date": "2024-02-14",
+          "direction": "UP",
+          "changePct": 14.7268,
+          "zScore": 5.1642,
+          "close": 79.15,
+          "prevClose": 68.99
+        },
+        {
+          "date": "2024-10-31",
+          "direction": "DOWN",
+          "changePct": -9.2912,
+          "zScore": -3.2929,
+          "close": 72.05,
+          "prevClose": 79.43
+        },
+        {
+          "date": "2024-12-05",
+          "direction": "DOWN",
+          "changePct": -9.6037,
+          "zScore": -3.4029,
+          "close": 65.23,
+          "prevClose": 72.16
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 11.6951,
+          "zScore": 4.0967,
+          "close": 72.68,
+          "prevClose": 65.07
+        }
+      ]
+    },
+    {
+      "company": "Spotify",
+      "ticker": "SPOT",
+      "ceo": "Daniel Ek",
+      "twitter_handle": "@eldsjal",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.088311,
+      "stdDevPct": 2.972805,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-04-28",
+          "direction": "DOWN",
+          "changePct": -12.3174,
+          "zScore": -4.1731,
+          "close": 256.84,
+          "prevClose": 292.92
+        },
+        {
+          "date": "2022-01-31",
+          "direction": "UP",
+          "changePct": 13.4582,
+          "zScore": 4.4974,
+          "close": 196.26,
+          "prevClose": 172.98
+        },
+        {
+          "date": "2022-02-03",
+          "direction": "DOWN",
+          "changePct": -16.757,
+          "zScore": -5.6665,
+          "close": 159.76,
+          "prevClose": 191.92
+        },
+        {
+          "date": "2022-04-27",
+          "direction": "DOWN",
+          "changePct": -12.4445,
+          "zScore": -4.2158,
+          "close": 96.67,
+          "prevClose": 110.41
+        },
+        {
+          "date": "2022-07-27",
+          "direction": "UP",
+          "changePct": 12.1574,
+          "zScore": 4.0598,
+          "close": 116.61,
+          "prevClose": 103.97
+        },
+        {
+          "date": "2022-10-26",
+          "direction": "DOWN",
+          "changePct": -13.0139,
+          "zScore": -4.4074,
+          "close": 84.42,
+          "prevClose": 97.05
+        },
+        {
+          "date": "2023-01-31",
+          "direction": "UP",
+          "changePct": 12.72,
+          "zScore": 4.2491,
+          "close": 112.72,
+          "prevClose": 100
+        },
+        {
+          "date": "2023-07-25",
+          "direction": "DOWN",
+          "changePct": -14.256,
+          "zScore": -4.8252,
+          "close": 140.38,
+          "prevClose": 163.72
+        },
+        {
+          "date": "2025-02-04",
+          "direction": "UP",
+          "changePct": 13.2385,
+          "zScore": 4.4235,
+          "close": 621.77,
+          "prevClose": 549.08
+        },
+        {
+          "date": "2026-02-10",
+          "direction": "UP",
+          "changePct": 14.7479,
+          "zScore": 4.9312,
+          "close": 476.02,
+          "prevClose": 414.84
+        }
+      ]
+    },
+    {
+      "company": "JPMorgan Chase",
+      "ticker": "JPM",
+      "ceo": "Jamie Dimon",
+      "twitter_handle": "@jamiedimon",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.068943,
+      "stdDevPct": 1.538906,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-01-14",
+          "direction": "DOWN",
+          "changePct": -6.1463,
+          "zScore": -4.0388,
+          "close": 157.89,
+          "prevClose": 168.23
+        },
+        {
+          "date": "2022-05-23",
+          "direction": "UP",
+          "changePct": 6.1872,
+          "zScore": 3.9757,
+          "close": 124.6,
+          "prevClose": 117.34
+        },
+        {
+          "date": "2022-10-13",
+          "direction": "UP",
+          "changePct": 5.5593,
+          "zScore": 3.5677,
+          "close": 109.37,
+          "prevClose": 103.61
+        },
+        {
+          "date": "2023-03-09",
+          "direction": "DOWN",
+          "changePct": -5.4136,
+          "zScore": -3.5627,
+          "close": 130.34,
+          "prevClose": 137.8
+        },
+        {
+          "date": "2023-04-14",
+          "direction": "UP",
+          "changePct": 7.551,
+          "zScore": 4.8619,
+          "close": 138.73,
+          "prevClose": 128.99
+        },
+        {
+          "date": "2024-04-12",
+          "direction": "DOWN",
+          "changePct": -6.4678,
+          "zScore": -4.2476,
+          "close": 182.79,
+          "prevClose": 195.43
+        },
+        {
+          "date": "2024-11-06",
+          "direction": "UP",
+          "changePct": 11.5445,
+          "zScore": 7.457,
+          "close": 247.06,
+          "prevClose": 221.49
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -6.9685,
+          "zScore": -4.573,
+          "close": 228.69,
+          "prevClose": 245.82
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -8.0502,
+          "zScore": -5.2759,
+          "close": 210.28,
+          "prevClose": 228.69
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 8.0555,
+          "zScore": 5.1898,
+          "close": 234.34,
+          "prevClose": 216.87
+        }
+      ]
+    },
+    {
+      "company": "General Motors",
+      "ticker": "GM",
+      "ceo": "Mary Barra",
+      "twitter_handle": "@mtbarra",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.049827,
+      "stdDevPct": 2.304925,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-08-04",
+          "direction": "DOWN",
+          "changePct": -8.915,
+          "zScore": -3.8894,
+          "close": 52.72,
+          "prevClose": 57.88
+        },
+        {
+          "date": "2022-06-16",
+          "direction": "DOWN",
+          "changePct": -8.0749,
+          "zScore": -3.5249,
+          "close": 31.42,
+          "prevClose": 34.18
+        },
+        {
+          "date": "2022-10-04",
+          "direction": "UP",
+          "changePct": 8.9139,
+          "zScore": 3.8457,
+          "close": 35.8,
+          "prevClose": 32.87
+        },
+        {
+          "date": "2023-11-29",
+          "direction": "UP",
+          "changePct": 9.3804,
+          "zScore": 4.0481,
+          "close": 31.6,
+          "prevClose": 28.89
+        },
+        {
+          "date": "2024-10-22",
+          "direction": "UP",
+          "changePct": 9.8099,
+          "zScore": 4.2345,
+          "close": 53.73,
+          "prevClose": 48.93
+        },
+        {
+          "date": "2024-11-26",
+          "direction": "DOWN",
+          "changePct": -8.9867,
+          "zScore": -3.9205,
+          "close": 54.79,
+          "prevClose": 60.2
+        },
+        {
+          "date": "2025-01-28",
+          "direction": "DOWN",
+          "changePct": -8.8856,
+          "zScore": -3.8767,
+          "close": 50.04,
+          "prevClose": 54.92
+        },
+        {
+          "date": "2025-07-22",
+          "direction": "DOWN",
+          "changePct": -8.1188,
+          "zScore": -3.544,
+          "close": 48.89,
+          "prevClose": 53.21
+        },
+        {
+          "date": "2025-10-21",
+          "direction": "UP",
+          "changePct": 14.8621,
+          "zScore": 6.4263,
+          "close": 66.62,
+          "prevClose": 58
+        },
+        {
+          "date": "2026-01-27",
+          "direction": "UP",
+          "changePct": 8.7498,
+          "zScore": 3.7745,
+          "close": 86.38,
+          "prevClose": 79.43
+        }
+      ]
+    },
+    {
+      "company": "Intel",
+      "ticker": "INTC",
+      "ceo": "Pat Gelsinger",
+      "twitter_handle": "@PGelsinger",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.076488,
+      "stdDevPct": 3.152089,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-10-22",
+          "direction": "DOWN",
+          "changePct": -11.6786,
+          "zScore": -3.7293,
+          "close": 49.46,
+          "prevClose": 56
+        },
+        {
+          "date": "2024-01-26",
+          "direction": "DOWN",
+          "changePct": -11.9072,
+          "zScore": -3.8018,
+          "close": 43.65,
+          "prevClose": 49.55
+        },
+        {
+          "date": "2024-08-02",
+          "direction": "DOWN",
+          "changePct": -26.0585,
+          "zScore": -8.2913,
+          "close": 21.48,
+          "prevClose": 29.05
+        },
+        {
+          "date": "2025-02-18",
+          "direction": "UP",
+          "changePct": 16.0593,
+          "zScore": 5.0706,
+          "close": 27.39,
+          "prevClose": 23.6
+        },
+        {
+          "date": "2025-03-13",
+          "direction": "UP",
+          "changePct": 14.6035,
+          "zScore": 4.6087,
+          "close": 23.7,
+          "prevClose": 20.68
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -11.5025,
+          "zScore": -3.6734,
+          "close": 19.85,
+          "prevClose": 22.43
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 18.7535,
+          "zScore": 5.9253,
+          "close": 21.53,
+          "prevClose": 18.13
+        },
+        {
+          "date": "2025-09-18",
+          "direction": "UP",
+          "changePct": 22.7711,
+          "zScore": 7.1999,
+          "close": 30.57,
+          "prevClose": 24.9
+        },
+        {
+          "date": "2026-01-23",
+          "direction": "DOWN",
+          "changePct": -17.0287,
+          "zScore": -5.4266,
+          "close": 45.07,
+          "prevClose": 54.32
+        },
+        {
+          "date": "2026-04-24",
+          "direction": "UP",
+          "changePct": 23.5999,
+          "zScore": 7.4628,
+          "close": 82.54,
+          "prevClose": 66.78
+        }
+      ]
+    },
+    {
+      "company": "Pfizer",
+      "ticker": "PFE",
+      "ceo": "Albert Bourla",
+      "twitter_handle": "@AlbertBourla",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": -0.015628,
+      "stdDevPct": 1.617339,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-11-05",
+          "direction": "UP",
+          "changePct": 10.8552,
+          "zScore": 6.7214,
+          "close": 48.61,
+          "prevClose": 43.85
+        },
+        {
+          "date": "2021-11-26",
+          "direction": "UP",
+          "changePct": 6.1112,
+          "zScore": 3.7882,
+          "close": 54,
+          "prevClose": 50.89
+        },
+        {
+          "date": "2021-12-06",
+          "direction": "DOWN",
+          "changePct": -5.141,
+          "zScore": -3.169,
+          "close": 51.48,
+          "prevClose": 54.27
+        },
+        {
+          "date": "2023-01-09",
+          "direction": "DOWN",
+          "changePct": -4.9686,
+          "zScore": -3.0624,
+          "close": 48.39,
+          "prevClose": 50.92
+        },
+        {
+          "date": "2023-12-01",
+          "direction": "DOWN",
+          "changePct": -5.1198,
+          "zScore": -3.1559,
+          "close": 28.91,
+          "prevClose": 30.47
+        },
+        {
+          "date": "2023-12-13",
+          "direction": "DOWN",
+          "changePct": -6.718,
+          "zScore": -4.1441,
+          "close": 26.66,
+          "prevClose": 28.58
+        },
+        {
+          "date": "2024-05-01",
+          "direction": "UP",
+          "changePct": 6.089,
+          "zScore": 3.7745,
+          "close": 27.18,
+          "prevClose": 25.62
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -5.4343,
+          "zScore": -3.3504,
+          "close": 22.97,
+          "prevClose": 24.29
+        },
+        {
+          "date": "2025-09-30",
+          "direction": "UP",
+          "changePct": 6.8344,
+          "zScore": 4.2354,
+          "close": 25.48,
+          "prevClose": 23.85
+        },
+        {
+          "date": "2025-10-01",
+          "direction": "UP",
+          "changePct": 6.7896,
+          "zScore": 4.2077,
+          "close": 27.21,
+          "prevClose": 25.48
+        }
+      ]
+    },
+    {
+      "company": "Shopify",
+      "ticker": "SHOP",
+      "ceo": "Tobi Lütke",
+      "twitter_handle": "@tobi",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.089222,
+      "stdDevPct": 4.100854,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-02-16",
+          "direction": "DOWN",
+          "changePct": -16.0371,
+          "zScore": -3.9324,
+          "close": 74.685,
+          "prevClose": 88.95
+        },
+        {
+          "date": "2022-03-18",
+          "direction": "UP",
+          "changePct": 18.6528,
+          "zScore": 4.5268,
+          "close": 78,
+          "prevClose": 65.738
+        },
+        {
+          "date": "2022-05-05",
+          "direction": "DOWN",
+          "changePct": -14.9128,
+          "zScore": -3.6583,
+          "close": 41.309,
+          "prevClose": 48.549
+        },
+        {
+          "date": "2023-02-16",
+          "direction": "DOWN",
+          "changePct": -15.8831,
+          "zScore": -3.8949,
+          "close": 44.91,
+          "prevClose": 53.39
+        },
+        {
+          "date": "2023-05-04",
+          "direction": "UP",
+          "changePct": 23.8383,
+          "zScore": 5.7913,
+          "close": 57.3,
+          "prevClose": 46.27
+        },
+        {
+          "date": "2023-11-02",
+          "direction": "UP",
+          "changePct": 22.3611,
+          "zScore": 5.431,
+          "close": 59.7,
+          "prevClose": 48.79
+        },
+        {
+          "date": "2024-05-08",
+          "direction": "DOWN",
+          "changePct": -18.5853,
+          "zScore": -4.5538,
+          "close": 62.73,
+          "prevClose": 77.05
+        },
+        {
+          "date": "2024-11-12",
+          "direction": "UP",
+          "changePct": 21.0357,
+          "zScore": 5.1078,
+          "close": 108.92,
+          "prevClose": 89.99
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -18.2414,
+          "zScore": -4.47,
+          "close": 82.29,
+          "prevClose": 100.65
+        },
+        {
+          "date": "2025-08-06",
+          "direction": "UP",
+          "changePct": 21.9685,
+          "zScore": 5.3353,
+          "close": 154.9,
+          "prevClose": 127
+        }
+      ]
+    },
+    {
+      "company": "Ford",
+      "ticker": "F",
+      "ceo": "Jim Farley",
+      "twitter_handle": "@jimfarley98",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.031104,
+      "stdDevPct": 2.45799,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-04-29",
+          "direction": "DOWN",
+          "changePct": -9.4127,
+          "zScore": -3.8421,
+          "close": 11.26,
+          "prevClose": 12.43
+        },
+        {
+          "date": "2021-10-28",
+          "direction": "UP",
+          "changePct": 8.7041,
+          "zScore": 3.5285,
+          "close": 16.86,
+          "prevClose": 15.51
+        },
+        {
+          "date": "2021-12-10",
+          "direction": "UP",
+          "changePct": 9.6065,
+          "zScore": 3.8956,
+          "close": 21.45,
+          "prevClose": 19.57
+        },
+        {
+          "date": "2022-01-04",
+          "direction": "UP",
+          "changePct": 11.6674,
+          "zScore": 4.7341,
+          "close": 24.31,
+          "prevClose": 21.77
+        },
+        {
+          "date": "2022-02-04",
+          "direction": "DOWN",
+          "changePct": -9.7034,
+          "zScore": -3.9603,
+          "close": 17.96,
+          "prevClose": 19.89
+        },
+        {
+          "date": "2022-09-20",
+          "direction": "DOWN",
+          "changePct": -12.3242,
+          "zScore": -5.0266,
+          "close": 13.09,
+          "prevClose": 14.93
+        },
+        {
+          "date": "2023-10-27",
+          "direction": "DOWN",
+          "changePct": -12.2467,
+          "zScore": -4.9951,
+          "close": 9.96,
+          "prevClose": 11.35
+        },
+        {
+          "date": "2024-07-25",
+          "direction": "DOWN",
+          "changePct": -18.3614,
+          "zScore": -7.4827,
+          "close": 11.16,
+          "prevClose": 13.67
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 9.3211,
+          "zScore": 3.7795,
+          "close": 9.5,
+          "prevClose": 8.69
+        },
+        {
+          "date": "2025-10-24",
+          "direction": "UP",
+          "changePct": 12.1556,
+          "zScore": 4.9327,
+          "close": 13.84,
+          "prevClose": 12.34
+        }
+      ]
+    },
+    {
+      "company": "BlackRock",
+      "ticker": "BLK",
+      "ceo": "Larry Fink",
+      "twitter_handle": "@larryfink",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.033565,
+      "stdDevPct": 1.681433,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-06-10",
+          "direction": "DOWN",
+          "changePct": -6.3924,
+          "zScore": -3.8217,
+          "close": 617.67,
+          "prevClose": 659.85
+        },
+        {
+          "date": "2022-06-21",
+          "direction": "UP",
+          "changePct": 5.5439,
+          "zScore": 3.2772,
+          "close": 614.54,
+          "prevClose": 582.26
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -7.4482,
+          "zScore": -4.4497,
+          "close": 644.91,
+          "prevClose": 696.81
+        },
+        {
+          "date": "2022-10-13",
+          "direction": "UP",
+          "changePct": 6.5769,
+          "zScore": 3.8915,
+          "close": 566.03,
+          "prevClose": 531.1
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 13.4688,
+          "zScore": 7.9904,
+          "close": 759.81,
+          "prevClose": 669.62
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -7.7133,
+          "zScore": -4.6073,
+          "close": 887.65,
+          "prevClose": 961.84
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -7.3261,
+          "zScore": -4.377,
+          "close": 822.62,
+          "prevClose": 887.65
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 9.974,
+          "zScore": 5.9119,
+          "close": 897.08,
+          "prevClose": 815.72
+        },
+        {
+          "date": "2026-01-15",
+          "direction": "UP",
+          "changePct": 5.9349,
+          "zScore": 3.5097,
+          "close": 1156.65,
+          "prevClose": 1091.85
+        },
+        {
+          "date": "2026-03-06",
+          "direction": "DOWN",
+          "changePct": -7.686,
+          "zScore": -4.5911,
+          "close": 955.45,
+          "prevClose": 1035
+        }
+      ]
+    },
+    {
+      "company": "Goldman Sachs",
+      "ticker": "GS",
+      "ceo": "David Solomon",
+      "twitter_handle": "@DavidSolomon",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.09436,
+      "stdDevPct": 1.748646,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-01-18",
+          "direction": "DOWN",
+          "changePct": -6.967,
+          "zScore": -4.0382,
+          "close": 354.4,
+          "prevClose": 380.94
+        },
+        {
+          "date": "2022-06-24",
+          "direction": "UP",
+          "changePct": 5.7938,
+          "zScore": 3.2593,
+          "close": 302.75,
+          "prevClose": 286.17
+        },
+        {
+          "date": "2023-01-17",
+          "direction": "DOWN",
+          "changePct": -6.4385,
+          "zScore": -3.736,
+          "close": 349.92,
+          "prevClose": 374
+        },
+        {
+          "date": "2023-12-14",
+          "direction": "UP",
+          "changePct": 5.7177,
+          "zScore": 3.2159,
+          "close": 383.47,
+          "prevClose": 362.73
+        },
+        {
+          "date": "2024-11-06",
+          "direction": "UP",
+          "changePct": 13.0978,
+          "zScore": 7.4363,
+          "close": 595.98,
+          "prevClose": 526.96
+        },
+        {
+          "date": "2025-01-15",
+          "direction": "UP",
+          "changePct": 6.0172,
+          "zScore": 3.3871,
+          "close": 605.92,
+          "prevClose": 571.53
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -9.2115,
+          "zScore": -5.3218,
+          "close": 511.23,
+          "prevClose": 563.1
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -7.9064,
+          "zScore": -4.5754,
+          "close": 470.81,
+          "prevClose": 511.23
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 11.8234,
+          "zScore": 6.7075,
+          "close": 516.87,
+          "prevClose": 462.22
+        },
+        {
+          "date": "2026-02-27",
+          "direction": "DOWN",
+          "changePct": -7.4736,
+          "zScore": -4.3279,
+          "close": 859.57,
+          "prevClose": 929
+        }
+      ]
+    },
+    {
+      "company": "Coinbase",
+      "ticker": "COIN",
+      "ceo": "Brian Armstrong",
+      "twitter_handle": "@brian_armstrong",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.110942,
+      "stdDevPct": 5.410287,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-05-09",
+          "direction": "DOWN",
+          "changePct": -19.5007,
+          "zScore": -3.6249,
+          "close": 83.51,
+          "prevClose": 103.74
+        },
+        {
+          "date": "2022-05-11",
+          "direction": "DOWN",
+          "changePct": -26.4009,
+          "zScore": -4.9003,
+          "close": 53.72,
+          "prevClose": 72.99
+        },
+        {
+          "date": "2022-07-26",
+          "direction": "DOWN",
+          "changePct": -21.0825,
+          "zScore": -3.9172,
+          "close": 52.93,
+          "prevClose": 67.07
+        },
+        {
+          "date": "2022-08-03",
+          "direction": "UP",
+          "changePct": 20.1993,
+          "zScore": 3.713,
+          "close": 80.81,
+          "prevClose": 67.23
+        },
+        {
+          "date": "2023-02-02",
+          "direction": "UP",
+          "changePct": 23.9878,
+          "zScore": 4.4132,
+          "close": 81.46,
+          "prevClose": 65.7
+        },
+        {
+          "date": "2023-07-13",
+          "direction": "UP",
+          "changePct": 24.491,
+          "zScore": 4.5062,
+          "close": 107,
+          "prevClose": 85.95
+        },
+        {
+          "date": "2024-11-06",
+          "direction": "UP",
+          "changePct": 31.1147,
+          "zScore": 5.7305,
+          "close": 254.31,
+          "prevClose": 193.96
+        },
+        {
+          "date": "2025-03-10",
+          "direction": "DOWN",
+          "changePct": -17.5765,
+          "zScore": -3.2692,
+          "close": 179.23,
+          "prevClose": 217.45
+        },
+        {
+          "date": "2025-05-13",
+          "direction": "UP",
+          "changePct": 23.9745,
+          "zScore": 4.4108,
+          "close": 256.9,
+          "prevClose": 207.22
+        },
+        {
+          "date": "2025-08-01",
+          "direction": "DOWN",
+          "changePct": -16.6958,
+          "zScore": -3.1064,
+          "close": 314.69,
+          "prevClose": 377.76
+        }
+      ]
+    },
+    {
+      "company": "MicroStrategy",
+      "ticker": "MSTR",
+      "ceo": "Phong Le",
+      "twitter_handle": "@phongle_mstr",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.238467,
+      "stdDevPct": 5.718665,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-07-26",
+          "direction": "UP",
+          "changePct": 26.4568,
+          "zScore": 4.5847,
+          "close": 68.25,
+          "prevClose": 53.971
+        },
+        {
+          "date": "2022-05-09",
+          "direction": "DOWN",
+          "changePct": -25.554,
+          "zScore": -4.5102,
+          "close": 21.905,
+          "prevClose": 29.424
+        },
+        {
+          "date": "2022-05-11",
+          "direction": "DOWN",
+          "changePct": -25.4168,
+          "zScore": -4.4862,
+          "close": 16.82,
+          "prevClose": 22.552
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -25.1819,
+          "zScore": -4.4452,
+          "close": 15.215,
+          "prevClose": 20.336
+        },
+        {
+          "date": "2022-11-08",
+          "direction": "DOWN",
+          "changePct": -20.5521,
+          "zScore": -3.6356,
+          "close": 21.184,
+          "prevClose": 26.664
+        },
+        {
+          "date": "2024-03-04",
+          "direction": "UP",
+          "changePct": 23.5892,
+          "zScore": 4.0833,
+          "close": 133.401,
+          "prevClose": 107.939
+        },
+        {
+          "date": "2024-03-05",
+          "direction": "DOWN",
+          "changePct": -21.2142,
+          "zScore": -3.7513,
+          "close": 105.101,
+          "prevClose": 133.401
+        },
+        {
+          "date": "2024-11-11",
+          "direction": "UP",
+          "changePct": 25.7303,
+          "zScore": 4.4577,
+          "close": 340,
+          "prevClose": 270.42
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 24.7573,
+          "zScore": 4.2875,
+          "close": 296.86,
+          "prevClose": 237.95
+        },
+        {
+          "date": "2026-02-06",
+          "direction": "UP",
+          "changePct": 26.1146,
+          "zScore": 4.5249,
+          "close": 134.93,
+          "prevClose": 106.99
+        }
+      ]
+    },
+    {
+      "company": "Box",
+      "ticker": "BOX",
+      "ceo": "Aaron Levie",
+      "twitter_handle": "@alevie",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.028058,
+      "stdDevPct": 2.052036,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-09-09",
+          "direction": "DOWN",
+          "changePct": -6.9034,
+          "zScore": -3.3778,
+          "close": 23.6,
+          "prevClose": 25.35
+        },
+        {
+          "date": "2021-12-01",
+          "direction": "UP",
+          "changePct": 10.252,
+          "zScore": 4.9824,
+          "close": 25.81,
+          "prevClose": 23.41
+        },
+        {
+          "date": "2022-10-03",
+          "direction": "UP",
+          "changePct": 9.1841,
+          "zScore": 4.4619,
+          "close": 26.63,
+          "prevClose": 24.39
+        },
+        {
+          "date": "2023-03-02",
+          "direction": "DOWN",
+          "changePct": -12.9244,
+          "zScore": -6.312,
+          "close": 29.24,
+          "prevClose": 33.58
+        },
+        {
+          "date": "2023-08-30",
+          "direction": "DOWN",
+          "changePct": -12.3052,
+          "zScore": -6.0102,
+          "close": 27.01,
+          "prevClose": 30.8
+        },
+        {
+          "date": "2023-12-06",
+          "direction": "DOWN",
+          "changePct": -10.1911,
+          "zScore": -4.98,
+          "close": 23.97,
+          "prevClose": 26.69
+        },
+        {
+          "date": "2024-08-28",
+          "direction": "UP",
+          "changePct": 10.8258,
+          "zScore": 5.262,
+          "close": 31.94,
+          "prevClose": 28.82
+        },
+        {
+          "date": "2024-12-04",
+          "direction": "DOWN",
+          "changePct": -7.699,
+          "zScore": -3.7656,
+          "close": 31.77,
+          "prevClose": 34.42
+        },
+        {
+          "date": "2025-05-28",
+          "direction": "UP",
+          "changePct": 17.2337,
+          "zScore": 8.3847,
+          "close": 36.87,
+          "prevClose": 31.45
+        },
+        {
+          "date": "2026-03-04",
+          "direction": "UP",
+          "changePct": 10.1589,
+          "zScore": 4.937,
+          "close": 26.35,
+          "prevClose": 23.92
+        }
+      ]
+    },
+    {
+      "company": "Qualcomm",
+      "ticker": "QCOM",
+      "ceo": "Cristiano Amon",
+      "twitter_handle": "@cristianoamon",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.034,
+      "stdDevPct": 2.391103,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-11-04",
+          "direction": "UP",
+          "changePct": 12.7311,
+          "zScore": 5.3101,
+          "close": 156.11,
+          "prevClose": 138.48
+        },
+        {
+          "date": "2024-05-02",
+          "direction": "UP",
+          "changePct": 9.7435,
+          "zScore": 4.0607,
+          "close": 180.1,
+          "prevClose": 164.11
+        },
+        {
+          "date": "2024-07-17",
+          "direction": "DOWN",
+          "changePct": -8.6052,
+          "zScore": -3.6131,
+          "close": 191.6,
+          "prevClose": 209.64
+        },
+        {
+          "date": "2024-08-01",
+          "direction": "DOWN",
+          "changePct": -9.3672,
+          "zScore": -3.9318,
+          "close": 164,
+          "prevClose": 180.95
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -9.5145,
+          "zScore": -3.9934,
+          "close": 139.42,
+          "prevClose": 154.08
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -8.5784,
+          "zScore": -3.6019,
+          "close": 127.46,
+          "prevClose": 139.42
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 15.1853,
+          "zScore": 6.3365,
+          "close": 143.59,
+          "prevClose": 124.66
+        },
+        {
+          "date": "2025-05-01",
+          "direction": "DOWN",
+          "changePct": -8.925,
+          "zScore": -3.7468,
+          "close": 135.21,
+          "prevClose": 148.46
+        },
+        {
+          "date": "2025-10-27",
+          "direction": "UP",
+          "changePct": 11.0927,
+          "zScore": 4.6249,
+          "close": 187.68,
+          "prevClose": 168.94
+        },
+        {
+          "date": "2026-04-24",
+          "direction": "UP",
+          "changePct": 11.1236,
+          "zScore": 4.6378,
+          "close": 148.85,
+          "prevClose": 133.95
+        }
+      ]
+    },
+    {
+      "company": "IBM",
+      "ticker": "IBM",
+      "ceo": "Arvind Krishna",
+      "twitter_handle": "@ArvindKrishna",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.055847,
+      "stdDevPct": 1.602567,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2021-10-21",
+          "direction": "DOWN",
+          "changePct": -9.5631,
+          "zScore": -6.0022,
+          "close": 122.6864,
+          "prevClose": 135.6597
+        },
+        {
+          "date": "2022-04-20",
+          "direction": "UP",
+          "changePct": 7.1003,
+          "zScore": 4.3957,
+          "close": 138.32,
+          "prevClose": 129.15
+        },
+        {
+          "date": "2024-01-25",
+          "direction": "UP",
+          "changePct": 9.4866,
+          "zScore": 5.8848,
+          "close": 190.43,
+          "prevClose": 173.93
+        },
+        {
+          "date": "2024-04-25",
+          "direction": "DOWN",
+          "changePct": -8.251,
+          "zScore": -5.1834,
+          "close": 168.91,
+          "prevClose": 184.1
+        },
+        {
+          "date": "2025-01-30",
+          "direction": "UP",
+          "changePct": 12.9642,
+          "zScore": 8.0548,
+          "close": 258.27,
+          "prevClose": 228.63
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 6.4607,
+          "zScore": 3.9966,
+          "close": 235.31,
+          "prevClose": 221.03
+        },
+        {
+          "date": "2025-07-24",
+          "direction": "DOWN",
+          "changePct": -7.6238,
+          "zScore": -4.7921,
+          "close": 260.51,
+          "prevClose": 282.01
+        },
+        {
+          "date": "2025-10-24",
+          "direction": "UP",
+          "changePct": 7.8807,
+          "zScore": 4.8827,
+          "close": 307.46,
+          "prevClose": 285
+        },
+        {
+          "date": "2026-02-23",
+          "direction": "DOWN",
+          "changePct": -13.1475,
+          "zScore": -8.2388,
+          "close": 223.35,
+          "prevClose": 257.16
+        },
+        {
+          "date": "2026-04-23",
+          "direction": "DOWN",
+          "changePct": -8.2506,
+          "zScore": -5.1832,
+          "close": 231.08,
+          "prevClose": 251.86
+        }
+      ]
+    },
+    {
+      "company": "Berkshire Hathaway",
+      "ticker": "BRK-B",
+      "ceo": "Warren Buffett",
+      "twitter_handle": "@WarrenBuffett",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.049657,
+      "stdDevPct": 1.081783,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-06-16",
+          "direction": "DOWN",
+          "changePct": -3.7178,
+          "zScore": -3.4826,
+          "close": 268.56,
+          "prevClose": 278.93
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -3.5423,
+          "zScore": -3.3204,
+          "close": 278.29,
+          "prevClose": 288.51
+        },
+        {
+          "date": "2022-10-13",
+          "direction": "UP",
+          "changePct": 4.4621,
+          "zScore": 4.0789,
+          "close": 275.78,
+          "prevClose": 264
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 5.0407,
+          "zScore": 4.6137,
+          "close": 303.2,
+          "prevClose": 288.65
+        },
+        {
+          "date": "2024-11-06",
+          "direction": "UP",
+          "changePct": 5.3566,
+          "zScore": 4.9057,
+          "close": 468.9,
+          "prevClose": 445.06
+        },
+        {
+          "date": "2025-02-24",
+          "direction": "UP",
+          "changePct": 4.1108,
+          "zScore": 3.7541,
+          "close": 498.42,
+          "prevClose": 478.74
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -6.9073,
+          "zScore": -6.4311,
+          "close": 493.54,
+          "prevClose": 530.16
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 5.84,
+          "zScore": 5.3526,
+          "close": 521.41,
+          "prevClose": 492.64
+        },
+        {
+          "date": "2025-05-05",
+          "direction": "DOWN",
+          "changePct": -5.1223,
+          "zScore": -4.7809,
+          "close": 512.15,
+          "prevClose": 539.8
+        },
+        {
+          "date": "2026-03-02",
+          "direction": "DOWN",
+          "changePct": -4.9074,
+          "zScore": -4.5823,
+          "close": 480.17,
+          "prevClose": 504.95
+        }
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "ticker": "MSFT",
+      "ceo": "Sam Altman",
+      "twitter_handle": "@sama",
+      "zScoreThreshold": 2.5,
+      "absChangeThreshold": 4,
+      "periodStart": "2021-04-26",
+      "periodEnd": "2026-04-24",
+      "totalTradingDays": 1255,
+      "meanReturnPct": 0.05241,
+      "stdDevPct": 1.661417,
+      "totalSpikes": 10,
+      "spikesUp": 5,
+      "spikesDown": 5,
+      "peaks": [
+        {
+          "date": "2022-07-27",
+          "direction": "UP",
+          "changePct": 6.6852,
+          "zScore": 3.9922,
+          "close": 268.74,
+          "prevClose": 251.9
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -5.4978,
+          "zScore": -3.3407,
+          "close": 251.99,
+          "prevClose": 266.65
+        },
+        {
+          "date": "2022-10-26",
+          "direction": "DOWN",
+          "changePct": -7.7156,
+          "zScore": -4.6756,
+          "close": 231.32,
+          "prevClose": 250.66
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 8.2268,
+          "zScore": 4.9201,
+          "close": 242.98,
+          "prevClose": 224.51
+        },
+        {
+          "date": "2023-04-26",
+          "direction": "UP",
+          "changePct": 7.2435,
+          "zScore": 4.3283,
+          "close": 295.37,
+          "prevClose": 275.42
+        },
+        {
+          "date": "2024-10-31",
+          "direction": "DOWN",
+          "changePct": -6.0528,
+          "zScore": -3.6747,
+          "close": 406.35,
+          "prevClose": 432.53
+        },
+        {
+          "date": "2025-01-30",
+          "direction": "DOWN",
+          "changePct": -6.1809,
+          "zScore": -3.7518,
+          "close": 414.99,
+          "prevClose": 442.33
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 10.1337,
+          "zScore": 6.0679,
+          "close": 390.49,
+          "prevClose": 354.56
+        },
+        {
+          "date": "2025-05-01",
+          "direction": "UP",
+          "changePct": 7.6254,
+          "zScore": 4.5581,
+          "close": 425.4,
+          "prevClose": 395.26
+        },
+        {
+          "date": "2026-01-29",
+          "direction": "DOWN",
+          "changePct": -9.9931,
+          "zScore": -6.0464,
+          "close": 433.5,
+          "prevClose": 481.63
+        }
+      ]
+    }
+  ]
+}
