@@ -1,9 +1,9 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
-  import type { Tweet } from '@projectTypes/tweets';
+  import type { GameItem } from '@projectTypes/gameItem';
 
-  export let item: Tweet;
+  export let item: GameItem;
   export let texts: Record<string, string>;
   export let locale: string;
   export let status: string;
@@ -15,7 +15,7 @@
   let isCorrect = false;
 
   function guess(direction: 'higher' | 'lower') {
-    isCorrect = direction === (item.stockChange >= 0 ? 'higher' : 'lower');
+    isCorrect = direction === (item.stockDirection === 'UP' ? 'higher' : 'lower');
     
     // 2. Ejecutamos la función pasándole los datos directamente
     if (onAnswer) {
@@ -26,7 +26,7 @@
 
 <div class="mode-wrapper" class:is-revealed={status === 'revealed'}>
   <p class="ceo">{item.ceo} {texts.tweeted}:</p>
-  <h3 class="tweet">"{item.tweet}"</h3>
+  <h3 class="tweet">"{item.tweetText}"</h3>
   <p class="date">{new Date(item.date).toLocaleDateString(locale === 'en' ? 'en-GB' : locale)}</p>
 
   {#if status === 'playing'}
@@ -44,11 +44,11 @@
       <h3>
         {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
       </h3>
-      <p>{item.company} ({item.stockCompany}) - {texts.change_text} <strong>{item.stockChange}%</strong></p>
+      <p>{item.company} ({item.ticker}) - {texts.change_text} <strong>{item.stockChangePct}%</strong></p>
 
       <StockChart 
         history={item.history} 
-        stockChange={item.stockChange} 
+        stockChange={item.stockChangePct} 
         showDramaticColor={showDramaticColor} 
       />
     </div>
