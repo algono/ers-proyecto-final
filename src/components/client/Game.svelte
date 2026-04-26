@@ -11,6 +11,7 @@
   export let locale;
   export let texts;
   export let data;
+  export let stocksImagePlaceholder;
   export let gameMode = 'classic';
 
   // Diccionario para cargar el componente dinámicamente
@@ -146,7 +147,7 @@
 <div class="game-layout">
   <div class="image-section">
     <img 
-      src={currentItem?.ceoImage || '/assets/stock-market-neon.jpg'} 
+      src={currentItem?.ceoImage || stocksImagePlaceholder} 
       alt={currentItem?.ceo || 'Stock Market'} 
       class="side-image"
     />
@@ -224,7 +225,7 @@
     position: absolute;
     inset: 0;
     /* Degradado que funde la imagen con el color de la tarjeta */
-    background: linear-gradient(to right, transparent, var(--color-secondary));
+    background: linear-gradient(to right, transparent 75%, var(--color-secondary));
   }
 
   /* 3. Contenedor del juego */
