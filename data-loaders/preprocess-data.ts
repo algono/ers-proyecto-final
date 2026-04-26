@@ -46,6 +46,23 @@ function getClosestHistory(historyData: Peak[], targetDateStr: string, totalPoin
   return slice.map(point => point.close);
 }
 
+// Función para limpiar la basura de HTML del scraper de Twitter
+function decodeHTMLEntities(text: string): string {
+  if (!text) return text;
+  
+  const entities: Record<string, string> = {
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&#39;': "'",
+    '&apos;': "'"
+  };
+  
+  // Busca cualquiera de esas claves y las reemplaza por su símbolo real
+  return text.replace(/&amp;|&lt;|&gt;|&quot;|&#39;|&apos;/g, match => entities[match] || match);
+}
+
 async function processData() {
   // Rutas
   const dataLoadersDir = __dirname;
@@ -80,10 +97,13 @@ async function processData() {
       const tweetData = JSON.parse(tweetRaw);
 
       for (const tweet of tweetData.tweets as Tweet[]) {
-        // Limpiamos el formato corrupto del scraper (quitamos el +00:00Z y dejamos solo la Z)
+        // 1. Limpiamos el formato de fecha corrupto del scraper (quitamos el +00:00Z y dejamos solo la Z)
         if (tweet.created_at.includes('+00:00Z')) {
           tweet.created_at = tweet.created_at.replace('+00:00Z', 'Z');
         }
+
+        // 2. Limpiamos el texto del tweet para quitar los &gt; y demás
+        tweet.text = decodeHTMLEntities(tweet.text);
 
         // Añadir a la tabla general de tweets
         allTweets.push(tweet);
