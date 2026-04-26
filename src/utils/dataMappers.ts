@@ -1,5 +1,6 @@
 import type { GameItem } from "@projectTypes/gameItem";
 import type { PeakData, Tweet, StockTweetLink } from '@projectTypes/data';
+import { getClosestHistory } from "./history";
 
 export function formatClassic(stocks: PeakData[], tweets: Tweet[], links: StockTweetLink[]): GameItem[] {
   const result: GameItem[] = [];
