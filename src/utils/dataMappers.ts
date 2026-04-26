@@ -1,6 +1,6 @@
 import type { GameItem } from "@projectTypes/gameItem";
 import type { PeakData, Tweet, StockTweetLink } from "@projectTypes/data";
-import { getClosestHistory } from './history'; // Tu helper importado
+import { getClosestPeakHistory } from './history'; // Tu helper importado
 
 // --- HELPER 1: MATEMÁTICAS DE LA BOLSA ---
 // Calcula el % y la dirección. Reutilizable para Classic y Stocks Only.
@@ -77,7 +77,7 @@ export function formatStocksOnly(stocks: PeakData[]): GameItem[] {
 
     for (const peak of stock.peaks) {
       // Usamos tu helper de history, pasándole el historial de la acción y la fecha del pico
-      const historySlice = getClosestHistory(stock.peaks, peak.date, 5);
+      const historySlice = getClosestPeakHistory(stock.peaks, peak.date);
       
       let changePct = peak.changePct; // Fallback
       let direction = peak.direction;

@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 import type { PeakData, Tweet, StockTweetLink } from '../src/types/data';
-import { getClosestHistory } from '../src/utils/history';
+import { getClosestPeakHistory } from '../src/utils/history';
 
 // Recreamos __dirname para ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -75,8 +75,7 @@ async function processData() {
         stockTweetsLink.push({
           ticker: stock.ticker,
           tweet_id: tweet.id,
-          // Pasamos el historial de la empresa, la fecha del tweet, y pedimos 5 puntos
-          history: getClosestHistory(stock.peaks, tweet.created_at, 5) 
+          history: getClosestPeakHistory(stock.peaks, tweet.created_at) 
         });
       }
       console.log(`✅ Añadidos ${tweetData.tweets.length} tweets de ${stock.ceo} (${stock.ticker})`);
