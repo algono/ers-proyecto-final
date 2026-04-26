@@ -11,23 +11,8 @@
   export let showDramaticColor: boolean;
   export let onAnswer: (result: { isCorrect: boolean }) => void;
 
-  let options: string[] = [];
   let isCorrect = false;
   let selectedCEO: string | null = null;
-
-  // Cada vez que 'item' cambia (pasamos al siguiente turno), 
-  // recalculamos las opciones aleatorias.
-  $: if (item && data) {
-    const allCEOs = [...new Set(data.map(d => d.tweetAuthorDisplayName))];
-    const otherCEOs = allCEOs.filter(c => c !== item.tweetAuthorDisplayName);
-    
-    // Elegimos 2 al azar
-    const randoms = otherCEOs.sort(() => Math.random() - 0.5).slice(0, 2);
-
-    // Barajamos los 3
-    options = [item.ceo, ...randoms].sort(() => Math.random() - 0.5);
-    selectedCEO = null; // Reseteamos selección al cambiar de turno
-  }
 
   function guess(chosenOption: string) {
     selectedCEO = chosenOption;
@@ -44,7 +29,7 @@
       <p class="question">{texts.who_tweeted}</p>
       
       <div class="buttons">
-        {#each options as option}
+        {#each item.options as option}
           <button class="ceo-btn" on:click={() => guess(option)}>
             👤 {option}
           </button>
