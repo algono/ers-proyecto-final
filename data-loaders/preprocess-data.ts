@@ -80,6 +80,11 @@ async function processData() {
       const tweetData = JSON.parse(tweetRaw);
 
       for (const tweet of tweetData.tweets as Tweet[]) {
+        // Limpiamos el formato corrupto del scraper (quitamos el +00:00Z y dejamos solo la Z)
+        if (tweet.created_at.includes('+00:00Z')) {
+          tweet.created_at = tweet.created_at.replace('+00:00Z', 'Z');
+        }
+
         // Añadir a la tabla general de tweets
         allTweets.push(tweet);
         
