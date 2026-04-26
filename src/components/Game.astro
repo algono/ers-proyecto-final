@@ -5,8 +5,6 @@ import GameSvelte from '@components/client/Game.svelte';
 
 import { PROJECT_NAME, type GameMode } from '@constants';
 
-import { tweets } from '@utils/tweets';
-
 import stocksImagePlaceholder from '@assets/images/stocks-image-placeholder.png';
 import { getImage } from 'astro:assets';
 
@@ -33,7 +31,7 @@ const { gameMode = 'classic' } = Astro.props;
 ---
 
 <Layout title={PROJECT_NAME}>
-  <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} data={tweets} gameMode={gameMode} stocksImagePlaceholder={stocksImagePlaceholderData.src} />
+  <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} gameMode={gameMode} stocksImagePlaceholder={stocksImagePlaceholderData.src} />
 </Layout>
 
 <style>

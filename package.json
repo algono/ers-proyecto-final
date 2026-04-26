@@ -7,6 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "data:preprocess": "tsx data-loaders/preprocess-data.ts",
     "generate-icons": "node generate-icons.js"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "svgo": "^4.0.0"
+    "svgo": "^4.0.0",
+    "tsx": "^4.21.0"
   }
 }

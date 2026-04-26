@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
   
   // Importamos los modos de juego
@@ -7,20 +8,40 @@
   import ModeStocksOnly from './gamemodes/ModeStocksOnly.svelte';
   import ModeWhoSaidWhat from './gamemodes/ModeWhoSaidWhat.svelte';
   
-  import type { Tweet } from '@projectTypes/tweets';
+  import type { GameItem } from '@projectTypes/gameItem';
   import type { GameMode } from '@constants';
   import type { Component } from 'svelte';
+
+  import { formatClassic } from '@utils/dataMappers';
 
   // Props de Astro:
   export let locale: string;
   export let texts: Record<string, string>;
-  export let data : Tweet[];
   export let stocksImagePlaceholder: string;
   export let gameMode : GameMode = 'classic';
 
+  let data: GameItem[] = []; // Usaremos esta nueva interfaz (te la explico abajo)
+  let isLoading = true; // Para mostrar un spinner mientras carga el JSON
+
+  onMount(async () => {
+    // Vite creará "chunks" (archivos separados) para cada JSON automáticamente
+    if (gameMode === 'classic') {
+      // Cargamos los 3 a la vez en paralelo
+      const [stocksMod, tweetsMod, linksMod] = await Promise.all([
+        import('../../content/data/stocks.json'),
+        import('../../content/data/tweets.json'),
+        import('../../content/data/stock_tweets.json')
+      ]);
+      data = formatClassic(stocksMod.default, tweetsMod.default, linksMod.default);
+    }
+    // ... otros modos ...
+    
+    isLoading = false;
+  });
+
   interface GameModeProps {
-    item: Tweet;
-    data: Tweet[];
+    item: GameItem;
+    data: GameItem[];
     texts: Record<string, string>;
     locale: string;
     status: string;
