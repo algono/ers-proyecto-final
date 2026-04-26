@@ -24,7 +24,7 @@ game.lower_button,Went down,Bajaron,Gefallen,Caiu,Scendono,Smanjilo,Descendu
 game.confirm_exit,You have a game in progress. Are you sure you want to leave? You'll lose your current progress.,Tienes una partida en curso. ¿Seguro que quieres salir? Perderás tu progreso actual.,"Du hast ein laufendes Spiel. Bist du sicher, dass du die Seite verlassen möchtest? Du verlierst deinen aktuellen Fortschritt.",Você tem um jogo em andamento. Tem certeza de que deseja sair? Você perderá seu progresso atual.,Hai una partita in corso. Sei sicuro di voler uscire? Perderai i tuoi progressi attuali.,Imaš igru u tijeku. Jeste li sigurni da želite napustiti? Izgubit ćete svoj trenutni napredak.,Vous avez une partie en cours. Êtes-vous sûr de vouloir quitter ? Vous perdrez votre progression actuelle.
 game.correct,Correct!,¡Acertaste!,Richtig!,Correto!,Giusto!,Točno!,Correct !
 game.wrong,Wrong!,¡Fallaste!,Falsch!,Errado!,Sbagliato!,Netočno!,Faux !
-game.next_button,Next Tweet ➡️,Siguiente Tweet ➡️,Nächster Tweet ➡️,Próximo Tweet ➡️,Prossimo Tweet ➡️,Sljedeći tvit ➡️,Tweet suivant ➡️
+game.next_button,Next Tweet,Siguiente Tweet,Nächster Tweet,Próximo Tweet,Prossimo Tweet,Sljedeći tvit,Tweet suivant
 game.restart_button,Restart,Reiniciar,Neustart,Reiniciar,Riavvia,Ponovno pokreni,Redémarrer
 game.results_button,View results,Ver resultados,Ergebnisse anzeigen,Ver resultados,Vedi risultati,Vidi rezultate,Voir les résultats
 game.play_again,Play again,Volver a jugar,Nochmal spielen,Jogar novamente,Gioca ancora,Igraj ponovno,Rejouer

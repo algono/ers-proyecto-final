@@ -143,96 +143,170 @@
   }
 </script>
 
-<div class="game-container">
-  <header>
-    <h2>{texts.score}: <span>{score}</span></h2>
-  </header>
+<div class="game-layout">
+  <div class="image-section">
+    <img 
+      src={currentItem?.ceoImage || '/assets/stock-market-neon.jpg'} 
+      alt={currentItem?.ceo || 'Stock Market'} 
+      class="side-image"
+    />
+    <div class="image-overlay"></div>
+  </div>
 
-  {#if status === 'gameover'}
-    <div in:fade class="game-over">
-      <h2>{texts.over_title}</h2>
-      <p>{texts.final_score}: {score}</p>
-      <button class="main-btn" on:click={restart}>{texts.play_again}</button>
-    </div>
-  {:else}
-    <div class="card">
-      
-      <svelte:component 
-        this={ActiveModeComponent}
-        item={currentItem}
-        data={shuffledData}
-        texts={texts}
-        locale={locale}
-        status={status}
-        showDramaticColor={showDramaticColor}
-        onAnswer={handleAnswer}
-      />
+  <div class="game-container">
+    <header>
+      <h2>{texts.score}: <span>{score}</span></h2>
+    </header>
 
-      {#if showDramaticColor}
-        <button class="main-btn" in:fly={{ y: 10, duration: 300 }} on:click={next}>
-          {lastAnswerWasCorrect ? texts.next_button : texts.results_button}
-        </button>
-      {/if}
+    {#if status === 'gameover'}
+      <div in:fade class="game-over">
+        <h2>{texts.over_title}</h2>
+        <p>{texts.final_score}: {score}</p>
+        <button class="main-btn" on:click={restart}>{texts.play_again}</button>
+      </div>
+    {:else if currentItem}
+      <div class="card glass">
+        <button class="main-btn restart-btn" on:click={restart}>↺</button>
+        <div class="card-content">
+          <svelte:component 
+            this={ActiveModeComponent} 
+            item={currentItem} 
+            data={shuffledData} 
+            {texts} {locale} {status} {showDramaticColor}
+            onAnswer={handleAnswer} 
+          />
 
-      <button class="main-btn restart-btn" on:click={restart}>
-        {texts.restart_button}
-      </button>
-    </div>
-  {/if}
+          {#if showDramaticColor}
+            <button class="main-btn next-action" in:fly={{ y: 10 }} on:click={next}>
+              {lastAnswerWasCorrect ? texts.next_button : texts.results_button}
+            </button>
+          {/if}
+        </div>
+      </div>
+    {/if}
+  </div>
 </div>
 
 <style>
-  /* Estilos estructurales y globales del juego */
-  .game-container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+  /* 1. Layout principal: Dos columnas en PC, una en móvil */
+  .game-layout {
+    display: flex;
+    max-width: 1000px; /* Más ancho para que luzcan las dos columnas */
+    margin: 2rem auto;
+    background: var(--color-secondary);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--color-tertiary);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
-  .card {
+
+  /* 2. Sección de la imagen */
+  .image-section {
+    flex: 1;
     position: relative;
-    background: #1e293b;
-    color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    min-height: 350px;
+    display: none; /* Se oculta en móviles pequeños */
+    background: #000;
+  }
+
+  @media (min-width: 768px) {
+    .image-section { display: block; }
+  }
+
+  .side-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* Para que no distraiga demasiado del texto */
+    filter: grayscale(20%);
+  }
+
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    /* Degradado que funde la imagen con el color de la tarjeta */
+    background: linear-gradient(to right, transparent, var(--color-secondary));
+  }
+
+  /* 3. Contenedor del juego */
+  .game-container {
+    flex: 1.2;
+    padding-inline: 2rem;
+    padding-block: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: var(--color-background);
   }
-  
-  /* Estilos para los botones genéricos del padre (Siguiente, Volver a jugar) */
+
+  .game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 4. La Tarjeta con efecto GLASS */
+  .card.glass {
+    background: rgba(26, 26, 26, 0.6); /* Fondo semi-transparente */
+    backdrop-filter: blur(12px); /* El toque mágico */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(222, 255, 154, 0.1); /* Borde sutil con tu verde neón */
+    color: var(--color-text);
+    padding: 1rem;
+    border-radius: 1rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* 5. Botones usando tus variables globales */
   button.main-btn {
-    padding: 0.75rem 1.5rem;
+    background: var(--color-logo-primary); /* Verde Neón */
+    color: var(--color-secondary); /* Texto negro para contraste */
+    padding: 1rem 1.5rem;
     font-size: 1.1rem;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.1s;
-    background: #3b82f6; 
-    color: white;
-    margin-top: 1.5rem;
-    width: 100%;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s;
   }
+
   button.main-btn:hover {
-    background: #2563eb;
-  }
-  button.main-btn:active { 
-    transform: scale(0.95); 
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(222, 255, 154, 0.3);
   }
 
   button.restart-btn {
-    /* Subtle dark gray background for the restart button */
-    background: #475569;
-    /* Smaller size so it doesn't compete with the main action button */
-    width: fit-content;
-    margin: 0;
-    padding: 0.4rem 0.5rem;
-    font-size: 0.7rem;
-    /* Show on top left corner of the card */
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.2rem;
+  }
+
+  header h2 {
+    color: var(--color-semi-transparent-white);
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  header span {
+    color: var(--color-logo-primary);
+    font-size: 2.5rem;
+    font-weight: 900;
   }
 </style>

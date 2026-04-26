@@ -24,13 +24,11 @@ const { gameMode = 'classic' } = Astro.props;
 ---
 
 <Layout title={PROJECT_NAME}>
-  <main>
-    <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} data={tweets} gameMode={gameMode} />
-  </main>
+  <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} data={tweets} gameMode={gameMode} />
 </Layout>
 
 <style>
-  main {
+  :global(main) {
     min-height: 670px;
   }
 </style>
