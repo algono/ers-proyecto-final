@@ -18,8 +18,8 @@
   // Cada vez que 'item' cambia (pasamos al siguiente turno), 
   // recalculamos las opciones aleatorias.
   $: if (item && data) {
-    const allCEOs = [...new Set(data.map(d => d.ceo))];
-    const otherCEOs = allCEOs.filter(c => c !== item.ceo);
+    const allCEOs = [...new Set(data.map(d => d.tweetAuthorDisplayName))];
+    const otherCEOs = allCEOs.filter(c => c !== item.tweetAuthorDisplayName);
     
     // Elegimos 2 al azar
     const randoms = otherCEOs.sort(() => Math.random() - 0.5).slice(0, 2);
