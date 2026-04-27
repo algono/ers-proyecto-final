@@ -9,12 +9,11 @@
   export let locale: string;
   export let status: string;
   export let showDramaticColor: boolean;
+  export let lastAnswerWasCorrect: boolean;
   export let onAnswer: (result: { isCorrect: boolean }) => void;
 
-  let isCorrect = false;
-
   function guess(direction: 'higher' | 'lower') {
-    isCorrect = direction === (item.stockChangePct! > 0 ? 'higher' : 'lower');
+    const isCorrect = direction === (item.stockChangePct! > 0 ? 'higher' : 'lower');
     onAnswer({ isCorrect });
   }
 </script>
@@ -39,7 +38,7 @@
   {#if status === 'revealed'}
     <div class="result" in:fade>
       <h3>
-        {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
+        {lastAnswerWasCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
       </h3>
       <p>{texts.change_text} <strong>{item.stockChangePct!.toFixed(2)}%</strong></p>
 

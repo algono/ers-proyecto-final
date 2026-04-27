@@ -8,12 +8,11 @@
   export let texts: Record<string, string>;
   export let status: string;
   export let showDramaticColor: boolean;
+  export let lastAnswerWasCorrect: boolean;
   export let onAnswer: (result: { isCorrect: boolean }) => void;
 
-  let isCorrect = false;
-
   function guess(chosenOption: string) {
-    isCorrect = chosenOption === item.tweetAuthorDisplayName;
+    const isCorrect = chosenOption === item.tweetAuthorDisplayName;
     onAnswer({ isCorrect });
   }
 </script>
@@ -38,7 +37,7 @@
   {#if status === 'revealed'}
     <div class="result" in:fade>
       <h3>
-        {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
+        {lastAnswerWasCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
       </h3>
       
       <p>

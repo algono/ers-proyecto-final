@@ -8,12 +8,12 @@
   export let texts: Record<string, string>;
   export let status: string;
   export let showDramaticColor: boolean;
+  export let lastAnswerWasCorrect: boolean;
   export let onAnswer: (result: { isCorrect: boolean }) => void;
 
   let ceosPool: string[] = [];
   let slots: (string | null)[] = [null, null]; // Los dos huecos vacíos
   let activeCeo: string | null = null; // Para el clic-to-slot o drag
-  let isCorrect = false;
 
   // 1. Preparación del tablero usando item.matchData y item.options
   $: if (item && status === 'playing') {
@@ -73,7 +73,7 @@
     const firstMatch = slots[0] === item.matchData![0].tweetAuthorDisplayName;
     const secondMatch = slots[1] === item.matchData![1].tweetAuthorDisplayName;
     
-    isCorrect = firstMatch && secondMatch;
+    const isCorrect = firstMatch && secondMatch;
     
     // Le decimos al Padre Game.svelte que hemos terminado
     onAnswer({ isCorrect });
@@ -125,7 +125,7 @@
 {#if status === 'revealed'}
   <div class="result" in:fade>
     <h3>
-      {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
+      {lastAnswerWasCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
     </h3>
     
     <div class="side-by-side-charts">

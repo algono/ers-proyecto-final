@@ -7,15 +7,14 @@
   export let texts: Record<string, string>;
   export let locale: string;
   export let status: string;
+  export let lastAnswerWasCorrect: boolean;
   export let showDramaticColor: boolean;
 
   // 1. ¡Nueva Prop! Recibimos la función del padre directamente
   export let onAnswer: (result: { isCorrect: boolean }) => void;
 
-  let isCorrect = false;
-
   function guess(direction: 'higher' | 'lower') {
-    isCorrect = direction === (item.stockDirection === 'UP' ? 'higher' : 'lower');
+    const isCorrect = direction === (item.stockDirection === 'UP' ? 'higher' : 'lower');
     
     // 2. Ejecutamos la función pasándole los datos directamente
     if (onAnswer) {
@@ -42,7 +41,7 @@
   {#if status === 'revealed'}
     <div class="result" in:fade>
       <h3>
-        {isCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
+        {lastAnswerWasCorrect ? `✅ ${texts.correct}` : `❌ ${texts.wrong}`}
       </h3>
       <p>{item.company} ({item.ticker}) - {texts.change_text} <strong>{item.stockChangePct}%</strong></p>
 

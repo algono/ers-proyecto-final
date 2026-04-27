@@ -95,11 +95,11 @@
 
   interface GameModeProps {
     item: GameItem;
-    data: GameItem[];
     texts: Record<string, string>;
     locale: string;
     status: string;
     showDramaticColor: boolean;
+    lastAnswerWasCorrect: boolean;
     onAnswer: (result: { isCorrect: boolean }) => void;
   }
 
@@ -249,12 +249,11 @@
         <div class="card glass">
           <button class="main-btn restart-btn" on:click={restart}>↺</button>
           <div class="card-content">
-            <svelte:component 
-              this={ActiveModeComponent} 
-              item={currentItem} 
-              data={shuffledData} 
-              {texts} {locale} {status} {showDramaticColor}
-              onAnswer={handleAnswer} 
+            <svelte:component
+              this={ActiveModeComponent}
+              item={currentItem}
+              {texts} {locale} {status} {showDramaticColor} {lastAnswerWasCorrect}
+              onAnswer={handleAnswer}
             />
 
             {#if showDramaticColor}
