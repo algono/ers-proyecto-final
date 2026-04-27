@@ -8,6 +8,17 @@ export const PROJECT_NAME_FOR_SCREEN_READERS = 'The C E O Effect';
 
 export const COPYRIGHT_YEARS = '2026'; // Update with the actual year(s) of the project
 
+export const AUTHORS = [
+  { name: 'Alejandro Gómez', githubUser: 'algono' },
+  { name: 'Jesús García', githubUser: 'JesusGSoriano' },
+  { name: 'Adrián Lucas', githubUser: 'LordLucas15' },
+]
+export const GetGitHubUrl = (githubUsername: string) => `https://github.com/${githubUsername}`;
+export const AUTHORS_WITH_GITHUB_URLS = AUTHORS.map(author => ({
+  ...author,
+  githubUrl: GetGitHubUrl(author.githubUser),
+}));
+
 // 1. La lista maestra en formato Array (el "as const" la hace inmutable)
 export const VALID_GAME_MODES = ['classic', 'guess-ceo', 'stocks-only', 'who-said-what'] as const;
 

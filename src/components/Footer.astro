@@ -1,8 +1,8 @@
 ---
-import { COPYRIGHT_YEARS } from "@constants";
-import { getAriaCurrentPage, PROJECT_NAME_HTML } from "@utils/a11y";
+import { COPYRIGHT_YEARS, AUTHORS_WITH_GITHUB_URLS } from "@constants";
+import { getAriaCurrentPage } from "@utils/a11y";
 
-const { homeLocale: home, t } = Astro.locals;
+const { t } = Astro.locals;
 
 const footerLinks : { href: string; label: string }[] = [];
 ---
@@ -15,9 +15,21 @@ const footerLinks : { href: string; label: string }[] = [];
     ))}
     </ul>
   </nav>
-  <div class="copyright-text">
-    Copyright © {COPYRIGHT_YEARS} <Fragment set:html={t('copyright_text', PROJECT_NAME_HTML)} />
-  </div>
+  <span class="copyright-text">
+    Copyright © {COPYRIGHT_YEARS}
+    <span>
+      {AUTHORS_WITH_GITHUB_URLS.map((a, i, arr) => (
+        <>
+          <span>
+            {a.name}
+            (<a href={a.githubUrl} target="_blank" rel="noopener noreferrer">{a.githubUser}</a>)
+          </span>
+          {i < arr.length - 1 ? ', ' : ''}
+        </>
+      ))}
+    </span>
+    | {t('copyright_text')}
+  </span>
 </footer>
 <style>
   footer {
@@ -44,5 +56,11 @@ const footerLinks : { href: string; label: string }[] = [];
   }
   .footer-link:hover {
     text-decoration: underline;
+  }
+  .copyright-text a {
+    color: var(--color-primary);
+  }
+  .copyright-text a:hover {
+    filter: brightness(0.8);
   }
 </style>
