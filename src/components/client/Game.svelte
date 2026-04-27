@@ -249,7 +249,7 @@
           <button class="main-btn" on:click={restart}>{texts.play_again}</button>
         </div>
       {:else if currentItem}
-        <div class="card glass">
+        <div class="card">
           <div class="card-content">
             <svelte:component
               this={ActiveModeComponent}
@@ -328,11 +328,8 @@
     align-items: center;
   }
 
-  /* 4. La Tarjeta con efecto GLASS */
-  .card.glass {
-    background: rgba(26, 26, 26, 0.6); /* Fondo semi-transparente */
-    backdrop-filter: blur(12px); /* El toque mágico */
-    -webkit-backdrop-filter: blur(12px);
+  /* 4. La Tarjeta */
+  .card {
     border: 1px solid rgba(222, 255, 154, 0.1); /* Borde sutil con tu verde neón */
     color: var(--color-text);
     padding: 1rem;
