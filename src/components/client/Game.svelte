@@ -23,6 +23,8 @@
   let data: GameItem[] = []; // Usaremos esta nueva interfaz (te la explico abajo)
   let isLoading = true; // Para mostrar un spinner mientras carga el JSON
 
+  const saveKey = `finance_game_state_${gameMode}`; // Clave única para cada modo de juego, así no se pisan entre ellos
+
   onMount(async () => {
     // Vite creará "chunks" (archivos separados) para cada JSON automáticamente
     switch (gameMode) {
@@ -64,7 +66,7 @@
     // 1. CARGAR PARTIDA AL INICIAR
     // Comprobamos window para que el Build de Astro no explote
     if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
-      const savedState = sessionStorage.getItem('finance_game_state');
+      const savedState = sessionStorage.getItem(saveKey);
       if (savedState) {
         try {
           const parsed = JSON.parse(savedState);
@@ -148,14 +150,16 @@
   // Svelte ejecutará esto automáticamente cada vez que cualquiera de estas variables cambie
   $: {
     // Nos aseguramos de que estamos en el navegador y no en el servidor de Astro
-    if (typeof sessionStorage !== 'undefined') {
+    // (y de que no estamos en modo loading, para evitar guardar un estado vacío al cargar)
+    if (!isLoading && typeof sessionStorage !== 'undefined') {
       const stateToSave = {
         currentIndex,
         score,
         status,
-        lastAnswerWasCorrect
+        lastAnswerWasCorrect,
+        gameSeed
       };
-      sessionStorage.setItem('finance_game_state', JSON.stringify(stateToSave));
+      sessionStorage.setItem(saveKey, JSON.stringify(stateToSave));
     }
   }
   // ----------------------------------------
@@ -211,7 +215,7 @@
   function cleanupStorage() {
     // Limpiamos el guardado si existe (y si no, sessionStorage no hace nada)
     if (typeof sessionStorage !== 'undefined') {
-      sessionStorage.removeItem('finance_game_state');
+      sessionStorage.removeItem(saveKey);
     }
   }
 </script>
