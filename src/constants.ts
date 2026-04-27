@@ -3,6 +3,10 @@ export const PROJECT_NAME = 'The CEO Effect';
 // --- SEO CONFIGURATION ---
 export const SEO_TITLE = `${PROJECT_NAME} - Play the Market Game`;
 export const SEO_DESCRIPTION = "Guess the stock market reaction to CEO tweets in this interactive game.";
+/**
+ * Relative path to the social preview image for social media sharing (place it in the public/ folder)
+ */
+export const SEO_IMAGE = 'social-preview.png';
 
 /**
  * Theme color, set as the primary color for the website, used in the "theme-color" meta tag for the address bar color on mobile devices
