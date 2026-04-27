@@ -247,7 +247,7 @@
         </div>
       {:else if currentItem}
         <div class="card glass">
-          <button class="main-btn restart-btn" on:click={restart}>↺</button>
+          <button class="main-btn restart-btn" on:click={restart} aria-label={texts.restart_button}>↺</button>
           <div class="card-content">
             <svelte:component
               this={ActiveModeComponent}
