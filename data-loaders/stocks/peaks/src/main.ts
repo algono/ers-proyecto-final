@@ -74,17 +74,17 @@ async function main(): Promise<void> {
 
       const analysis = analyzer.analyze(entry, bars);
 
-      // Top 5 subidas: filtrar UP, ya vienen ordenados por |changePct| desc,
+      // Top 10 subidas: filtrar UP, ya vienen ordenados por |changePct| desc,
       // así que los primeros UP son los más grandes
       const top5Up = analysis.peaks
         .filter((p) => p.direction === "UP")
-        .slice(0, 5);
+        .slice(0, 10);
 
-      // Top 5 bajadas: filtrar DOWN y ordenar por changePct asc (más negativo primero)
+      // Top 10 bajadas: filtrar DOWN y ordenar por changePct asc (más negativo primero)
       const top5Down = analysis.peaks
         .filter((p) => p.direction === "DOWN")
         .sort((a, b) => a.changePct - b.changePct)
-        .slice(0, 5);
+        .slice(0, 10);
 
       // Unir y reordenar por fecha para que el JSON sea legible cronológicamente
       analysis.peaks      = [...top5Up, ...top5Down].sort((a, b) => a.date.localeCompare(b.date));

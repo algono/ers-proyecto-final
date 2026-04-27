@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-26T17:14:12.538Z",
+  "generatedAt": "2026-04-27T13:05:54.768Z",
   "config": {
     "zScoreThreshold": 2.5,
     "absChangeThreshold": 4
@@ -12,36 +12,84 @@
       "twitter_handle": "@jensenhuang",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.259509,
-      "stdDevPct": 3.248977,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.260212,
+      "stdDevPct": 3.250177,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2021-11-04",
+          "direction": "UP",
+          "changePct": 12.0423,
+          "zScore": 3.625,
+          "close": 29.801,
+          "prevClose": 26.598
+        },
+        {
+          "date": "2022-03-24",
+          "direction": "UP",
+          "changePct": 9.8151,
+          "zScore": 2.9398,
+          "close": 28.15,
+          "prevClose": 25.634
+        },
         {
           "date": "2022-05-09",
           "direction": "DOWN",
           "changePct": -9.2369,
-          "zScore": -2.9229,
+          "zScore": -2.922,
           "close": 16.95,
           "prevClose": 18.675
+        },
+        {
+          "date": "2022-05-13",
+          "direction": "UP",
+          "changePct": 9.4652,
+          "zScore": 2.8322,
+          "close": 17.706,
+          "prevClose": 16.175
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -7.8178,
+          "zScore": -2.4854,
+          "close": 15.647,
+          "prevClose": 16.974
+        },
+        {
+          "date": "2022-08-26",
+          "direction": "DOWN",
+          "changePct": -9.2279,
+          "zScore": -2.9193,
+          "close": 16.26,
+          "prevClose": 17.913
         },
         {
           "date": "2022-09-13",
           "direction": "DOWN",
           "changePct": -9.4726,
-          "zScore": -2.9954,
+          "zScore": -2.9945,
           "close": 13.131,
           "prevClose": 14.505
+        },
+        {
+          "date": "2022-10-07",
+          "direction": "DOWN",
+          "changePct": -8.0274,
+          "zScore": -2.5499,
+          "close": 12.076,
+          "prevClose": 13.13
         },
         {
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 14.3293,
-          "zScore": 4.3305,
+          "zScore": 4.3287,
           "close": 15.75,
           "prevClose": 13.776
         },
@@ -49,7 +97,7 @@
           "date": "2023-02-23",
           "direction": "UP",
           "changePct": 14.0214,
-          "zScore": 4.2358,
+          "zScore": 4.234,
           "close": 23.664,
           "prevClose": 20.754
         },
@@ -57,7 +105,7 @@
           "date": "2023-05-25",
           "direction": "UP",
           "changePct": 24.3696,
-          "zScore": 7.4208,
+          "zScore": 7.4179,
           "close": 37.98,
           "prevClose": 30.538
         },
@@ -65,7 +113,7 @@
           "date": "2024-02-22",
           "direction": "UP",
           "changePct": 16.4009,
-          "zScore": 4.9681,
+          "zScore": 4.9661,
           "close": 78.538,
           "prevClose": 67.472
         },
@@ -73,15 +121,31 @@
           "date": "2024-04-19",
           "direction": "DOWN",
           "changePct": -10.0046,
-          "zScore": -3.1592,
+          "zScore": -3.1582,
           "close": 76.2,
           "prevClose": 84.671
+        },
+        {
+          "date": "2024-05-23",
+          "direction": "UP",
+          "changePct": 9.3196,
+          "zScore": 2.7874,
+          "close": 103.799,
+          "prevClose": 94.95
+        },
+        {
+          "date": "2024-07-31",
+          "direction": "UP",
+          "changePct": 12.8121,
+          "zScore": 3.8619,
+          "close": 117.02,
+          "prevClose": 103.73
         },
         {
           "date": "2024-09-03",
           "direction": "DOWN",
           "changePct": -9.525,
-          "zScore": -3.0116,
+          "zScore": -3.0107,
           "close": 108,
           "prevClose": 119.37
         },
@@ -89,15 +153,31 @@
           "date": "2025-01-27",
           "direction": "DOWN",
           "changePct": -16.9682,
-          "zScore": -5.3025,
+          "zScore": -5.3007,
           "close": 118.42,
           "prevClose": 142.62
+        },
+        {
+          "date": "2025-02-27",
+          "direction": "DOWN",
+          "changePct": -8.4781,
+          "zScore": -2.6886,
+          "close": 120.15,
+          "prevClose": 131.28
+        },
+        {
+          "date": "2025-03-03",
+          "direction": "DOWN",
+          "changePct": -8.6936,
+          "zScore": -2.7549,
+          "close": 114.06,
+          "prevClose": 124.92
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 18.7227,
-          "zScore": 5.6828,
+          "zScore": 5.6805,
           "close": 114.33,
           "prevClose": 96.3
         }
@@ -110,20 +190,20 @@
       "twitter_handle": "@tim_cook",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.070626,
-      "stdDevPct": 1.731135,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.070877,
+      "stdDevPct": 1.731802,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2022-01-28",
           "direction": "UP",
           "changePct": 6.9778,
-          "zScore": 3.99,
+          "zScore": 3.9883,
           "close": 170.33,
           "prevClose": 159.22
         },
@@ -131,15 +211,23 @@
           "date": "2022-05-05",
           "direction": "DOWN",
           "changePct": -5.5716,
-          "zScore": -3.2593,
+          "zScore": -3.2582,
           "close": 156.77,
           "prevClose": 166.02
+        },
+        {
+          "date": "2022-05-11",
+          "direction": "DOWN",
+          "changePct": -5.1841,
+          "zScore": -3.0344,
+          "close": 146.5,
+          "prevClose": 154.51
         },
         {
           "date": "2022-05-18",
           "direction": "DOWN",
           "changePct": -5.6419,
-          "zScore": -3.2999,
+          "zScore": -3.2988,
           "close": 140.82,
           "prevClose": 149.24
         },
@@ -147,15 +235,23 @@
           "date": "2022-09-13",
           "direction": "DOWN",
           "changePct": -5.868,
-          "zScore": -3.4305,
+          "zScore": -3.4293,
           "close": 153.84,
           "prevClose": 163.43
+        },
+        {
+          "date": "2022-09-29",
+          "direction": "DOWN",
+          "changePct": -4.9119,
+          "zScore": -2.8772,
+          "close": 142.48,
+          "prevClose": 149.84
         },
         {
           "date": "2022-10-28",
           "direction": "UP",
           "changePct": 7.5553,
-          "zScore": 4.3235,
+          "zScore": 4.3217,
           "close": 155.74,
           "prevClose": 144.8
         },
@@ -163,23 +259,55 @@
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 8.8975,
-          "zScore": 5.0989,
+          "zScore": 5.0968,
           "close": 146.87,
           "prevClose": 134.87
+        },
+        {
+          "date": "2022-11-30",
+          "direction": "UP",
+          "changePct": 4.8594,
+          "zScore": 2.765,
+          "close": 148.03,
+          "prevClose": 141.17
+        },
+        {
+          "date": "2023-05-05",
+          "direction": "UP",
+          "changePct": 4.6927,
+          "zScore": 2.6688,
+          "close": 173.57,
+          "prevClose": 165.79
+        },
+        {
+          "date": "2024-05-03",
+          "direction": "UP",
+          "changePct": 5.9816,
+          "zScore": 3.4131,
+          "close": 183.38,
+          "prevClose": 173.03
         },
         {
           "date": "2024-06-11",
           "direction": "UP",
           "changePct": 7.2649,
-          "zScore": 4.1558,
+          "zScore": 4.1541,
           "close": 207.15,
           "prevClose": 193.12
+        },
+        {
+          "date": "2025-03-10",
+          "direction": "DOWN",
+          "changePct": -4.848,
+          "zScore": -2.8403,
+          "close": 227.48,
+          "prevClose": 239.07
         },
         {
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -9.2456,
-          "zScore": -5.3816,
+          "zScore": -5.3796,
           "close": 203.19,
           "prevClose": 223.89
         },
@@ -187,17 +315,49 @@
           "date": "2025-04-04",
           "direction": "DOWN",
           "changePct": -7.2887,
-          "zScore": -4.2512,
+          "zScore": -4.2497,
           "close": 188.38,
           "prevClose": 203.19
+        },
+        {
+          "date": "2025-04-08",
+          "direction": "DOWN",
+          "changePct": -4.9818,
+          "zScore": -2.9176,
+          "close": 172.42,
+          "prevClose": 181.46
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 15.3289,
-          "zScore": 8.814,
+          "zScore": 8.8105,
           "close": 198.85,
           "prevClose": 172.42
+        },
+        {
+          "date": "2025-05-12",
+          "direction": "UP",
+          "changePct": 6.1754,
+          "zScore": 3.5249,
+          "close": 210.79,
+          "prevClose": 198.53
+        },
+        {
+          "date": "2025-08-06",
+          "direction": "UP",
+          "changePct": 5.0907,
+          "zScore": 2.8986,
+          "close": 213.25,
+          "prevClose": 202.92
+        },
+        {
+          "date": "2026-02-12",
+          "direction": "DOWN",
+          "changePct": -4.9982,
+          "zScore": -2.927,
+          "close": 261.73,
+          "prevClose": 275.5
         }
       ]
     },
@@ -208,28 +368,60 @@
       "twitter_handle": "@sundarpichai",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.106041,
-      "stdDevPct": 1.948532,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.10678,
+      "stdDevPct": 1.949134,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2022-02-02",
+          "direction": "UP",
+          "changePct": 7.5238,
+          "zScore": 3.8053,
+          "close": 148,
+          "prevClose": 137.644
+        },
+        {
+          "date": "2022-07-22",
+          "direction": "DOWN",
+          "changePct": -5.6323,
+          "zScore": -2.9444,
+          "close": 107.9,
+          "prevClose": 114.34
+        },
         {
           "date": "2022-07-27",
           "direction": "UP",
           "changePct": 7.6557,
-          "zScore": 3.8745,
+          "zScore": 3.873,
           "close": 113.06,
           "prevClose": 105.02
+        },
+        {
+          "date": "2022-08-26",
+          "direction": "DOWN",
+          "changePct": -5.4093,
+          "zScore": -2.83,
+          "close": 110.34,
+          "prevClose": 116.65
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -5.8993,
+          "zScore": -3.0814,
+          "close": 104.32,
+          "prevClose": 110.86
         },
         {
           "date": "2022-10-26",
           "direction": "DOWN",
           "changePct": -9.1405,
-          "zScore": -4.7454,
+          "zScore": -4.7443,
           "close": 94.93,
           "prevClose": 104.48
         },
@@ -237,23 +429,47 @@
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 7.5813,
-          "zScore": 3.8364,
+          "zScore": 3.8348,
           "close": 93.94,
           "prevClose": 87.32
+        },
+        {
+          "date": "2022-11-30",
+          "direction": "UP",
+          "changePct": 6.0931,
+          "zScore": 3.0713,
+          "close": 100.99,
+          "prevClose": 95.19
+        },
+        {
+          "date": "2023-02-02",
+          "direction": "UP",
+          "changePct": 7.2787,
+          "zScore": 3.6795,
+          "close": 107.74,
+          "prevClose": 100.43
         },
         {
           "date": "2023-02-08",
           "direction": "DOWN",
           "changePct": -7.683,
-          "zScore": -3.9974,
+          "zScore": -3.9965,
           "close": 99.37,
           "prevClose": 107.64
+        },
+        {
+          "date": "2023-07-26",
+          "direction": "UP",
+          "changePct": 5.7769,
+          "zScore": 2.9091,
+          "close": 129.27,
+          "prevClose": 122.21
         },
         {
           "date": "2023-10-25",
           "direction": "DOWN",
           "changePct": -9.5094,
-          "zScore": -4.9347,
+          "zScore": -4.9336,
           "close": 125.61,
           "prevClose": 138.81
         },
@@ -261,7 +477,7 @@
           "date": "2024-01-31",
           "direction": "DOWN",
           "changePct": -7.5003,
-          "zScore": -3.9036,
+          "zScore": -3.9028,
           "close": 140.1,
           "prevClose": 151.46
         },
@@ -269,15 +485,23 @@
           "date": "2024-04-26",
           "direction": "UP",
           "changePct": 10.2244,
-          "zScore": 5.1928,
+          "zScore": 5.1908,
           "close": 171.95,
           "prevClose": 156
+        },
+        {
+          "date": "2024-07-24",
+          "direction": "DOWN",
+          "changePct": -5.0388,
+          "zScore": -2.6399,
+          "close": 172.63,
+          "prevClose": 181.79
         },
         {
           "date": "2025-02-05",
           "direction": "DOWN",
           "changePct": -7.2924,
-          "zScore": -3.7969,
+          "zScore": -3.7961,
           "close": 191.33,
           "prevClose": 206.38
         },
@@ -285,17 +509,33 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 9.6821,
-          "zScore": 4.9145,
+          "zScore": 4.9126,
           "close": 158.71,
           "prevClose": 144.7
+        },
+        {
+          "date": "2025-05-07",
+          "direction": "DOWN",
+          "changePct": -7.2597,
+          "zScore": -3.7794,
+          "close": 151.38,
+          "prevClose": 163.23
         },
         {
           "date": "2025-09-03",
           "direction": "UP",
           "changePct": 9.1365,
-          "zScore": 4.6345,
+          "zScore": 4.6327,
           "close": 230.66,
           "prevClose": 211.35
+        },
+        {
+          "date": "2025-11-24",
+          "direction": "UP",
+          "changePct": 6.3138,
+          "zScore": 3.1845,
+          "close": 318.58,
+          "prevClose": 299.66
         }
       ]
     },
@@ -306,20 +546,52 @@
       "twitter_handle": "@satyanadella",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.05241,
-      "stdDevPct": 1.661417,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.052323,
+      "stdDevPct": 1.662077,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2022-02-24",
+          "direction": "UP",
+          "changePct": 5.1094,
+          "zScore": 3.0426,
+          "close": 294.59,
+          "prevClose": 280.27
+        },
+        {
+          "date": "2022-04-27",
+          "direction": "UP",
+          "changePct": 4.8109,
+          "zScore": 2.863,
+          "close": 283.22,
+          "prevClose": 270.22
+        },
+        {
+          "date": "2022-05-18",
+          "direction": "DOWN",
+          "changePct": -4.7748,
+          "zScore": -2.9042,
+          "close": 254.08,
+          "prevClose": 266.82
+        },
+        {
+          "date": "2022-06-10",
+          "direction": "DOWN",
+          "changePct": -4.4564,
+          "zScore": -2.7127,
+          "close": 252.99,
+          "prevClose": 264.79
+        },
         {
           "date": "2022-07-27",
           "direction": "UP",
           "changePct": 6.6852,
-          "zScore": 3.9922,
+          "zScore": 3.9907,
           "close": 268.74,
           "prevClose": 251.9
         },
@@ -327,15 +599,23 @@
           "date": "2022-09-13",
           "direction": "DOWN",
           "changePct": -5.4978,
-          "zScore": -3.3407,
+          "zScore": -3.3393,
           "close": 251.99,
           "prevClose": 266.65
+        },
+        {
+          "date": "2022-10-07",
+          "direction": "DOWN",
+          "changePct": -5.0853,
+          "zScore": -3.0911,
+          "close": 234.24,
+          "prevClose": 246.79
         },
         {
           "date": "2022-10-26",
           "direction": "DOWN",
           "changePct": -7.7156,
-          "zScore": -4.6756,
+          "zScore": -4.6736,
           "close": 231.32,
           "prevClose": 250.66
         },
@@ -343,15 +623,39 @@
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 8.2268,
-          "zScore": 4.9201,
+          "zScore": 4.9182,
           "close": 242.98,
           "prevClose": 224.51
+        },
+        {
+          "date": "2022-11-30",
+          "direction": "UP",
+          "changePct": 6.1624,
+          "zScore": 3.6761,
+          "close": 255.14,
+          "prevClose": 240.33
+        },
+        {
+          "date": "2023-01-04",
+          "direction": "DOWN",
+          "changePct": -4.3743,
+          "zScore": -2.6633,
+          "close": 229.1,
+          "prevClose": 239.58
+        },
+        {
+          "date": "2023-02-02",
+          "direction": "UP",
+          "changePct": 4.6884,
+          "zScore": 2.7893,
+          "close": 264.6,
+          "prevClose": 252.75
         },
         {
           "date": "2023-04-26",
           "direction": "UP",
           "changePct": 7.2435,
-          "zScore": 4.3283,
+          "zScore": 4.3266,
           "close": 295.37,
           "prevClose": 275.42
         },
@@ -359,7 +663,7 @@
           "date": "2024-10-31",
           "direction": "DOWN",
           "changePct": -6.0528,
-          "zScore": -3.6747,
+          "zScore": -3.6732,
           "close": 406.35,
           "prevClose": 432.53
         },
@@ -367,7 +671,7 @@
           "date": "2025-01-30",
           "direction": "DOWN",
           "changePct": -6.1809,
-          "zScore": -3.7518,
+          "zScore": -3.7503,
           "close": 414.99,
           "prevClose": 442.33
         },
@@ -375,7 +679,7 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 10.1337,
-          "zScore": 6.0679,
+          "zScore": 6.0655,
           "close": 390.49,
           "prevClose": 354.56
         },
@@ -383,7 +687,7 @@
           "date": "2025-05-01",
           "direction": "UP",
           "changePct": 7.6254,
-          "zScore": 4.5581,
+          "zScore": 4.5564,
           "close": 425.4,
           "prevClose": 395.26
         },
@@ -391,9 +695,25 @@
           "date": "2026-01-29",
           "direction": "DOWN",
           "changePct": -9.9931,
-          "zScore": -6.0464,
+          "zScore": -6.0439,
           "close": 433.5,
           "prevClose": 481.63
+        },
+        {
+          "date": "2026-02-05",
+          "direction": "DOWN",
+          "changePct": -4.9542,
+          "zScore": -3.0122,
+          "close": 393.67,
+          "prevClose": 414.19
+        },
+        {
+          "date": "2026-04-15",
+          "direction": "UP",
+          "changePct": 4.6069,
+          "zScore": 2.7403,
+          "close": 411.22,
+          "prevClose": 393.11
         }
       ]
     },
@@ -404,20 +724,36 @@
       "twitter_handle": "@ajassy",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.05978,
-      "stdDevPct": 2.233999,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.05963,
+      "stdDevPct": 2.234884,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2021-07-30",
+          "direction": "DOWN",
+          "changePct": -7.5649,
+          "zScore": -3.4116,
+          "close": 166.3795,
+          "prevClose": 179.996
+        },
+        {
+          "date": "2022-02-03",
+          "direction": "DOWN",
+          "changePct": -7.8128,
+          "zScore": -3.5225,
+          "close": 138.8455,
+          "prevClose": 150.6125
+        },
         {
           "date": "2022-02-04",
           "direction": "UP",
           "changePct": 13.5359,
-          "zScore": 6.0323,
+          "zScore": 6.03,
           "close": 157.6395,
           "prevClose": 138.8455
         },
@@ -425,39 +761,95 @@
           "date": "2022-04-29",
           "direction": "DOWN",
           "changePct": -14.0494,
-          "zScore": -6.3157,
+          "zScore": -6.3131,
           "close": 124.2815,
           "prevClose": 144.5965
+        },
+        {
+          "date": "2022-05-05",
+          "direction": "DOWN",
+          "changePct": -7.561,
+          "zScore": -3.4099,
+          "close": 116.407,
+          "prevClose": 125.9285
+        },
+        {
+          "date": "2022-05-18",
+          "direction": "DOWN",
+          "changePct": -7.1562,
+          "zScore": -3.2287,
+          "close": 107.1125,
+          "prevClose": 115.3685
         },
         {
           "date": "2022-07-29",
           "direction": "UP",
           "changePct": 10.3615,
-          "zScore": 4.6113,
+          "zScore": 4.6096,
           "close": 134.95,
           "prevClose": 122.28
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -7.0575,
+          "zScore": -3.1846,
+          "close": 126.82,
+          "prevClose": 136.45
         },
         {
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 12.1778,
-          "zScore": 5.4244,
+          "zScore": 5.4223,
           "close": 96.63,
           "prevClose": 86.14
+        },
+        {
+          "date": "2023-02-02",
+          "direction": "UP",
+          "changePct": 7.3799,
+          "zScore": 3.2755,
+          "close": 112.91,
+          "prevClose": 105.15
         },
         {
           "date": "2023-02-03",
           "direction": "DOWN",
           "changePct": -8.4315,
-          "zScore": -3.8009,
+          "zScore": -3.7994,
           "close": 103.39,
           "prevClose": 112.91
+        },
+        {
+          "date": "2023-08-04",
+          "direction": "UP",
+          "changePct": 8.2693,
+          "zScore": 3.6734,
+          "close": 139.57,
+          "prevClose": 128.91
+        },
+        {
+          "date": "2023-10-27",
+          "direction": "UP",
+          "changePct": 6.8328,
+          "zScore": 3.0307,
+          "close": 127.74,
+          "prevClose": 119.57
+        },
+        {
+          "date": "2024-02-02",
+          "direction": "UP",
+          "changePct": 7.8666,
+          "zScore": 3.4933,
+          "close": 171.81,
+          "prevClose": 159.28
         },
         {
           "date": "2024-08-02",
           "direction": "DOWN",
           "changePct": -8.7847,
-          "zScore": -3.959,
+          "zScore": -3.9574,
           "close": 167.9,
           "prevClose": 184.07
         },
@@ -465,7 +857,7 @@
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -8.9791,
-          "zScore": -4.0461,
+          "zScore": -4.0444,
           "close": 178.41,
           "prevClose": 196.01
         },
@@ -473,15 +865,23 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 11.977,
-          "zScore": 5.3345,
+          "zScore": 5.3324,
           "close": 191.1,
           "prevClose": 170.66
+        },
+        {
+          "date": "2025-05-12",
+          "direction": "UP",
+          "changePct": 8.07,
+          "zScore": 3.5843,
+          "close": 208.64,
+          "prevClose": 193.06
         },
         {
           "date": "2025-08-01",
           "direction": "DOWN",
           "changePct": -8.2696,
-          "zScore": -3.7285,
+          "zScore": -3.7269,
           "close": 214.75,
           "prevClose": 234.11
         },
@@ -489,7 +889,7 @@
           "date": "2025-10-31",
           "direction": "UP",
           "changePct": 9.5845,
-          "zScore": 4.2635,
+          "zScore": 4.2619,
           "close": 244.22,
           "prevClose": 222.86
         }
@@ -502,36 +902,60 @@
       "twitter_handle": "@finkd",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.102449,
-      "stdDevPct": 2.765133,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.102392,
+      "stdDevPct": 2.766235,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2022-02-03",
           "direction": "DOWN",
           "changePct": -26.3901,
-          "zScore": -9.5809,
+          "zScore": -9.5771,
           "close": 237.76,
           "prevClose": 323
+        },
+        {
+          "date": "2022-04-20",
+          "direction": "DOWN",
+          "changePct": -7.7723,
+          "zScore": -2.8467,
+          "close": 200.42,
+          "prevClose": 217.31
         },
         {
           "date": "2022-04-28",
           "direction": "UP",
           "changePct": 17.5936,
-          "zScore": 6.3256,
+          "zScore": 6.3231,
           "close": 205.73,
           "prevClose": 174.95
+        },
+        {
+          "date": "2022-05-24",
+          "direction": "DOWN",
+          "changePct": -7.6186,
+          "zScore": -2.7912,
+          "close": 181.28,
+          "prevClose": 196.23
+        },
+        {
+          "date": "2022-07-22",
+          "direction": "DOWN",
+          "changePct": -7.5886,
+          "zScore": -2.7803,
+          "close": 169.27,
+          "prevClose": 183.17
         },
         {
           "date": "2022-09-13",
           "direction": "DOWN",
           "changePct": -9.3691,
-          "zScore": -3.4253,
+          "zScore": -3.424,
           "close": 153.13,
           "prevClose": 168.96
         },
@@ -539,15 +963,31 @@
           "date": "2022-10-27",
           "direction": "DOWN",
           "changePct": -24.5571,
-          "zScore": -8.918,
+          "zScore": -8.9145,
           "close": 97.94,
           "prevClose": 129.82
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 10.2493,
+          "zScore": 3.6681,
+          "close": 111.87,
+          "prevClose": 101.47
+        },
+        {
+          "date": "2022-11-30",
+          "direction": "UP",
+          "changePct": 7.8933,
+          "zScore": 2.8164,
+          "close": 118.1,
+          "prevClose": 109.46
         },
         {
           "date": "2023-02-02",
           "direction": "UP",
           "changePct": 23.2824,
-          "zScore": 8.3829,
+          "zScore": 8.3796,
           "close": 188.77,
           "prevClose": 153.12
         },
@@ -555,7 +995,7 @@
           "date": "2023-04-27",
           "direction": "UP",
           "changePct": 13.9255,
-          "zScore": 4.9991,
+          "zScore": 4.9971,
           "close": 238.56,
           "prevClose": 209.4
         },
@@ -563,7 +1003,7 @@
           "date": "2024-02-02",
           "direction": "UP",
           "changePct": 20.3176,
-          "zScore": 7.3107,
+          "zScore": 7.3079,
           "close": 474.99,
           "prevClose": 394.78
         },
@@ -571,25 +1011,65 @@
           "date": "2024-04-25",
           "direction": "DOWN",
           "changePct": -10.5613,
-          "zScore": -3.8565,
+          "zScore": -3.8549,
           "close": 441.38,
           "prevClose": 493.5
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -8.9583,
+          "zScore": -3.2754,
+          "close": 531.62,
+          "prevClose": 583.93
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 14.7556,
-          "zScore": 5.2993,
+          "zScore": 5.2972,
           "close": 585.77,
           "prevClose": 510.45
+        },
+        {
+          "date": "2025-05-12",
+          "direction": "UP",
+          "changePct": 7.9225,
+          "zScore": 2.827,
+          "close": 639.43,
+          "prevClose": 592.49
+        },
+        {
+          "date": "2025-07-31",
+          "direction": "UP",
+          "changePct": 11.2527,
+          "zScore": 4.0309,
+          "close": 773.44,
+          "prevClose": 695.21
         },
         {
           "date": "2025-10-30",
           "direction": "DOWN",
           "changePct": -11.3348,
-          "zScore": -4.1362,
+          "zScore": -4.1346,
           "close": 666.47,
           "prevClose": 751.67
+        },
+        {
+          "date": "2026-01-29",
+          "direction": "UP",
+          "changePct": 10.4048,
+          "zScore": 3.7243,
+          "close": 738.31,
+          "prevClose": 668.73
+        },
+        {
+          "date": "2026-03-26",
+          "direction": "DOWN",
+          "changePct": -7.9595,
+          "zScore": -2.9144,
+          "close": 547.54,
+          "prevClose": 594.89
         }
       ]
     },
@@ -600,44 +1080,108 @@
       "twitter_handle": "@elonmusk",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.102583,
-      "stdDevPct": 3.718066,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.10628,
+      "stdDevPct": 3.717242,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2021-10-25",
+          "direction": "UP",
+          "changePct": 12.6616,
+          "zScore": 3.3776,
+          "close": 341.62,
+          "prevClose": 303.2267
+        },
+        {
+          "date": "2021-11-09",
+          "direction": "DOWN",
+          "changePct": -11.9903,
+          "zScore": -3.2542,
+          "close": 341.1667,
+          "prevClose": 387.6467
+        },
         {
           "date": "2022-01-03",
           "direction": "UP",
           "changePct": 13.5317,
-          "zScore": 3.6118,
+          "zScore": 3.6117,
           "close": 399.9267,
           "prevClose": 352.26
+        },
+        {
+          "date": "2022-01-27",
+          "direction": "DOWN",
+          "changePct": -11.5542,
+          "zScore": -3.1369,
+          "close": 276.3667,
+          "prevClose": 312.47
         },
         {
           "date": "2022-04-26",
           "direction": "DOWN",
           "changePct": -12.1841,
-          "zScore": -3.3046,
+          "zScore": -3.3063,
           "close": 292.14,
           "prevClose": 332.6733
+        },
+        {
+          "date": "2022-12-27",
+          "direction": "DOWN",
+          "changePct": -11.4089,
+          "zScore": -3.0978,
+          "close": 109.1,
+          "prevClose": 123.15
         },
         {
           "date": "2023-01-03",
           "direction": "DOWN",
           "changePct": -12.2422,
-          "zScore": -3.3202,
+          "zScore": -3.322,
           "close": 108.1,
           "prevClose": 123.18
+        },
+        {
+          "date": "2023-01-26",
+          "direction": "UP",
+          "changePct": 10.9673,
+          "zScore": 2.9218,
+          "close": 160.27,
+          "prevClose": 144.43
+        },
+        {
+          "date": "2023-01-27",
+          "direction": "UP",
+          "changePct": 11.0002,
+          "zScore": 2.9306,
+          "close": 177.9,
+          "prevClose": 160.27
+        },
+        {
+          "date": "2024-01-25",
+          "direction": "DOWN",
+          "changePct": -12.1253,
+          "zScore": -3.2905,
+          "close": 182.63,
+          "prevClose": 207.83
+        },
+        {
+          "date": "2024-04-24",
+          "direction": "UP",
+          "changePct": 12.0611,
+          "zScore": 3.216,
+          "close": 162.13,
+          "prevClose": 144.68
         },
         {
           "date": "2024-04-29",
           "direction": "UP",
           "changePct": 15.3069,
-          "zScore": 4.0893,
+          "zScore": 4.0892,
           "close": 194.05,
           "prevClose": 168.29
         },
@@ -645,7 +1189,7 @@
           "date": "2024-07-24",
           "direction": "DOWN",
           "changePct": -12.3346,
-          "zScore": -3.3451,
+          "zScore": -3.3468,
           "close": 215.99,
           "prevClose": 246.38
         },
@@ -653,7 +1197,7 @@
           "date": "2024-10-24",
           "direction": "UP",
           "changePct": 21.919,
-          "zScore": 5.8677,
+          "zScore": 5.868,
           "close": 260.48,
           "prevClose": 213.65
         },
@@ -661,7 +1205,7 @@
           "date": "2024-11-06",
           "direction": "UP",
           "changePct": 14.751,
-          "zScore": 3.9398,
+          "zScore": 3.9397,
           "close": 288.53,
           "prevClose": 251.44
         },
@@ -669,15 +1213,31 @@
           "date": "2025-03-10",
           "direction": "DOWN",
           "changePct": -15.4262,
-          "zScore": -4.1766,
+          "zScore": -4.1785,
           "close": 222.15,
           "prevClose": 262.67
+        },
+        {
+          "date": "2025-03-24",
+          "direction": "UP",
+          "changePct": 11.9336,
+          "zScore": 3.1817,
+          "close": 278.39,
+          "prevClose": 248.71
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -10.4198,
+          "zScore": -2.8317,
+          "close": 239.43,
+          "prevClose": 267.28
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 22.69,
-          "zScore": 6.075,
+          "zScore": 6.0754,
           "close": 272.2,
           "prevClose": 221.86
         },
@@ -685,7 +1245,7 @@
           "date": "2025-06-05",
           "direction": "DOWN",
           "changePct": -14.2599,
-          "zScore": -3.8629,
+          "zScore": -3.8647,
           "close": 284.7,
           "prevClose": 332.05
         }
@@ -698,28 +1258,60 @@
       "twitter_handle": "@joshdamaro",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": -0.029835,
-      "stdDevPct": 1.831397,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": -0.030018,
+      "stdDevPct": 1.832116,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2021-11-11",
+          "direction": "DOWN",
+          "changePct": -7.0737,
+          "zScore": -3.8445,
+          "close": 162.11,
+          "prevClose": 174.45
+        },
+        {
+          "date": "2022-01-21",
+          "direction": "DOWN",
+          "changePct": -6.9367,
+          "zScore": -3.7698,
+          "close": 137.38,
+          "prevClose": 147.62
+        },
+        {
+          "date": "2022-08-11",
+          "direction": "UP",
+          "changePct": 4.6785,
+          "zScore": 2.57,
+          "close": 117.69,
+          "prevClose": 112.43
+        },
         {
           "date": "2022-11-09",
           "direction": "DOWN",
           "changePct": -13.1632,
-          "zScore": -7.1712,
+          "zScore": -7.1683,
           "close": 86.75,
           "prevClose": 99.9
+        },
+        {
+          "date": "2022-11-11",
+          "direction": "UP",
+          "changePct": 5.0299,
+          "zScore": 2.7618,
+          "close": 95.01,
+          "prevClose": 90.46
         },
         {
           "date": "2022-11-21",
           "direction": "UP",
           "changePct": 6.2963,
-          "zScore": 3.4543,
+          "zScore": 3.453,
           "close": 97.58,
           "prevClose": 91.8
         },
@@ -727,15 +1319,23 @@
           "date": "2023-05-11",
           "direction": "DOWN",
           "changePct": -8.7305,
-          "zScore": -4.7508,
+          "zScore": -4.7489,
           "close": 92.31,
           "prevClose": 101.14
+        },
+        {
+          "date": "2023-08-10",
+          "direction": "UP",
+          "changePct": 4.8806,
+          "zScore": 2.6803,
+          "close": 91.76,
+          "prevClose": 87.49
         },
         {
           "date": "2023-11-09",
           "direction": "UP",
           "changePct": 6.9112,
-          "zScore": 3.79,
+          "zScore": 3.7887,
           "close": 90.34,
           "prevClose": 84.5
         },
@@ -743,7 +1343,7 @@
           "date": "2024-02-08",
           "direction": "UP",
           "changePct": 11.4989,
-          "zScore": 6.295,
+          "zScore": 6.2927,
           "close": 110.54,
           "prevClose": 99.14
         },
@@ -751,31 +1351,63 @@
           "date": "2024-05-07",
           "direction": "DOWN",
           "changePct": -9.5132,
-          "zScore": -5.1782,
+          "zScore": -5.1761,
           "close": 105.39,
           "prevClose": 116.47
+        },
+        {
+          "date": "2024-11-14",
+          "direction": "UP",
+          "changePct": 6.2305,
+          "zScore": 3.4171,
+          "close": 109.12,
+          "prevClose": 102.72
+        },
+        {
+          "date": "2024-11-15",
+          "direction": "UP",
+          "changePct": 5.4619,
+          "zScore": 2.9976,
+          "close": 115.08,
+          "prevClose": 109.12
         },
         {
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -9.2358,
-          "zScore": -5.0267,
+          "zScore": -5.0247,
           "close": 88.84,
           "prevClose": 97.88
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -5.977,
+          "zScore": -3.246,
+          "close": 83.53,
+          "prevClose": 88.84
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 11.8943,
-          "zScore": 6.5109,
+          "zScore": 6.5085,
           "close": 91.44,
           "prevClose": 81.72
+        },
+        {
+          "date": "2025-04-10",
+          "direction": "DOWN",
+          "changePct": -6.7913,
+          "zScore": -3.6904,
+          "close": 85.23,
+          "prevClose": 91.44
         },
         {
           "date": "2025-05-07",
           "direction": "UP",
           "changePct": 10.7627,
-          "zScore": 5.8931,
+          "zScore": 5.8909,
           "close": 102.09,
           "prevClose": 92.17
         },
@@ -783,9 +1415,17 @@
           "date": "2025-11-13",
           "direction": "DOWN",
           "changePct": -7.7497,
-          "zScore": -4.2153,
+          "zScore": -4.2135,
           "close": 107.61,
           "prevClose": 116.65
+        },
+        {
+          "date": "2026-02-02",
+          "direction": "DOWN",
+          "changePct": -7.4025,
+          "zScore": -4.024,
+          "close": 104.45,
+          "prevClose": 112.8
         }
       ]
     },
@@ -796,20 +1436,20 @@
       "twitter_handle": "@tedsarandos",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.085686,
-      "stdDevPct": 2.712219,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.086496,
+      "stdDevPct": 2.713149,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2022-01-21",
           "direction": "DOWN",
           "changePct": -21.7905,
-          "zScore": -8.0658,
+          "zScore": -8.0633,
           "close": 39.75,
           "prevClose": 50.825
         },
@@ -817,7 +1457,7 @@
           "date": "2022-01-31",
           "direction": "UP",
           "changePct": 11.1302,
-          "zScore": 4.0721,
+          "zScore": 4.0704,
           "close": 42.714,
           "prevClose": 38.436
         },
@@ -825,31 +1465,95 @@
           "date": "2022-04-20",
           "direction": "DOWN",
           "changePct": -35.1166,
-          "zScore": -12.9791,
+          "zScore": -12.975,
           "close": 22.619,
           "prevClose": 34.861
+        },
+        {
+          "date": "2022-05-05",
+          "direction": "DOWN",
+          "changePct": -7.6908,
+          "zScore": -2.8665,
+          "close": 18.832,
+          "prevClose": 20.401
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -7.7791,
+          "zScore": -2.8991,
+          "close": 21.813,
+          "prevClose": 23.653
+        },
+        {
+          "date": "2022-09-28",
+          "direction": "UP",
+          "changePct": 9.2886,
+          "zScore": 3.3917,
+          "close": 24.52,
+          "prevClose": 22.436
         },
         {
           "date": "2022-10-19",
           "direction": "UP",
           "changePct": 13.0864,
-          "zScore": 4.7934,
+          "zScore": 4.7915,
           "close": 27.238,
           "prevClose": 24.086
+        },
+        {
+          "date": "2022-12-15",
+          "direction": "DOWN",
+          "changePct": -8.6273,
+          "zScore": -3.2117,
+          "close": 29.041,
+          "prevClose": 31.783
+        },
+        {
+          "date": "2023-03-23",
+          "direction": "UP",
+          "changePct": 9.0065,
+          "zScore": 3.2877,
+          "close": 32.037,
+          "prevClose": 29.39
+        },
+        {
+          "date": "2023-05-18",
+          "direction": "UP",
+          "changePct": 9.2158,
+          "zScore": 3.3648,
+          "close": 37.129,
+          "prevClose": 33.996
+        },
+        {
+          "date": "2023-07-20",
+          "direction": "DOWN",
+          "changePct": -8.411,
+          "zScore": -3.132,
+          "close": 43.742,
+          "prevClose": 47.759
         },
         {
           "date": "2023-10-19",
           "direction": "UP",
           "changePct": 16.0548,
-          "zScore": 5.8878,
+          "zScore": 5.8855,
           "close": 40.177,
           "prevClose": 34.619
+        },
+        {
+          "date": "2024-01-24",
+          "direction": "UP",
+          "changePct": 10.7032,
+          "zScore": 3.913,
+          "close": 54.487,
+          "prevClose": 49.219
         },
         {
           "date": "2024-04-19",
           "direction": "DOWN",
           "changePct": -9.0933,
-          "zScore": -3.3843,
+          "zScore": -3.3834,
           "close": 55.504,
           "prevClose": 61.056
         },
@@ -857,15 +1561,31 @@
           "date": "2024-10-18",
           "direction": "UP",
           "changePct": 11.087,
-          "zScore": 4.0562,
+          "zScore": 4.0545,
           "close": 76.389,
           "prevClose": 68.765
+        },
+        {
+          "date": "2025-01-22",
+          "direction": "UP",
+          "changePct": 9.6944,
+          "zScore": 3.5412,
+          "close": 95.399,
+          "prevClose": 86.968
+        },
+        {
+          "date": "2025-03-06",
+          "direction": "DOWN",
+          "changePct": -8.5335,
+          "zScore": -3.1771,
+          "close": 90.636,
+          "prevClose": 99.092
         },
         {
           "date": "2025-10-22",
           "direction": "DOWN",
           "changePct": -10.0681,
-          "zScore": -3.7437,
+          "zScore": -3.7427,
           "close": 111.637,
           "prevClose": 124.135
         },
@@ -873,7 +1593,7 @@
           "date": "2026-02-27",
           "direction": "UP",
           "changePct": 13.7723,
-          "zScore": 5.0463,
+          "zScore": 5.0443,
           "close": 96.24,
           "prevClose": 84.59
         },
@@ -881,7 +1601,7 @@
           "date": "2026-04-17",
           "direction": "DOWN",
           "changePct": -9.7226,
-          "zScore": -3.6163,
+          "zScore": -3.6154,
           "close": 97.31,
           "prevClose": 107.79
         }
@@ -894,20 +1614,28 @@
       "twitter_handle": "@Benioff",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.004284,
-      "stdDevPct": 2.293698,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.004711,
+      "stdDevPct": 2.294563,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2021-09-23",
+          "direction": "UP",
+          "changePct": 7.2115,
+          "zScore": 3.1408,
+          "close": 277.86,
+          "prevClose": 259.17
+        },
         {
           "date": "2021-12-01",
           "direction": "DOWN",
           "changePct": -11.742,
-          "zScore": -5.1211,
+          "zScore": -5.1194,
           "close": 251.5,
           "prevClose": 284.96
         },
@@ -915,23 +1643,55 @@
           "date": "2022-01-05",
           "direction": "DOWN",
           "changePct": -8.2826,
-          "zScore": -3.6129,
+          "zScore": -3.6117,
           "close": 227.67,
           "prevClose": 248.23
+        },
+        {
+          "date": "2022-02-24",
+          "direction": "UP",
+          "changePct": 7.2163,
+          "zScore": 3.1429,
+          "close": 204.29,
+          "prevClose": 190.54
+        },
+        {
+          "date": "2022-05-05",
+          "direction": "DOWN",
+          "changePct": -7.1059,
+          "zScore": -3.0989,
+          "close": 172.3,
+          "prevClose": 185.48
         },
         {
           "date": "2022-06-01",
           "direction": "UP",
           "changePct": 9.8789,
-          "zScore": 4.3051,
+          "zScore": 4.3033,
           "close": 176.07,
           "prevClose": 160.24
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -6.9599,
+          "zScore": -3.0353,
+          "close": 166.03,
+          "prevClose": 178.45
+        },
+        {
+          "date": "2022-06-24",
+          "direction": "UP",
+          "changePct": 7.4372,
+          "zScore": 3.2392,
+          "close": 185.92,
+          "prevClose": 173.05
         },
         {
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 10.0239,
-          "zScore": 4.3683,
+          "zScore": 4.3665,
           "close": 156.3,
           "prevClose": 142.06
         },
@@ -939,15 +1699,23 @@
           "date": "2022-12-01",
           "direction": "DOWN",
           "changePct": -8.2683,
-          "zScore": -3.6067,
+          "zScore": -3.6055,
           "close": 147,
           "prevClose": 160.25
+        },
+        {
+          "date": "2022-12-05",
+          "direction": "DOWN",
+          "changePct": -7.3534,
+          "zScore": -3.2067,
+          "close": 133.93,
+          "prevClose": 144.56
         },
         {
           "date": "2023-03-02",
           "direction": "UP",
           "changePct": 11.4969,
-          "zScore": 5.0105,
+          "zScore": 5.0084,
           "close": 186.59,
           "prevClose": 167.35
         },
@@ -955,31 +1723,63 @@
           "date": "2023-11-30",
           "direction": "UP",
           "changePct": 9.3553,
-          "zScore": 4.0768,
+          "zScore": 4.0751,
           "close": 251.9,
           "prevClose": 230.35
+        },
+        {
+          "date": "2024-04-15",
+          "direction": "DOWN",
+          "changePct": -7.2778,
+          "zScore": -3.1738,
+          "close": 272.9,
+          "prevClose": 294.32
         },
         {
           "date": "2024-05-30",
           "direction": "DOWN",
           "changePct": -19.7371,
-          "zScore": -8.6068,
+          "zScore": -8.6037,
           "close": 218.01,
           "prevClose": 271.62
+        },
+        {
+          "date": "2024-05-31",
+          "direction": "UP",
+          "changePct": 7.5364,
+          "zScore": 3.2824,
+          "close": 234.44,
+          "prevClose": 218.01
         },
         {
           "date": "2024-12-04",
           "direction": "UP",
           "changePct": 10.9948,
-          "zScore": 4.7916,
+          "zScore": 4.7896,
           "close": 367.87,
           "prevClose": 331.43
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 8.6807,
+          "zScore": 3.7811,
+          "close": 265.17,
+          "prevClose": 243.99
+        },
+        {
+          "date": "2026-01-13",
+          "direction": "DOWN",
+          "changePct": -7.0702,
+          "zScore": -3.0833,
+          "close": 241.06,
+          "prevClose": 259.4
         },
         {
           "date": "2026-04-23",
           "direction": "DOWN",
           "changePct": -8.6934,
-          "zScore": -3.792,
+          "zScore": -3.7907,
           "close": 173.3,
           "prevClose": 189.8
         }
@@ -992,28 +1792,52 @@
       "twitter_handle": "@lisasu",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.168974,
-      "stdDevPct": 3.39531,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.169295,
+      "stdDevPct": 3.396645,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2021-11-08",
+          "direction": "UP",
+          "changePct": 10.1364,
+          "zScore": 2.9344,
+          "close": 150.16,
+          "prevClose": 136.34
+        },
         {
           "date": "2022-02-11",
           "direction": "DOWN",
           "changePct": -10.0103,
-          "zScore": -2.998,
+          "zScore": -2.997,
           "close": 113.18,
           "prevClose": 125.77
+        },
+        {
+          "date": "2022-05-09",
+          "direction": "DOWN",
+          "changePct": -9.4189,
+          "zScore": -2.8228,
+          "close": 86.36,
+          "prevClose": 95.34
+        },
+        {
+          "date": "2022-09-13",
+          "direction": "DOWN",
+          "changePct": -8.991,
+          "zScore": -2.6969,
+          "close": 77.03,
+          "prevClose": 84.64
         },
         {
           "date": "2022-10-07",
           "direction": "DOWN",
           "changePct": -13.8688,
-          "zScore": -4.1345,
+          "zScore": -4.1329,
           "close": 58.44,
           "prevClose": 67.85
         },
@@ -1021,7 +1845,7 @@
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 14.269,
-          "zScore": 4.1528,
+          "zScore": 4.1511,
           "close": 68.47,
           "prevClose": 59.92
         },
@@ -1029,15 +1853,55 @@
           "date": "2023-02-01",
           "direction": "UP",
           "changePct": 12.6281,
-          "zScore": 3.6695,
+          "zScore": 3.668,
           "close": 84.64,
           "prevClose": 75.15
+        },
+        {
+          "date": "2023-05-03",
+          "direction": "DOWN",
+          "changePct": -9.2203,
+          "zScore": -2.7644,
+          "close": 81.62,
+          "prevClose": 89.91
+        },
+        {
+          "date": "2023-05-25",
+          "direction": "UP",
+          "changePct": 11.1573,
+          "zScore": 3.235,
+          "close": 120.35,
+          "prevClose": 108.27
+        },
+        {
+          "date": "2023-12-07",
+          "direction": "UP",
+          "changePct": 9.887,
+          "zScore": 2.861,
+          "close": 128.37,
+          "prevClose": 116.82
+        },
+        {
+          "date": "2024-02-22",
+          "direction": "UP",
+          "changePct": 10.6945,
+          "zScore": 3.0987,
+          "close": 181.86,
+          "prevClose": 164.29
+        },
+        {
+          "date": "2024-05-01",
+          "direction": "DOWN",
+          "changePct": -8.909,
+          "zScore": -2.6727,
+          "close": 144.27,
+          "prevClose": 158.38
         },
         {
           "date": "2024-07-17",
           "direction": "DOWN",
           "changePct": -10.2056,
-          "zScore": -3.0556,
+          "zScore": -3.0544,
           "close": 159.43,
           "prevClose": 177.55
         },
@@ -1045,15 +1909,23 @@
           "date": "2024-10-30",
           "direction": "DOWN",
           "changePct": -10.6165,
-          "zScore": -3.1766,
+          "zScore": -3.1754,
           "close": 148.6,
           "prevClose": 166.25
+        },
+        {
+          "date": "2025-04-03",
+          "direction": "DOWN",
+          "changePct": -8.8967,
+          "zScore": -2.6691,
+          "close": 93.8,
+          "prevClose": 102.96
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 23.8205,
-          "zScore": 6.9659,
+          "zScore": 6.9631,
           "close": 96.84,
           "prevClose": 78.21
         },
@@ -1061,15 +1933,23 @@
           "date": "2025-10-06",
           "direction": "UP",
           "changePct": 23.708,
-          "zScore": 6.9328,
+          "zScore": 6.93,
           "close": 203.71,
           "prevClose": 164.67
+        },
+        {
+          "date": "2025-10-08",
+          "direction": "UP",
+          "changePct": 11.3706,
+          "zScore": 3.2978,
+          "close": 235.56,
+          "prevClose": 211.51
         },
         {
           "date": "2026-02-04",
           "direction": "DOWN",
           "changePct": -17.3144,
-          "zScore": -5.1493,
+          "zScore": -5.1474,
           "close": 200.19,
           "prevClose": 242.11
         },
@@ -1077,7 +1957,7 @@
           "date": "2026-04-24",
           "direction": "UP",
           "changePct": 13.9128,
-          "zScore": 4.0479,
+          "zScore": 4.0462,
           "close": 347.81,
           "prevClose": 305.33
         }
@@ -1090,20 +1970,28 @@
       "twitter_handle": "@MichaelDell",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.158103,
-      "stdDevPct": 2.951816,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.157967,
+      "stdDevPct": 2.952989,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2022-02-25",
+          "direction": "DOWN",
+          "changePct": -7.8438,
+          "zScore": -2.7097,
+          "close": 51.46,
+          "prevClose": 55.84
+        },
         {
           "date": "2022-05-27",
           "direction": "UP",
           "changePct": 12.8614,
-          "zScore": 4.3035,
+          "zScore": 4.3019,
           "close": 49.58,
           "prevClose": 43.93
         },
@@ -1111,7 +1999,7 @@
           "date": "2022-08-26",
           "direction": "DOWN",
           "changePct": -13.5073,
-          "zScore": -4.6295,
+          "zScore": -4.6276,
           "close": 41.43,
           "prevClose": 47.9
         },
@@ -1119,7 +2007,7 @@
           "date": "2023-09-01",
           "direction": "UP",
           "changePct": 21.2482,
-          "zScore": 7.1448,
+          "zScore": 7.142,
           "close": 68.19,
           "prevClose": 56.24
         },
@@ -1127,15 +2015,39 @@
           "date": "2024-03-01",
           "direction": "UP",
           "changePct": 31.6184,
-          "zScore": 10.658,
+          "zScore": 10.6538,
           "close": 124.59,
           "prevClose": 94.66
+        },
+        {
+          "date": "2024-04-03",
+          "direction": "UP",
+          "changePct": 8.5613,
+          "zScore": 2.8457,
+          "close": 128.58,
+          "prevClose": 118.44
+        },
+        {
+          "date": "2024-05-15",
+          "direction": "UP",
+          "changePct": 11.2138,
+          "zScore": 3.744,
+          "close": 149.16,
+          "prevClose": 134.12
+        },
+        {
+          "date": "2024-05-29",
+          "direction": "UP",
+          "changePct": 7.9058,
+          "zScore": 2.6237,
+          "close": 179.21,
+          "prevClose": 166.08
         },
         {
           "date": "2024-05-31",
           "direction": "DOWN",
           "changePct": -17.8672,
-          "zScore": -6.1065,
+          "zScore": -6.1041,
           "close": 139.56,
           "prevClose": 169.92
         },
@@ -1143,15 +2055,23 @@
           "date": "2024-11-27",
           "direction": "DOWN",
           "changePct": -12.2478,
-          "zScore": -4.2028,
+          "zScore": -4.2011,
           "close": 124.38,
           "prevClose": 141.74
+        },
+        {
+          "date": "2025-01-27",
+          "direction": "DOWN",
+          "changePct": -8.696,
+          "zScore": -2.9983,
+          "close": 103.84,
+          "prevClose": 113.73
         },
         {
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -18.9867,
-          "zScore": -6.4858,
+          "zScore": -6.4831,
           "close": 77.23,
           "prevClose": 95.33
         },
@@ -1159,15 +2079,47 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 15.9802,
-          "zScore": 5.3601,
+          "zScore": 5.358,
           "close": 84.19,
           "prevClose": 72.59
+        },
+        {
+          "date": "2025-08-29",
+          "direction": "DOWN",
+          "changePct": -8.8773,
+          "zScore": -3.0597,
+          "close": 122.15,
+          "prevClose": 134.05
+        },
+        {
+          "date": "2025-10-08",
+          "direction": "UP",
+          "changePct": 9.0542,
+          "zScore": 3.0126,
+          "close": 164.53,
+          "prevClose": 150.87
+        },
+        {
+          "date": "2025-11-17",
+          "direction": "DOWN",
+          "changePct": -8.433,
+          "zScore": -2.9092,
+          "close": 122.48,
+          "prevClose": 133.76
+        },
+        {
+          "date": "2026-01-20",
+          "direction": "DOWN",
+          "changePct": -7.8487,
+          "zScore": -2.7114,
+          "close": 111.07,
+          "prevClose": 120.53
         },
         {
           "date": "2026-02-12",
           "direction": "DOWN",
           "changePct": -9.1334,
-          "zScore": -3.1477,
+          "zScore": -3.1464,
           "close": 112.82,
           "prevClose": 124.16
         },
@@ -1175,9 +2127,17 @@
           "date": "2026-02-27",
           "direction": "UP",
           "changePct": 21.9267,
-          "zScore": 7.3747,
+          "zScore": 7.3718,
           "close": 148.08,
           "prevClose": 121.45
+        },
+        {
+          "date": "2026-04-16",
+          "direction": "UP",
+          "changePct": 8.9181,
+          "zScore": 2.9665,
+          "close": 193.09,
+          "prevClose": 177.28
         }
       ]
     },
@@ -1188,20 +2148,20 @@
       "twitter_handle": "@bchesky",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.0227,
-      "stdDevPct": 2.78735,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.021322,
+      "stdDevPct": 2.788035,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-08-24",
           "direction": "UP",
           "changePct": 9.9666,
-          "zScore": 3.5675,
+          "zScore": 3.5671,
           "close": 161.42,
           "prevClose": 146.79
         },
@@ -1209,31 +2169,103 @@
           "date": "2021-11-05",
           "direction": "UP",
           "changePct": 12.984,
-          "zScore": 4.6501,
+          "zScore": 4.6494,
           "close": 201.62,
           "prevClose": 178.45
+        },
+        {
+          "date": "2021-12-06",
+          "direction": "UP",
+          "changePct": 8.4558,
+          "zScore": 3.0252,
+          "close": 180.85,
+          "prevClose": 166.75
+        },
+        {
+          "date": "2022-01-31",
+          "direction": "UP",
+          "changePct": 7.8448,
+          "zScore": 2.8061,
+          "close": 153.97,
+          "prevClose": 142.77
         },
         {
           "date": "2022-02-23",
           "direction": "DOWN",
           "changePct": -9.1987,
-          "zScore": -3.3083,
+          "zScore": -3.307,
           "close": 150.04,
           "prevClose": 165.24
+        },
+        {
+          "date": "2022-03-08",
+          "direction": "UP",
+          "changePct": 8.0097,
+          "zScore": 2.8652,
+          "close": 142.13,
+          "prevClose": 131.59
+        },
+        {
+          "date": "2022-03-16",
+          "direction": "UP",
+          "changePct": 8.1973,
+          "zScore": 2.9325,
+          "close": 155.75,
+          "prevClose": 143.95
+        },
+        {
+          "date": "2022-05-05",
+          "direction": "DOWN",
+          "changePct": -8.3814,
+          "zScore": -3.0138,
+          "close": 143.09,
+          "prevClose": 156.18
         },
         {
           "date": "2022-05-09",
           "direction": "DOWN",
           "changePct": -12.1246,
-          "zScore": -4.358,
+          "zScore": -4.3564,
           "close": 119.37,
           "prevClose": 135.84
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -9.1635,
+          "zScore": -3.2944,
+          "close": 98.93,
+          "prevClose": 108.91
+        },
+        {
+          "date": "2022-06-16",
+          "direction": "DOWN",
+          "changePct": -8.0911,
+          "zScore": -2.9097,
+          "close": 93.26,
+          "prevClose": 101.47
+        },
+        {
+          "date": "2022-06-24",
+          "direction": "UP",
+          "changePct": 8.1383,
+          "zScore": 2.9114,
+          "close": 103.51,
+          "prevClose": 95.72
+        },
+        {
+          "date": "2022-09-22",
+          "direction": "DOWN",
+          "changePct": -9.0255,
+          "zScore": -3.2449,
+          "close": 103.72,
+          "prevClose": 114.01
         },
         {
           "date": "2022-11-02",
           "direction": "DOWN",
           "changePct": -13.425,
-          "zScore": -4.8246,
+          "zScore": -4.8229,
           "close": 94.41,
           "prevClose": 109.05
         },
@@ -1241,7 +2273,7 @@
           "date": "2023-02-15",
           "direction": "UP",
           "changePct": 13.3532,
-          "zScore": 4.7825,
+          "zScore": 4.7818,
           "close": 137.01,
           "prevClose": 120.87
         },
@@ -1249,7 +2281,7 @@
           "date": "2023-05-10",
           "direction": "DOWN",
           "changePct": -10.9231,
-          "zScore": -3.927,
+          "zScore": -3.9255,
           "close": 113.19,
           "prevClose": 127.07
         },
@@ -1257,15 +2289,23 @@
           "date": "2024-08-07",
           "direction": "DOWN",
           "changePct": -13.3824,
-          "zScore": -4.8093,
+          "zScore": -4.8076,
           "close": 113.01,
           "prevClose": 130.47
+        },
+        {
+          "date": "2024-11-08",
+          "direction": "DOWN",
+          "changePct": -8.6585,
+          "zScore": -3.1132,
+          "close": 134.61,
+          "prevClose": 147.37
         },
         {
           "date": "2025-02-14",
           "direction": "UP",
           "changePct": 14.4498,
-          "zScore": 5.1759,
+          "zScore": 5.1751,
           "close": 161.42,
           "prevClose": 141.04
         },
@@ -1273,7 +2313,7 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 14.7885,
-          "zScore": 5.2974,
+          "zScore": 5.2966,
           "close": 121.32,
           "prevClose": 105.69
         }
@@ -1286,20 +2326,44 @@
       "twitter_handle": "@dkhos",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.060589,
-      "stdDevPct": 2.839981,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.06126,
+      "stdDevPct": 2.841014,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2021-05-06",
+          "direction": "DOWN",
+          "changePct": -8.8511,
+          "zScore": -3.137,
+          "close": 46.65,
+          "prevClose": 51.18
+        },
+        {
+          "date": "2021-09-21",
+          "direction": "UP",
+          "changePct": 11.4853,
+          "zScore": 4.0211,
+          "close": 44.36,
+          "prevClose": 39.79
+        },
+        {
+          "date": "2022-03-16",
+          "direction": "UP",
+          "changePct": 9.4295,
+          "zScore": 3.2975,
+          "close": 32.61,
+          "prevClose": 29.8
+        },
         {
           "date": "2022-05-09",
           "direction": "DOWN",
           "changePct": -11.5842,
-          "zScore": -4.1003,
+          "zScore": -4.099,
           "close": 23.05,
           "prevClose": 26.07
         },
@@ -1307,23 +2371,39 @@
           "date": "2022-05-24",
           "direction": "DOWN",
           "changePct": -9.3776,
-          "zScore": -3.3233,
+          "zScore": -3.3224,
           "close": 21.55,
           "prevClose": 23.78
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -9.0641,
+          "zScore": -3.212,
+          "close": 21.57,
+          "prevClose": 23.72
         },
         {
           "date": "2022-08-02",
           "direction": "UP",
           "changePct": 18.9024,
-          "zScore": 6.6345,
+          "zScore": 6.6318,
           "close": 29.25,
           "prevClose": 24.6
+        },
+        {
+          "date": "2022-10-04",
+          "direction": "UP",
+          "changePct": 9.244,
+          "zScore": 3.2322,
+          "close": 29.19,
+          "prevClose": 26.72
         },
         {
           "date": "2022-10-11",
           "direction": "DOWN",
           "changePct": -10.425,
-          "zScore": -3.6921,
+          "zScore": -3.691,
           "close": 24.66,
           "prevClose": 27.53
         },
@@ -1331,7 +2411,7 @@
           "date": "2022-11-01",
           "direction": "UP",
           "changePct": 11.9684,
-          "zScore": 4.1929,
+          "zScore": 4.1912,
           "close": 29.75,
           "prevClose": 26.57
         },
@@ -1339,7 +2419,7 @@
           "date": "2023-05-02",
           "direction": "UP",
           "changePct": 11.5455,
-          "zScore": 4.044,
+          "zScore": 4.0423,
           "close": 36.52,
           "prevClose": 32.74
         },
@@ -1347,15 +2427,39 @@
           "date": "2024-02-14",
           "direction": "UP",
           "changePct": 14.7268,
-          "zScore": 5.1642,
+          "zScore": 5.1621,
           "close": 79.15,
           "prevClose": 68.99
+        },
+        {
+          "date": "2024-07-17",
+          "direction": "DOWN",
+          "changePct": -7.6447,
+          "zScore": -2.7124,
+          "close": 68.62,
+          "prevClose": 74.3
+        },
+        {
+          "date": "2024-08-06",
+          "direction": "UP",
+          "changePct": 10.9268,
+          "zScore": 3.8245,
+          "close": 64.87,
+          "prevClose": 58.48
+        },
+        {
+          "date": "2024-10-11",
+          "direction": "UP",
+          "changePct": 10.806,
+          "zScore": 3.782,
+          "close": 86.34,
+          "prevClose": 77.92
         },
         {
           "date": "2024-10-31",
           "direction": "DOWN",
           "changePct": -9.2912,
-          "zScore": -3.2929,
+          "zScore": -3.2919,
           "close": 72.05,
           "prevClose": 79.43
         },
@@ -1363,15 +2467,31 @@
           "date": "2024-12-05",
           "direction": "DOWN",
           "changePct": -9.6037,
-          "zScore": -3.4029,
+          "zScore": -3.4019,
           "close": 65.23,
           "prevClose": 72.16
+        },
+        {
+          "date": "2025-02-05",
+          "direction": "DOWN",
+          "changePct": -7.5556,
+          "zScore": -2.681,
+          "close": 64.48,
+          "prevClose": 69.75
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -7.4875,
+          "zScore": -2.6571,
+          "close": 64.62,
+          "prevClose": 69.85
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 11.6951,
-          "zScore": 4.0967,
+          "zScore": 4.095,
           "close": 72.68,
           "prevClose": 65.07
         }
@@ -1384,20 +2504,20 @@
       "twitter_handle": "@eldsjal",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.088311,
-      "stdDevPct": 2.972805,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.089746,
+      "stdDevPct": 2.973556,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-04-28",
           "direction": "DOWN",
           "changePct": -12.3174,
-          "zScore": -4.1731,
+          "zScore": -4.1725,
           "close": 256.84,
           "prevClose": 292.92
         },
@@ -1405,7 +2525,7 @@
           "date": "2022-01-31",
           "direction": "UP",
           "changePct": 13.4582,
-          "zScore": 4.4974,
+          "zScore": 4.4958,
           "close": 196.26,
           "prevClose": 172.98
         },
@@ -1413,23 +2533,39 @@
           "date": "2022-02-03",
           "direction": "DOWN",
           "changePct": -16.757,
-          "zScore": -5.6665,
+          "zScore": -5.6655,
           "close": 159.76,
           "prevClose": 191.92
+        },
+        {
+          "date": "2022-04-20",
+          "direction": "DOWN",
+          "changePct": -10.858,
+          "zScore": -3.6817,
+          "close": 122.49,
+          "prevClose": 137.41
         },
         {
           "date": "2022-04-27",
           "direction": "DOWN",
           "changePct": -12.4445,
-          "zScore": -4.2158,
+          "zScore": -4.2152,
           "close": 96.67,
           "prevClose": 110.41
+        },
+        {
+          "date": "2022-05-09",
+          "direction": "DOWN",
+          "changePct": -9.7822,
+          "zScore": -3.3199,
+          "close": 94.44,
+          "prevClose": 104.68
         },
         {
           "date": "2022-07-27",
           "direction": "UP",
           "changePct": 12.1574,
-          "zScore": 4.0598,
+          "zScore": 4.0583,
           "close": 116.61,
           "prevClose": 103.97
         },
@@ -1437,15 +2573,31 @@
           "date": "2022-10-26",
           "direction": "DOWN",
           "changePct": -13.0139,
-          "zScore": -4.4074,
+          "zScore": -4.4067,
           "close": 84.42,
           "prevClose": 97.05
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 9.8599,
+          "zScore": 3.2857,
+          "close": 78.44,
+          "prevClose": 71.4
+        },
+        {
+          "date": "2022-12-15",
+          "direction": "DOWN",
+          "changePct": -8.7746,
+          "zScore": -2.9811,
+          "close": 72.36,
+          "prevClose": 79.32
         },
         {
           "date": "2023-01-31",
           "direction": "UP",
           "changePct": 12.72,
-          "zScore": 4.2491,
+          "zScore": 4.2475,
           "close": 112.72,
           "prevClose": 100
         },
@@ -1453,23 +2605,71 @@
           "date": "2023-07-25",
           "direction": "DOWN",
           "changePct": -14.256,
-          "zScore": -4.8252,
+          "zScore": -4.8245,
           "close": 140.38,
           "prevClose": 163.72
+        },
+        {
+          "date": "2023-10-24",
+          "direction": "UP",
+          "changePct": 10.3616,
+          "zScore": 3.4544,
+          "close": 170.63,
+          "prevClose": 154.61
+        },
+        {
+          "date": "2024-04-23",
+          "direction": "UP",
+          "changePct": 11.4127,
+          "zScore": 3.8079,
+          "close": 303.31,
+          "prevClose": 272.24
+        },
+        {
+          "date": "2024-07-23",
+          "direction": "UP",
+          "changePct": 11.9614,
+          "zScore": 3.9924,
+          "close": 330.79,
+          "prevClose": 295.45
+        },
+        {
+          "date": "2024-11-13",
+          "direction": "UP",
+          "changePct": 11.4404,
+          "zScore": 3.8172,
+          "close": 467.37,
+          "prevClose": 419.39
         },
         {
           "date": "2025-02-04",
           "direction": "UP",
           "changePct": 13.2385,
-          "zScore": 4.4235,
+          "zScore": 4.4219,
           "close": 621.77,
           "prevClose": 549.08
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -9.8707,
+          "zScore": -3.3497,
+          "close": 503.3,
+          "prevClose": 558.42
+        },
+        {
+          "date": "2025-07-29",
+          "direction": "DOWN",
+          "changePct": -11.551,
+          "zScore": -3.9147,
+          "close": 620.01,
+          "prevClose": 700.98
         },
         {
           "date": "2026-02-10",
           "direction": "UP",
           "changePct": 14.7479,
-          "zScore": 4.9312,
+          "zScore": 4.9295,
           "close": 476.02,
           "prevClose": 414.84
         }
@@ -1482,52 +2682,100 @@
       "twitter_handle": "@jamiedimon",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.068943,
-      "stdDevPct": 1.538906,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.068632,
+      "stdDevPct": 1.53948,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2022-01-14",
           "direction": "DOWN",
           "changePct": -6.1463,
-          "zScore": -4.0388,
+          "zScore": -4.0371,
           "close": 157.89,
           "prevClose": 168.23
+        },
+        {
+          "date": "2022-03-16",
+          "direction": "UP",
+          "changePct": 4.4686,
+          "zScore": 2.8581,
+          "close": 138.4,
+          "prevClose": 132.48
         },
         {
           "date": "2022-05-23",
           "direction": "UP",
           "changePct": 6.1872,
-          "zScore": 3.9757,
+          "zScore": 3.9744,
           "close": 124.6,
           "prevClose": 117.34
+        },
+        {
+          "date": "2022-06-10",
+          "direction": "DOWN",
+          "changePct": -4.5966,
+          "zScore": -3.0304,
+          "close": 119.55,
+          "prevClose": 125.31
+        },
+        {
+          "date": "2022-07-15",
+          "direction": "UP",
+          "changePct": 4.5833,
+          "zScore": 2.9326,
+          "close": 112.95,
+          "prevClose": 108
+        },
+        {
+          "date": "2022-10-04",
+          "direction": "UP",
+          "changePct": 4.6784,
+          "zScore": 2.9943,
+          "close": 112.77,
+          "prevClose": 107.73
         },
         {
           "date": "2022-10-13",
           "direction": "UP",
           "changePct": 5.5593,
-          "zScore": 3.5677,
+          "zScore": 3.5666,
           "close": 109.37,
           "prevClose": 103.61
+        },
+        {
+          "date": "2022-10-21",
+          "direction": "UP",
+          "changePct": 5.2527,
+          "zScore": 3.3674,
+          "close": 122.23,
+          "prevClose": 116.13
         },
         {
           "date": "2023-03-09",
           "direction": "DOWN",
           "changePct": -5.4136,
-          "zScore": -3.5627,
+          "zScore": -3.5611,
           "close": 130.34,
           "prevClose": 137.8
+        },
+        {
+          "date": "2023-03-15",
+          "direction": "DOWN",
+          "changePct": -4.7244,
+          "zScore": -3.1134,
+          "close": 128.26,
+          "prevClose": 134.62
         },
         {
           "date": "2023-04-14",
           "direction": "UP",
           "changePct": 7.551,
-          "zScore": 4.8619,
+          "zScore": 4.8603,
           "close": 138.73,
           "prevClose": 128.99
         },
@@ -1535,15 +2783,39 @@
           "date": "2024-04-12",
           "direction": "DOWN",
           "changePct": -6.4678,
-          "zScore": -4.2476,
+          "zScore": -4.2459,
           "close": 182.79,
           "prevClose": 195.43
+        },
+        {
+          "date": "2024-05-20",
+          "direction": "DOWN",
+          "changePct": -4.4973,
+          "zScore": -2.9659,
+          "close": 195.58,
+          "prevClose": 204.79
+        },
+        {
+          "date": "2024-09-10",
+          "direction": "DOWN",
+          "changePct": -5.1889,
+          "zScore": -3.4151,
+          "close": 205.56,
+          "prevClose": 216.81
+        },
+        {
+          "date": "2024-10-11",
+          "direction": "UP",
+          "changePct": 4.44,
+          "zScore": 2.8395,
+          "close": 222.29,
+          "prevClose": 212.84
         },
         {
           "date": "2024-11-06",
           "direction": "UP",
           "changePct": 11.5445,
-          "zScore": 7.457,
+          "zScore": 7.4544,
           "close": 247.06,
           "prevClose": 221.49
         },
@@ -1551,7 +2823,7 @@
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -6.9685,
-          "zScore": -4.573,
+          "zScore": -4.5711,
           "close": 228.69,
           "prevClose": 245.82
         },
@@ -1559,7 +2831,7 @@
           "date": "2025-04-04",
           "direction": "DOWN",
           "changePct": -8.0502,
-          "zScore": -5.2759,
+          "zScore": -5.2737,
           "close": 210.28,
           "prevClose": 228.69
         },
@@ -1567,9 +2839,17 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 8.0555,
-          "zScore": 5.1898,
+          "zScore": 5.188,
           "close": 234.34,
           "prevClose": 216.87
+        },
+        {
+          "date": "2025-12-09",
+          "direction": "DOWN",
+          "changePct": -4.6636,
+          "zScore": -3.0739,
+          "close": 300.51,
+          "prevClose": 315.21
         }
       ]
     },
@@ -1580,28 +2860,52 @@
       "twitter_handle": "@mtbarra",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.049827,
-      "stdDevPct": 2.304925,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.048825,
+      "stdDevPct": 2.305572,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-08-04",
           "direction": "DOWN",
           "changePct": -8.915,
-          "zScore": -3.8894,
+          "zScore": -3.8879,
           "close": 52.72,
           "prevClose": 57.88
+        },
+        {
+          "date": "2021-12-13",
+          "direction": "DOWN",
+          "changePct": -6.4547,
+          "zScore": -2.8208,
+          "close": 59.13,
+          "prevClose": 63.21
+        },
+        {
+          "date": "2022-01-04",
+          "direction": "UP",
+          "changePct": 7.471,
+          "zScore": 3.2192,
+          "close": 65.74,
+          "prevClose": 61.17
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -7.7978,
+          "zScore": -3.4033,
+          "close": 32.28,
+          "prevClose": 35.01
         },
         {
           "date": "2022-06-16",
           "direction": "DOWN",
           "changePct": -8.0749,
-          "zScore": -3.5249,
+          "zScore": -3.5235,
           "close": 31.42,
           "prevClose": 34.18
         },
@@ -1609,23 +2913,55 @@
           "date": "2022-10-04",
           "direction": "UP",
           "changePct": 8.9139,
-          "zScore": 3.8457,
+          "zScore": 3.8451,
           "close": 35.8,
           "prevClose": 32.87
+        },
+        {
+          "date": "2022-12-22",
+          "direction": "DOWN",
+          "changePct": -6.6017,
+          "zScore": -2.8845,
+          "close": 33.53,
+          "prevClose": 35.9
+        },
+        {
+          "date": "2023-01-31",
+          "direction": "UP",
+          "changePct": 8.3494,
+          "zScore": 3.6002,
+          "close": 39.32,
+          "prevClose": 36.29
         },
         {
           "date": "2023-11-29",
           "direction": "UP",
           "changePct": 9.3804,
-          "zScore": 4.0481,
+          "zScore": 4.0474,
           "close": 31.6,
           "prevClose": 28.89
+        },
+        {
+          "date": "2024-01-30",
+          "direction": "UP",
+          "changePct": 7.7988,
+          "zScore": 3.3614,
+          "close": 38.15,
+          "prevClose": 35.39
+        },
+        {
+          "date": "2024-07-23",
+          "direction": "DOWN",
+          "changePct": -6.4165,
+          "zScore": -2.8042,
+          "close": 46.38,
+          "prevClose": 49.56
         },
         {
           "date": "2024-10-22",
           "direction": "UP",
           "changePct": 9.8099,
-          "zScore": 4.2345,
+          "zScore": 4.2337,
           "close": 53.73,
           "prevClose": 48.93
         },
@@ -1633,7 +2969,7 @@
           "date": "2024-11-26",
           "direction": "DOWN",
           "changePct": -8.9867,
-          "zScore": -3.9205,
+          "zScore": -3.919,
           "close": 54.79,
           "prevClose": 60.2
         },
@@ -1641,23 +2977,47 @@
           "date": "2025-01-28",
           "direction": "DOWN",
           "changePct": -8.8856,
-          "zScore": -3.8767,
+          "zScore": -3.8752,
           "close": 50.04,
           "prevClose": 54.92
+        },
+        {
+          "date": "2025-03-27",
+          "direction": "DOWN",
+          "changePct": -7.3602,
+          "zScore": -3.2135,
+          "close": 47.2,
+          "prevClose": 50.95
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 7.6742,
+          "zScore": 3.3074,
+          "close": 45.74,
+          "prevClose": 42.48
         },
         {
           "date": "2025-07-22",
           "direction": "DOWN",
           "changePct": -8.1188,
-          "zScore": -3.544,
+          "zScore": -3.5425,
           "close": 48.89,
           "prevClose": 53.21
+        },
+        {
+          "date": "2025-07-23",
+          "direction": "UP",
+          "changePct": 8.6725,
+          "zScore": 3.7404,
+          "close": 53.13,
+          "prevClose": 48.89
         },
         {
           "date": "2025-10-21",
           "direction": "UP",
           "changePct": 14.8621,
-          "zScore": 6.4263,
+          "zScore": 6.425,
           "close": 66.62,
           "prevClose": 58
         },
@@ -1665,7 +3025,7 @@
           "date": "2026-01-27",
           "direction": "UP",
           "changePct": 8.7498,
-          "zScore": 3.7745,
+          "zScore": 3.7739,
           "close": 86.38,
           "prevClose": 79.43
         }
@@ -1678,44 +3038,84 @@
       "twitter_handle": "@PGelsinger",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.076488,
-      "stdDevPct": 3.152089,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.077621,
+      "stdDevPct": 3.153091,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-10-22",
           "direction": "DOWN",
           "changePct": -11.6786,
-          "zScore": -3.7293,
+          "zScore": -3.7285,
           "close": 49.46,
           "prevClose": 56
+        },
+        {
+          "date": "2022-07-29",
+          "direction": "DOWN",
+          "changePct": -8.5621,
+          "zScore": -2.7401,
+          "close": 36.31,
+          "prevClose": 39.71
+        },
+        {
+          "date": "2022-10-28",
+          "direction": "UP",
+          "changePct": 10.6585,
+          "zScore": 3.3557,
+          "close": 29.07,
+          "prevClose": 26.27
         },
         {
           "date": "2024-01-26",
           "direction": "DOWN",
           "changePct": -11.9072,
-          "zScore": -3.8018,
+          "zScore": -3.801,
           "close": 43.65,
           "prevClose": 49.55
+        },
+        {
+          "date": "2024-04-03",
+          "direction": "DOWN",
+          "changePct": -8.2157,
+          "zScore": -2.6302,
+          "close": 40.33,
+          "prevClose": 43.94
+        },
+        {
+          "date": "2024-04-26",
+          "direction": "DOWN",
+          "changePct": -9.1997,
+          "zScore": -2.9423,
+          "close": 31.88,
+          "prevClose": 35.11
         },
         {
           "date": "2024-08-02",
           "direction": "DOWN",
           "changePct": -26.0585,
-          "zScore": -8.2913,
+          "zScore": -8.2891,
           "close": 21.48,
           "prevClose": 29.05
+        },
+        {
+          "date": "2024-09-03",
+          "direction": "DOWN",
+          "changePct": -8.8022,
+          "zScore": -2.8162,
+          "close": 20.1,
+          "prevClose": 22.04
         },
         {
           "date": "2025-02-18",
           "direction": "UP",
           "changePct": 16.0593,
-          "zScore": 5.0706,
+          "zScore": 5.0686,
           "close": 27.39,
           "prevClose": 23.6
         },
@@ -1723,7 +3123,7 @@
           "date": "2025-03-13",
           "direction": "UP",
           "changePct": 14.6035,
-          "zScore": 4.6087,
+          "zScore": 4.6069,
           "close": 23.7,
           "prevClose": 20.68
         },
@@ -1731,7 +3131,7 @@
           "date": "2025-04-04",
           "direction": "DOWN",
           "changePct": -11.5025,
-          "zScore": -3.6734,
+          "zScore": -3.6726,
           "close": 19.85,
           "prevClose": 22.43
         },
@@ -1739,31 +3139,71 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 18.7535,
-          "zScore": 5.9253,
+          "zScore": 5.923,
           "close": 21.53,
           "prevClose": 18.13
+        },
+        {
+          "date": "2025-07-25",
+          "direction": "DOWN",
+          "changePct": -8.5285,
+          "zScore": -2.7294,
+          "close": 20.7,
+          "prevClose": 22.63
         },
         {
           "date": "2025-09-18",
           "direction": "UP",
           "changePct": 22.7711,
-          "zScore": 7.1999,
+          "zScore": 7.1972,
           "close": 30.57,
           "prevClose": 24.9
+        },
+        {
+          "date": "2026-01-09",
+          "direction": "UP",
+          "changePct": 10.8003,
+          "zScore": 3.4007,
+          "close": 45.55,
+          "prevClose": 41.11
+        },
+        {
+          "date": "2026-01-21",
+          "direction": "UP",
+          "changePct": 11.7175,
+          "zScore": 3.6916,
+          "close": 54.25,
+          "prevClose": 48.56
         },
         {
           "date": "2026-01-23",
           "direction": "DOWN",
           "changePct": -17.0287,
-          "zScore": -5.4266,
+          "zScore": -5.4253,
           "close": 45.07,
           "prevClose": 54.32
+        },
+        {
+          "date": "2026-01-28",
+          "direction": "UP",
+          "changePct": 11.0403,
+          "zScore": 3.4768,
+          "close": 48.78,
+          "prevClose": 43.93
+        },
+        {
+          "date": "2026-04-08",
+          "direction": "UP",
+          "changePct": 11.4156,
+          "zScore": 3.5958,
+          "close": 58.95,
+          "prevClose": 52.91
         },
         {
           "date": "2026-04-24",
           "direction": "UP",
           "changePct": 23.5999,
-          "zScore": 7.4628,
+          "zScore": 7.4601,
           "close": 82.54,
           "prevClose": 66.78
         }
@@ -1776,20 +3216,28 @@
       "twitter_handle": "@AlbertBourla",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": -0.015628,
-      "stdDevPct": 1.617339,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": -0.015167,
+      "stdDevPct": 1.617901,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2021-08-10",
+          "direction": "UP",
+          "changePct": 4.8064,
+          "zScore": 2.9802,
+          "close": 48.19,
+          "prevClose": 45.98
+        },
         {
           "date": "2021-11-05",
           "direction": "UP",
           "changePct": 10.8552,
-          "zScore": 6.7214,
+          "zScore": 6.7188,
           "close": 48.61,
           "prevClose": 43.85
         },
@@ -1797,7 +3245,7 @@
           "date": "2021-11-26",
           "direction": "UP",
           "changePct": 6.1112,
-          "zScore": 3.7882,
+          "zScore": 3.7866,
           "close": 54,
           "prevClose": 50.89
         },
@@ -1805,23 +3253,71 @@
           "date": "2021-12-06",
           "direction": "DOWN",
           "changePct": -5.141,
-          "zScore": -3.169,
+          "zScore": -3.1682,
           "close": 51.48,
           "prevClose": 54.27
+        },
+        {
+          "date": "2021-12-15",
+          "direction": "UP",
+          "changePct": 5.8696,
+          "zScore": 3.6373,
+          "close": 58.8,
+          "prevClose": 55.54
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -4.1225,
+          "zScore": -2.5387,
+          "close": 47.91,
+          "prevClose": 49.97
+        },
+        {
+          "date": "2022-10-21",
+          "direction": "UP",
+          "changePct": 4.7541,
+          "zScore": 2.9478,
+          "close": 44.95,
+          "prevClose": 42.91
+        },
+        {
+          "date": "2022-12-16",
+          "direction": "DOWN",
+          "changePct": -4.1224,
+          "zScore": -2.5386,
+          "close": 51.4,
+          "prevClose": 53.61
         },
         {
           "date": "2023-01-09",
           "direction": "DOWN",
           "changePct": -4.9686,
-          "zScore": -3.0624,
+          "zScore": -3.0616,
           "close": 48.39,
           "prevClose": 50.92
+        },
+        {
+          "date": "2023-05-22",
+          "direction": "UP",
+          "changePct": 5.3848,
+          "zScore": 3.3377,
+          "close": 38.75,
+          "prevClose": 36.77
+        },
+        {
+          "date": "2023-10-18",
+          "direction": "DOWN",
+          "changePct": -4.0916,
+          "zScore": -2.5196,
+          "close": 31.41,
+          "prevClose": 32.75
         },
         {
           "date": "2023-12-01",
           "direction": "DOWN",
           "changePct": -5.1198,
-          "zScore": -3.1559,
+          "zScore": -3.1551,
           "close": 28.91,
           "prevClose": 30.47
         },
@@ -1829,7 +3325,7 @@
           "date": "2023-12-13",
           "direction": "DOWN",
           "changePct": -6.718,
-          "zScore": -4.1441,
+          "zScore": -4.1429,
           "close": 26.66,
           "prevClose": 28.58
         },
@@ -1837,23 +3333,47 @@
           "date": "2024-05-01",
           "direction": "UP",
           "changePct": 6.089,
-          "zScore": 3.7745,
+          "zScore": 3.7729,
           "close": 27.18,
           "prevClose": 25.62
+        },
+        {
+          "date": "2024-11-15",
+          "direction": "DOWN",
+          "changePct": -4.6887,
+          "zScore": -2.8886,
+          "close": 24.8,
+          "prevClose": 26.02
         },
         {
           "date": "2025-04-04",
           "direction": "DOWN",
           "changePct": -5.4343,
-          "zScore": -3.3504,
+          "zScore": -3.3495,
           "close": 22.97,
           "prevClose": 24.29
+        },
+        {
+          "date": "2025-05-06",
+          "direction": "DOWN",
+          "changePct": -4.1475,
+          "zScore": -2.5541,
+          "close": 22.88,
+          "prevClose": 23.87
+        },
+        {
+          "date": "2025-08-05",
+          "direction": "UP",
+          "changePct": 5.1849,
+          "zScore": 3.2141,
+          "close": 24.75,
+          "prevClose": 23.53
         },
         {
           "date": "2025-09-30",
           "direction": "UP",
           "changePct": 6.8344,
-          "zScore": 4.2354,
+          "zScore": 4.2336,
           "close": 25.48,
           "prevClose": 23.85
         },
@@ -1861,7 +3381,7 @@
           "date": "2025-10-01",
           "direction": "UP",
           "changePct": 6.7896,
-          "zScore": 4.2077,
+          "zScore": 4.2059,
           "close": 27.21,
           "prevClose": 25.48
         }
@@ -1874,44 +3394,100 @@
       "twitter_handle": "@tobi",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.089222,
-      "stdDevPct": 4.100854,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.089916,
+      "stdDevPct": 4.102417,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2022-01-21",
+          "direction": "DOWN",
+          "changePct": -13.8513,
+          "zScore": -3.3983,
+          "close": 88.212,
+          "prevClose": 102.395
+        },
         {
           "date": "2022-02-16",
           "direction": "DOWN",
           "changePct": -16.0371,
-          "zScore": -3.9324,
+          "zScore": -3.9311,
           "close": 74.685,
           "prevClose": 88.95
+        },
+        {
+          "date": "2022-03-09",
+          "direction": "UP",
+          "changePct": 14.1179,
+          "zScore": 3.4194,
+          "close": 58.765,
+          "prevClose": 51.495
         },
         {
           "date": "2022-03-18",
           "direction": "UP",
           "changePct": 18.6528,
-          "zScore": 4.5268,
+          "zScore": 4.5249,
           "close": 78,
           "prevClose": 65.738
+        },
+        {
+          "date": "2022-03-21",
+          "direction": "DOWN",
+          "changePct": -12.3782,
+          "zScore": -3.0392,
+          "close": 68.345,
+          "prevClose": 78
+        },
+        {
+          "date": "2022-04-20",
+          "direction": "DOWN",
+          "changePct": -13.3134,
+          "zScore": -3.2672,
+          "close": 52.5,
+          "prevClose": 60.563
         },
         {
           "date": "2022-05-05",
           "direction": "DOWN",
           "changePct": -14.9128,
-          "zScore": -3.6583,
+          "zScore": -3.657,
           "close": 41.309,
           "prevClose": 48.549
+        },
+        {
+          "date": "2022-07-26",
+          "direction": "DOWN",
+          "changePct": -14.0561,
+          "zScore": -3.4482,
+          "close": 31.55,
+          "prevClose": 36.71
+        },
+        {
+          "date": "2022-10-27",
+          "direction": "UP",
+          "changePct": 17.3434,
+          "zScore": 4.2057,
+          "close": 34.1,
+          "prevClose": 29.06
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 18.1553,
+          "zScore": 4.4036,
+          "close": 36.51,
+          "prevClose": 30.9
         },
         {
           "date": "2023-02-16",
           "direction": "DOWN",
           "changePct": -15.8831,
-          "zScore": -3.8949,
+          "zScore": -3.8936,
           "close": 44.91,
           "prevClose": 53.39
         },
@@ -1919,7 +3495,7 @@
           "date": "2023-05-04",
           "direction": "UP",
           "changePct": 23.8383,
-          "zScore": 5.7913,
+          "zScore": 5.7889,
           "close": 57.3,
           "prevClose": 46.27
         },
@@ -1927,23 +3503,39 @@
           "date": "2023-11-02",
           "direction": "UP",
           "changePct": 22.3611,
-          "zScore": 5.431,
+          "zScore": 5.4288,
           "close": 59.7,
           "prevClose": 48.79
+        },
+        {
+          "date": "2024-02-13",
+          "direction": "DOWN",
+          "changePct": -13.3977,
+          "zScore": -3.2877,
+          "close": 77.18,
+          "prevClose": 89.12
         },
         {
           "date": "2024-05-08",
           "direction": "DOWN",
           "changePct": -18.5853,
-          "zScore": -4.5538,
+          "zScore": -4.5523,
           "close": 62.73,
           "prevClose": 77.05
+        },
+        {
+          "date": "2024-08-07",
+          "direction": "UP",
+          "changePct": 17.8347,
+          "zScore": 4.3255,
+          "close": 63.89,
+          "prevClose": 54.22
         },
         {
           "date": "2024-11-12",
           "direction": "UP",
           "changePct": 21.0357,
-          "zScore": 5.1078,
+          "zScore": 5.1057,
           "close": 108.92,
           "prevClose": 89.99
         },
@@ -1951,15 +3543,23 @@
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -18.2414,
-          "zScore": -4.47,
+          "zScore": -4.4684,
           "close": 82.29,
           "prevClose": 100.65
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 18.5627,
+          "zScore": 4.5029,
+          "close": 91.4,
+          "prevClose": 77.09
         },
         {
           "date": "2025-08-06",
           "direction": "UP",
           "changePct": 21.9685,
-          "zScore": 5.3353,
+          "zScore": 5.3331,
           "close": 154.9,
           "prevClose": 127
         }
@@ -1972,28 +3572,36 @@
       "twitter_handle": "@jimfarley98",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.031104,
-      "stdDevPct": 2.45799,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.029699,
+      "stdDevPct": 2.458467,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-04-29",
           "direction": "DOWN",
           "changePct": -9.4127,
-          "zScore": -3.8421,
+          "zScore": -3.8408,
           "close": 11.26,
           "prevClose": 12.43
+        },
+        {
+          "date": "2021-05-26",
+          "direction": "UP",
+          "changePct": 8.509,
+          "zScore": 3.449,
+          "close": 13.9,
+          "prevClose": 12.81
         },
         {
           "date": "2021-10-28",
           "direction": "UP",
           "changePct": 8.7041,
-          "zScore": 3.5285,
+          "zScore": 3.5284,
           "close": 16.86,
           "prevClose": 15.51
         },
@@ -2001,7 +3609,7 @@
           "date": "2021-12-10",
           "direction": "UP",
           "changePct": 9.6065,
-          "zScore": 3.8956,
+          "zScore": 3.8955,
           "close": 21.45,
           "prevClose": 19.57
         },
@@ -2009,47 +3617,119 @@
           "date": "2022-01-04",
           "direction": "UP",
           "changePct": 11.6674,
-          "zScore": 4.7341,
+          "zScore": 4.7337,
           "close": 24.31,
           "prevClose": 21.77
+        },
+        {
+          "date": "2022-01-19",
+          "direction": "DOWN",
+          "changePct": -7.9163,
+          "zScore": -3.2321,
+          "close": 22.45,
+          "prevClose": 24.38
         },
         {
           "date": "2022-02-04",
           "direction": "DOWN",
           "changePct": -9.7034,
-          "zScore": -3.9603,
+          "zScore": -3.959,
           "close": 17.96,
           "prevClose": 19.89
+        },
+        {
+          "date": "2022-03-02",
+          "direction": "UP",
+          "changePct": 8.3832,
+          "zScore": 3.3979,
+          "close": 18.1,
+          "prevClose": 16.7
+        },
+        {
+          "date": "2022-05-13",
+          "direction": "UP",
+          "changePct": 8.5209,
+          "zScore": 3.4539,
+          "close": 13.5,
+          "prevClose": 12.44
+        },
+        {
+          "date": "2022-06-16",
+          "direction": "DOWN",
+          "changePct": -8.313,
+          "zScore": -3.3934,
+          "close": 11.25,
+          "prevClose": 12.27
         },
         {
           "date": "2022-09-20",
           "direction": "DOWN",
           "changePct": -12.3242,
-          "zScore": -5.0266,
+          "zScore": -5.025,
           "close": 13.09,
           "prevClose": 14.93
+        },
+        {
+          "date": "2022-10-04",
+          "direction": "UP",
+          "changePct": 7.7594,
+          "zScore": 3.1441,
+          "close": 12.36,
+          "prevClose": 11.47
+        },
+        {
+          "date": "2023-02-03",
+          "direction": "DOWN",
+          "changePct": -7.6117,
+          "zScore": -3.1082,
+          "close": 13.23,
+          "prevClose": 14.32
         },
         {
           "date": "2023-10-27",
           "direction": "DOWN",
           "changePct": -12.2467,
-          "zScore": -4.9951,
+          "zScore": -4.9935,
           "close": 9.96,
           "prevClose": 11.35
+        },
+        {
+          "date": "2023-12-14",
+          "direction": "UP",
+          "changePct": 7.4733,
+          "zScore": 3.0277,
+          "close": 12.08,
+          "prevClose": 11.24
         },
         {
           "date": "2024-07-25",
           "direction": "DOWN",
           "changePct": -18.3614,
-          "zScore": -7.4827,
+          "zScore": -7.4807,
           "close": 11.16,
           "prevClose": 13.67
+        },
+        {
+          "date": "2024-10-29",
+          "direction": "DOWN",
+          "changePct": -8.4433,
+          "zScore": -3.4464,
+          "close": 10.41,
+          "prevClose": 11.37
+        },
+        {
+          "date": "2025-02-06",
+          "direction": "DOWN",
+          "changePct": -7.4925,
+          "zScore": -3.0597,
+          "close": 9.26,
+          "prevClose": 10.01
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 9.3211,
-          "zScore": 3.7795,
+          "zScore": 3.7793,
           "close": 9.5,
           "prevClose": 8.69
         },
@@ -2057,7 +3737,7 @@
           "date": "2025-10-24",
           "direction": "UP",
           "changePct": 12.1556,
-          "zScore": 4.9327,
+          "zScore": 4.9323,
           "close": 13.84,
           "prevClose": 12.34
         }
@@ -2070,20 +3750,44 @@
       "twitter_handle": "@larryfink",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.033565,
-      "stdDevPct": 1.681433,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.033378,
+      "stdDevPct": 1.682091,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2022-03-04",
+          "direction": "DOWN",
+          "changePct": -5.574,
+          "zScore": -3.3336,
+          "close": 696.59,
+          "prevClose": 737.71
+        },
+        {
+          "date": "2022-05-04",
+          "direction": "UP",
+          "changePct": 5.4147,
+          "zScore": 3.1992,
+          "close": 665.23,
+          "prevClose": 631.06
+        },
+        {
+          "date": "2022-05-05",
+          "direction": "DOWN",
+          "changePct": -4.7232,
+          "zScore": -2.8278,
+          "close": 633.81,
+          "prevClose": 665.23
+        },
         {
           "date": "2022-06-10",
           "direction": "DOWN",
           "changePct": -6.3924,
-          "zScore": -3.8217,
+          "zScore": -3.8201,
           "close": 617.67,
           "prevClose": 659.85
         },
@@ -2091,15 +3795,31 @@
           "date": "2022-06-21",
           "direction": "UP",
           "changePct": 5.5439,
-          "zScore": 3.2772,
+          "zScore": 3.276,
           "close": 614.54,
           "prevClose": 582.26
+        },
+        {
+          "date": "2022-07-19",
+          "direction": "UP",
+          "changePct": 5.1562,
+          "zScore": 3.0455,
+          "close": 628.34,
+          "prevClose": 597.53
+        },
+        {
+          "date": "2022-08-26",
+          "direction": "DOWN",
+          "changePct": -4.8072,
+          "zScore": -2.8777,
+          "close": 676.44,
+          "prevClose": 710.6
         },
         {
           "date": "2022-09-13",
           "direction": "DOWN",
           "changePct": -7.4482,
-          "zScore": -4.4497,
+          "zScore": -4.4478,
           "close": 644.91,
           "prevClose": 696.81
         },
@@ -2107,7 +3827,7 @@
           "date": "2022-10-13",
           "direction": "UP",
           "changePct": 6.5769,
-          "zScore": 3.8915,
+          "zScore": 3.8901,
           "close": 566.03,
           "prevClose": 531.1
         },
@@ -2115,15 +3835,47 @@
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 13.4688,
-          "zScore": 7.9904,
+          "zScore": 7.9874,
           "close": 759.81,
           "prevClose": 669.62
+        },
+        {
+          "date": "2023-01-06",
+          "direction": "UP",
+          "changePct": 5.2421,
+          "zScore": 3.0966,
+          "close": 738,
+          "prevClose": 701.24
+        },
+        {
+          "date": "2023-11-14",
+          "direction": "UP",
+          "changePct": 5.4275,
+          "zScore": 3.2068,
+          "close": 697.35,
+          "prevClose": 661.45
+        },
+        {
+          "date": "2025-01-15",
+          "direction": "UP",
+          "changePct": 5.1922,
+          "zScore": 3.0669,
+          "close": 1013.18,
+          "prevClose": 963.17
+        },
+        {
+          "date": "2025-02-03",
+          "direction": "DOWN",
+          "changePct": -5.7415,
+          "zScore": -3.4332,
+          "close": 1013.75,
+          "prevClose": 1075.5
         },
         {
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -7.7133,
-          "zScore": -4.6073,
+          "zScore": -4.6054,
           "close": 887.65,
           "prevClose": 961.84
         },
@@ -2131,7 +3883,7 @@
           "date": "2025-04-04",
           "direction": "DOWN",
           "changePct": -7.3261,
-          "zScore": -4.377,
+          "zScore": -4.3752,
           "close": 822.62,
           "prevClose": 887.65
         },
@@ -2139,15 +3891,23 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 9.974,
-          "zScore": 5.9119,
+          "zScore": 5.9097,
           "close": 897.08,
           "prevClose": 815.72
+        },
+        {
+          "date": "2025-07-15",
+          "direction": "DOWN",
+          "changePct": -5.8751,
+          "zScore": -3.5126,
+          "close": 1046.16,
+          "prevClose": 1111.46
         },
         {
           "date": "2026-01-15",
           "direction": "UP",
           "changePct": 5.9349,
-          "zScore": 3.5097,
+          "zScore": 3.5084,
           "close": 1156.65,
           "prevClose": 1091.85
         },
@@ -2155,7 +3915,7 @@
           "date": "2026-03-06",
           "direction": "DOWN",
           "changePct": -7.686,
-          "zScore": -4.5911,
+          "zScore": -4.5891,
           "close": 955.45,
           "prevClose": 1035
         }
@@ -2168,36 +3928,60 @@
       "twitter_handle": "@DavidSolomon",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.09436,
-      "stdDevPct": 1.748646,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.093714,
+      "stdDevPct": 1.749194,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2022-01-18",
           "direction": "DOWN",
           "changePct": -6.967,
-          "zScore": -4.0382,
+          "zScore": -4.0365,
           "close": 354.4,
           "prevClose": 380.94
+        },
+        {
+          "date": "2022-06-10",
+          "direction": "DOWN",
+          "changePct": -5.6538,
+          "zScore": -3.2858,
+          "close": 287.02,
+          "prevClose": 304.22
         },
         {
           "date": "2022-06-24",
           "direction": "UP",
           "changePct": 5.7938,
-          "zScore": 3.2593,
+          "zScore": 3.2587,
           "close": 302.75,
           "prevClose": 286.17
+        },
+        {
+          "date": "2022-07-19",
+          "direction": "UP",
+          "changePct": 5.5733,
+          "zScore": 3.1326,
+          "close": 318.05,
+          "prevClose": 301.26
+        },
+        {
+          "date": "2022-10-04",
+          "direction": "UP",
+          "changePct": 5.2549,
+          "zScore": 2.9506,
+          "close": 314.87,
+          "prevClose": 299.15
         },
         {
           "date": "2023-01-17",
           "direction": "DOWN",
           "changePct": -6.4385,
-          "zScore": -3.736,
+          "zScore": -3.7344,
           "close": 349.92,
           "prevClose": 374
         },
@@ -2205,15 +3989,31 @@
           "date": "2023-12-14",
           "direction": "UP",
           "changePct": 5.7177,
-          "zScore": 3.2159,
+          "zScore": 3.2152,
           "close": 383.47,
           "prevClose": 362.73
+        },
+        {
+          "date": "2024-08-02",
+          "direction": "DOWN",
+          "changePct": -5.8946,
+          "zScore": -3.4235,
+          "close": 470.64,
+          "prevClose": 500.12
+        },
+        {
+          "date": "2024-09-03",
+          "direction": "DOWN",
+          "changePct": -4.4664,
+          "zScore": -2.607,
+          "close": 487.46,
+          "prevClose": 510.25
         },
         {
           "date": "2024-11-06",
           "direction": "UP",
           "changePct": 13.0978,
-          "zScore": 7.4363,
+          "zScore": 7.4343,
           "close": 595.98,
           "prevClose": 526.96
         },
@@ -2221,15 +4021,23 @@
           "date": "2025-01-15",
           "direction": "UP",
           "changePct": 6.0172,
-          "zScore": 3.3871,
+          "zScore": 3.3864,
           "close": 605.92,
           "prevClose": 571.53
+        },
+        {
+          "date": "2025-03-10",
+          "direction": "DOWN",
+          "changePct": -5.0047,
+          "zScore": -2.9147,
+          "close": 531.66,
+          "prevClose": 559.67
         },
         {
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -9.2115,
-          "zScore": -5.3218,
+          "zScore": -5.3197,
           "close": 511.23,
           "prevClose": 563.1
         },
@@ -2237,7 +4045,7 @@
           "date": "2025-04-04",
           "direction": "DOWN",
           "changePct": -7.9064,
-          "zScore": -4.5754,
+          "zScore": -4.5736,
           "close": 470.81,
           "prevClose": 511.23
         },
@@ -2245,17 +4053,49 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 11.8234,
-          "zScore": 6.7075,
+          "zScore": 6.7058,
           "close": 516.87,
           "prevClose": 462.22
+        },
+        {
+          "date": "2025-04-10",
+          "direction": "DOWN",
+          "changePct": -5.2373,
+          "zScore": -3.0477,
+          "close": 489.8,
+          "prevClose": 516.87
+        },
+        {
+          "date": "2026-01-15",
+          "direction": "UP",
+          "changePct": 4.6308,
+          "zScore": 2.5938,
+          "close": 975.86,
+          "prevClose": 932.67
         },
         {
           "date": "2026-02-27",
           "direction": "DOWN",
           "changePct": -7.4736,
-          "zScore": -4.3279,
+          "zScore": -4.3262,
           "close": 859.57,
           "prevClose": 929
+        },
+        {
+          "date": "2026-03-31",
+          "direction": "UP",
+          "changePct": 4.7536,
+          "zScore": 2.664,
+          "close": 845.99,
+          "prevClose": 807.6
+        },
+        {
+          "date": "2026-04-08",
+          "direction": "UP",
+          "changePct": 4.814,
+          "zScore": 2.6985,
+          "close": 905.75,
+          "prevClose": 864.15
         }
       ]
     },
@@ -2266,20 +4106,28 @@
       "twitter_handle": "@brian_armstrong",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.110942,
-      "stdDevPct": 5.410287,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.111696,
+      "stdDevPct": 5.412379,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2022-01-21",
+          "direction": "DOWN",
+          "changePct": -13.3788,
+          "zScore": -2.4925,
+          "close": 191.97,
+          "prevClose": 221.62
+        },
         {
           "date": "2022-05-09",
           "direction": "DOWN",
           "changePct": -19.5007,
-          "zScore": -3.6249,
+          "zScore": -3.6236,
           "close": 83.51,
           "prevClose": 103.74
         },
@@ -2287,7 +4135,7 @@
           "date": "2022-05-11",
           "direction": "DOWN",
           "changePct": -26.4009,
-          "zScore": -4.9003,
+          "zScore": -4.8985,
           "close": 53.72,
           "prevClose": 72.99
         },
@@ -2295,7 +4143,7 @@
           "date": "2022-07-26",
           "direction": "DOWN",
           "changePct": -21.0825,
-          "zScore": -3.9172,
+          "zScore": -3.9159,
           "close": 52.93,
           "prevClose": 67.07
         },
@@ -2303,7 +4151,7 @@
           "date": "2022-08-03",
           "direction": "UP",
           "changePct": 20.1993,
-          "zScore": 3.713,
+          "zScore": 3.7114,
           "close": 80.81,
           "prevClose": 67.23
         },
@@ -2311,39 +4159,103 @@
           "date": "2023-02-02",
           "direction": "UP",
           "changePct": 23.9878,
-          "zScore": 4.4132,
+          "zScore": 4.4114,
           "close": 81.46,
           "prevClose": 65.7
+        },
+        {
+          "date": "2023-02-09",
+          "direction": "DOWN",
+          "changePct": -14.1273,
+          "zScore": -2.6308,
+          "close": 59.63,
+          "prevClose": 69.44
+        },
+        {
+          "date": "2023-02-15",
+          "direction": "UP",
+          "changePct": 17.4657,
+          "zScore": 3.2064,
+          "close": 69.34,
+          "prevClose": 59.03
+        },
+        {
+          "date": "2023-03-23",
+          "direction": "DOWN",
+          "changePct": -14.0524,
+          "zScore": -2.617,
+          "close": 66.3,
+          "prevClose": 77.14
+        },
+        {
+          "date": "2023-05-05",
+          "direction": "UP",
+          "changePct": 18.3259,
+          "zScore": 3.3653,
+          "close": 58.24,
+          "prevClose": 49.22
         },
         {
           "date": "2023-07-13",
           "direction": "UP",
           "changePct": 24.491,
-          "zScore": 4.5062,
+          "zScore": 4.5044,
           "close": 107,
           "prevClose": 85.95
+        },
+        {
+          "date": "2024-02-26",
+          "direction": "UP",
+          "changePct": 16.8454,
+          "zScore": 3.0917,
+          "close": 193.94,
+          "prevClose": 165.98
+        },
+        {
+          "date": "2024-10-31",
+          "direction": "DOWN",
+          "changePct": -15.3443,
+          "zScore": -2.8557,
+          "close": 179.25,
+          "prevClose": 211.74
         },
         {
           "date": "2024-11-06",
           "direction": "UP",
           "changePct": 31.1147,
-          "zScore": 5.7305,
+          "zScore": 5.7282,
           "close": 254.31,
           "prevClose": 193.96
+        },
+        {
+          "date": "2024-11-11",
+          "direction": "UP",
+          "changePct": 19.7607,
+          "zScore": 3.6304,
+          "close": 324.24,
+          "prevClose": 270.74
         },
         {
           "date": "2025-03-10",
           "direction": "DOWN",
           "changePct": -17.5765,
-          "zScore": -3.2692,
+          "zScore": -3.2681,
           "close": 179.23,
           "prevClose": 217.45
+        },
+        {
+          "date": "2025-04-09",
+          "direction": "UP",
+          "changePct": 16.9142,
+          "zScore": 3.1045,
+          "close": 177.09,
+          "prevClose": 151.47
         },
         {
           "date": "2025-05-13",
           "direction": "UP",
           "changePct": 23.9745,
-          "zScore": 4.4108,
+          "zScore": 4.4089,
           "close": 256.9,
           "prevClose": 207.22
         },
@@ -2351,9 +4263,17 @@
           "date": "2025-08-01",
           "direction": "DOWN",
           "changePct": -16.6958,
-          "zScore": -3.1064,
+          "zScore": -3.1054,
           "close": 314.69,
           "prevClose": 377.76
+        },
+        {
+          "date": "2026-02-05",
+          "direction": "DOWN",
+          "changePct": -13.3436,
+          "zScore": -2.486,
+          "close": 146.12,
+          "prevClose": 168.62
         }
       ]
     },
@@ -2364,28 +4284,36 @@
       "twitter_handle": "@phongle_mstr",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.238467,
-      "stdDevPct": 5.718665,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.236457,
+      "stdDevPct": 5.720504,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-07-26",
           "direction": "UP",
           "changePct": 26.4568,
-          "zScore": 4.5847,
+          "zScore": 4.5836,
           "close": 68.25,
           "prevClose": 53.971
+        },
+        {
+          "date": "2022-01-21",
+          "direction": "DOWN",
+          "changePct": -17.8436,
+          "zScore": -3.1606,
+          "close": 37.589,
+          "prevClose": 45.753
         },
         {
           "date": "2022-05-09",
           "direction": "DOWN",
           "changePct": -25.554,
-          "zScore": -4.5102,
+          "zScore": -4.5084,
           "close": 21.905,
           "prevClose": 29.424
         },
@@ -2393,31 +4321,63 @@
           "date": "2022-05-11",
           "direction": "DOWN",
           "changePct": -25.4168,
-          "zScore": -4.4862,
+          "zScore": -4.4844,
           "close": 16.82,
           "prevClose": 22.552
+        },
+        {
+          "date": "2022-05-13",
+          "direction": "UP",
+          "changePct": 19.5058,
+          "zScore": 3.3685,
+          "close": 20.457,
+          "prevClose": 17.118
+        },
+        {
+          "date": "2022-05-31",
+          "direction": "UP",
+          "changePct": 20.6482,
+          "zScore": 3.5682,
+          "close": 26.469,
+          "prevClose": 21.939
         },
         {
           "date": "2022-06-13",
           "direction": "DOWN",
           "changePct": -25.1819,
-          "zScore": -4.4452,
+          "zScore": -4.4434,
           "close": 15.215,
           "prevClose": 20.336
+        },
+        {
+          "date": "2022-07-19",
+          "direction": "UP",
+          "changePct": 18.4107,
+          "zScore": 3.177,
+          "close": 26.717,
+          "prevClose": 22.563
         },
         {
           "date": "2022-11-08",
           "direction": "DOWN",
           "changePct": -20.5521,
-          "zScore": -3.6356,
+          "zScore": -3.634,
           "close": 21.184,
           "prevClose": 26.664
+        },
+        {
+          "date": "2022-11-09",
+          "direction": "DOWN",
+          "changePct": -19.5808,
+          "zScore": -3.4643,
+          "close": 17.036,
+          "prevClose": 21.184
         },
         {
           "date": "2024-03-04",
           "direction": "UP",
           "changePct": 23.5892,
-          "zScore": 4.0833,
+          "zScore": 4.0823,
           "close": 133.401,
           "prevClose": 107.939
         },
@@ -2425,31 +4385,71 @@
           "date": "2024-03-05",
           "direction": "DOWN",
           "changePct": -21.2142,
-          "zScore": -3.7513,
+          "zScore": -3.7498,
           "close": 105.101,
           "prevClose": 133.401
+        },
+        {
+          "date": "2024-03-06",
+          "direction": "UP",
+          "changePct": 18.5726,
+          "zScore": 3.2053,
+          "close": 124.621,
+          "prevClose": 105.101
+        },
+        {
+          "date": "2024-03-25",
+          "direction": "UP",
+          "changePct": 21.8647,
+          "zScore": 3.7808,
+          "close": 185.6,
+          "prevClose": 152.3
+        },
+        {
+          "date": "2024-04-30",
+          "direction": "DOWN",
+          "changePct": -17.6292,
+          "zScore": -3.1231,
+          "close": 106.503,
+          "prevClose": 129.297
         },
         {
           "date": "2024-11-11",
           "direction": "UP",
           "changePct": 25.7303,
-          "zScore": 4.4577,
+          "zScore": 4.4566,
           "close": 340,
           "prevClose": 270.42
+        },
+        {
+          "date": "2025-03-10",
+          "direction": "DOWN",
+          "changePct": -16.6829,
+          "zScore": -2.9577,
+          "close": 239.27,
+          "prevClose": 287.18
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 24.7573,
-          "zScore": 4.2875,
+          "zScore": 4.2865,
           "close": 296.86,
           "prevClose": 237.95
+        },
+        {
+          "date": "2026-02-05",
+          "direction": "DOWN",
+          "changePct": -17.1198,
+          "zScore": -3.0341,
+          "close": 106.99,
+          "prevClose": 129.09
         },
         {
           "date": "2026-02-06",
           "direction": "UP",
           "changePct": 26.1146,
-          "zScore": 4.5249,
+          "zScore": 4.5238,
           "close": 134.93,
           "prevClose": 106.99
         }
@@ -2462,20 +4462,20 @@
       "twitter_handle": "@alevie",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.028058,
-      "stdDevPct": 2.052036,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.028475,
+      "stdDevPct": 2.052801,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-09-09",
           "direction": "DOWN",
           "changePct": -6.9034,
-          "zScore": -3.3778,
+          "zScore": -3.3768,
           "close": 23.6,
           "prevClose": 25.35
         },
@@ -2483,23 +4483,71 @@
           "date": "2021-12-01",
           "direction": "UP",
           "changePct": 10.252,
-          "zScore": 4.9824,
+          "zScore": 4.9803,
           "close": 25.81,
           "prevClose": 23.41
+        },
+        {
+          "date": "2022-05-18",
+          "direction": "DOWN",
+          "changePct": -5.2613,
+          "zScore": -2.5769,
+          "close": 27.01,
+          "prevClose": 28.51
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -6.0016,
+          "zScore": -2.9375,
+          "close": 24.12,
+          "prevClose": 25.66
+        },
+        {
+          "date": "2022-06-16",
+          "direction": "DOWN",
+          "changePct": -5.2301,
+          "zScore": -2.5617,
+          "close": 22.65,
+          "prevClose": 23.9
+        },
+        {
+          "date": "2022-06-24",
+          "direction": "UP",
+          "changePct": 8.0502,
+          "zScore": 3.9077,
+          "close": 26.71,
+          "prevClose": 24.72
         },
         {
           "date": "2022-10-03",
           "direction": "UP",
           "changePct": 9.1841,
-          "zScore": 4.4619,
+          "zScore": 4.4601,
           "close": 26.63,
           "prevClose": 24.39
+        },
+        {
+          "date": "2022-12-12",
+          "direction": "UP",
+          "changePct": 7.4351,
+          "zScore": 3.608,
+          "close": 30.2,
+          "prevClose": 28.11
+        },
+        {
+          "date": "2023-01-10",
+          "direction": "DOWN",
+          "changePct": -6.3003,
+          "zScore": -3.083,
+          "close": 27.96,
+          "prevClose": 29.84
         },
         {
           "date": "2023-03-02",
           "direction": "DOWN",
           "changePct": -12.9244,
-          "zScore": -6.312,
+          "zScore": -6.3098,
           "close": 29.24,
           "prevClose": 33.58
         },
@@ -2507,7 +4555,7 @@
           "date": "2023-08-30",
           "direction": "DOWN",
           "changePct": -12.3052,
-          "zScore": -6.0102,
+          "zScore": -6.0082,
           "close": 27.01,
           "prevClose": 30.8
         },
@@ -2515,15 +4563,31 @@
           "date": "2023-12-06",
           "direction": "DOWN",
           "changePct": -10.1911,
-          "zScore": -4.98,
+          "zScore": -4.9783,
           "close": 23.97,
           "prevClose": 26.69
+        },
+        {
+          "date": "2024-03-06",
+          "direction": "UP",
+          "changePct": 8.6239,
+          "zScore": 4.1871,
+          "close": 29.6,
+          "prevClose": 27.25
+        },
+        {
+          "date": "2024-05-29",
+          "direction": "UP",
+          "changePct": 8.6262,
+          "zScore": 4.1883,
+          "close": 27.2,
+          "prevClose": 25.04
         },
         {
           "date": "2024-08-28",
           "direction": "UP",
           "changePct": 10.8258,
-          "zScore": 5.262,
+          "zScore": 5.2598,
           "close": 31.94,
           "prevClose": 28.82
         },
@@ -2531,7 +4595,7 @@
           "date": "2024-12-04",
           "direction": "DOWN",
           "changePct": -7.699,
-          "zScore": -3.7656,
+          "zScore": -3.7644,
           "close": 31.77,
           "prevClose": 34.42
         },
@@ -2539,17 +4603,33 @@
           "date": "2025-05-28",
           "direction": "UP",
           "changePct": 17.2337,
-          "zScore": 8.3847,
+          "zScore": 8.3813,
           "close": 36.87,
           "prevClose": 31.45
+        },
+        {
+          "date": "2026-02-03",
+          "direction": "DOWN",
+          "changePct": -6.1437,
+          "zScore": -3.0067,
+          "close": 24.29,
+          "prevClose": 25.88
         },
         {
           "date": "2026-03-04",
           "direction": "UP",
           "changePct": 10.1589,
-          "zScore": 4.937,
+          "zScore": 4.9349,
           "close": 26.35,
           "prevClose": 23.92
+        },
+        {
+          "date": "2026-04-15",
+          "direction": "UP",
+          "changePct": 6.6756,
+          "zScore": 3.2381,
+          "close": 23.81,
+          "prevClose": 22.32
         }
       ]
     },
@@ -2560,28 +4640,84 @@
       "twitter_handle": "@cristianoamon",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.034,
-      "stdDevPct": 2.391103,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.034573,
+      "stdDevPct": 2.391971,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-11-04",
           "direction": "UP",
           "changePct": 12.7311,
-          "zScore": 5.3101,
+          "zScore": 5.308,
           "close": 156.11,
           "prevClose": 138.48
+        },
+        {
+          "date": "2021-11-16",
+          "direction": "UP",
+          "changePct": 7.8927,
+          "zScore": 3.2852,
+          "close": 181.81,
+          "prevClose": 168.51
+        },
+        {
+          "date": "2022-04-28",
+          "direction": "UP",
+          "changePct": 9.6891,
+          "zScore": 4.0362,
+          "close": 148.19,
+          "prevClose": 135.1
+        },
+        {
+          "date": "2022-06-16",
+          "direction": "DOWN",
+          "changePct": -7.7921,
+          "zScore": -3.2721,
+          "close": 120.82,
+          "prevClose": 131.03
+        },
+        {
+          "date": "2022-11-03",
+          "direction": "DOWN",
+          "changePct": -7.6622,
+          "zScore": -3.2178,
+          "close": 103.88,
+          "prevClose": 112.5
+        },
+        {
+          "date": "2022-11-10",
+          "direction": "UP",
+          "changePct": 9.2819,
+          "zScore": 3.866,
+          "close": 120.68,
+          "prevClose": 110.43
+        },
+        {
+          "date": "2022-11-30",
+          "direction": "UP",
+          "changePct": 6.8508,
+          "zScore": 2.8496,
+          "close": 126.49,
+          "prevClose": 118.38
+        },
+        {
+          "date": "2023-08-03",
+          "direction": "DOWN",
+          "changePct": -8.1767,
+          "zScore": -3.4328,
+          "close": 118.7,
+          "prevClose": 129.27
         },
         {
           "date": "2024-05-02",
           "direction": "UP",
           "changePct": 9.7435,
-          "zScore": 4.0607,
+          "zScore": 4.059,
           "close": 180.1,
           "prevClose": 164.11
         },
@@ -2589,15 +4725,23 @@
           "date": "2024-07-17",
           "direction": "DOWN",
           "changePct": -8.6052,
-          "zScore": -3.6131,
+          "zScore": -3.612,
           "close": 191.6,
           "prevClose": 209.64
+        },
+        {
+          "date": "2024-07-31",
+          "direction": "UP",
+          "changePct": 8.3922,
+          "zScore": 3.494,
+          "close": 180.95,
+          "prevClose": 166.94
         },
         {
           "date": "2024-08-01",
           "direction": "DOWN",
           "changePct": -9.3672,
-          "zScore": -3.9318,
+          "zScore": -3.9306,
           "close": 164,
           "prevClose": 180.95
         },
@@ -2605,7 +4749,7 @@
           "date": "2025-04-03",
           "direction": "DOWN",
           "changePct": -9.5145,
-          "zScore": -3.9934,
+          "zScore": -3.9922,
           "close": 139.42,
           "prevClose": 154.08
         },
@@ -2613,7 +4757,7 @@
           "date": "2025-04-04",
           "direction": "DOWN",
           "changePct": -8.5784,
-          "zScore": -3.6019,
+          "zScore": -3.6008,
           "close": 127.46,
           "prevClose": 139.42
         },
@@ -2621,7 +4765,7 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 15.1853,
-          "zScore": 6.3365,
+          "zScore": 6.334,
           "close": 143.59,
           "prevClose": 124.66
         },
@@ -2629,23 +4773,39 @@
           "date": "2025-05-01",
           "direction": "DOWN",
           "changePct": -8.925,
-          "zScore": -3.7468,
+          "zScore": -3.7457,
           "close": 135.21,
           "prevClose": 148.46
+        },
+        {
+          "date": "2025-07-31",
+          "direction": "DOWN",
+          "changePct": -7.7329,
+          "zScore": -3.2473,
+          "close": 146.76,
+          "prevClose": 159.06
         },
         {
           "date": "2025-10-27",
           "direction": "UP",
           "changePct": 11.0927,
-          "zScore": 4.6249,
+          "zScore": 4.623,
           "close": 187.68,
           "prevClose": 168.94
+        },
+        {
+          "date": "2026-02-05",
+          "direction": "DOWN",
+          "changePct": -8.4559,
+          "zScore": -3.5496,
+          "close": 136.3,
+          "prevClose": 148.89
         },
         {
           "date": "2026-04-24",
           "direction": "UP",
           "changePct": 11.1236,
-          "zScore": 4.6378,
+          "zScore": 4.6359,
           "close": 148.85,
           "prevClose": 133.95
         }
@@ -2658,36 +4818,52 @@
       "twitter_handle": "@ArvindKrishna",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.055847,
-      "stdDevPct": 1.602567,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.055644,
+      "stdDevPct": 1.60319,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
         {
           "date": "2021-10-21",
           "direction": "DOWN",
           "changePct": -9.5631,
-          "zScore": -6.0022,
+          "zScore": -5.9997,
           "close": 122.6864,
           "prevClose": 135.6597
+        },
+        {
+          "date": "2022-01-25",
+          "direction": "UP",
+          "changePct": 5.6513,
+          "zScore": 3.4903,
+          "close": 136.1,
+          "prevClose": 128.82
         },
         {
           "date": "2022-04-20",
           "direction": "UP",
           "changePct": 7.1003,
-          "zScore": 4.3957,
+          "zScore": 4.3941,
           "close": 138.32,
           "prevClose": 129.15
+        },
+        {
+          "date": "2023-10-26",
+          "direction": "UP",
+          "changePct": 4.8731,
+          "zScore": 3.0049,
+          "close": 143.76,
+          "prevClose": 137.08
         },
         {
           "date": "2024-01-25",
           "direction": "UP",
           "changePct": 9.4866,
-          "zScore": 5.8848,
+          "zScore": 5.8826,
           "close": 190.43,
           "prevClose": 173.93
         },
@@ -2695,47 +4871,111 @@
           "date": "2024-04-25",
           "direction": "DOWN",
           "changePct": -8.251,
-          "zScore": -5.1834,
+          "zScore": -5.1813,
           "close": 168.91,
           "prevClose": 184.1
+        },
+        {
+          "date": "2024-10-24",
+          "direction": "DOWN",
+          "changePct": -6.1697,
+          "zScore": -3.8831,
+          "close": 218.39,
+          "prevClose": 232.75
         },
         {
           "date": "2025-01-30",
           "direction": "UP",
           "changePct": 12.9642,
-          "zScore": 8.0548,
+          "zScore": 8.0518,
           "close": 258.27,
           "prevClose": 228.63
+        },
+        {
+          "date": "2025-03-07",
+          "direction": "UP",
+          "changePct": 5.1671,
+          "zScore": 3.1883,
+          "close": 261.54,
+          "prevClose": 248.69
+        },
+        {
+          "date": "2025-04-04",
+          "direction": "DOWN",
+          "changePct": -6.5752,
+          "zScore": -4.136,
+          "close": 227.48,
+          "prevClose": 243.49
         },
         {
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 6.4607,
-          "zScore": 3.9966,
+          "zScore": 3.9952,
           "close": 235.31,
           "prevClose": 221.03
+        },
+        {
+          "date": "2025-04-24",
+          "direction": "DOWN",
+          "changePct": -6.5789,
+          "zScore": -4.1384,
+          "close": 229.33,
+          "prevClose": 245.48
         },
         {
           "date": "2025-07-24",
           "direction": "DOWN",
           "changePct": -7.6238,
-          "zScore": -4.7921,
+          "zScore": -4.7901,
           "close": 260.51,
           "prevClose": 282.01
+        },
+        {
+          "date": "2025-09-25",
+          "direction": "UP",
+          "changePct": 5.1994,
+          "zScore": 3.2085,
+          "close": 281.44,
+          "prevClose": 267.53
         },
         {
           "date": "2025-10-24",
           "direction": "UP",
           "changePct": 7.8807,
-          "zScore": 4.8827,
+          "zScore": 4.8809,
           "close": 307.46,
           "prevClose": 285
+        },
+        {
+          "date": "2026-01-29",
+          "direction": "UP",
+          "changePct": 5.1265,
+          "zScore": 3.163,
+          "close": 309.24,
+          "prevClose": 294.16
+        },
+        {
+          "date": "2026-02-03",
+          "direction": "DOWN",
+          "changePct": -6.4881,
+          "zScore": -4.0817,
+          "close": 294.31,
+          "prevClose": 314.73
+        },
+        {
+          "date": "2026-02-11",
+          "direction": "DOWN",
+          "changePct": -6.4951,
+          "zScore": -4.086,
+          "close": 272.81,
+          "prevClose": 291.76
         },
         {
           "date": "2026-02-23",
           "direction": "DOWN",
           "changePct": -13.1475,
-          "zScore": -8.2388,
+          "zScore": -8.2355,
           "close": 223.35,
           "prevClose": 257.16
         },
@@ -2743,7 +4983,7 @@
           "date": "2026-04-23",
           "direction": "DOWN",
           "changePct": -8.2506,
-          "zScore": -5.1832,
+          "zScore": -5.1811,
           "close": 231.08,
           "prevClose": 251.86
         }
@@ -2756,28 +4996,68 @@
       "twitter_handle": "@WarrenBuffett",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.049657,
-      "stdDevPct": 1.081783,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.048876,
+      "stdDevPct": 1.081859,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2022-02-25",
+          "direction": "UP",
+          "changePct": 3.5552,
+          "zScore": 3.241,
+          "close": 319.24,
+          "prevClose": 308.28
+        },
+        {
+          "date": "2022-06-10",
+          "direction": "DOWN",
+          "changePct": -3.0219,
+          "zScore": -2.8385,
+          "close": 291.71,
+          "prevClose": 300.8
+        },
+        {
+          "date": "2022-06-13",
+          "direction": "DOWN",
+          "changePct": -3.4795,
+          "zScore": -3.2614,
+          "close": 281.56,
+          "prevClose": 291.71
+        },
         {
           "date": "2022-06-16",
           "direction": "DOWN",
           "changePct": -3.7178,
-          "zScore": -3.4826,
+          "zScore": -3.4816,
           "close": 268.56,
           "prevClose": 278.93
+        },
+        {
+          "date": "2022-06-24",
+          "direction": "UP",
+          "changePct": 4.0221,
+          "zScore": 3.6726,
+          "close": 278.28,
+          "prevClose": 267.52
+        },
+        {
+          "date": "2022-08-22",
+          "direction": "DOWN",
+          "changePct": -2.8895,
+          "zScore": -2.7161,
+          "close": 288.69,
+          "prevClose": 297.28
         },
         {
           "date": "2022-09-13",
           "direction": "DOWN",
           "changePct": -3.5423,
-          "zScore": -3.3204,
+          "zScore": -3.3195,
           "close": 278.29,
           "prevClose": 288.51
         },
@@ -2785,23 +5065,55 @@
           "date": "2022-10-13",
           "direction": "UP",
           "changePct": 4.4621,
-          "zScore": 4.0789,
+          "zScore": 4.0793,
           "close": 275.78,
           "prevClose": 264
+        },
+        {
+          "date": "2022-10-21",
+          "direction": "UP",
+          "changePct": 3.283,
+          "zScore": 2.9894,
+          "close": 282.51,
+          "prevClose": 273.53
+        },
+        {
+          "date": "2022-10-28",
+          "direction": "UP",
+          "changePct": 3.3635,
+          "zScore": 3.0638,
+          "close": 299.63,
+          "prevClose": 289.88
         },
         {
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 5.0407,
-          "zScore": 4.6137,
+          "zScore": 4.6141,
           "close": 303.2,
           "prevClose": 288.65
+        },
+        {
+          "date": "2023-08-07",
+          "direction": "UP",
+          "changePct": 3.5972,
+          "zScore": 3.2799,
+          "close": 362.58,
+          "prevClose": 349.99
+        },
+        {
+          "date": "2024-08-05",
+          "direction": "DOWN",
+          "changePct": -3.4177,
+          "zScore": -3.2043,
+          "close": 413.72,
+          "prevClose": 428.36
         },
         {
           "date": "2024-11-06",
           "direction": "UP",
           "changePct": 5.3566,
-          "zScore": 4.9057,
+          "zScore": 4.9061,
           "close": 468.9,
           "prevClose": 445.06
         },
@@ -2809,7 +5121,7 @@
           "date": "2025-02-24",
           "direction": "UP",
           "changePct": 4.1108,
-          "zScore": 3.7541,
+          "zScore": 3.7546,
           "close": 498.42,
           "prevClose": 478.74
         },
@@ -2817,7 +5129,7 @@
           "date": "2025-04-04",
           "direction": "DOWN",
           "changePct": -6.9073,
-          "zScore": -6.4311,
+          "zScore": -6.4299,
           "close": 493.54,
           "prevClose": 530.16
         },
@@ -2825,7 +5137,7 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 5.84,
-          "zScore": 5.3526,
+          "zScore": 5.3529,
           "close": 521.41,
           "prevClose": 492.64
         },
@@ -2833,15 +5145,23 @@
           "date": "2025-05-05",
           "direction": "DOWN",
           "changePct": -5.1223,
-          "zScore": -4.7809,
+          "zScore": -4.7799,
           "close": 512.15,
           "prevClose": 539.8
+        },
+        {
+          "date": "2025-08-04",
+          "direction": "DOWN",
+          "changePct": -2.9037,
+          "zScore": -2.7292,
+          "close": 459.11,
+          "prevClose": 472.84
         },
         {
           "date": "2026-03-02",
           "direction": "DOWN",
           "changePct": -4.9074,
-          "zScore": -4.5823,
+          "zScore": -4.5813,
           "close": 480.17,
           "prevClose": 504.95
         }
@@ -2854,20 +5174,52 @@
       "twitter_handle": "@sama",
       "zScoreThreshold": 2.5,
       "absChangeThreshold": 4,
-      "periodStart": "2021-04-26",
+      "periodStart": "2021-04-27",
       "periodEnd": "2026-04-24",
-      "totalTradingDays": 1255,
-      "meanReturnPct": 0.05241,
-      "stdDevPct": 1.661417,
-      "totalSpikes": 10,
-      "spikesUp": 5,
-      "spikesDown": 5,
+      "totalTradingDays": 1254,
+      "meanReturnPct": 0.052323,
+      "stdDevPct": 1.662077,
+      "totalSpikes": 20,
+      "spikesUp": 10,
+      "spikesDown": 10,
       "peaks": [
+        {
+          "date": "2022-02-24",
+          "direction": "UP",
+          "changePct": 5.1094,
+          "zScore": 3.0426,
+          "close": 294.59,
+          "prevClose": 280.27
+        },
+        {
+          "date": "2022-04-27",
+          "direction": "UP",
+          "changePct": 4.8109,
+          "zScore": 2.863,
+          "close": 283.22,
+          "prevClose": 270.22
+        },
+        {
+          "date": "2022-05-18",
+          "direction": "DOWN",
+          "changePct": -4.7748,
+          "zScore": -2.9042,
+          "close": 254.08,
+          "prevClose": 266.82
+        },
+        {
+          "date": "2022-06-10",
+          "direction": "DOWN",
+          "changePct": -4.4564,
+          "zScore": -2.7127,
+          "close": 252.99,
+          "prevClose": 264.79
+        },
         {
           "date": "2022-07-27",
           "direction": "UP",
           "changePct": 6.6852,
-          "zScore": 3.9922,
+          "zScore": 3.9907,
           "close": 268.74,
           "prevClose": 251.9
         },
@@ -2875,15 +5227,23 @@
           "date": "2022-09-13",
           "direction": "DOWN",
           "changePct": -5.4978,
-          "zScore": -3.3407,
+          "zScore": -3.3393,
           "close": 251.99,
           "prevClose": 266.65
+        },
+        {
+          "date": "2022-10-07",
+          "direction": "DOWN",
+          "changePct": -5.0853,
+          "zScore": -3.0911,
+          "close": 234.24,
+          "prevClose": 246.79
         },
         {
           "date": "2022-10-26",
           "direction": "DOWN",
           "changePct": -7.7156,
-          "zScore": -4.6756,
+          "zScore": -4.6736,
           "close": 231.32,
           "prevClose": 250.66
         },
@@ -2891,15 +5251,39 @@
           "date": "2022-11-10",
           "direction": "UP",
           "changePct": 8.2268,
-          "zScore": 4.9201,
+          "zScore": 4.9182,
           "close": 242.98,
           "prevClose": 224.51
+        },
+        {
+          "date": "2022-11-30",
+          "direction": "UP",
+          "changePct": 6.1624,
+          "zScore": 3.6761,
+          "close": 255.14,
+          "prevClose": 240.33
+        },
+        {
+          "date": "2023-01-04",
+          "direction": "DOWN",
+          "changePct": -4.3743,
+          "zScore": -2.6633,
+          "close": 229.1,
+          "prevClose": 239.58
+        },
+        {
+          "date": "2023-02-02",
+          "direction": "UP",
+          "changePct": 4.6884,
+          "zScore": 2.7893,
+          "close": 264.6,
+          "prevClose": 252.75
         },
         {
           "date": "2023-04-26",
           "direction": "UP",
           "changePct": 7.2435,
-          "zScore": 4.3283,
+          "zScore": 4.3266,
           "close": 295.37,
           "prevClose": 275.42
         },
@@ -2907,7 +5291,7 @@
           "date": "2024-10-31",
           "direction": "DOWN",
           "changePct": -6.0528,
-          "zScore": -3.6747,
+          "zScore": -3.6732,
           "close": 406.35,
           "prevClose": 432.53
         },
@@ -2915,7 +5299,7 @@
           "date": "2025-01-30",
           "direction": "DOWN",
           "changePct": -6.1809,
-          "zScore": -3.7518,
+          "zScore": -3.7503,
           "close": 414.99,
           "prevClose": 442.33
         },
@@ -2923,7 +5307,7 @@
           "date": "2025-04-09",
           "direction": "UP",
           "changePct": 10.1337,
-          "zScore": 6.0679,
+          "zScore": 6.0655,
           "close": 390.49,
           "prevClose": 354.56
         },
@@ -2931,7 +5315,7 @@
           "date": "2025-05-01",
           "direction": "UP",
           "changePct": 7.6254,
-          "zScore": 4.5581,
+          "zScore": 4.5564,
           "close": 425.4,
           "prevClose": 395.26
         },
@@ -2939,9 +5323,25 @@
           "date": "2026-01-29",
           "direction": "DOWN",
           "changePct": -9.9931,
-          "zScore": -6.0464,
+          "zScore": -6.0439,
           "close": 433.5,
           "prevClose": 481.63
+        },
+        {
+          "date": "2026-02-05",
+          "direction": "DOWN",
+          "changePct": -4.9542,
+          "zScore": -3.0122,
+          "close": 393.67,
+          "prevClose": 414.19
+        },
+        {
+          "date": "2026-04-15",
+          "direction": "UP",
+          "changePct": 4.6069,
+          "zScore": 2.7403,
+          "close": 411.22,
+          "prevClose": 393.11
         }
       ]
     }
