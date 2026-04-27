@@ -1,0 +1,21 @@
+{
+  "username": "finkd",
+  "display_name": "Mark Zuckerberg",
+  "last_scraped": "2026-04-26T17:17:32Z",
+  "total_tweets": 1,
+  "tweets": [
+    {
+      "id": "1676747594460962817",
+      "username": "finkd",
+      "display_name": "Mark Zuckerberg",
+      "text": "https://t.co/MbMxUWiQgp",
+      "views": 46813716,
+      "likes": 290007,
+      "retweets": 34403,
+      "replies": 49747,
+      "bookmarks": 4368,
+      "created_at": "2023-07-06T00:19:13Z",
+      "scraped_at": "2026-04-26T17:17:30Z"
+    }
+  ]
+}
