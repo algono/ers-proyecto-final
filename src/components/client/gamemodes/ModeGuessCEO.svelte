@@ -13,7 +13,7 @@
   let isCorrect = false;
 
   function guess(chosenOption: string) {
-    isCorrect = chosenOption === item.ceo;
+    isCorrect = chosenOption === item.tweetAuthorDisplayName;
     onAnswer({ isCorrect });
   }
 </script>
