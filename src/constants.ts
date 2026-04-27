@@ -1,5 +1,13 @@
 export const PROJECT_NAME = 'The CEO Effect';
-export const PROJECT_SUBTITLE = '';
+
+// --- SEO CONFIGURATION ---
+export const SEO_TITLE = `${PROJECT_NAME} - Play the Market Game`;
+export const SEO_DESCRIPTION = "Guess the stock market reaction to CEO tweets in this interactive game.";
+
+/**
+ * Theme color, set as the primary color for the website, used in the "theme-color" meta tag for the address bar color on mobile devices
+ */
+export const THEME_COLOR = "#DEFF9A";
 
 /**
  * This is the same as {@link PROJECT_NAME} but with spaces for screen readers to read it correctly
