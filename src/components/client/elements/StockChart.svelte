@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
   import { draw, fade } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
 
   // Props que recibirá desde el componente padre
-  export let history = [];
-  export let stockChange = 0;
-  export let showDramaticColor = false;
+  export let history: number[] = [];
+  export let stockChange: number = 0;
+  export let showDramaticColor: boolean = false;
 
   // 1. Ajuste matemático: Hacemos que la gráfica ocupe de Y=0 a Y=35.
   // Así dejamos espacio libre abajo (hasta Y=55) para las líneas y los textos.
@@ -27,15 +27,15 @@
   $: finalColor = stockChange >= 0 ? '#10b981' : '#ef4444'; // Verde o Rojo
 
   // Transición personalizada de la línea cayendo
-  function dropLine(node, { delay = 0, duration = 400 }) {
-    const y1 = parseFloat(node.getAttribute('y1'));
-    const y2 = parseFloat(node.getAttribute('y2')); // El destino final
+  function dropLine(node: Element, { delay = 0, duration = 400 }) {
+    const y1 = parseFloat(node.getAttribute('y1') || '0'); // El punto de partida (arriba)
+    const y2 = parseFloat(node.getAttribute('y2') || '0'); // El destino final
     return {
       delay,
       duration,
-      tick: t => {
+      tick: (t: number) => {
         // 't' va de 0 a 1 durante la animación. Movemos el punto final hacia abajo.
-        node.setAttribute('y2', y1 + (y2 - y1) * t);
+        node.setAttribute('y2', (y1 + (y2 - y1) * t).toString());
       }
     };
   }
@@ -73,7 +73,7 @@
           delay: i * (1500 / Math.max(1, pointCoords.length - 1)) 
         }}
       >
-        {p.val}
+        {p.val.toFixed(2)}
       </text>
     {/each}
 
