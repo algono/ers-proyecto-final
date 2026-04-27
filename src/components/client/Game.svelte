@@ -169,6 +169,10 @@
   function handleAnswer(result: { isCorrect: boolean }) {
     lastAnswerWasCorrect = result.isCorrect;
     status = 'revealed';
+
+    if (result.isCorrect) {
+      score++;
+    }
     
     // El efecto dramático: esperamos 1.5s (lo que tarda la línea en dibujarse)
     // para cambiar el color al verde/rojo definitivo
@@ -178,17 +182,12 @@
   }
 
   function next() {
-    if (lastAnswerWasCorrect) {
-      score++;
-      if (currentIndex < data.length - 1) {
-        currentIndex++;
-        status = 'playing';
-        showDramaticColor = false;
-      } else {
-        gameover(); // ¡Ganó el juego! (Se acabaron los datos)
-      }
+    if (lastAnswerWasCorrect && currentIndex < data.length - 1) {
+      currentIndex++;
+      status = 'playing';
+      showDramaticColor = false;
     } else {
-      gameover(); // Falló
+      gameover(); // Falló O ganó el juego porque se acabaron las preguntas, en ambos casos terminamos la partida
     }
   }
 
@@ -239,7 +238,7 @@
       <header>
         <h2>{texts.score}: <span>{score}</span></h2>
       </header>
-      
+
       {#if status === 'gameover'}
         <div in:fade class="game-over">
           <h2>{texts.over_title}</h2>
