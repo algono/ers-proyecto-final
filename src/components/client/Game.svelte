@@ -59,6 +59,34 @@
         data = formatWhoSaidWhat(stocksModWs.default, tweetsModWs.default, linksModWs.default);
         break;
     }
+
+    // --- 🔥 AUTOGUARDADO 🔥 ---
+    // 1. CARGAR PARTIDA AL INICIAR
+    // Comprobamos window para que el Build de Astro no explote
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      const savedState = sessionStorage.getItem('finance_game_state');
+      if (savedState) {
+        try {
+          const parsed = JSON.parse(savedState);
+          // Si hay menos datos de los que el jugador llevaba, reseteamos para evitar bugs
+          if (parsed.currentIndex < data.length) {
+            currentIndex = parsed.currentIndex;
+            score = parsed.score;
+            status = parsed.status;
+            lastAnswerWasCorrect = parsed.lastAnswerWasCorrect;
+            gameSeed = parsed.gameSeed || gameSeed;
+            
+            // Si guardó en mitad de una revelación, saltamos la espera de 1.5s
+            // y le mostramos los colores directamente para que pueda pulsar Siguiente
+            if (status === 'revealed') {
+              showDramaticColor = true;
+            }
+          }
+        } catch (e) {
+          console.error("Error leyendo la partida guardada", e);
+        }
+      }
+    }
     
     isLoading = false;
   });
@@ -111,34 +139,6 @@
   let showDramaticColor = false;
   let lastAnswerWasCorrect = false;
   let gameSeed = Math.floor(Math.random() * 1000000); // Semilla por defecto
-
-  // --- 🔥 AUTOGUARDADO 🔥 ---
-  // 1. CARGAR PARTIDA AL INICIAR
-  // Comprobamos window para que el Build de Astro no explote
-  if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
-    const savedState = sessionStorage.getItem('finance_game_state');
-    if (savedState) {
-      try {
-        const parsed = JSON.parse(savedState);
-        // Si hay menos datos de los que el jugador llevaba, reseteamos para evitar bugs
-        if (parsed.currentIndex < data.length) {
-          currentIndex = parsed.currentIndex;
-          score = parsed.score;
-          status = parsed.status;
-          lastAnswerWasCorrect = parsed.lastAnswerWasCorrect;
-          gameSeed = parsed.gameSeed || gameSeed;
-          
-          // Si guardó en mitad de una revelación, saltamos la espera de 1.5s
-          // y le mostramos los colores directamente para que pueda pulsar Siguiente
-          if (status === 'revealed') {
-            showDramaticColor = true;
-          }
-        }
-      } catch (e) {
-        console.error("Error leyendo la partida guardada", e);
-      }
-    }
-  }
 
   // Barajamos los datos usando la semilla (se mantendrá igual en la sesión)
   $: shuffledData = seededShuffle(data, gameSeed);
@@ -231,7 +231,11 @@
       <h2>{texts.score}: <span>{score}</span></h2>
     </header>
 
-    {#if status === 'gameover'}
+    {#if isLoading}
+      <div class="loader-container" in:fade>
+        <div class="spinner"></div>
+      </div>
+    {:else if status === 'gameover'}
       <div in:fade class="game-over">
         <h2>{texts.over_title}</h2>
         <p>{texts.final_score}: {score}</p>
@@ -400,5 +404,32 @@
     color: var(--color-logo-primary);
     font-size: 2.5rem;
     font-weight: 900;
+  }
+
+  /* --- Spinner de Carga --- */
+  .loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px; /* Misma altura que tu tarjeta glass */
+    color: var(--color-semi-transparent-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(222, 255, 154, 0.1); /* Anillo de fondo suave */
+    border-top-color: var(--color-logo-primary); /* Anillo que gira brillante */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1.5rem;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
   }
 </style>
