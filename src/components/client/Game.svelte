@@ -231,41 +231,41 @@
   </div>
 
   <div class="game-container">
-    {#if !isLoading}
-      <header>
-        <h2>{texts.score}: <span>{score}</span></h2>
-      </header>
-    {/if}
-
     {#if isLoading}
       <div class="loader-container" in:fade>
         <div class="spinner"></div>
       </div>
-    {:else if status === 'gameover'}
-      <div in:fade class="game-over">
-        <h2>{texts.over_title}</h2>
-        <p>{texts.final_score}: {score}</p>
-        <button class="main-btn" on:click={restart}>{texts.play_again}</button>
-      </div>
-    {:else if currentItem}
-      <div class="card glass">
-        <button class="main-btn restart-btn" on:click={restart}>↺</button>
-        <div class="card-content">
-          <svelte:component 
-            this={ActiveModeComponent} 
-            item={currentItem} 
-            data={shuffledData} 
-            {texts} {locale} {status} {showDramaticColor}
-            onAnswer={handleAnswer} 
-          />
-
-          {#if showDramaticColor}
-            <button class="main-btn next-action" in:fly={{ y: 10 }} on:click={next}>
-              {lastAnswerWasCorrect ? texts.next_button : texts.results_button}
-            </button>
-          {/if}
+    {:else}
+      <header>
+        <h2>{texts.score}: <span>{score}</span></h2>
+      </header>
+      
+      {#if status === 'gameover'}
+        <div in:fade class="game-over">
+          <h2>{texts.over_title}</h2>
+          <p>{texts.final_score}: {score}</p>
+          <button class="main-btn" on:click={restart}>{texts.play_again}</button>
         </div>
-      </div>
+      {:else if currentItem}
+        <div class="card glass">
+          <button class="main-btn restart-btn" on:click={restart}>↺</button>
+          <div class="card-content">
+            <svelte:component 
+              this={ActiveModeComponent} 
+              item={currentItem} 
+              data={shuffledData} 
+              {texts} {locale} {status} {showDramaticColor}
+              onAnswer={handleAnswer} 
+            />
+
+            {#if showDramaticColor}
+              <button class="main-btn next-action" in:fly={{ y: 10 }} on:click={next}>
+                {lastAnswerWasCorrect ? texts.next_button : texts.results_button}
+              </button>
+            {/if}
+          </div>
+        </div>
+      {/if}
     {/if}
   </div>
 </div>
