@@ -30,19 +30,4 @@ const i18n = defineCollection({
   }).strict(), // Ensure no extra fields are present
 });
 
-// 3. Define the tweets collection
-const tweets = defineCollection({
-  loader: file("src/content/tweets.json"),
-  schema: z.object({
-    id: z.number(),
-    ceo: z.string(),
-    tweet: z.string(),
-    date: z.coerce.date(), // ISO date string, converted to Date object by Zod
-    company: z.string().optional(),
-    stockCompany: z.string(),
-    stockChange: z.number(),
-    history: z.array(z.number()),
-  }).strict(),
-});
-
-export const collections = { i18n, tweets };
+export const collections = { i18n };
