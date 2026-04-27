@@ -236,6 +236,9 @@
       </div>
     {:else}
       <header>
+        {#if status !== 'gameover'}
+          <button class="main-btn restart-btn" on:click={restart} aria-label={texts.restart_button}>↺</button>
+        {/if}
         <h2>{texts.score}: <span>{score}</span></h2>
       </header>
 
@@ -247,7 +250,6 @@
         </div>
       {:else if currentItem}
         <div class="card glass">
-          <button class="main-btn restart-btn" on:click={restart} aria-label={texts.restart_button}>↺</button>
           <div class="card-content">
             <svelte:component
               this={ActiveModeComponent}
@@ -398,16 +400,37 @@
     font-size: 1.2rem;
   }
 
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* El botón a la izquierda, el título centrado, y un espacio vacío a la derecha para centrar el título */
+    margin-bottom: 1rem;
+    min-height: 40px; /* Evita que el header cambie de altura cuando el botón desaparece en gameover */
+  }
+
+  header .restart-btn {
+    grid-column: 1; /* Obligamos al botón a ir a la primera columna */
+    justify-self: end; /* Pegado a la puntuación: */
+    margin-right: 1rem; /* Un poco de aire entre el botón y el texto */
+  }
+
   header h2 {
+    grid-column: 2; /* Obligamos al texto a ir al centro absoluto */
+    justify-self: center;
+
     color: var(--color-semi-transparent-white);
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5ch; /* Un pequeño espacio entre el texto y el número */
   }
 
   header span {
     color: var(--color-logo-primary);
     font-size: 2.5rem;
     font-weight: 900;
+    margin-top: -0.3rem;
   }
 
   /* --- Spinner de Carga --- */
