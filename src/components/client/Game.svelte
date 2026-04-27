@@ -231,9 +231,11 @@
   </div>
 
   <div class="game-container">
-    <header>
-      <h2>{texts.score}: <span>{score}</span></h2>
-    </header>
+    {#if !isLoading}
+      <header>
+        <h2>{texts.score}: <span>{score}</span></h2>
+      </header>
+    {/if}
 
     {#if isLoading}
       <div class="loader-container" in:fade>
