@@ -17,6 +17,11 @@ const {
   description = SEO_DESCRIPTION,
   image = SEO_IMAGE,
 } = Astro.props;
+
+// URL Absoluta de la Imagen:
+// homeNoLocale(image) nos da "/ruta/social-preview.png"
+// new URL(...) le pega el dominio: "https://tudominio.com/ruta/social-preview.png"
+const absoluteImageUrl = new URL(homeNoLocale(image), Astro.site || Astro.url.origin);
 ---
 <title>{title}</title>
 <meta name="description" content={description} />
@@ -27,9 +32,9 @@ const {
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonicalURL.href} />
-<meta property="og:image" content={homeNoLocale(image)} />
+<meta property="og:image" content={absoluteImageUrl.href} />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={homeNoLocale(image)} />
+<meta name="twitter:image" content={absoluteImageUrl.href} />
