@@ -381,6 +381,7 @@
     grid-template-columns: 1fr auto 1fr; /* El botón a la izquierda, el título centrado, y un espacio vacío a la derecha para centrar el título */
     margin-bottom: 1rem;
     min-height: 40px; /* Evita que el header cambie de altura cuando el botón desaparece en gameover */
+    text-shadow: 0px 2px 4px rgba(0,0,0, 0.8), 0px 0px 10px rgba(0,0,0, 0.5); /* Sombra negra durísima para que el texto se lea bien sobre cualquier fondo */
   }
 
   header .restart-btn {
