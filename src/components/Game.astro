@@ -5,15 +5,6 @@ import GameSvelte from '@components/client/Game.svelte';
 
 import { PROJECT_NAME, type GameMode } from '@constants';
 
-import stocksImagePlaceholder from '@assets/images/stocks-image-placeholder.png';
-import { getImage } from 'astro:assets';
-
-const stocksImagePlaceholderData = await getImage({
-  src: stocksImagePlaceholder,
-  width: 425,
-  format: 'webp',
-})
-
 import { translationsForLocaleWithPrefix } from '@utils/translation';
 const { locale } = Astro.locals;
 
@@ -31,7 +22,7 @@ const { gameMode = 'classic' } = Astro.props;
 ---
 
 <Layout title={PROJECT_NAME}>
-  <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} gameMode={gameMode} stocksImage={stocksImagePlaceholderData.src} />
+  <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} gameMode={gameMode} />
 </Layout>
 
 <style>

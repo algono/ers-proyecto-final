@@ -7,7 +7,7 @@
   /* Website base colors */
   --color-background: #1A1A1A; /* Un gris casi negro, más elegante que el negro puro para el fondo principal */
   --color-primary: var(--color-logo-primary); /* Vinculado directamente a tu color neón */
-  --color-secondary: #000000; /* Negro puro para tarjetas, modales o secciones destacadas */
+  --color-secondary: #131315; /* Casi negro para tarjetas, modales o secciones destacadas */
   --color-tertiary: #333333; /* Un gris medio para bordes finos y separadores sutiles */
   --color-text: #F5F5F5; /* Blanco roto para el texto principal (no cansa la vista como el blanco puro) */
   --color-text-on-secondary: var(--color-semi-transparent-white);

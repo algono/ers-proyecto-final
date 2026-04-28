@@ -8,7 +8,7 @@
   import ModeStocksOnly from './gamemodes/ModeStocksOnly.svelte';
   import ModeWhoSaidWhat from './gamemodes/ModeWhoSaidWhat.svelte';
 
-  import GameImage from './elements/GameImage.svelte';
+  import BackgroundChart from './elements/BackgroundChart.svelte';
   
   import type { GameItem } from '@projectTypes/gameItem';
   import type { GameMode } from '@constants';
@@ -19,7 +19,6 @@
   // Props de Astro:
   export let locale: string;
   export let texts: Record<string, string>;
-  export let stocksImage: string;
   export let gameMode : GameMode = 'classic';
 
   let data: GameItem[] = []; // Usaremos esta nueva interfaz (te la explico abajo)
@@ -221,13 +220,9 @@
   }
 </script>
 
-<div class="game-layout">
-  {#if status !== 'gameover'}
-    <div class="image-section">
-      <GameImage {stocksImage} {currentIndex} ceoImage={currentItem?.ceoImage} ceo={currentItem?.ceo} />
-    </div>
-  {/if}
+<BackgroundChart {currentIndex} />
 
+<div class="game-layout">
   <div class="game-container">
     {#if isLoading}
       <div class="loader-container" in:fade>
@@ -272,46 +267,20 @@
 <style>
   /* 1. Layout principal: Volvemos a Flex, pero centrando su contenido */
   .game-layout {
-    position: relative; /* ¡Clave! Para que la imagen absoluta no se escape de aquí */
     display: flex;
-    justify-content: center; /* Centramos el game-container geométricamente */
-    max-width: 900px; 
-    margin: 2rem auto;
-    background: var(--color-background); /* Usamos tu fondo oscuro aquí */
-    border-radius: 1.5rem;
-    overflow: hidden;
-    border: 1px solid var(--color-tertiary);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  }
-
-  /* 2. Sección de la imagen: Absoluta a la izquierda */
-  .image-section {
-    display: none; 
-  }
-
-  @media (min-width: 768px) {
-    .image-section { 
-      display: block; 
-      position: absolute; /* La sacamos del flujo */
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      z-index: 0; /* Por debajo del texto */
-    }
-  }
-
-  /* 3. Contenedor del juego: En el centro y por encima */
-  .game-container {
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Para que quede centradito en la pantalla */
+    padding: 1rem;
     position: relative;
-    z-index: 1; /* ¡Súper importante! Para que el texto quede por encima del degradado de la imagen */
+    z-index: 1; /* Para asegurarnos de que está por encima del fondo fijo */
+  }
+
+  .game-container {
     width: 100%;
-    padding-inline: clamp(1rem, 5vw, 2rem);
-    padding-block: 2rem;
+    max-width: 600px; /* Ancho máximo de la tarjeta para que quede elegante */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* Quitamos el background de aquí para que herede el del layout */
   }
 
   .game-over {
