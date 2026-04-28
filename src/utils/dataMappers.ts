@@ -1,6 +1,7 @@
 import type { GameItem } from "@projectTypes/gameItem";
 import type { PeakData, Tweet, StockTweetLink } from "@projectTypes/data";
-import { getClosestPeakHistory } from './history'; // Tu helper importado
+import { getClosestPeakHistory } from '@utils/history';
+import { seededShuffle } from '@utils/array';
 
 // --- HELPER 1: MATEMÁTICAS DE LA BOLSA ---
 // Calcula el % y la dirección. Reutilizable para Classic y Stocks Only.
@@ -116,13 +117,13 @@ export function formatGuessCEO(stocks: PeakData[], tweets: Tweet[], links: Stock
 }
 
 // --- 4. MODO WHO SAID WHAT (Matching 2 Tweets) ---
-export function formatWhoSaidWhat(stocks: PeakData[], tweets: Tweet[], links: StockTweetLink[]): GameItem[] {
+export function formatWhoSaidWhat(stocks: PeakData[], tweets: Tweet[], links: StockTweetLink[], gameSeed: number): GameItem[] {
   const result: GameItem[] = [];
 
   const classicItems: GameItem[] = formatClassic(stocks, tweets, links); // Partimos de los items del Classic para tener la info de los tweets y sus stocks (sin esto no podemos mostrar la gráfica cuando revelamos la respuesta)
   
   // 1. Clonamos y barajamos todos los tweets
-  const shuffled = [...classicItems].sort(() => 0.5 - Math.random());
+  const shuffled = seededShuffle(classicItems, gameSeed);
 
   // 2. Vamos emparejando de 2 en 2, asegurando que sean de distinto autor
   for (let i = 0; i < shuffled.length; i++) {
@@ -150,7 +151,7 @@ export function formatWhoSaidWhat(stocks: PeakData[], tweets: Tweet[], links: St
         // Pasamos la info pura para que Svelte pinte las dos cajas
         matchData: [tweet1, tweet2],
         // Pasamos los 2 nombres de los autores barajados para que el jugador los asigne
-        options: [tweet1.tweetAuthorDisplayName!, tweet2.tweetAuthorDisplayName!].sort(() => 0.5 - Math.random())
+        options: seededShuffle([tweet1.tweetAuthorDisplayName!, tweet2.tweetAuthorDisplayName!], gameSeed)
       });
     }
   }

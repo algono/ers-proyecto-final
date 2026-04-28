@@ -15,6 +15,7 @@
   import type { Component } from 'svelte';
 
   import { formatClassic, formatGuessCEO, formatStocksOnly, formatWhoSaidWhat } from '@utils/dataMappers';
+  import { seededShuffle } from '@utils/array';
 
   // Props de Astro:
   export let locale: string;
@@ -22,11 +23,38 @@
   export let gameMode : GameMode = 'classic';
 
   let data: GameItem[] = [];
+  let gameSeed = Math.floor(Math.random() * 1000000); // Semilla por defecto, se generará una nueva cada vez que se reinicie el juego para que las partidas sean distintas incluso en el mismo modo
   let isLoading = true; // Para mostrar un spinner mientras carga el JSON
 
   const saveKey = `finance_game_state_${gameMode}`; // Clave única para cada modo de juego, así no se pisan entre ellos
 
   onMount(async () => {
+    // --- 🔥 AUTOGUARDADO 🔥 ---
+    // 1. CARGAR PARTIDA AL INICIAR
+    // Comprobamos window para que el Build de Astro no explote
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      const savedState = sessionStorage.getItem(saveKey);
+      if (savedState) {
+        try {
+          const parsed = JSON.parse(savedState);
+          
+          currentIndex = parsed.currentIndex;
+          score = parsed.score;
+          status = parsed.status;
+          lastAnswerWasCorrect = parsed.lastAnswerWasCorrect;
+          gameSeed = parsed.gameSeed || gameSeed;
+          
+          // Si guardó en mitad de una revelación, saltamos la espera de 1.5s
+          // y le mostramos los colores directamente para que pueda pulsar Siguiente
+          if (status === 'revealed') {
+            showDramaticColor = true;
+          }
+        } catch (e) {
+          console.error("Error leyendo la partida guardada", e);
+        }
+      }
+    }
+
     // Vite creará "chunks" (archivos separados) para cada JSON automáticamente
     switch (gameMode) {
       case 'classic':
@@ -59,36 +87,13 @@
           import('../../content/data/tweets.json'),
           import('../../content/data/stock_tweets.json')
         ]);
-        data = formatWhoSaidWhat(stocksModWs.default, tweetsModWs.default, linksModWs.default);
+        data = formatWhoSaidWhat(stocksModWs.default, tweetsModWs.default, linksModWs.default, gameSeed);
         break;
     }
 
-    // --- 🔥 AUTOGUARDADO 🔥 ---
-    // 1. CARGAR PARTIDA AL INICIAR
-    // Comprobamos window para que el Build de Astro no explote
-    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
-      const savedState = sessionStorage.getItem(saveKey);
-      if (savedState) {
-        try {
-          const parsed = JSON.parse(savedState);
-          // Si hay menos datos de los que el jugador llevaba, reseteamos para evitar bugs
-          if (parsed.currentIndex < data.length) {
-            currentIndex = parsed.currentIndex;
-            score = parsed.score;
-            status = parsed.status;
-            lastAnswerWasCorrect = parsed.lastAnswerWasCorrect;
-            gameSeed = parsed.gameSeed || gameSeed;
-            
-            // Si guardó en mitad de una revelación, saltamos la espera de 1.5s
-            // y le mostramos los colores directamente para que pueda pulsar Siguiente
-            if (status === 'revealed') {
-              showDramaticColor = true;
-            }
-          }
-        } catch (e) {
-          console.error("Error leyendo la partida guardada", e);
-        }
-      }
+    // Si hay menos datos de los que el jugador llevaba, reseteamos para evitar bugs
+    if (currentIndex >= data.length) {
+      restart();
     }
     
     isLoading = false;
@@ -113,27 +118,6 @@
   }; // Aseguramos que el tipo es correcto
   $: ActiveModeComponent = componentsMap[gameMode];
 
-  // --- 🎲 LÓGICA DE LA SEMILLA Y MEZCLA ---
-
-  // Función de barajado Fisher-Yates determinista mediante una semilla
-  function seededShuffle<T>(array: T[], seed: number): T[] {
-    let m: number = array.length, t: T, i: number;
-    let shuffled = [...array];
-    // Generador de números pseudo-aleatorios basado en la semilla
-    const random = (s: number) => {
-      const x = Math.sin(s) * 10000;
-      return x - Math.floor(x);
-    };
-
-    while (m) {
-      i = Math.floor(random(seed + m) * m--);
-      t = shuffled[m];
-      shuffled[m] = shuffled[i];
-      shuffled[i] = t;
-    }
-    return shuffled;
-  }
-
   // --- 💾 GESTIÓN DE ESTADO ---
 
   let currentIndex = 0;
@@ -141,7 +125,6 @@
   let status = 'playing'; // 'playing', 'revealed', 'gameover'
   let showDramaticColor = false;
   let lastAnswerWasCorrect = false;
-  let gameSeed = Math.floor(Math.random() * 1000000); // Semilla por defecto
 
   // Barajamos los datos usando la semilla (se mantendrá igual en la sesión)
   $: shuffledData = seededShuffle(data, gameSeed);
