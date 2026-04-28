@@ -21,7 +21,7 @@
   export let texts: Record<string, string>;
   export let gameMode : GameMode = 'classic';
 
-  let data: GameItem[] = []; // Usaremos esta nueva interfaz (te la explico abajo)
+  let data: GameItem[] = [];
   let isLoading = true; // Para mostrar un spinner mientras carga el JSON
 
   const saveKey = `finance_game_state_${gameMode}`; // Clave única para cada modo de juego, así no se pisan entre ellos
