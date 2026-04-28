@@ -9,18 +9,19 @@
   export let ceo: string | undefined;
 
   // --- VARIABLES PARA EL EFECTO GENERATIVO ---
-  let currentHue = 0; // Entre 0 y 359
-  let currentGray = 20; // Entre 0 y 100, pero priorizando bajos
+  let currentHue = Math.floor(Math.random() * 360); // El primer color es 100% aleatorio
+  let currentGray = 20;
 
-  // Esta función genera los valores aleatorios
   function updateImageEffect() {
-    // 1. Tono aleatorio (Linear): Cualquier color es bueno.
-    // Usamos Math.floor para tener ints limpios.
-    currentHue = Math.floor(Math.random() * 360);
+    // 1. Tono anti-repetición:
+    // Generamos un salto aleatorio entre 90 y 270 grados.
+    const hueJump = Math.floor(Math.random() * 180) + 90;
+    
+    // Le sumamos el salto al tono anterior y usamos el módulo 360 (%) 
+    // para que si se pasa de 360, vuelva a empezar por el 0 (como un reloj).
+    currentHue = (currentHue + hueJump) % 360;
 
-    // 2. Grayscale aleatorio (Weighted/Priorizado): Queremos colores vivos la mayor parte del tiempo.
-    // Math.random() elevado al cubo (pow 3) hace que los números bajos sean extremadamente probables.
-    // El resultado final lo multiplicamos por 100 para tener el porcentaje.
+    // 2. Grayscale aleatorio (Weighted/Priorizado para más colores vivos)
     currentGray = Math.floor(Math.pow(Math.random(), 3) * 100); 
   }
 
