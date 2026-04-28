@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import StockChart from '../elements/StockChart.svelte';
+  import HigherLowerButtons from '../elements/HigherLowerButtons.svelte';
   import type { GameItem } from '@projectTypes/gameItem';
 
   export let item: GameItem;
@@ -31,10 +32,7 @@
   {#if status === 'playing'}
     <div class="actions" in:fade>
       <p>{texts.what_happened}</p>
-      <div class="buttons">
-        <button class="up" on:click={() => guess('higher')}>📈 {texts.higher_button}</button>
-        <button class="down" on:click={() => guess('lower')}>📉 {texts.lower_button}</button>
-      </div>
+      <HigherLowerButtons {texts} guess={guess} />
     </div>
   {/if}
 
@@ -99,37 +97,4 @@
   .is-revealed .date {
     font-size: 0.75rem;
   }
-
-  .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  button {
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.1s;
-
-    /* MAGIA 1: Padding fluido (Arriba/Abajo | Izquierda/Derecha) */
-    padding: clamp(0.6rem, 2vw, 1rem) clamp(0.8rem, 3vw, 1.5rem);
-    
-    /* MAGIA 2: Letra fluida (Mínimo 13px | Ideal | Máximo ~18px) */
-    font-size: clamp(0.85rem, 3vw, 1.1rem);
-
-    /* MAGIA 3: Sobrescribir el "hacha" para que solo rompa por palabras enteras */
-    word-break: normal;
-    overflow-wrap: break-word;
-
-    /* Sombra negra durísima para que se vea bien sobre cualquier fondo, heredada de card-content en Game.svelte */
-    text-shadow: inherit;
-  }
-  button:active { transform: scale(0.95); }
-  .up { background: #10b981; color: white; }
-  .up:hover { background: #059669; }
-  .down { background: #ef4444; color: white; }
-  .down:hover { background: #dc2626; }
 </style>
