@@ -31,7 +31,7 @@ const { gameMode = 'classic' } = Astro.props;
 ---
 
 <Layout title={PROJECT_NAME}>
-  <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} gameMode={gameMode} stocksImagePlaceholder={stocksImagePlaceholderData.src} />
+  <GameSvelte client:load locale={locale} texts={gameTranslatedTexts} gameMode={gameMode} stocksImage={stocksImagePlaceholderData.src} />
 </Layout>
 
 <style>

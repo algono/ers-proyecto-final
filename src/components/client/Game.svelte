@@ -7,6 +7,8 @@
   import ModeGuessCEO from './gamemodes/ModeGuessCEO.svelte';
   import ModeStocksOnly from './gamemodes/ModeStocksOnly.svelte';
   import ModeWhoSaidWhat from './gamemodes/ModeWhoSaidWhat.svelte';
+
+  import GameImage from './elements/GameImage.svelte';
   
   import type { GameItem } from '@projectTypes/gameItem';
   import type { GameMode } from '@constants';
@@ -17,7 +19,7 @@
   // Props de Astro:
   export let locale: string;
   export let texts: Record<string, string>;
-  export let stocksImagePlaceholder: string;
+  export let stocksImage: string;
   export let gameMode : GameMode = 'classic';
 
   let data: GameItem[] = []; // Usaremos esta nueva interfaz (te la explico abajo)
@@ -221,12 +223,7 @@
 
 <div class="game-layout">
   <div class="image-section">
-    <img 
-      src={currentItem?.ceoImage || stocksImagePlaceholder} 
-      alt={currentItem?.ceo || 'Stock Market'} 
-      class="side-image"
-    />
-    <div class="image-overlay"></div>
+    <GameImage {stocksImage} ceoImage={currentItem?.ceoImage} ceo={currentItem?.ceo} />
   </div>
 
   <div class="game-container">
@@ -286,28 +283,12 @@
   /* 2. Sección de la imagen */
   .image-section {
     flex: 1;
-    position: relative;
     display: none; /* Se oculta en móviles pequeños */
     background: #000;
   }
 
   @media (min-width: 768px) {
     .image-section { display: block; }
-  }
-
-  .side-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6; /* Para que no distraiga demasiado del texto */
-    filter: grayscale(20%);
-  }
-
-  .image-overlay {
-    position: absolute;
-    inset: 0;
-    /* Degradado que funde la imagen con el color de la tarjeta */
-    background: linear-gradient(to right, transparent 75%, var(--color-secondary));
   }
 
   /* 3. Contenedor del juego */
