@@ -223,7 +223,7 @@
 
 <div class="game-layout">
   <div class="image-section">
-    <GameImage {stocksImage} ceoImage={currentItem?.ceoImage} ceo={currentItem?.ceo} />
+    <GameImage {stocksImage} {currentIndex} ceoImage={currentItem?.ceoImage} ceo={currentItem?.ceo} />
   </div>
 
   <div class="game-container">
