@@ -26,6 +26,11 @@ function decodeHTMLEntities(text: string): string {
   return text.replace(/&amp;|&lt;|&gt;|&quot;|&#39;|&apos;/g, match => entities[match] || match);
 }
 
+/** Retuits en formato clásico (texto que empieza por "RT") — no los incluimos en el dataset. */
+function isClassicRetweet(text: string): boolean {
+  return text.trim().startsWith('RT');
+}
+
 async function processData() {
   // Rutas
   const dataLoadersDir = __dirname;
@@ -59,7 +64,12 @@ async function processData() {
       const tweetRaw = fs.readFileSync(tweetFilePath, 'utf-8');
       const tweetData = JSON.parse(tweetRaw);
 
+      let addedCount = 0;
       for (const tweet of tweetData.tweets as Tweet[]) {
+        if (isClassicRetweet(tweet.text)) {
+          continue;
+        }
+
         // 1. Limpiamos el formato de fecha corrupto del scraper (quitamos el +00:00Z y dejamos solo la Z)
         if (tweet.created_at.includes('+00:00Z')) {
           tweet.created_at = tweet.created_at.replace('+00:00Z', 'Z');
@@ -77,8 +87,9 @@ async function processData() {
           tweet_id: tweet.id,
           history: getClosestPeakHistory(stock.peaks, tweet.created_at) 
         });
+        addedCount += 1;
       }
-      console.log(`✅ Añadidos ${tweetData.tweets.length} tweets de ${stock.ceo} (${stock.ticker})`);
+      console.log(`✅ Añadidos ${addedCount} tweets de ${stock.ceo} (${stock.ticker})`);
     } else {
       console.warn(`⚠️ Aviso: No se encontró el archivo ${handle}.json para ${stock.ceo}`);
     }
