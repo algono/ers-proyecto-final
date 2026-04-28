@@ -222,9 +222,11 @@
 </script>
 
 <div class="game-layout">
-  <div class="image-section">
-    <GameImage {stocksImage} {currentIndex} ceoImage={currentItem?.ceoImage} ceo={currentItem?.ceo} />
-  </div>
+  {#if status !== 'gameover'}
+    <div class="image-section">
+      <GameImage {stocksImage} {currentIndex} ceoImage={currentItem?.ceoImage} ceo={currentItem?.ceo} />
+    </div>
+  {/if}
 
   <div class="game-container">
     {#if isLoading}
