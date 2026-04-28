@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition'; // Importamos el fundido de Svelte
-
   export let stocksImage: string;
   export let currentIndex: number; // Para que aplique un color nuevo cada vez que el juego avanza
 
@@ -34,16 +32,12 @@
 </script>
 
 <div class="game-image-container">
-  {#key currentIndex}
-    <img 
-      src={ceoImage || stocksImage} 
-      alt={(ceoImage && ceo) ? ceo : 'Stock Market'} 
-      class="game-image"
-      style={randomFilterStyle}
-      in:fade={{ duration: 600 }}
-      out:fade={{ duration: 600 }}
-    />
-  {/key}
+  <img 
+    src={ceoImage || stocksImage} 
+    alt={(ceoImage && ceo) ? ceo : 'Stock Market'} 
+    class="game-image"
+    style={randomFilterStyle}
+  />
   <div class="image-overlay"></div>
 </div>
 
@@ -63,6 +57,8 @@
     height: 100%;
     object-fit: cover;
     opacity: 0.6; /* Para que no distraiga demasiado del texto */
+
+    transition: filter 1s ease-in-out;
   }
 
   .image-overlay {
