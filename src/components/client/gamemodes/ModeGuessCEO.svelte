@@ -86,7 +86,7 @@
     font-size: 1.1rem;
     font-weight: 500;
   }
-  
+
   .buttons {
     display: grid;
 
@@ -116,10 +116,10 @@
     text-align: left;
 
     /* MAGIA 1: Padding fluido (Arriba/Abajo | Izquierda/Derecha) */
-    padding: clamp(0.6rem, 2vw, 1rem) clamp(0.8rem, 3vw, 1.5rem);
+    padding: clamp(0.85rem, 3vw, 1.2rem) clamp(1.2rem, 4vw, 2rem);
     
-    /* MAGIA 2: Letra fluida (Mínimo 13px | Ideal | Máximo ~18px) */
-    font-size: clamp(0.85rem, 3vw, 1.1rem);
+    /* MAGIA 2: Letra fluida (Mínimo 16px | Ideal | Máximo ~18px) */
+    font-size: clamp(1rem, 3vw, 1.15rem);
 
     /* MAGIA 3: Sobrescribir el "hacha" para que solo rompa por palabras enteras */
     word-break: normal;

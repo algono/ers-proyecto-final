@@ -237,7 +237,13 @@
     background: #1e293b;
     border: 2px solid #475569;
     color: white;
-    padding: 0.8rem 1.2rem;
+    
+    /* MAGIA 1: Padding fluido (Arriba/Abajo | Izquierda/Derecha) */
+    padding: clamp(0.85rem, 3vw, 1.2rem) clamp(1.2rem, 4vw, 2rem);
+    
+    /* MAGIA 2: Letra fluida (Mínimo 16px | Ideal | Máximo ~18px) */
+    font-size: clamp(1rem, 3vw, 1.15rem);
+
     border-radius: 2rem;
     font-weight: bold;
     cursor: grab;
