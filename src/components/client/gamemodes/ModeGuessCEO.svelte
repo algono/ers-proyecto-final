@@ -86,13 +86,25 @@
     font-size: 1.1rem;
     font-weight: 500;
   }
+  
   .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: grid;
+
+    /* Por defecto (móviles): 1 sola columna que ocupa todo el ancho */
+    grid-template-columns: 1fr; 
     gap: 0.75rem;
     margin-top: 1rem;
+    width: 100%; /* Aseguramos que el contenedor coge todo el ancho de la tarjeta */
   }
+
+  /* Cuando la pantalla pasa de 600px (móviles grandes / tablets / PC) */
+  @media (min-width: 600px) {
+    .buttons {
+      /* Le decimos que haga 2 columnas exactamente iguales */
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+
   button.ceo-btn {
     border: 2px solid #3b82f6;
     background: transparent;
