@@ -7,7 +7,7 @@
 <div class="game-image-container">
   <img 
     src={ceoImage || stocksImage} 
-    alt={ceo || 'Stock Market'} 
+    alt={(ceoImage && ceo) ? ceo : 'Stock Market'} 
     class="game-image"
   />
   <div class="image-overlay"></div>
