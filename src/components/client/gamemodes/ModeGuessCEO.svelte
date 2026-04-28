@@ -112,6 +112,9 @@
     /* MAGIA 3: Sobrescribir el "hacha" para que solo rompa por palabras enteras */
     word-break: normal;
     overflow-wrap: break-word;
+
+    /* Sombra negra durísima para que se vea bien sobre cualquier fondo, heredada de card-content en Game.svelte */
+    text-shadow: inherit;
   }
   button.ceo-btn:hover {
     background: rgba(59, 130, 246, 0.1);

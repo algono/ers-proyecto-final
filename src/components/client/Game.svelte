@@ -270,39 +270,48 @@
 </div>
 
 <style>
-  /* 1. Layout principal: Dos columnas en PC, una en móvil */
+  /* 1. Layout principal: Volvemos a Flex, pero centrando su contenido */
   .game-layout {
+    position: relative; /* ¡Clave! Para que la imagen absoluta no se escape de aquí */
     display: flex;
-    max-width: 1000px; /* Más ancho para que luzcan las dos columnas */
+    justify-content: center; /* Centramos el game-container geométricamente */
+    max-width: 900px; 
     margin: 2rem auto;
-    background: var(--color-secondary);
+    background: var(--color-background); /* Usamos tu fondo oscuro aquí */
     border-radius: 1.5rem;
     overflow: hidden;
     border: 1px solid var(--color-tertiary);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
 
-  /* 2. Sección de la imagen */
+  /* 2. Sección de la imagen: Absoluta a la izquierda */
   .image-section {
-    flex: 1;
-    display: none; /* Se oculta en móviles pequeños */
-    background: #000;
+    display: none; 
   }
 
   @media (min-width: 768px) {
-    .image-section { display: block; }
+    .image-section { 
+      display: block; 
+      position: absolute; /* La sacamos del flujo */
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 0; /* Por debajo del texto */
+    }
   }
 
-  /* 3. Contenedor del juego */
+  /* 3. Contenedor del juego: En el centro y por encima */
   .game-container {
-    flex: 1.2;
-    /* Mínimo 1rem (móvil), ideal 5% del ancho de la pantalla (fluido), Máximo 2rem (PC) */
+    position: relative;
+    z-index: 1; /* ¡Súper importante! Para que el texto quede por encima del degradado de la imagen */
+    width: 100%;
     padding-inline: clamp(1rem, 5vw, 2rem);
-    padding-block: 1rem;
+    padding-block: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--color-background);
+    /* Quitamos el background de aquí para que herede el del layout */
   }
 
   .game-over {
@@ -313,10 +322,25 @@
 
   /* 4. La Tarjeta */
   .card {
-    border: 1px solid rgba(222, 255, 154, 0.1); /* Borde sutil con tu verde neón */
+    /* 1. Fondo oscuro pero translúcido (70% opaco para que se lea el texto) */
+    background: rgba(15, 15, 18, 0.7); 
+    
+    /* 2. El desenfoque: Alto para romper las líneas duras del fondo */
+    backdrop-filter: blur(16px) saturate(120%); 
+    
+    /* 3. Borde de cristal (Ligeramente iluminado arriba y a la izquierda) */
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    
+    /* 4. Sombra para despegarla del fondo animado */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+
     color: var(--color-text);
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+
     min-height: 400px;
     display: flex;
     flex-direction: column;
@@ -339,6 +363,9 @@
     /* Si usas flexbox dentro de la tarjeta, asegúrate de que tiene esto 
       para que los elementos puedan encogerse por debajo de su contenido interno */
     min-width: 0;
+
+    /* Crea una sombra negra durísima y pegada a las letras */
+    text-shadow: 0px 2px 4px rgba(0,0,0, 0.8), 0px 0px 10px rgba(0,0,0, 0.5);
   }
 
   /* 5. Botones usando tus variables globales */

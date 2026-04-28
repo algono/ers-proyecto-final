@@ -156,8 +156,8 @@
 
 <style>
   .instruction {
-    color: #94a3b8;
-    margin-bottom: 2rem;
+    color: var(--color-semi-transparent-white);
+    margin-bottom: 1.5rem;
     font-weight: bold;
   }
   .drop-zones {
@@ -176,9 +176,13 @@
     background: #334155;
     padding: 1rem;
     border-radius: 0.8rem 0.8rem 0.8rem 0;
-    font-style: italic;
     font-size: 1.1rem;
     color: #f8fafc;
+    text-shadow: none; /* Evitamos que el texto del tweet tenga sombra, para que sea más legible */
+  }
+  button {
+    /* Sombra negra durísima para que se vea bien sobre cualquier fondo, heredada de card-content en Game.svelte */
+    text-shadow: inherit;
   }
   button.slot {
     align-self: flex-start;
@@ -211,7 +215,7 @@
     flex-wrap: wrap;
     min-height: 60px;
     padding: 1rem;
-    background: #0f172a;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 1rem;
   }
   button.ceo-token {
@@ -223,6 +227,7 @@
     font-weight: bold;
     cursor: grab;
     transition: all 0.2s;
+    text-shadow: none; /* Evitamos que el texto de los tokens tenga sombra, para que sea más legible */
   }
   button.ceo-token:active {
     cursor: grabbing;
@@ -239,10 +244,11 @@
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 1rem;
   }
   .chart-wrapper {
     flex: 1;
-    background: #0f172a;
+    background: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
     border-radius: 1rem;
     /* Evita que el contenedor crezca más de su mitad y rompa el flexbox */

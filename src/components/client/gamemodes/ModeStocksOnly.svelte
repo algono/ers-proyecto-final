@@ -123,6 +123,9 @@
     /* MAGIA 3: Sobrescribir el "hacha" para que solo rompa por palabras enteras */
     word-break: normal;
     overflow-wrap: break-word;
+
+    /* Sombra negra durísima para que se vea bien sobre cualquier fondo, heredada de card-content en Game.svelte */
+    text-shadow: inherit;
   }
   button:active { transform: scale(0.95); }
   .up { background: #10b981; color: white; }
