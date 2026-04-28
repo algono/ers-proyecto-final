@@ -278,7 +278,7 @@
 
   .game-container {
     width: 100%;
-    max-width: 600px; /* Ancho máximo de la tarjeta para que quede elegante */
+    max-width: 800px; /* Ancho máximo de la tarjeta para que quede elegante */
     display: flex;
     flex-direction: column;
   }

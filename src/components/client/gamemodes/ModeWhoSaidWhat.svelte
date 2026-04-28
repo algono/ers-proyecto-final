@@ -161,16 +161,31 @@
     font-weight: bold;
   }
   .drop-zones {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr; /* Móvil: 1 columna */
     gap: 1.5rem;
     margin-bottom: 2.5rem;
+    width: 100%;
   }
+
+  /* Usamos 768px (pantalla de PC o Tablet en horizontal) porque los tweets necesitan más espacio para leerse bien que los botones cortos */
+  @media (min-width: 768px) {
+    .drop-zones {
+      grid-template-columns: repeat(2, 1fr); /* PC: 2 columnas iguales */
+    }
+  }
+
   .tweet-row {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     text-align: left;
+
+    /* TRUCO DE ARQUITECTO FRONTEND: 
+       Cuando usas Grid con cajas que tienen texto largo, a veces las palabras 
+       empujan el ancho y rompen las columnas. Esto fuerza a la celda a respetar 
+       su límite y que el texto salte de línea correctamente. */
+    min-width: 0;
   }
   .tweet-bubble {
     background: #334155;
