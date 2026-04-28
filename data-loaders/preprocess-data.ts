@@ -31,6 +31,14 @@ function isClassicRetweet(text: string): boolean {
   return text.trim().startsWith('RT');
 }
 
+// Limpia el display name del CEO para quitar caracteres que no sean letras o espacios
+// (o un . como en un middle name tipo Cristiano R. Amon)
+// y forzar el camel case porque alguno lo tiene todo en minúsculas (ej: "sundar pichai" -> "Sundar Pichai")
+function cleanDisplayName(displayName: string): string {
+  return displayName.replace(/[^a-zA-Z\s\.]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).trim();
+}
+
+// Función principal para procesar los datos
 async function processData() {
   // Rutas
   const dataLoadersDir = __dirname;
@@ -77,6 +85,9 @@ async function processData() {
 
         // 2. Limpiamos el texto del tweet para quitar los &gt; y demás
         tweet.text = decodeHTMLEntities(tweet.text);
+
+        // 3. Limpiamos el display name del CEO (ej: "sundar pichai" -> "Sundar Pichai")
+        tweet.display_name = cleanDisplayName(tweet.display_name);
 
         // Añadir a la tabla general de tweets
         allTweets.push(tweet);
