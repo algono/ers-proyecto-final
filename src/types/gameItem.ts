@@ -6,7 +6,6 @@ export interface GameItem {
   company: string;
   ticker: string;
   ceo: string;
-  ceoImage?: string; // Opcional, por si no hay foto
   
   // --- Info del Evento ---
   date: string; // Mejor usar string ISO (ej: '2025-04-09') para evitar fallos de serialización
