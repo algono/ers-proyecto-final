@@ -34,11 +34,9 @@ def parse_created_at(raw: str) -> str:
     if not raw:
         return ""
     try:
-        # Handle formats like "2025-03-09T10:41:28.000Z" or "2025-03-09T10:41:28Z"
         raw_clean = re.sub(r"\.\d+Z$", "Z", raw)
         if raw_clean.endswith("Z"):
             return raw_clean
-        # Try parsing and re-formatting as fallback
         dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
         return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
     except Exception:
