@@ -1,0 +1,36 @@
+graph TD
+    %% Estilos personalizados
+    classDef python fill:#3776AB,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef ts fill:#3178C6,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef astro fill:#FF5D01,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef svelte fill:#FF3E00,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef json fill:#F7DF1E,stroke:#333,stroke-width:2px,color:#333;
+    classDef html fill:#E34F26,stroke:#fff,stroke-width:2px,color:#fff;
+
+    subgraph Capa1 ["Capa 1: Extracción de Datos (Backend Scraping)"]
+        A[Twitter Scraper<br/>Python]:::python -->|Genera| C1[("@handle.json<br/>(Raw Tweets)")]:::json
+        B[yfinance API<br/>TypeScript]:::ts -->|Genera| C2[("peaks_found.json<br/>(Raw Stocks)")]:::json
+    end
+
+    subgraph Capa2 ["Capa 2: Procesamiento Relacional (ETL)"]
+        C1 --> D{preprocess-data.ts}:::ts
+        C2 --> D
+        D -->|Entidades limpias| E1[("tweets.json")]:::json
+        D -->|Entidades limpias| E2[("stocks.json")]:::json
+        D -->|Tabla intermedia + Historial| E3[("stock_tweets.json")]:::json
+    end
+
+    subgraph Capa3 ["Capa 3: Build Estático (Astro SSG)"]
+        E1 --> H((Astro Build<br/>Process)):::astro
+        E2 --> H
+        E3 --> H
+        H -->|Renderizado en tiempo de Build| I[HTML Estático Ultra-Rápido]:::html
+    end
+
+    subgraph Capa4 ["Capa 4: Interactividad Cliente (Island Architecture)"]
+        I -.->|Hydration Parcial| J[Svelte Components]:::svelte
+        J --> K1[Game UI: Classic]:::svelte
+        J --> K2[Game UI: Guess CEO]:::svelte
+        J --> K3[Game UI: Stocks Only]:::svelte
+        J --> K4[Game UI: Who Said What]:::svelte
+    end
